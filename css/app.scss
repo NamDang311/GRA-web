@@ -8,8 +8,12 @@ $jose:'Josefin Sans',
 sans-serif;
 $blue:#2b90d9;
 $gray:#d9e1e8;
-$neutral:rgb(247,255,247);
+$yellow:#FFE66D;
+$neutral:#F7FFF7;
 $darkBlue: #1A535C;
+$lightBlue: #4ECDC4;
+$dark:#353535;
+$red:#FF6B6B;
 $asteroids-belt-orb: 600px;
 $asteroids-belt-pl: 210px;
 $year-in-second: 30; // 1 Earth year = 30 sec
@@ -29,18 +33,16 @@ $year-in-second: 30; // 1 Earth year = 30 sec
     @return unquote($stars);
 }
 
-body {
-  
-}
+body {}
 
 .line {
     display: inline-block;
     vertical-align: bottom;
     zoom: 1;
     width: 100px;
-    height: 2px;
+    height: 4px;
     background: white;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 }
 
 
@@ -56,9 +58,7 @@ li {
 #section-1 {
     background-color: $blue;
     z-index: -2;
-    .row {
-       
-    }
+    .row {}
     h1 {
         font-family: $karla;
         text-transform: uppercase;
@@ -98,10 +98,10 @@ nav a {
     font-style: italic;
     position: absolute;
     left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
     bottom: 7%;
     letter-spacing: 0.08rem;
-    font-size:1.3rem;
+    font-size: 1.3rem;
 }
 
 #findout:after {
@@ -110,7 +110,7 @@ nav a {
     width: 20px;
     height: 32px;
     bottom: -180%;
-    left:50%;
+    left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
 }
@@ -149,21 +149,20 @@ nav a {
     p {
         font-family: $arvo;
         font-size: 16px;
-        color:white;
+        color: white;
     }
-    .line{
-        background-color:black;
+    .line {
+        background-color: black;
         margin-left: 10px;
     }
 }
 
 .graphic {
     z-index: 5;
-    position:absolute;
+    position: absolute;
     width: 100vw;
-    height:100vh;
+    height: 100vh;
     bottom: 0;
-    
 }
 
 #bus {
@@ -185,8 +184,6 @@ nav a {
     -webkit-animation: traffic linear 15s infinite;
     animation: traffic linear 15s infinite;
 }
-
-
 
 .plane {
     width: 12vw;
@@ -234,6 +231,7 @@ nav a {
     animation: flyHeli ease-in-out 12s infinite;
     z-index: 1;
 }
+
 #land {
     background-color: $darkBlue;
     height: 80px;
@@ -258,10 +256,10 @@ nav a {
     z-index: 0;
     vertical-align: bottom;
     display: table-cell;
-    .factory-img{
-        height:50vh;
+    .factory-img {
+        height: 50vh;
         width: auto;
-       vertical-align: bottom;
+        vertical-align: bottom;
     }
 }
 
@@ -274,8 +272,6 @@ nav a {
     position: absolute;
     bottom: 80%;
     left: 3.5%;
-    
-  
 }
 
 .smoke-2 {
@@ -285,13 +281,13 @@ nav a {
     position: absolute;
     background: url('/img/smoke_sprite.png') left no-repeat;
     top: -60%;
-    right:19%;
+    right: 19%;
     animation: play 8s steps(317) infinite;
 }
 
-#bodymovin {
-     
-}
+#bodymovin {}
+
+
 /**
    * SEC-3 
    */
@@ -351,7 +347,7 @@ nav a {
     border-radius: 50%;
     width: 320px;
     height: 320px;
-    background-color: rgba(247,255,247,0.1);
+    background-color: rgba(247, 255, 247, 0.1);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -362,10 +358,10 @@ nav a {
 .earth-wrapper {
     position: absolute;
     top: 0;
-    z-index: 0;
+    z-index: 2;
     background-color: $darkBlue;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     margin-top: 0;
     &:after {
         content: "";
@@ -373,8 +369,9 @@ nav a {
         height: 2px;
         width: 2px;
         top: -2px;
+        z-index: 0;
         background: white;
-        box-shadow: stars(500, 1800);
+        box-shadow: stars(500, 2000);
         border-radius: 100px;
     }
     .asteroids-belt {
@@ -403,7 +400,7 @@ nav a {
     animation: orb 150s linear infinite;
     overflow: hidden;
     &:before {
-        z-index: 99999;
+        z-index: 1;
         top: 50%;
         height: $asteroids-belt-pl;
         width: $asteroids-belt-pl;
@@ -490,29 +487,13 @@ nav a {
 
 
 /**
-   * SEC-5 
+   * SEC-4
    */
 
-
-
-
-
-/**
-   * Bulb-city
-   */
-
-#bulb-city {
-    position: absolute;
-    z-index: 999;
-    width: 35vw;
-    right: 10vw;
-    top: 0vw;
+#section-4 {
+    background-color: $yellow;
+    z-index: 1;
 }
-
-
-/**
-   * Slider
-   */
 
 #range {
     width: 300px;
@@ -570,55 +551,127 @@ nav a {
     top: 36px;
 }
 
-
-/**
-   * city2- LIGHTTTTTTTTTTTT -_-
-   */
-
 #city2 {
     bottom: 0;
     position: absolute;
     left: 0;
+    z-index: 99999;
 }
 
-#lightbulb {
-    width: 40vh;
-    right: 10%;
+.clouds {
+    width:200px;
+     position: absolute;
+     
+}
+
+#cloud-1, {
+    top:20%;
+   left:50%;
+   animation: fly linear 45s infinite;
+}
+#cloud-2, {
+    top:50%;
+   left:20%;
+   animation: fly linear 25s infinite;
+}
+#cloud-3, {
+    top:10%;
+   left:30%;
+   animation: fly linear 35s infinite;
+}
+#cloud-4, {
+    top:30%;
+   left:10%;
+   animation: fly linear 65s infinite;
+}
+#cloud-5, {
+    top:40%;
+   left:00%;
+   animation: fly linear 40s infinite;
+}
+.sun {
+    height: 200px;
+    width: 200px;
+    top:15%;
+    border-radius:50%;
+    position: absolute;
+    z-index: 999;
+    background-color:$red ;
+}
+.bulb-wrapper {
+    width: 40vw;
+    height: 80vh;
+    right: 5%;
     position: absolute;
     top: 0;
+    z-index: 99;
+}
+
+#bulb {
+    width: 42%;
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.lightray {
+    position: absolute;
+    bottom: 0%;
+    background-color: transparentize($yellow, 0.4);
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    transform: translate(-50%, 0);
+    left: 50%;
+    z-index: 0;
+    display: none;
 }
 
 .handler-wrapper {
     height: auto;
     position: absolute;
-    top: 200px;
+    top: -20%;
     right: 40%;
     width: 19.34px;
+    z-index: 999;
 }
 
 .handler-ripple {
-    background-color: #C0EFFF;
-    width: 1.1em;
-    height: 1.1em;
+    background-color: #4ECDC4;
+    width: 1.5em;
+    height: 1.5em;
     border-radius: 50%;
     left: 50%;
     transform: translate(-50%, 0);
     cursor: pointer;
     position: absolute;
-    bottom: 0;
+    bottom: 0%;
     -webkit-animation: ripple 2s linear infinite;
     animation: ripple 2s linear infinite;
 }
 
-
-/**
-   * worldmap
-   */
-#section-5 {
-    background-color:$darkBlue;
+#section-4 .section-4-paragraph {
+    color: white;
+    font-family: $jose;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 0;
+    
+    
 }
+#section-4 h1 {
+    opacity: 0;
+}
+/**
+   * SEC-5
+   */
 
-
+#section-5 {
+    background-color: $darkBlue;
+}
 
 #worldmap {
     width: 90%;
@@ -626,7 +679,7 @@ nav a {
     position: absolute;
     min-width: 300px;
     transform: translate(0, 50%);
-    left:0;
+    left: 0;
 }
 
 .circle-ripple {
@@ -734,7 +787,6 @@ nav a {
 
 .continent-total #totalTitle {
     top: 10%;
-    
     width: 100%;
 }
 
@@ -935,4 +987,3 @@ nav a {
         transform: scale(2.0);
     }
 }
-

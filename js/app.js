@@ -1,44 +1,34 @@
+//One-Page
 $(document).foundation();
 $(".main").onepage_scroll({
     pagination: true
     , loop: false
 });
 
-$('#bulb-btn').click(
-    function () {
-        TweenMax.to("#section1-bg1", 3, {
-            opacity: 0
-            , ease: Power2.easeInOut
-        });
-    }
-);
-    var animData = {
-
-  wrapper: document.getElementById('bodymovin'), // the dom element
-  renderer: 'svg',
-  loop: true,
-  autoplay: true,
-  path: '../js/data.json' // the animation data
-
-};
-var anim = bodymovin.loadAnimation(animData);
-
+//SEC-2
 var tlSmoke = new TimelineMax({
-        repeat: -1,immediateRender:true,repeatDelay: 0.2
-    });
-tlSmoke.from($(".smoke-1"), 0, {bottom:"80%",
-        scale: 0,ease: Power0.easeNone
-        , transformOrigin: "50% 50% 0",
-    })
-    .to($(".smoke-1"), 2, {bottom:"90%",
-        scale: 2,ease: Power0.easeNone
-        , transformOrigin: "50% 50% 0",
-    })
-    .to($(".smoke-1"), 2, {bottom:"100%",
-        scale: 0,ease: Power0.easeNone
-        , transformOrigin: "50% 50% 0",
-    })
-;
+    repeat: -1
+    , immediateRender: true
+    , repeatDelay: 0.2
+});
+tlSmoke.from($(".smoke-1"), 0, {
+        bottom: "80%"
+        , scale: 0
+        , ease: Power0.easeNone
+        , transformOrigin: "50% 50% 0"
+    , })
+    .to($(".smoke-1"), 2, {
+        bottom: "90%"
+        , scale: 2
+        , ease: Power0.easeNone
+        , transformOrigin: "50% 50% 0"
+    , })
+    .to($(".smoke-1"), 2, {
+        bottom: "100%"
+        , scale: 0
+        , ease: Power0.easeNone
+        , transformOrigin: "50% 50% 0"
+    , });
 
 (function () {
     $('#range').slider({
@@ -51,6 +41,28 @@ tlSmoke.from($(".smoke-1"), 0, {bottom:"80%",
         }
     });
 }());
+
+//SEC-2
+d3.xml("/img/helicopter.svg", "image/svg+xml", function (error, xml) {
+    if (error) throw error;
+    document.getElementById('helicopter').appendChild(xml.documentElement);
+    animateTop();
+});
+
+function animateTop() {
+    var $rotar = $('#top');
+    var tl = new TimelineMax({
+        repeat: -1
+        , repeatDelay: 3
+    });
+    tl.from($rotar, 0.2, {
+        rotationY: 360
+        , ease: Power0.easeNone
+        , repeat: -1
+        , transformOrigin: "50% 0 0"
+    });
+};
+
 
 //SEC - 3
 var slideVal = [1.15, 1.13, 1.11, 1.04, 1.02, 1];
@@ -93,9 +105,9 @@ $("#earth-shadow").mousemove(function () {
         , transformOrigin: "50% 50% 0"
         , immediateRender: true
     });
-    
-    
-   
+
+
+
 
 
 });
@@ -107,74 +119,89 @@ $("#earth-shadow").mouseout(function (e) {
         , transformOrigin: "50% 50% 0"
         , immediateRender: true
     });
-  
+
 
 });
 
 
- TweenMax.staggerFromTo($(".signal"), 10, {
-        scale: 0
-        , opacity: 0.3
-        , transformOrigin: "50% 50% 0"
-    , }, {
-        scale: 0.8
-        , repeat: -1
-        , opacity: 0
-    }, 1);
+TweenMax.staggerFromTo($(".signal"), 10, {
+    scale: 0
+    , opacity: 0.3
+    , transformOrigin: "50% 50% 0"
+, }, {
+    scale: 0.8
+    , repeat: -1
+    , opacity: 0
+}, 1);
 //END- of - SEC - 3
 
 
+/// SEC-4
 
-//SEC-2
-d3.xml("/img/helicopter.svg", "image/svg+xml", function (error, xml) {
-    if (error) throw error;
-    document.getElementById('helicopter').appendChild(xml.documentElement);
-    animateTop();
-});
-
-function animateTop() {
-    var $rotar = $('#top');
-    var tl = new TimelineMax({
-        repeat: -1
-        , repeatDelay: 3
-    });
-    tl.from($rotar, 0.2, {
-        rotationY: 360
-        , ease: Power0.easeNone
-        , repeat: -1
-        , transformOrigin: "50% 0 0"
-    });
-};
-
-
-
-/// LIGHT WORLDDDDDDDD
 Draggable.create(".handler-wrapper", {
     type: "y"
     , bounds: {
-        top: 0
+        maxY:120
         , left: 0
-        , height: 100
+        , height: 10
     }
     , throwProps: true
-    , edgeResistance: 0.7
+    , edgeResistance: 1
     , onDragEnd: function () {
-        TweenLite.from($(".handler-wrapper"), 0.4, {
-            top: 0
+        lightUp();
+        sunSet();
+        TweenLite.to($(".handler-wrapper"), 1, {
+            y: 0
             , ease: Elastic.easeOut
         });
     }
 });
+TweenLite.set('#lightray', {scale:1,transformOrigin: "50% 0 0", ease:Power3.easeOut})
+function lightUp () {
+    $('.lightray').css('display','inline');
+    TweenLite.fromTo('.lightray',1.5, {scale:0,transformOrigin: "50% 50% 0", ease:Power3.easeOut},{scale:1.3,transformOrigin: "50% 50% 0", ease:Power3.easeOut});
+   TweenLite.to('#section-4',1.5, {backgroundColor:"#353535", ease:Power3.easeOut}); d3.select("#bulbBody").transition().duration(500).ease("sin").style("fill","#FFE66D");   
+};
+function sunSet () {
+     TweenLite.to('.sun',1.5, {top:"120%", ease:Power3.easeOut});
+    
+};
 
 
+d3.xml("/img/bulb.svg", "image/svg+xml", function (error, xml) {
+    if (error) throw error;
+    document.getElementById('bulb').appendChild(xml.documentElement);
+});
+
+   
+d3.xml("/img/clouds/clouds-1.svg", "image/svg+xml", function (error, xml) {
+    if (error) throw error;
+    document.getElementById('cloud-1').appendChild(xml.documentElement);
+});
+d3.xml("/img/clouds/clouds-2.svg", "image/svg+xml", function (error, xml) {
+    if (error) throw error;
+    document.getElementById('cloud-2').appendChild(xml.documentElement);
+});
+d3.xml("/img/clouds/clouds-3.svg", "image/svg+xml", function (error, xml) {
+    if (error) throw error;
+    document.getElementById('cloud-3').appendChild(xml.documentElement);
+});
+d3.xml("/img/clouds/clouds-4.svg", "image/svg+xml", function (error, xml) {
+    if (error) throw error;
+    document.getElementById('cloud-4').appendChild(xml.documentElement);
+});
+d3.xml("/img/clouds/clouds-5.svg", "image/svg+xml", function (error, xml) {
+    if (error) throw error;
+    document.getElementById('cloud-5').appendChild(xml.documentElement);
+});
 
 
-
-// Load world svg
+// SEC-5
 d3.xml("/img/worldmap.svg", "image/svg+xml", function (error, xml) {
     if (error) throw error;
     document.getElementById('worldmap').appendChild(xml.documentElement);
 });
+
 
 // click map
 var popupheight = parseInt($('#popup').css("height")) + 20;
