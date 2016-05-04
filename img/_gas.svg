@@ -1,0 +1,86 @@
+<svg id="Layer_4" data-name="Layer 4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 308.43 183.16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #484a51;
+      }
+
+      .cls-2 {
+        fill: #7e818c;
+      }
+
+      .cls-3, .cls-5, .cls-6 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        stroke: #7e818c;
+        stroke-width: 2px;
+      }
+
+      .cls-4 {
+        fill: #8d8f99;
+      }
+
+      .cls-5 {
+        stroke: #484a51;
+        stroke-width: 7px;
+      }
+
+      .cls-6 {
+        stroke: #44495e;
+        stroke-width: 5px;
+      }
+    </style>
+  </defs>
+  <title>_gas</title>
+  <g id="gas">
+    <g>
+      <path class="cls-1" d="M2993.9,643c5.87,4,10.22,9,12,16h3.84a30.43,30.43,0,0,1,11.21-16h-27Z" transform="translate(-2940.57 -508.24)"/>
+      <path class="cls-1" d="M2962.67,643H2941v16h9.7C2952.45,652,2956.8,647,2962.67,643Z" transform="translate(-2940.57 -508.24)"/>
+    </g>
+    <g>
+      <path class="cls-1" d="M3183.25,643H3053.71a30.43,30.43,0,0,1,11.21,16h106.36C3173,652,3177.38,647,3183.25,643Z" transform="translate(-2940.57 -508.24)"/>
+      <path class="cls-1" d="M3214.47,643c5.87,4,10.22,9,12,16H3249V643h-34.53Z" transform="translate(-2940.57 -508.24)"/>
+    </g>
+    <g>
+      <circle class="cls-2" cx="37.71" cy="158.17" r="25"/>
+      <circle class="cls-1" cx="37.71" cy="158.17" r="15.02"/>
+      <g>
+        <line class="cls-3" x1="31.6" y1="158.17" x2="43.83" y2="158.17"/>
+        <line class="cls-3" x1="37.71" y1="152.05" x2="37.71" y2="164.28"/>
+      </g>
+    </g>
+    <g>
+      <circle class="cls-2" cx="96.74" cy="158.17" r="25"/>
+      <circle class="cls-1" cx="96.74" cy="158.17" r="15.02"/>
+      <g>
+        <line class="cls-3" x1="90.63" y1="158.17" x2="102.86" y2="158.17"/>
+        <line class="cls-3" x1="96.74" y1="152.05" x2="96.74" y2="164.28"/>
+      </g>
+    </g>
+    <g>
+      <circle class="cls-2" cx="258.29" cy="158.17" r="25"/>
+      <circle class="cls-1" cx="258.29" cy="158.17" r="15.02"/>
+      <g>
+        <line class="cls-3" x1="252.17" y1="158.17" x2="264.4" y2="158.17"/>
+        <line class="cls-3" x1="258.29" y1="152.05" x2="258.29" y2="164.28"/>
+      </g>
+    </g>
+    <polygon class="cls-2" points="218.22 79.06 201.56 75.69 201.56 72.06 218.22 75.43 218.22 79.06"/>
+    <path class="cls-2" d="M2968,545.15V543h-2v-6h5v-1h-11v1h5v6h-3v2.15c-4,.5-9,4.78-9,10V633h24V555.12C2977,549.92,2974,545.65,2968,545.15Z" transform="translate(-2940.57 -508.24)"/>
+    <path class="cls-2" d="M2997,545.15V543h-2v-6h6v-1h-12v1h5v6h-2v2.15a10.06,10.06,0,0,0-9,10V633h23V555.12C3006,549.92,3003,545.65,2997,545.15Z" transform="translate(-2940.57 -508.24)"/>
+    <path class="cls-2" d="M3026,545.15V543h-2v-6h6v-1h-11v1h4v6h-2v2.15a10.06,10.06,0,0,0-9,10V633h23V555.12C3035,549.92,3032,545.65,3026,545.15Z" transform="translate(-2940.57 -508.24)"/>
+    <path class="cls-2" d="M3057,545.15V543h-2v-6h5v-1h-11v1h4v6h-2v2.15c-4,.5-9,4.78-9,10V633h24V555.12A10.06,10.06,0,0,0,3057,545.15Z" transform="translate(-2940.57 -508.24)"/>
+    <path class="cls-2" d="M3086,545.15V543h-2v-6h5v-1h-11v1h5v6h-3v2.15c-4,.5-9,4.78-9,10V633h24V555.12C3095,549.92,3092,545.65,3086,545.15Z" transform="translate(-2940.57 -508.24)"/>
+    <path class="cls-2" d="M3115,545.15V543h-2v-6h6v-1h-12v1h5v6h-2v2.15a10.06,10.06,0,0,0-9,10V633h23V555.12C3124,549.92,3121,545.65,3115,545.15Z" transform="translate(-2940.57 -508.24)"/>
+    <path class="cls-4" d="M3243,633V596.82l-37-7.48V539c0-7.09-4.23-13.24-10.29-14.79l-61.37-15.84c-2.94-.75-5.34,1.8-5.34,5.24V624H2941v24h308V633h-6Z" transform="translate(-2940.57 -508.24)"/>
+    <line class="cls-5" x1="188.08" y1="79.06" y2="79.06"/>
+    <line class="cls-5" x1="188.08" y1="102.95" y2="102.95"/>
+    <line class="cls-6" x1="6.66" y1="61.76" x2="6.66" y2="115.3"/>
+    <polygon class="cls-2" points="256.04 76.28 201.56 63.53 201.56 21.25 256.04 33.57 256.04 76.28"/>
+    <circle class="cls-2" cx="292.78" cy="96.18" r="2.11"/>
+    <circle class="cls-2" cx="280.68" cy="94.07" r="2.11"/>
+  </g>
+</svg>
