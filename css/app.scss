@@ -593,6 +593,7 @@ nav a {
     height: 200px;
     width: 200px;
     top:15%;
+    left:12%;
     border-radius:50%;
     position: absolute;
     z-index: 999;
@@ -600,7 +601,7 @@ nav a {
 }
 .bulb-wrapper {
     width: 40vw;
-    height: 80vh;
+    height: 60vh;
     right: 5%;
     position: absolute;
     top: 0;
@@ -608,7 +609,8 @@ nav a {
 }
 
 #bulb {
-    width: 42%;
+    width: 30%;
+    height: 100%;
     position: absolute;
     top: 0;
     z-index: 99;
