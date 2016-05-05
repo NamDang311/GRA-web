@@ -1,4 +1,4 @@
-//One-Page
+//One-Page 
 $(document).foundation();
 $(".main").onepage_scroll({
     pagination: true
@@ -137,11 +137,10 @@ TweenMax.staggerFromTo($(".signal"), 10, {
 
 
 /// SEC-4
-
 Draggable.create(".handler-wrapper", {
     type: "y"
     , bounds: {
-        maxY:120
+        maxY: 120
         , left: 0
         , height: 10
     }
@@ -150,21 +149,49 @@ Draggable.create(".handler-wrapper", {
     , onDragEnd: function () {
         lightUp();
         sunSet();
+        revealText();
         TweenLite.to($(".handler-wrapper"), 1, {
             y: 0
             , ease: Elastic.easeOut
         });
     }
 });
-TweenLite.set('#lightray', {scale:1,transformOrigin: "50% 0 0", ease:Power3.easeOut})
-function lightUp () {
-    $('.lightray').css('display','inline');
-    TweenLite.fromTo('.lightray',1.5, {scale:0,transformOrigin: "50% 50% 0", ease:Power3.easeOut},{scale:1.3,transformOrigin: "50% 50% 0", ease:Power3.easeOut});
-   TweenLite.to('#section-4',1.5, {backgroundColor:"#353535", ease:Power3.easeOut}); d3.select("#bulbBody").transition().duration(500).ease("sin").style("fill","#FFE66D");   
+TweenLite.set('#lightray', {
+    scale: 1
+    , transformOrigin: "50% 0 0"
+    , ease: Power3.easeOut
+})
+
+function lightUp() {
+    $('.lightray').css('display', 'inline');
+    TweenLite.fromTo('.lightray', 1.5, {
+        scale: 0
+        , transformOrigin: "50% 50% 0"
+        , ease: Power3.easeOut
+    }, {
+        scale: 1.3
+        , transformOrigin: "50% 50% 0"
+        , ease: Power3.easeOut
+    });
+    TweenLite.to('#section-4', 1.5, {
+        backgroundColor: "#353535"
+        , ease: Power3.easeOut
+    });
+    d3.select("#bulbBody").transition().duration(500).ease("sin").style("fill", "#FFE66D");
 };
-function sunSet () {
-     TweenLite.to('.sun',1.5, {top:"120%", ease:Power3.easeOut});
-    
+
+function sunSet() {
+    TweenLite.to('.sun', 1.5, {
+        top: "120%"
+        , ease: Power3.easeOut
+    });
+};
+var $section4Content=$(".section-4-paragraph, #section-4 h1")
+function revealText() {
+    TweenLite.to($section4Content, 1.5, {
+        opacity:1
+        , ease: Power3.easeOut
+    });
 };
 
 
@@ -173,7 +200,7 @@ d3.xml("/img/bulb.svg", "image/svg+xml", function (error, xml) {
     document.getElementById('bulb').appendChild(xml.documentElement);
 });
 
-   
+
 d3.xml("/img/clouds/clouds-1.svg", "image/svg+xml", function (error, xml) {
     if (error) throw error;
     document.getElementById('cloud-1').appendChild(xml.documentElement);
