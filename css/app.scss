@@ -106,7 +106,7 @@ nav a {
 
 #findout:after {
     content: "";
-    background: url(../img/mouse.svg) no-repeat;
+    background: url(img/mouse.svg) no-repeat;
     width: 20px;
     height: 32px;
     bottom: -180%;
@@ -279,7 +279,7 @@ nav a {
     height: 360px;
     width: 371px;
     position: absolute;
-    background: url('../img/smoke_sprite.png') left no-repeat;
+    background: url('img/smoke_sprite.png') left no-repeat;
     top: -60%;
     right: 19%;
     animation: play 8s steps(317) infinite;

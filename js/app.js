@@ -195,36 +195,36 @@ function revealText() {
 };
 
 
-d3.xml("/img/bulb.svg", "image/svg+xml", function (error, xml) {
+d3.xml("img/bulb.svg", "image/svg+xml", function (error, xml) {
     if (error) throw error;
     document.getElementById('bulb').appendChild(xml.documentElement);
 });
 
 
-d3.xml("/img/clouds/clouds-1.svg", "image/svg+xml", function (error, xml) {
+d3.xml("img/clouds/clouds-1.svg", "image/svg+xml", function (error, xml) {
     if (error) throw error;
     document.getElementById('cloud-1').appendChild(xml.documentElement);
 });
-d3.xml("/img/clouds/clouds-2.svg", "image/svg+xml", function (error, xml) {
+d3.xml("img/clouds/clouds-2.svg", "image/svg+xml", function (error, xml) {
     if (error) throw error;
     document.getElementById('cloud-2').appendChild(xml.documentElement);
 });
-d3.xml("/img/clouds/clouds-3.svg", "image/svg+xml", function (error, xml) {
+d3.xml("img/clouds/clouds-3.svg", "image/svg+xml", function (error, xml) {
     if (error) throw error;
     document.getElementById('cloud-3').appendChild(xml.documentElement);
 });
-d3.xml("/img/clouds/clouds-4.svg", "image/svg+xml", function (error, xml) {
+d3.xml("img/clouds/clouds-4.svg", "image/svg+xml", function (error, xml) {
     if (error) throw error;
     document.getElementById('cloud-4').appendChild(xml.documentElement);
 });
-d3.xml("/img/clouds/clouds-5.svg", "image/svg+xml", function (error, xml) {
+d3.xml("img/clouds/clouds-5.svg", "image/svg+xml", function (error, xml) {
     if (error) throw error;
     document.getElementById('cloud-5').appendChild(xml.documentElement);
 });
 
 
 // SEC-5
-d3.xml("/img/worldmap.svg", "image/svg+xml", function (error, xml) {
+d3.xml("img/worldmap.svg", "image/svg+xml", function (error, xml) {
     if (error) throw error;
     document.getElementById('worldmap').appendChild(xml.documentElement);
 });
