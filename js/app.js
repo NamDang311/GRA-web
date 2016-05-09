@@ -6,29 +6,41 @@ $(".main").onepage_scroll({
 });
 
 //SEC-2
-var tlSmoke = new TimelineMax({
-    repeat: -1
-    , immediateRender: true
-    , repeatDelay: 0.2
-});
-tlSmoke.from($(".smoke-1"), 0, {
-        bottom: "80%"
-        , scale: 0
-        , ease: Power0.easeNone
-        , transformOrigin: "50% 50% 0"
-    , })
-    .to($(".smoke-1"), 2, {
-        bottom: "90%"
-        , scale: 2
-        , ease: Power0.easeNone
-        , transformOrigin: "50% 50% 0"
-    , })
-    .to($(".smoke-1"), 2, {
-        bottom: "100%"
-        , scale: 0
-        , ease: Power0.easeNone
-        , transformOrigin: "50% 50% 0"
-    , });
+var stage = new PIXI.Container(),
+    renderer = PIXI.autoDetectRenderer(371, 360,{backgroundColor:0x1099bb,transparent:true});
+document.getElementById('smoke-2').appendChild(renderer.view);
+var frames = [];
+var movie;
+setup();
+
+//This `setup` function will run when the image has loaded
+function setup() { 
+    for (var i = 1; i < 318; i++) {
+        frames.push(PIXI.Texture.fromImage('../smoke/comp 1_' + i + '.png'));
+      
+    };
+    movie = new PIXI.extras.MovieClip(frames);
+    movie.play();
+    movie.animationSpeed = 0.5;
+    stage.addChild(movie);
+    animate();
+
+}
+function animate() {
+    renderer.render(stage);
+    requestAnimationFrame(animate);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 (function () {
     $('#range').slider({
