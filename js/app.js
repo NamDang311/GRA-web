@@ -6,18 +6,20 @@ $(".main").onepage_scroll({
 });
 
 //SEC-2
-var stage = new PIXI.Container(),
-    renderer = PIXI.autoDetectRenderer(371, 360,{backgroundColor:0x1099bb,transparent:true});
+var stage = new PIXI.Container()
+    , renderer = PIXI.autoDetectRenderer(371, 360, {
+        backgroundColor: 0x1099bb
+        , transparent: true
+    });
 document.getElementById('smoke-2').appendChild(renderer.view);
 var frames = [];
 var movie;
 setup();
 
-//This `setup` function will run when the image has loaded
-function setup() { 
+function setup() {
     for (var i = 1; i < 318; i++) {
         frames.push(PIXI.Texture.fromImage('../smoke/comp 1_' + i + '.png'));
-      
+
     };
     movie = new PIXI.extras.MovieClip(frames);
     movie.play();
@@ -26,33 +28,12 @@ function setup() {
     animate();
 
 }
+
 function animate() {
     renderer.render(stage);
     requestAnimationFrame(animate);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-(function () {
-    $('#range').slider({
-        range: 'min'
-        , min: 0
-        , max: 100
-        , value: 0
-        , slide: function (e, ui) {
-            $('#co2value').html(ui.value / 25)
-        }
-    });
-}());
 
 //SEC-2
 d3.xml("/img/helicopter.svg", "image/svg+xml", function (error, xml) {
@@ -77,20 +58,22 @@ function animateTop() {
 
 
 //SEC - 3
-var slideVal = [1.15, 1.13, 1.11, 1.04, 1.02, 1];
+
+var slideVal = [1, 1.02, 1.04, 1.11, 1.13, 1.2];
 var yearsAr = $(".section-3-years").toArray();
 var curClick = 5;
-
+var earthAr = [22.5, 24, 26, 30, 34, 40];
+ var statco2;
+var statcompare=0;
 $(".section-3-years").click(
     function () {
-        $(this).animate({
-            opacity: 1
-            , fontSize: "2.5em"
-        }, 500);
-        $(".section-3-years").not(this).animate({
-            opacity: 0.2
-            , fontSize: "1.5em"
-        }, 200);
+        var $notthis= $(".section-3-years").not(this);
+        TweenLite.to($(this),.5, {
+            fontSize:'1.3em',opacity:1,
+         });
+        TweenLite.to($notthis,.2, {
+            fontSize:'1em',opacity:0.5,
+       });
         curClick = $.inArray(this, yearsAr);
 
         //scale earth shadow
@@ -98,31 +81,45 @@ $(".section-3-years").click(
             scale: slideVal[curClick]
             , transformOrigin: "50% 50% 0"
         });
-    }
-);
-
-var earthAr = [40, 34, 30, 26, 24, 22.5];
-TweenLite.set($("#toolTip"), {
-    scale: 0
-    , transformOrigin: "50% 50% 0"
-    , immediateRender: true
-});
-
-$("#earth-shadow").mousemove(function () {
-    $("#toolTip").css("display", "block");
-    $("#toolTip-data").html(earthAr[curClick]);
-    TweenLite.to($("#toolTip"), 0.6, {
-        ease: Back.easeOut
-        , scale: 0.8
-        , transformOrigin: "50% 50% 0"
-        , immediateRender: true
+        
+        //Change data
+        statcompare= earthAr[curClick] *100 / 22.5;
+        statco2 = earthAr[curClick];
+        statisticCount();
+        
+        // add midLine
+        $(this).addClass("midLine");
     });
 
+function statisticCount(){
+$("#stat-co2").countTo({
+        from: 0
+        , to: statco2
+        , speed: 400
+        , refreshInterval: 10
+        , formatter: function (value, options) {
+            return value.toFixed(1).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
+        }  
+    });
+    $("#stat-compare").countTo({
+        from: 0
+        , to: statcompare
+        , speed: 400
+        , refreshInterval: 10
+        , formatter: function (value, options) {
+            return value.toFixed(1)+"%"
+        }  
+    });
+};
 
 
 
 
-});
+TweenLite.set($('.datatipWrapper'), {
+   ease: Power3.easeOut
+})
+
+
 
 $("#earth-shadow").mouseout(function (e) {
     TweenLite.to($("#toolTip"), 0.2, {
@@ -189,6 +186,7 @@ function lightUp() {
         backgroundColor: "#353535"
         , ease: Power3.easeOut
     });
+    d3.selectAll(".city-windows").transition().delay(function(d, i) { return i*60; }).duration(500).ease("sin").style("fill", "#FFE66D");
     d3.select("#bulbBody").transition().duration(500).ease("sin").style("fill", "#FFE66D");
 };
 
@@ -198,13 +196,18 @@ function sunSet() {
         , ease: Power3.easeOut
     });
 };
-var $section4Content=$(".section-4-paragraph, #section-4 h1")
+var $section4Content = $(".section-4-paragraph, #section-4 h1")
+
 function revealText() {
+    
+
     TweenLite.to($section4Content, 1.5, {
-        opacity:1
+        opacity: 1
         , ease: Power3.easeOut
     });
 };
+
+
 
 
 d3.xml("img/bulb.svg", "image/svg+xml", function (error, xml) {
@@ -232,6 +235,12 @@ d3.xml("img/clouds/clouds-4.svg", "image/svg+xml", function (error, xml) {
 d3.xml("img/clouds/clouds-5.svg", "image/svg+xml", function (error, xml) {
     if (error) throw error;
     document.getElementById('cloud-5').appendChild(xml.documentElement);
+});
+
+
+d3.xml("img/windows.svg", "image/svg+xml", function (error, xml) {
+    if (error) throw error;
+    document.getElementById('windowsHolder').appendChild(xml.documentElement);
 });
 
 
@@ -399,3 +408,17 @@ function fadedAni() {
     }
 
 };
+
+//sec-6
+
+(function () {
+    $('#range').slider({
+        range: 'min'
+        , min: 0
+        , max: 100
+        , value: 0
+        , slide: function (e, ui) {
+            $('#co2value').html(ui.value / 25)
+        }
+    });
+}());

@@ -12,11 +12,9 @@
     <link rel="stylesheet" href="css/onepage-scroll.css" />
     <link rel="stylesheet" href="css/jquery-ui.css" />
     <link rel="stylesheet" href="css/menu_sideslide.css" />
-    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Arvo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto+Condensed:400,300|Roboto:400,300,500' rel='stylesheet' type='text/css'>
 </head>
- 
+
 <body>
     <div class="menu-wrap">
         <nav class="menu-right">
@@ -64,7 +62,7 @@
 
             <div class="row">
                 <div class="medium-2 medium-offset-1 large-4 columns">
-                    <h1>The <span class="line"></span> <br /> Modern Era</h1>
+                    <h1>The<span class="line"></span> <br /> Modern Era</h1>
                     <p>TNo cibo nihil disputationi mea, an probatus mnesarchum vim, ea mea dicta legendos pericula. Alii probo rebum sea te, in bonorum neglegentur liberavisse est. Eos ut deserunt rationibus disputando, dicta appareat in mei. Ius viris feugait delicatissimi no, delenit salutatus concludaturque sit ad. Cu dictas iriure nusquam est, inimicus erroribus vix ei.
 
                     </p>
@@ -100,36 +98,22 @@
         </section>
 
         <section id="section-3">
-            <div class="row">
-                <div class="large-4 columns">
-
-                    <ul>
-                        <li class="section-3-years">2015</li>
-                        <li class="section-3-years">2010</li>
-                        <li class="section-3-years">2005</li>
-                        <li class="section-3-years">2000</li>
-                        <li class="section-3-years">1995</li>
-                        <li class="section-3-years">1990</li>
-                    </ul>
-                    <div id="timeline"></div>
-                </div>
-            </div>
-            <div id="toolTip">
-                <div id="toolTip-data">
-                </div>
-                <div id="toolTip-data-value">Gt tonnes CO2</div>
-            </div>
-
+           <div class="main-wrapper">
             <div class="earth-wrapper">
                 <div class="earth">
                 </div>
                 <div class='asteroids-belt'></div>
                 <div id="earth-shadow"></div>
                 <div class="satellite-wrapper">
+
                     <div class="moon-wrapper">
+
                         <div class="moon"></div>
                     </div>
+
                     <div class="satellite">
+
+
                         <div class="signal">
                         </div>
                         <div class="signal">
@@ -141,51 +125,92 @@
                 </div>
 
             </div>
-            <div class="meteor-wrapper">
-                <div class="meteor"></div>
+           
             </div>
-
 
             <div class="row">
-                <div class=" medium-2 medium-offset-1 large-4 columns">
+                <div class="small-4 medium-4 medium-offset-1 large-4 columns">
                     <h2>Global CO<sup>2</sup> 
                     <br />over time <span class="line"></span></h2>
+                    <p id="sec-3-p">Human activities are changing the natural greenhouse. Over the last century the burning of fossil fuels like coal and oil has increased the concentration of atmospheric carbon dioxide (CO2). This happens because the coal or oil burning process combines carbon with oxygen in the air to make CO2. To a lesser extent, the clearing of land for agriculture, industry, and other human activities have increased concentrations of greenhouse gases.
+                    </p>
+                    <br />
+                    <p>Select a year to review Co2 data:</p>
+                    <div class="row"> 
+                    <div class="small-4 medium-4 large-4 columns">
+                    <div class="year-wrapper">
+                        <div class="section-3-years " data-year="1990">
+                            <div>1990</div>
+                            
+                        </div>
+                        <div class="section-3-years" data-year="1995">
+                            <div>1995</div>
+                        </div>
+                        <div class="section-3-years" data-year="1995">
+                            <div>2000</div>
+                        </div>
+                        <div class="section-3-years" data-year="2000">
+                            <div>2005</div>
+                        </div>
+                        <div class="section-3-years" data-year="2005">
+                            <div>2010</div>
+                        </div>
+                        <div class="section-3-years" data-year="2015">
+                            <div>2015</div>
+                        </div>
+                    </div>
+                        </div>
+                        <div class="small-8 medium-8 large-8 columns">
+                            <div class="statistic">
+                            <h2 id="stat-co2">0</h2>
+                            <p>Gigatonnes of CO<sup>2</sup></p>
+                            <br />
+                            <h2 id="stat-compare">0<sup>%</sup></h2>
+                            <p>More than in 1990 </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
 
         </section>
 
         <section id="section-4">
             <div class="row">
-                <div class="large-6 columns">
-                     <div class="bulb-wrapper">
+                <div class="small-4 medium-4 medium-offset-1 large-4 columns">
+                    <div class="bulb-wrapper">
                         <div class="lightray"></div>
-                       <div id="bulb"></div>
+                        <div id="bulb"></div>
                     </div>
                     <h1>ENERGY <span class="line"></span><br />IN AUSTRALIA</h1>
-                    
+
                 </div>
                 <div class="large-6 columns"></div>
-                   <div id="cloud-1" class="clouds"></div>
-                   <div id="cloud-2" class="clouds"></div>
-                   <div id="cloud-3" class="clouds"></div>
-                   <div id="cloud-4" class="clouds"></div>
-                   <div id="cloud-5" class="clouds"></div>
-                    <div class="sun">
-                 <div class="sunRay"></div>
+                <div id="cloud-1" class="clouds"></div>
+                <div id="cloud-2" class="clouds"></div>
+                <div id="cloud-3" class="clouds"></div>
+                <div id="cloud-4" class="clouds"></div>
+                <div id="cloud-5" class="clouds"></div>
+                <div class="sun">
+                    <div class="sunRay"></div>
                 </div>
-                   
+                <div class="city2-wrapper">
                      <img id="city2" src="img/city2.svg" alt="city2">
-                    <div class="handler-wrapper">
-                        <img id="handler" src="img/handler.svg" alt="">
-                        <div class="handler-ripple"></div>
+                     <div id="windowsHolder"></div>
+                </div>
+               
+                <div class="handler-wrapper">
+                    <img id="handler" src="img/handler.svg" alt="">
+                    <div class="handler-ripple"></div>
 
-                    </div>
+                </div>
             </div>
             <div class="row">
-                <div class="large-4 columns section-4-paragraph" style="position:absolute;z-index:99999">
-                <p>Most of Australia’s energy is generated centrally and relies heavily on traditional energy sources, known sometimes as fossil fuels. In fact, around 86 percent of electricity is generated from these fuels types, with 73 percent from coal and 13 percent from natural gas. </p></div>
+                <div class="small-4 medium-4 medium-offset-1 large-4 columns" style="position:absolute;z-index:99999">
+                    <p>Most of Australia’s energy is generated centrally and relies heavily on traditional energy sources, known sometimes as fossil fuels. In fact, around 86 percent of electricity is generated from these fuels types, with 73 percent from coal and 13 percent from natural gas. </p>
                 </div>
+            </div>
         </section>
 
         <section id="section-5">
@@ -260,7 +285,7 @@
                 <h1>40 GIGATONES OF CO2</h1>
                 <div class="findoutWrapper">
                     <div class="findout-content">
-                        <h2 class="font-playfair findout">Find out</h2></div>
+                        <h2 class="findout">Find out</h2></div>
                     <div class="ausmap findout-content ">
                         <div class="aus-map-interactive">
                             <object id="svg1" data="img/ausmap.svg" type="image/svg+xml"></object>
@@ -297,6 +322,7 @@
     <script src="js/vendor/jquery.visible.min.js"></script>
     <script src="js/bodymovin.js"></script>
     <script src="js/jquery.onepage-scroll.js"></script>
+    <script src="js/vendor/jquery.arctext.js"></script>
     <script src="js/vendor/what-input.min.js"></script>
     <script src="js/foundation.min.js"></script>
     <script src="js/vendor/d3.v3.min.js"></script>

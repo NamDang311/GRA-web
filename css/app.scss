@@ -1,11 +1,5 @@
-$playfair:'Playfair Display',
-serif;
-$karla: 'Karla',
-sans-serif;
-$arvo:'Arvo',
-serif;
-$jose:'Josefin Sans', 
-sans-serif;
+$fonth:'Stellar','Roboto Slab',sans-serif;
+$fontp:'Roboto Condensed',sans-serif;
 $blue:#2b90d9;
 $gray:#d9e1e8;
 $yellow:#FFE66D;
@@ -33,26 +27,36 @@ $year-in-second: 30; // 1 Earth year = 30 sec
     @return unquote($stars);
 }
 
-body {}
-
 .line {
     display: inline-block;
     vertical-align: bottom;
     zoom: 1;
-    width: 100px;
+    width: 80px;
     height: 4px;
     background: white;
-    margin-bottom: 20px;
+    margin-bottom: 9px;
 }
 
-
+body {
+    font-size:1em;
+    letter-spacing: 0.15em;
+}
 /**
    * SEC-1
    */
 
+html {
+    min-width: 1280px;
+    min-height: 768px;
+}
+p {
+    font-family: $fontp;
+    font-weight: 200;
+}
+
 html,
 li {
-    font-family: $karla;
+    font-family: $fontp;
 }
 
 #section-1 {
@@ -60,7 +64,7 @@ li {
     z-index: -2;
     .row {}
     h1 {
-        font-family: $karla;
+        font-family: $fontp;
         text-transform: uppercase;
         font-size: 14vh;
         font-weight: 500;
@@ -91,7 +95,7 @@ nav a {
 }
 
 #findout {
-    font-family: playfair;
+    font-family: $fonth;
     color: white;
     margin: 0 auto;
     text-align: center;
@@ -140,16 +144,19 @@ nav a {
    */
 
 #section-2 {
-    background-color: #B5B5B5;
+    background-color: $yellow;
     h1 {
-        font-family: $karla;
-        font-weight: 600;
+        font-family: $fonth;
+        font-weight: 400;
         text-transform: uppercase;
+        line-height: 1.1em;
     }
     p {
-        font-family: $arvo;
+        font-family: $fontp;
         font-size: 16px;
         color: white;
+        font-weight: 200;
+        letter-spacing: 0.05em;
     }
     .line {
         background-color: black;
@@ -233,7 +240,7 @@ nav a {
 }
 
 #land {
-    background-color: $darkBlue;
+    background-color: darken($darkBlue,10%);
     height: 80px;
     width: 100%;
     position: absolute;
@@ -285,61 +292,91 @@ nav a {
     /**animation: play 8s steps(317) infinite;**/
 }
 
-#bodymovin {}
-
 
 /**
    * SEC-3 
    */
 
 #section-3 {
-    ul {
-        z-index: 3;
-        position: absolute;
-        top: 55%;
-        transform: translateY(-50%);
-        list-style: none;
-        color: white;
-        font-family: $karla;
-        display: flex;
-        left: 10%;
-        text-align: center;
-        flex-direction: column-reverse;
-        height: 35vh;
-        width: 150px;
-        justify-content: space-between;
-    }
-    li {
-        cursor: pointer;
-        line-height: 0;
+    background-color: $darkBlue;
+    .year-wrapper {
+       
+        font-family: $fonth;
         font-size: 1.5em;
-    }
-    li:nth-of-type(6) {
-        font-size: 2.5em;
-    }
-    li:not(:last-child) {
-        opacity: .2;
-    }
-    #timeline {
-        display: none;
         z-index: 3;
-        background-color: aliceblue;
-        height: 300px;
-        width: 4px;
-        position: absolute;
-        top: 50%;
-        left: 15%;
-        transform: translateY(-50%);
+        width:100px;
+        display: table;
+        letter-spacing: 0.1em;
+         
     }
+     .section-3-years {
+
+         color:white;
+         opacity: 0.5;
+          position: relative;
+             height:55px;
+            margin-bottom: 15px;
+          animation: all 2s linear;
+         
+    }
+    .section-3-years div {
+      
+        line-height: 0;
+        cursor: pointer;
+         position: absolute;
+        top:50%;
+       right: 0;
+        transform:translate(0,-50%);
+    }
+    
+    
+    
     h2 {
-        margin: 0;
-        position: absolute;
-        text-align: left;
+       padding: 0;
         color: white;
         z-index: 999;
         text-transform: uppercase;
-        font-family: $karla;
+        font-family:$fonth;
     }
+    #sec-3-p {
+        font-size: 1rem;
+       padding: 0;
+    color: white;
+   
+}
+}
+
+#section-3 .statistic h2 {
+    margin-top: -25px;
+    color: $lightBlue;
+    line-height: 1em;
+    font-size: 9em;
+    
+    margin-bottom: 17px;
+}
+#section-3 .statistic p {
+    color: white;
+    opacity: .8;
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+}
+
+.section-3-years:after{
+    content:"";
+   background-color: $red;
+    width:0;
+    height: 4px;
+    position: absolute;
+    top:50%; 
+    left:0;
+    opacity: 1;
+    z-index: 0;
+    transition: all 0.3s ease 0s; 
+  -webkit-transition: all 0.3s ease 0s; 
+}
+.section-3-years:hover:after{
+    width: 120px;
+    
 }
 
 #earth-shadow {
@@ -347,37 +384,27 @@ nav a {
     border-radius: 50%;
     width: 320px;
     height: 320px;
-    background-color: rgba(247, 255, 247, 0.1);
+    background-color: dimgray;
+    opacity: .5;
     top: 50%;
-    left: 50%;
+    left: 70%;
     transform: translate(-50%, -50%);
     cursor: pointer;
-    z-index: 10;
+    z-index: -1;
 }
 
 .earth-wrapper {
     position: absolute;
     top: 0;
-    z-index: 2;
-    background-color: $darkBlue;
+    z-index: 0;
     width: 100%;
     height: 100vh;
     margin-top: 0;
-    &:after {
-        content: "";
-        position: absolute;
-        height: 2px;
-        width: 2px;
-        top: -2px;
-        z-index: 0;
-        background: white;
-        box-shadow: stars(500, 2000);
-        border-radius: 100px;
-    }
+    
     .asteroids-belt {
         border-radius: 50%;
         top: 50%;
-        left: 50%;
+        left: 70%;
         position: absolute;
         z-index: 0;
         &:before {
@@ -400,7 +427,7 @@ nav a {
     animation: orb 150s linear infinite;
     overflow: hidden;
     &:before {
-        z-index: 1;
+        z-index: 99;
         top: 50%;
         height: $asteroids-belt-pl;
         width: $asteroids-belt-pl;
@@ -412,50 +439,51 @@ nav a {
     }
 }
 
-#toolTip {
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
-    background-color: #e6665a;
-    position: absolute;
-    top: 50%;
-    left: 60%;
-    transform: translate(70%, -50%);
-    cursor: pointer;
-    z-index: 5;
-}
 
-#toolTip-data {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%, -50%);
-    font-size: 7em;
-    color: white;
-}
-
-#toolTip-data-value {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%, -50%);
-    font-size: 1em;
-    color: white;
-}
 
 .satellite-wrapper {
     width: 700px;
     height: 700px;
     top: 50%;
-    left: 50%;
+    left: 70%;
     position: absolute;
     transform: translate(-50%, -50%);
     z-index: 0;
+  
+}
+
+
+.datatipWrapper {
+    position: absolute;
+    width: 400px;
+    height:400px;
+    z-index: 3;
+    top: 50%;
+    left: 65%;
+   transform: translate(-50%, -50%);
+    
+}
+
+.dataTip {
+    
+    position: absolute;
+    width: 100%;
+    height:100%;
+    z-index: 3;
+     transform-origin: 50% 50%;
+    animation: orb 15s linear infinite;
+}
+
+.datatipWrapper .dataTip-data {
+    position: absolute;
+    left: 50%;
+    z-index: 0;
+   transform: translate(-50%, -50%);
+        
 }
 
 .satellite {
+   
     z-index: 0;
     width: 100%;
     height: 100%;
@@ -492,47 +520,10 @@ nav a {
 
 #section-4 {
     background-color: $yellow;
-    z-index: 1;
+    z-index: 0;
 }
 
-#range {
-    width: 300px;
-    height: 4px;
-    border: 0;
-    border-radius: 100px;
-    background: rgba(0, 0, 0, 0.2);
-    outline: none;
-    z-index: 1;
-}
 
-#range .ui-slider-handle {
-    position: absolute;
-    margin: -6px 0 0 -17px;
-    border-radius: 100px;
-    background: #158789;
-    color: #fff;
-    border: 0;
-    height: 20px;
-    line-height: 20px;
-    text-align: center;
-    width: 34px;
-    outline: none;
-    cursor: pointer;
-    font-size: 8px;
-    font-weight: 800;
-    text-decoration: none;
-    transition: transform 0.1s ease;
-    z-index: 1;
-}
-
-#range .ui-slider-handle:hover,
-#range .ui-slider-handle:focus {
-    transform: scale(1.1);
-}
-
-#range .ui-slider-range {
-    background: #69b6b5;
-}
 
 .cntr {
     position: absolute;
@@ -555,7 +546,15 @@ nav a {
     bottom: 0;
     position: absolute;
     left: 0;
-    z-index: 99999;
+    z-index: 99;
+}
+#windowsHolder{
+    bottom: -0.5%;
+    position: absolute;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    
 }
 
 .clouds {
@@ -668,19 +667,7 @@ nav a {
     animation: ripple 2s linear infinite;
 }
 
-#section-4 .section-4-paragraph {
-    color: white;
-    font-family: $jose;
-    font-weight: 100;
-    font-size: 24px;
-    line-height: 39px;
-    opacity: 0;
-    
-    
-}
-#section-4 h1 {
-    opacity: 0;
-}
+
 /**
    * SEC-5
    */
@@ -824,7 +811,7 @@ nav a {
 }
 
 .activated {
-    background-color: #e6665a;
+    background-color: $red;
 }
 
 
@@ -863,7 +850,44 @@ nav a {
     z-index: -3;
 }
 
+#range {
+    width: 300px;
+    height: 4px;
+    border: 0;
+    border-radius: 100px;
+    background: rgba(0, 0, 0, 0.2);
+    outline: none;
+    z-index: 1;
+}
 
+#range .ui-slider-handle {
+    position: absolute;
+    margin: -6px 0 0 -17px;
+    border-radius: 100px;
+    background: #158789;
+    color: #fff;
+    border: 0;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    width: 34px;
+    outline: none;
+    cursor: pointer;
+    font-size: 8px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.1s ease;
+    z-index: 1;
+}
+
+#range .ui-slider-handle:hover,
+#range .ui-slider-handle:focus {
+    transform: scale(1.1);
+}
+
+#range .ui-slider-range {
+    background: #69b6b5;
+}
 /**
    * Section 7
    */
@@ -891,15 +915,6 @@ nav a {
     }
     80% {
         box-shadow: 0px 0px 0px 50px rgba(72, 74, 81, 0)
-    }
-}
-
-@-webkit-keyframes ripple {
-    0% {
-        box-shadow: 0 0 0 0 rgba(101, 255, 120, 0.3);
-    }
-    80% {
-        box-shadow: 0 0 0 5em rgba(101, 255, 120, 0);
     }
 }
 
