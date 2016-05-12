@@ -330,7 +330,6 @@ nav a {
     }
     
     
-    
     h2 {
        padding: 0;
         color: white;
@@ -521,6 +520,13 @@ nav a {
 #section-4 {
     background-color: $yellow;
     z-index: 0;
+    h2 {
+       padding: 0;
+        color: white;
+        z-index: 999;
+        text-transform: uppercase;
+        font-family:$fonth;
+    }
 }
 
 
@@ -674,19 +680,25 @@ nav a {
 
 #section-5 {
     background-color: $darkBlue;
+    h2 {
+       padding: 0;
+        color: white;
+        z-index: 999;
+        text-transform: uppercase;
+        font-family:$fonth;
+    }
 }
 
 #worldmap {
-    width: 90%;
+    width: 100%;
     height: auto;
     position: absolute;
     min-width: 300px;
-    transform: translate(0, 50%);
     left: 0;
 }
 
 .circle-ripple {
-    background-color: #3498DB;
+    background-color: $yellow;
     width: 1em;
     height: 1em;
     border-radius: 50%;
@@ -791,13 +803,16 @@ nav a {
 .continent-total #totalTitle {
     top: 10%;
     width: 100%;
+    color:darken($darkBlue,10);
+ 
 }
 
 .continent-total #totalNumber {
-    top: 8%;
+    top: 4%;
     position: absolute;
     width: 100%;
-    font-size: 15vh;
+    font-size: 8em;
+    color:white;
     vertical-align: top;
     margin: 0;
     ::after {
@@ -830,10 +845,6 @@ nav a {
     transform: translate(-150%, 0);
 }
 
-.font-playfair {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-}
 
 .findout {
     width: 200px;

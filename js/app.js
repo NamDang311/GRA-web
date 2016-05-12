@@ -252,38 +252,25 @@ d3.xml("img/worldmap.svg", "image/svg+xml", function (error, xml) {
 
 
 // click map
-var popupheight = parseInt($('#popup').css("height")) + 20;
-var popupwidth = parseInt($('#popup').css("width")) / 2;
 var myAr = $(".circle-ripple").toArray();
 var trigger = true;
 var topPos1 = 0;
 
-
+TweenMax.set($("#worldmap"),{perspective:1000});
 $('.circle-ripple').bind('click', function (event) {
     var curbtn = $.inArray(this, myAr);
-    var popuptop = $(this).offset().top - popupheight;
     if (!$(this).hasClass("activated")) {
         $(this).addClass("activated");
 
         TweenLite.fromTo($(this), 1, {
             scale: 1
-            , transformOrigin: "50% 50% 0"
-            , force3D: true
+            , transformOrigin: "50% 50% 0",force3D: false
+            
         }, {
-            opacity: 0.7
-            , scale: parseFloat(dataAr[curbtn])
+            opacity: 0.8
+            , scale: parseFloat(dataAr[curbtn]), force3D: false
         });
     };
-    $('#popup').css('left', $(this).offset().left - popupwidth);
-    $('#popup').css('display', 'inline');
-    $("#popup").css("position", "absolute");
-    TweenLite.fromTo($("#popup"), 1, {
-        opacity: 0
-        , top: popuptop - 20
-    }, {
-        opacity: 1
-        , top: popuptop
-    });
 
 
     //set Pos
@@ -294,7 +281,7 @@ $('.circle-ripple').bind('click', function (event) {
             top: topPos1 + "%"
         }).addClass("clicked");
         $(".data-" + curbtn + "").css({
-            top: (topPos1 + 8) + "%"
+            top: (topPos1 ) + "%"
         });
         topPos1 = topPos1 + 12;
         TweenLite.fromTo($(".data-" + curbtn + ""), 1, {
