@@ -63,17 +63,19 @@ var slideVal = [1, 1.02, 1.04, 1.11, 1.13, 1.2];
 var yearsAr = $(".section-3-years").toArray();
 var curClick = 5;
 var earthAr = [22.5, 24, 26, 30, 34, 40];
- var statco2;
-var statcompare=0;
+var statco2;
+var statcompare = 0;
 $(".section-3-years").click(
     function () {
-        var $notthis= $(".section-3-years").not(this);
-        TweenLite.to($(this),.5, {
-            fontSize:'1.3em',opacity:1,
-         });
-        TweenLite.to($notthis,.2, {
-            fontSize:'1em',opacity:0.5,
-       });
+        var $notthis = $(".section-3-years").not(this);
+        TweenLite.to($(this), .5, {
+            fontSize: '1.3em'
+            , opacity: 1
+        , });
+        TweenLite.to($notthis, .2, {
+            fontSize: '1em'
+            , opacity: 0.5
+        , });
         curClick = $.inArray(this, yearsAr);
 
         //scale earth shadow
@@ -81,25 +83,25 @@ $(".section-3-years").click(
             scale: slideVal[curClick]
             , transformOrigin: "50% 50% 0"
         });
-        
+
         //Change data
-        statcompare= earthAr[curClick] *100 / 22.5;
+        statcompare = earthAr[curClick] * 100 / 22.5;
         statco2 = earthAr[curClick];
         statisticCount();
-        
+
         // add midLine
         $(this).addClass("midLine");
     });
 
-function statisticCount(){
-$("#stat-co2").countTo({
+function statisticCount() {
+    $("#stat-co2").countTo({
         from: 0
         , to: statco2
         , speed: 400
         , refreshInterval: 10
         , formatter: function (value, options) {
             return value.toFixed(1).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
-        }  
+        }
     });
     $("#stat-compare").countTo({
         from: 0
@@ -107,8 +109,8 @@ $("#stat-co2").countTo({
         , speed: 400
         , refreshInterval: 10
         , formatter: function (value, options) {
-            return value.toFixed(1)+"%"
-        }  
+            return value.toFixed(1) + "%"
+        }
     });
 };
 
@@ -116,7 +118,7 @@ $("#stat-co2").countTo({
 
 
 TweenLite.set($('.datatipWrapper'), {
-   ease: Power3.easeOut
+    ease: Power3.easeOut
 })
 
 
@@ -170,23 +172,34 @@ TweenLite.set('#lightray', {
     , transformOrigin: "50% 0 0"
     , ease: Power3.easeOut
 })
+var lightOn = false;
 
 function lightUp() {
     $('.lightray').css('display', 'inline');
-    TweenLite.fromTo('.lightray', 1.5, {
-        scale: 0
-        , transformOrigin: "50% 50% 0"
-        , ease: Power3.easeOut
-    }, {
-        scale: 1.3
-        , transformOrigin: "50% 50% 0"
-        , ease: Power3.easeOut
-    });
-    TweenLite.to('#section-4', 1.5, {
+
+    if (lightOn == false) {
+        TweenLite.fromTo('.lightray', 1.5, {
+            scale: 0
+            , transformOrigin: "50% 50% 0"
+            , ease: Power3.easeOut
+        }, {
+            scale: 1.3
+            , transformOrigin: "50% 50% 0"
+            , ease: Power3.easeOut
+        });
+        lightOn = true;
+    };
+    TweenLite.to('#section-4', 2, {
         backgroundColor: "#353535"
         , ease: Power3.easeOut
     });
-    d3.selectAll(".city-windows").transition().delay(function(d, i) { return i*60; }).duration(500).ease("sin").style("fill", "#FFE66D");
+    TweenLite.to('#section-4 h2,#section-4 p ', 1.5, {
+        opacity: 1
+        , ease: Power3.easeOut
+    });
+    d3.selectAll(".city-windows").transition().delay(function (d, i) {
+        return i * 60;
+    }).duration(500).ease("sin").style("fill", "#FFE66D");
     d3.select("#bulbBody").transition().duration(500).ease("sin").style("fill", "#FFE66D");
 };
 
@@ -199,7 +212,7 @@ function sunSet() {
 var $section4Content = $(".section-4-paragraph, #section-4 h1")
 
 function revealText() {
-    
+
 
     TweenLite.to($section4Content, 1.5, {
         opacity: 1
@@ -255,8 +268,12 @@ d3.xml("img/worldmap.svg", "image/svg+xml", function (error, xml) {
 var myAr = $(".circle-ripple").toArray();
 var trigger = true;
 var topPos1 = 0;
+var leftPos1 = 3;
+var clickCount = 0;
 
-TweenMax.set($("#worldmap"),{perspective:1000});
+TweenMax.set($("#worldmap"), {
+    perspective: 1000
+});
 $('.circle-ripple').bind('click', function (event) {
     var curbtn = $.inArray(this, myAr);
     if (!$(this).hasClass("activated")) {
@@ -264,26 +281,38 @@ $('.circle-ripple').bind('click', function (event) {
 
         TweenLite.fromTo($(this), 1, {
             scale: 1
-            , transformOrigin: "50% 50% 0",force3D: false
-            
+            , transformOrigin: "50% 50% 0"
+            , force3D: false
+
         }, {
             opacity: 0.8
-            , scale: parseFloat(dataAr[curbtn]), force3D: false
+            , scale: parseFloat(dataAr[curbtn])
+            , force3D: false
         });
     };
 
 
-    //set Pos
+
+    //set Pos Country+ Bars
+    console.log(clickCount);
+    if (clickCount == 4) {
+        clickCount = 0;
+        leftPos1 = leftPos1 + 28;
+        topPos1 = 0
+    };
+    clickCount=clickCount+1;
     if (!$(".name-" + curbtn + "").hasClass("clicked")) {
         addNumber(curbtn);
         $(".continent-" + curbtn + "").removeClass("hidden");
         $(".name-" + curbtn + "").css({
             top: topPos1 + "%"
+            , left: leftPos1 + "%"
         }).addClass("clicked");
         $(".data-" + curbtn + "").css({
-            top: (topPos1 ) + "%"
+            top: (topPos1 + 6) + "%"
+            , left: leftPos1 + "%"
         });
-        topPos1 = topPos1 + 12;
+        topPos1 = topPos1 + 10;
         TweenLite.fromTo($(".data-" + curbtn + ""), 1, {
             width: 0
         }, {
@@ -321,7 +350,7 @@ function appendData() {
             , position: "absolute"
             , top: "0"
             , "background-color": "#e6665a"
-            , width: parseFloat(dataAr[a]) * 50
+            , width: parseFloat(dataAr[a]) * 30
         , });
         barWidth.push($(".data-" + a + "").css("width"));
     }
@@ -349,21 +378,7 @@ function addNumber(curbtn) {
 };
 
 
-//Section "how much"
-var leftPos = 50;
-$.each($(".findout-content"), function () {
-    $(this).css({
-        left: leftPos + "vw"
-    });
-    leftPos = leftPos + 100;
-})
-$(".findout").click(
-    function () {
-        TweenLite.to($(".findoutWrapper"), 1, {
-            left: "-=100%"
-        });
-    }
-);
+
 
 //Faded effect.
 var didScroll = true;
@@ -397,15 +412,12 @@ function fadedAni() {
 };
 
 //sec-6
+//Section "how much"
 
-(function () {
-    $('#range').slider({
-        range: 'min'
-        , min: 0
-        , max: 100
-        , value: 0
-        , slide: function (e, ui) {
-            $('#co2value').html(ui.value / 25)
-        }
-    });
-}());
+$(".findout").click(
+    function () {
+        TweenLite.to($(".findoutWrapper"), 1, {
+            left: "-=100%"
+        });
+    }
+);

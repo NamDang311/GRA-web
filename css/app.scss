@@ -46,8 +46,7 @@ body {
    */
 
 html {
-    min-width: 1280px;
-    min-height: 768px;
+  
 }
 p {
     font-family: $fontp;
@@ -298,7 +297,8 @@ nav a {
    */
 
 #section-3 {
-    background-color: $darkBlue;
+    background: url('/img/stars_medium.png') $darkBlue;
+   
     .year-wrapper {
        
         font-family: $fonth;
@@ -344,14 +344,16 @@ nav a {
    
 }
 }
-
+.statistic{
+     margin-top: 18px;
+}
 #section-3 .statistic h2 {
     margin-top: -25px;
     color: $lightBlue;
     line-height: 1em;
     font-size: 9em;
     
-    margin-bottom: 17px;
+    margin-bottom: 20px;
 }
 #section-3 .statistic p {
     color: white;
@@ -518,7 +520,7 @@ nav a {
    */
 
 #section-4 {
-    background-color: $yellow;
+    background:$yellow;
     z-index: 0;
     h2 {
        padding: 0;
@@ -526,6 +528,11 @@ nav a {
         z-index: 999;
         text-transform: uppercase;
         font-family:$fonth;
+        opacity:0;
+    }
+    p {   
+        color:white;
+        opacity:0;
     }
 }
 
@@ -552,7 +559,7 @@ nav a {
     bottom: 0;
     position: absolute;
     left: 0;
-    z-index: 99;
+    z-index: 9;
 }
 #windowsHolder{
     bottom: -0.5%;
@@ -566,7 +573,8 @@ nav a {
 .clouds {
     width:200px;
      position: absolute;
-     
+     z-index:0;
+    opacity: .2;
 }
 
 #cloud-1, {
@@ -619,18 +627,19 @@ nav a {
 }
 
 .bulb-wrapper {
-    width: 40vw;
-    height: 60vh;
+    width: 35vh;
+    height: 50vh;
     right: 5%;
     position: absolute;
     top: 0;
     z-index: 99;
+   
 }
 
 #bulb {
-    height: 100%;
-    width:30%;
+    padding-bottom: 100%;
     position: absolute;
+    width:80%; height:100%;
     top: 0;
     z-index: 99;
     left: 50%;
@@ -639,13 +648,13 @@ nav a {
 
 .lightray {
     position: absolute;
-    bottom: 0%;
     background-color: transparentize($yellow, 0.4);
-    width: 700px;
-    height: 700px;
+    width: 50vh;
+    height: 50vh;
     border-radius: 50%;
-    transform: translate(-50%, 0);
-    left: 50%;
+    top:50%;
+    transform: translate(0, -50%);
+     right: 1%;
     z-index: 0;
     display: none;
 }
@@ -776,6 +785,7 @@ nav a {
     color: white;
     opacity: 1;
     position: absolute;
+    font-size: 1em;
 }
 
 .continent-content {
@@ -808,10 +818,10 @@ nav a {
 }
 
 .continent-total #totalNumber {
-    top: 4%;
+    top: 2%;
     position: absolute;
     width: 100%;
-    font-size: 8em;
+    font-size: 6em;
     color:white;
     vertical-align: top;
     margin: 0;
@@ -831,74 +841,70 @@ nav a {
 
 
 /**
-   * Findout
+   * Section-6
    */
+#section-6 {
+    background-color: $yellow;
+    h2{
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 200;
+        font-size: 2em;
+    }
+    h1{
+        text-align: center;
+    }
+}
+
+
+
 
 .findoutWrapper {
-    position: relative;
-    height: 70vh;
-}
-
-.findout-content {
     position: absolute;
-    left: 0;
-    transform: translate(-150%, 0);
+    height: 70vh;
+    width: 100%;
+    left:0;
+    .findout-content {
+    top:20%;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
 }
-
-
+    
 .findout {
-    width: 200px;
-    margin: 0 auto;
-    margin-top: 20%;
+    
     text-decoration: underline;
     cursor: pointer;
 }
-
-.aus-map-interactive {
-    margin: 0px auto;
-    width: 30vw;
-    height: auto;
-    z-index: -3;
 }
 
-#range {
-    width: 300px;
-    height: 4px;
-    border: 0;
-    border-radius: 100px;
-    background: rgba(0, 0, 0, 0.2);
-    outline: none;
-    z-index: 1;
-}
-
-#range .ui-slider-handle {
-    position: absolute;
-    margin: -6px 0 0 -17px;
-    border-radius: 100px;
-    background: #158789;
-    color: #fff;
-    border: 0;
-    height: 20px;
-    line-height: 20px;
+.dragSection-wrapper {
+   position: absolute;
+    width: 70vw;
+    max-width: 900px;
+    max-height: 190px;
+    height:15vw;
+    bottom:5%;
+    left:50%;
+    transform: translate(-50%,0);
     text-align: center;
-    width: 34px;
-    outline: none;
-    cursor: pointer;
-    font-size: 8px;
-    font-weight: 800;
-    text-decoration: none;
-    transition: transform 0.1s ease;
-    z-index: 1;
+     display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
 }
 
-#range .ui-slider-handle:hover,
-#range .ui-slider-handle:focus {
-    transform: scale(1.1);
+.dragSection-wrapper .dragItems {
+   flex-grow: 1;
+    background-color: aqua;
+      margin-right: 20px;
 }
+.dragSection-wrapper .dragItems:last-child{margin-right: 0;}
 
-#range .ui-slider-range {
-    background: #69b6b5;
-}
+
+
+
 /**
    * Section 7
    */
