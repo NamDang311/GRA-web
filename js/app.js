@@ -4,6 +4,11 @@ $(".main").onepage_scroll({
     pagination: true
     , loop: false
 });
+//SEC-1 
+$('#section-1 h1').glitch();
+
+
+
 
 //SEC-2
 var stage = new PIXI.Container()

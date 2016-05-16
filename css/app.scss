@@ -1,5 +1,8 @@
-$fonth:'Stellar','Roboto Slab',sans-serif;
-$fontp:'Roboto Condensed',sans-serif;
+$fonth:'Stellar',
+'Roboto Slab',
+sans-serif;
+$fontp:'Roboto Condensed',
+sans-serif;
 $blue:#2b90d9;
 $gray:#d9e1e8;
 $yellow:#FFE66D;
@@ -33,21 +36,23 @@ $year-in-second: 30; // 1 Earth year = 30 sec
     zoom: 1;
     width: 80px;
     height: 4px;
-    background: white;
-    margin-bottom: 9px;
+    margin-bottom: 20px;
+    margin-left: -90px;
+    margin-right: 10px;
 }
 
 body {
-    font-size:1em;
+    font-size: 1em;
     letter-spacing: 0.15em;
 }
+
+
 /**
    * SEC-1
    */
 
-html {
-  
-}
+html {}
+h1 {line-height: 1.1em;}
 p {
     font-family: $fontp;
     font-weight: 200;
@@ -59,17 +64,21 @@ li {
 }
 
 #section-1 {
-    background-color: $blue;
+    background-color: $red;
+    background: url("../img/smoke2.jpg");
+    background-size: cover;
     z-index: -2;
-    .row {}
+    .row {
+        padding-top: 320px;
+    }
     h1 {
-        font-family: $fontp;
+        font-family: $fonth;
         text-transform: uppercase;
-        font-size: 14vh;
+        font-size: 12em;
         font-weight: 500;
-        padding-top: 0.4em;
-        line-height: 1.2em;
         color: white;
+        line-height: 0.8em;
+        letter-spacing: 0em;
     }
 }
 
@@ -122,7 +131,8 @@ nav a {
     width: 40vw;
     height: 40vw;
     border-radius: 50%;
-    background: #57585a;
+    background: url("../img/smoke.bg.jpg");
+    background-size: cover;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -150,16 +160,17 @@ nav a {
         text-transform: uppercase;
         line-height: 1.1em;
     }
+    h1:before {
+        @extend .line;
+        content: "";
+        background-color: black;
+    }
     p {
         font-family: $fontp;
         font-size: 16px;
         color: white;
         font-weight: 200;
         letter-spacing: 0.05em;
-    }
-    .line {
-        background-color: black;
-        margin-left: 10px;
     }
 }
 
@@ -239,7 +250,7 @@ nav a {
 }
 
 #land {
-    background-color: darken($darkBlue,10%);
+    background-color: darken($darkBlue, 10%);
     height: 80px;
     width: 100%;
     position: absolute;
@@ -298,63 +309,59 @@ nav a {
 
 #section-3 {
     background: url('/img/stars_medium.png') $darkBlue;
-   
     .year-wrapper {
-       
         font-family: $fonth;
         font-size: 1.5em;
         z-index: 3;
-        width:100px;
+        width: 100px;
         display: table;
         letter-spacing: 0.1em;
-         
     }
-     .section-3-years {
-
-         color:white;
-         opacity: 0.5;
-          position: relative;
-             height:55px;
-            margin-bottom: 15px;
-          animation: all 2s linear;
-         
+    .section-3-years {
+        color: white;
+        opacity: 0.5;
+        position: relative;
+        height: 55px;
+        margin-bottom: 15px;
+        animation: all 2s linear;
     }
     .section-3-years div {
-      
         line-height: 0;
         cursor: pointer;
-         position: absolute;
-        top:50%;
-       right: 0;
-        transform:translate(0,-50%);
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
     }
-    
-    
-    h2 {
-       padding: 0;
+    h1 {
         color: white;
-        z-index: 999;
         text-transform: uppercase;
-        font-family:$fonth;
+        font-family: $fonth;
+    }
+    h1:before {
+        @extend .line;
+        content: "";
+        background-color: white;
     }
     #sec-3-p {
         font-size: 1rem;
-       padding: 0;
-    color: white;
-   
+        padding: 0;
+        color: white;
+    }
 }
+
+.statistic {
+    margin-top: 18px;
 }
-.statistic{
-     margin-top: 18px;
-}
+
 #section-3 .statistic h2 {
     margin-top: -25px;
     color: $lightBlue;
     line-height: 1em;
     font-size: 9em;
-    
     margin-bottom: 20px;
 }
+
 #section-3 .statistic p {
     color: white;
     opacity: .8;
@@ -362,22 +369,22 @@ nav a {
     letter-spacing: 0.1em;
 }
 
-.section-3-years:after{
-    content:"";
-   background-color: $red;
-    width:0;
+.section-3-years:after {
+    content: "";
+    background-color: $red;
+    width: 0;
     height: 4px;
     position: absolute;
-    top:50%; 
-    left:0;
+    top: 50%;
+    left: 0;
     opacity: 1;
     z-index: 0;
-    transition: all 0.3s ease 0s; 
-  -webkit-transition: all 0.3s ease 0s; 
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
 }
-.section-3-years:hover:after{
+
+.section-3-years:hover:after {
     width: 120px;
-    
 }
 
 #earth-shadow {
@@ -401,7 +408,6 @@ nav a {
     width: 100%;
     height: 100vh;
     margin-top: 0;
-    
     .asteroids-belt {
         border-radius: 50%;
         top: 50%;
@@ -440,8 +446,6 @@ nav a {
     }
 }
 
-
-
 .satellite-wrapper {
     width: 700px;
     height: 700px;
@@ -450,28 +454,24 @@ nav a {
     position: absolute;
     transform: translate(-50%, -50%);
     z-index: 0;
-  
 }
-
 
 .datatipWrapper {
     position: absolute;
     width: 400px;
-    height:400px;
+    height: 400px;
     z-index: 3;
     top: 50%;
     left: 65%;
-   transform: translate(-50%, -50%);
-    
+    transform: translate(-50%, -50%);
 }
 
 .dataTip {
-    
     position: absolute;
     width: 100%;
-    height:100%;
+    height: 100%;
     z-index: 3;
-     transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
     animation: orb 15s linear infinite;
 }
 
@@ -479,12 +479,10 @@ nav a {
     position: absolute;
     left: 50%;
     z-index: 0;
-   transform: translate(-50%, -50%);
-        
+    transform: translate(-50%, -50%);
 }
 
 .satellite {
-   
     z-index: 0;
     width: 100%;
     height: 100%;
@@ -520,23 +518,26 @@ nav a {
    */
 
 #section-4 {
-    background:$yellow;
+    background: $yellow;
     z-index: 0;
-    h2 {
-       padding: 0;
+    h1 {
+        padding: 0;
         color: white;
         z-index: 999;
         text-transform: uppercase;
-        font-family:$fonth;
-        opacity:0;
+        font-family: $fonth;
+        opacity: 0;
     }
-    p {   
-        color:white;
-        opacity:0;
+    h1:before {
+        @extend .line;
+        content: "";
+        background-color: white;
+    }
+    p {
+        color: white;
+        opacity: 0;
     }
 }
-
-
 
 .cntr {
     position: absolute;
@@ -561,69 +562,80 @@ nav a {
     left: 0;
     z-index: 9;
 }
-#windowsHolder{
+
+#windowsHolder {
     bottom: -0.5%;
     position: absolute;
     left: 0;
     z-index: 999;
     width: 100%;
-    
 }
 
 .clouds {
-    width:200px;
-     position: absolute;
-     z-index:0;
+    width: 200px;
+    position: absolute;
+    z-index: 0;
     opacity: .2;
 }
 
-#cloud-1, {
-    top:20%;
-   left:50%;
-   animation: fly linear 45s infinite;
+#cloud-1,
+{
+    top: 20%;
+    left: 50%;
+    animation: fly linear 45s infinite;
 }
-#cloud-2, {
-    top:50%;
-   left:20%;
-   animation: fly linear 25s infinite;
+
+#cloud-2,
+{
+    top: 50%;
+    left: 20%;
+    animation: fly linear 25s infinite;
 }
-#cloud-3, {
-    top:10%;
-   left:30%;
-   animation: fly linear 35s infinite;
+
+#cloud-3,
+{
+    top: 10%;
+    left: 30%;
+    animation: fly linear 35s infinite;
 }
-#cloud-4, {
-    top:30%;
-   left:10%;
-   animation: fly linear 65s infinite;
+
+#cloud-4,
+{
+    top: 30%;
+    left: 10%;
+    animation: fly linear 65s infinite;
 }
-#cloud-5, {
-    top:40%;
-   left:00%;
-   animation: fly linear 40s infinite;
+
+#cloud-5,
+{
+    top: 40%;
+    left: 00%;
+    animation: fly linear 40s infinite;
 }
+
 .sun {
     height: 200px;
     width: 200px;
-    top:15%;
-    left:15%;
-    border-radius:50%;
+    top: 15%;
+    left: 15%;
+    border-radius: 50%;
     position: absolute;
     z-index: 999;
-    background-color:$red ;
+    background-color: $red;
 }
+
 .sunRay {
     height: 250px;
     width: 250px;
-    top:50%;
-    left:50%;
-    border-radius:50%;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
     position: absolute;
     z-index: 999;
-    background-color:$red ;
-    transform: translate(-50%,-50%);
+    background-color: $red;
+    transform: translate(-50%, -50%);
     opacity: 0.5;
-    box-shadow: 0 0 0 20px rgba(255,107,107,.5),0 0 0 40px rgba(255,107,107,.3);
+    box-shadow: 0 0 0 20px rgba(255, 107, 107, .5), 0 0 0 40px rgba(255, 107, 107, .3);
 }
 
 .bulb-wrapper {
@@ -633,13 +645,13 @@ nav a {
     position: absolute;
     top: 0;
     z-index: 99;
-   
 }
 
 #bulb {
     padding-bottom: 100%;
     position: absolute;
-    width:80%; height:100%;
+    width: 80%;
+    height: 100%;
     top: 0;
     z-index: 99;
     left: 50%;
@@ -652,9 +664,9 @@ nav a {
     width: 50vh;
     height: 50vh;
     border-radius: 50%;
-    top:50%;
+    top: 50%;
     transform: translate(0, -50%);
-     right: 1%;
+    right: 1%;
     z-index: 0;
     display: none;
 }
@@ -689,12 +701,18 @@ nav a {
 
 #section-5 {
     background-color: $darkBlue;
-    h2 {
-       padding: 0;
+    h1 {
+        padding: 0;
         color: white;
         z-index: 999;
         text-transform: uppercase;
-        font-family:$fonth;
+        font-family: $fonth;
+        
+    }
+    h1:before {
+        @extend .line;
+        content: "";
+        background-color: white;
     }
 }
 
@@ -779,17 +797,17 @@ nav a {
 
 .nameBubble {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     opacity: 0;
-     z-index: 999;
-   
-    #mainBubble{
+    z-index: 999;
+    #mainBubble {
         min-width: 50px;
         min-height: 10px;
         border-radius: 2px;
         background-color: #ffffff;
-        padding: 2px 7px 3px 7px;;
+        padding: 2px 7px 3px 7px;
+        ;
         text-align: center;
         font-size: 0.8em;
         font-weight: 600;
@@ -829,8 +847,7 @@ nav a {
 .continent-total #totalTitle {
     top: 10%;
     width: 100%;
-    color:darken($darkBlue,10);
- 
+    color: darken($darkBlue, 10);
 }
 
 .continent-total #totalNumber {
@@ -838,7 +855,7 @@ nav a {
     position: absolute;
     width: 100%;
     font-size: 6em;
-    color:white;
+    color: white;
     vertical-align: top;
     margin: 0;
     ::after {
@@ -859,79 +876,91 @@ nav a {
 /**
    * Section-6
    */
+
 #section-6 {
     background-color: $yellow;
-    h2{
+    h2 {
         text-align: center;
         text-transform: uppercase;
         font-weight: 200;
         font-size: 2em;
     }
-    h1{
+    h1 {
         text-align: center;
     }
 }
-
-
-
 
 .findoutWrapper {
     position: absolute;
     height: 70vh;
     width: 100%;
-    left:0;
+    left: 0;
     .findout-content {
-    top:20%;
-    position: absolute;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%, -50%);
-}
-    
-.findout {
-    text-decoration: underline;
-    cursor: pointer;
-}
-    .target-content{
-        top:5%;
-        height:400px;
+        top: 20%;
+        position: absolute;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+    }
+    .findout {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .target-content {
+        top: 5%;
+        height: 400px;
         width: 400px;
         background-color: gray;
         position: absolute;
-        left:150%;
-        transform: translate(-50%,0);
+        left: 150%;
+        transform: translate(-50%, 0);
     }
 }
 
 .dragSection-wrapper {
-   position: absolute;
+    position: absolute;
     width: 70vw;
     max-width: 900px;
     max-height: 150px;
-    height:15vw;
-    bottom:5%;
-    left:50%;
-    transform: translate(-50%,0);
+    height: 15vw;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
     text-align: center;
-     display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
 }
 
 .dragSection-wrapper .dragItems {
-   width:400px;
+    width: 400px;
     background-color: aqua;
-      margin-right: 40px;
+    margin-right: 40px;
 }
-.dragSection-wrapper .dragItems:last-child{margin-right: 0;}
 
-
+.dragSection-wrapper .dragItems:last-child {
+    margin-right: 0;
+}
 
 
 /**
    * Section 7
    */
+
+#section-7 {
+    background-color: $darkBlue;
+    h1 {
+        text-transform: uppercase;
+        color: #F7FFF7;
+        line-height: 1.1em;
+        font-family: $fonth;
+    }
+    h1:before {
+        @extend .line;
+        content: "";
+        background-color: white;
+    }
+}
 
 .section7-wrapper {
     width: 90vw;
