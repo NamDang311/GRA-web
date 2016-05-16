@@ -270,6 +270,7 @@ var trigger = true;
 var topPos1 = 0;
 var leftPos1 = 3;
 var clickCount = 0;
+var clickedAr=[];
 
 TweenMax.set($("#worldmap"), {
     perspective: 1000
@@ -291,16 +292,14 @@ $('.circle-ripple').bind('click', function (event) {
         });
     };
 
-
-
+    clickedAr.push(this);
     //set Pos Country+ Bars
-    console.log(clickCount);
     if (clickCount == 4) {
         clickCount = 0;
         leftPos1 = leftPos1 + 28;
         topPos1 = 0
     };
-    clickCount=clickCount+1;
+    clickCount = clickCount + 1;
     if (!$(".name-" + curbtn + "").hasClass("clicked")) {
         addNumber(curbtn);
         $(".continent-" + curbtn + "").removeClass("hidden");
@@ -320,6 +319,29 @@ $('.circle-ripple').bind('click', function (event) {
         });
     }
 });
+
+
+//Show name of country
+$('.circle-ripple').hover(
+    function () {
+        if ( $.inArray(this, clickedAr) < 0){
+       
+        TweenLite.to($(".nameBubble"), 0.5, {
+            opacity: 1
+        });
+        $("#mainBubble").html(nameAr[$.inArray(this, myAr)]);
+        $(".nameBubble").css({
+            left: Math.round($(this).position().left * 100 / $(this).parent().width()) + "%"
+            , top: $(this).position().top * 100 / $(this).parent().height() - 10 + "%"
+            , transform: "translate(-45%,-23%)"
+        });
+        }
+    }, function () {
+        TweenLite.to($(".nameBubble"), 0.5, {
+            opacity: 0
+        });
+    }
+);
 
 var dataAr = [];
 var nameAr = [];
@@ -421,3 +443,21 @@ $(".findout").click(
         });
     }
 );
+
+Draggable.create(".dragItems", {
+    type: "x,y"
+    , onDragEnd: function (e) {
+
+        //checks if at least 50% of the surface area of either element is overlapping:
+        if (this.hitTest(".target-content", "50%")) {
+            alert("Adsasd");
+        } else {
+            TweenLite.to(e.target, 0.3, {
+                x: 0
+                , y: 0
+                , top: e.target.originalTop
+                , left: e.target.originalLeft
+            });
+        };
+    }
+});

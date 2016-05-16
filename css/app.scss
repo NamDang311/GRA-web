@@ -728,12 +728,12 @@ nav a {
 }
 
 #eu {
-    left: 51%;
-    top: 27%;
+    left: 49%;
+    top: 26%;
 }
 
 #af {
-    left: 55%;
+    left: 54%;
     top: 55%;
 }
 
@@ -749,12 +749,12 @@ nav a {
 
 #me {
     left: 61%;
-    top: 46%;
+    top: 44%;
 }
 
 #ind {
-    left: 70%;
-    top: 45%;
+    left: 69%;
+    top: 43%;
 }
 
 #other {
@@ -763,13 +763,13 @@ nav a {
 }
 
 #jap {
-    left: 87%;
-    top: 36%;
+    left: 86%;
+    top: 32%;
 }
 
 #aus {
     left: 86%;
-    top: 77%;
+    top: 73%;
 }
 
 #chi {
@@ -777,8 +777,24 @@ nav a {
     top: 30%;
 }
 
-#worldmap-section .row {
-    text-align: left;
+.nameBubble {
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0;
+     z-index: 999;
+   
+    #mainBubble{
+        min-width: 50px;
+        min-height: 10px;
+        border-radius: 2px;
+        background-color: #ffffff;
+        padding: 2px 7px 3px 7px;;
+        text-align: center;
+        font-size: 0.8em;
+        font-weight: 600;
+        white-space: nowrap;
+    }
 }
 
 .continent {
@@ -873,17 +889,25 @@ nav a {
 }
     
 .findout {
-    
     text-decoration: underline;
     cursor: pointer;
 }
+    .target-content{
+        top:5%;
+        height:400px;
+        width: 400px;
+        background-color: gray;
+        position: absolute;
+        left:150%;
+        transform: translate(-50%,0);
+    }
 }
 
 .dragSection-wrapper {
    position: absolute;
     width: 70vw;
     max-width: 900px;
-    max-height: 190px;
+    max-height: 150px;
     height:15vw;
     bottom:5%;
     left:50%;
@@ -896,9 +920,9 @@ nav a {
 }
 
 .dragSection-wrapper .dragItems {
-   flex-grow: 1;
+   width:400px;
     background-color: aqua;
-      margin-right: 20px;
+      margin-right: 40px;
 }
 .dragSection-wrapper .dragItems:last-child{margin-right: 0;}
 
