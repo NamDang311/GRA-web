@@ -1,0 +1,14 @@
+<svg id="coal_factory" data-name="coal factory" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 733.99 401.45">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffe66d;
+        stroke: #2f404f;
+        stroke-miterlimit: 10;
+        stroke-width: 6.57px;
+      }
+    </style>
+  </defs>
+  <title>factory</title>
+  <polygon class="cls-1" points="588.38 51.58 588.38 4.54 446.06 51.58 446.06 4.54 110.33 115.5 110.33 187.83 3.28 187.83 3.28 398.17 110.33 398.17 252.65 398.17 394.97 398.17 446.06 398.17 519.05 398.17 588.38 398.17 730.7 398.17 730.7 4.54 588.38 51.58"/>
+</svg>
