@@ -1,4 +1,4 @@
-/* line 33, app.scss */
+/* line 34, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .line, #section-2 h1:before, #section-3 h1:before, #section-4 h1:before, #section-5 h1:before, #section-7 h1:before {
   display: inline-block;
   vertical-align: bottom;
@@ -7,82 +7,70 @@
   height: 4px;
   margin-bottom: 20px;
   margin-left: -90px;
-  margin-right: 10px;
-}
+  margin-right: 10px; }
 
-/* line 44, app.scss */
+/* line 45, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 body {
   font-size: 1em;
-  letter-spacing: 0.15em;
-}
+  letter-spacing: 0.1em; }
 
 /**
    * SEC-1
    */
-/* line 55, app.scss */
+/* line 56, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 h1 {
-  line-height: 1.1em;
-}
+  line-height: 1.1em; }
 
-/* line 56, app.scss */
+/* line 57, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 p {
   font-family: "Roboto Condensed", sans-serif;
-  font-weight: 200;
-}
+  font-weight: 200; }
 
-/* line 61, app.scss */
+/* line 63, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 html,
 li {
-  font-family: "Roboto Condensed", sans-serif;
-}
+  font-family: "Roboto Condensed", sans-serif; }
 
-/* line 66, app.scss */
+/* line 67, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-1 {
   background-color: #FF6B6B;
   background: url("../img/smoke2.jpg");
   background-size: cover;
-  z-index: -2;
-}
-/* line 71, app.scss */
-#section-1 .row {
-  padding-top: 320px;
-}
-/* line 74, app.scss */
-#section-1 h1 {
-  font-family: "Stellar", "Roboto Slab", sans-serif;
-  text-transform: uppercase;
-  font-size: 12em;
-  font-weight: 500;
-  color: white;
-  line-height: 0.8em;
-  letter-spacing: 0em;
-}
+  z-index: -2; }
+  /* line 72, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-1 .row {
+    padding-top: 320px; }
+  /* line 75, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-1 h1 {
+    font-family: "Stellar", "Roboto Slab", sans-serif;
+    text-transform: uppercase;
+    font-size: 12em;
+    font-weight: 500;
+    color: white;
+    line-height: 0.8em;
+    letter-spacing: 0em; }
 
-/* line 85, app.scss */
+/* line 86, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 section {
-  padding-top: 50px;
-}
+  padding-top: 50px; }
 
-/* line 89, app.scss */
+/* line 90, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 nav {
   height: 50px;
   z-index: 2;
   padding-right: 20px;
-  padding-top: 5px;
-}
+  padding-top: 5px; }
 
-/* line 96, app.scss */
+/* line 97, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 nav a {
   color: #383838;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
-/* line 101, app.scss */
+/* line 102, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .main {
-  z-index: -999;
-}
+  z-index: -999; }
 
-/* line 105, app.scss */
+/* line 106, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #findout {
   font-family: "Stellar", "Roboto Slab", sans-serif;
   color: white;
@@ -94,10 +82,9 @@ nav a {
   transform: translate(-50%, 0);
   bottom: 7%;
   letter-spacing: 0.08rem;
-  font-size: 1.3rem;
-}
+  font-size: 1.3rem; }
 
-/* line 119, app.scss */
+/* line 120, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #findout:after {
   content: "";
   background: url(../img/mouse.svg) no-repeat;
@@ -106,10 +93,9 @@ nav a {
   bottom: -180%;
   left: 50%;
   position: absolute;
-  transform: translate(-50%, -50%);
-}
+  transform: translate(-50%, -50%); }
 
-/* line 130, app.scss */
+/* line 131, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #pollutedEarth {
   width: 40vw;
   height: 40vw;
@@ -122,8 +108,7 @@ nav a {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   overflow: hidden;
-  z-index: -1;
-}
+  z-index: -1; }
 
 /**
    * End of SEC-1
@@ -131,41 +116,36 @@ nav a {
 /**
    * SEC-2 
    */
-/* line 155, app.scss */
+/* line 156, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-2 {
-  background-color: #FFE66D;
-}
-/* line 157, app.scss */
-#section-2 h1 {
-  font-family: "Stellar", "Roboto Slab", sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  line-height: 1.1em;
-}
-/* line 163, app.scss */
-#section-2 h1:before {
-  content: "";
-  background-color: black;
-}
-/* line 168, app.scss */
-#section-2 p {
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 16px;
-  color: white;
-  font-weight: 200;
-  letter-spacing: 0.05em;
-}
+  background-color: #FFE66D; }
+  /* line 158, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-2 h1 {
+    font-family: "Stellar", "Roboto Slab", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.1em; }
+  /* line 164, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-2 h1:before {
+    content: "";
+    background-color: black; }
+  /* line 169, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-2 p {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 16px;
+    color: white;
+    font-weight: 200;
+    letter-spacing: 0.05em; }
 
-/* line 177, app.scss */
+/* line 178, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .graphic {
   z-index: 5;
   position: absolute;
   width: 100vw;
   height: 100vh;
-  bottom: 0;
-}
+  bottom: 0; }
 
-/* line 185, app.scss */
+/* line 186, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #bus {
   width: 20vw;
   height: auto;
@@ -173,10 +153,9 @@ nav a {
   bottom: 80px;
   left: 0;
   -webkit-animation: traffic linear 15s infinite;
-  animation: traffic linear 15s infinite;
-}
+  animation: traffic linear 15s infinite; }
 
-/* line 195, app.scss */
+/* line 196, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #truck {
   width: 17vw;
   height: auto;
@@ -184,24 +163,21 @@ nav a {
   bottom: 80px;
   left: 30%;
   -webkit-animation: traffic linear 15s infinite;
-  animation: traffic linear 15s infinite;
-}
+  animation: traffic linear 15s infinite; }
 
-/* line 205, app.scss */
+/* line 206, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .plane {
   width: 12vw;
   height: auto;
   position: absolute;
   top: 150px;
-  left: -15vw;
-}
+  left: -15vw; }
 
-/* line 213, app.scss */
+/* line 214, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .plane:nth-of-type(1) {
-  animation: fly linear 15s infinite;
-}
+  animation: fly linear 15s infinite; }
 
-/* line 217, app.scss */
+/* line 218, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .plane:nth-of-type(2) {
   top: 100px;
   width: 10vw;
@@ -209,27 +185,24 @@ nav a {
   transform: scaleX(-1);
   animation: fly linear 10s infinite;
   animation-direction: reverse;
-  animation-delay: 5s;
-}
+  animation-delay: 5s; }
 
-/* line 227, app.scss */
+/* line 228, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .plane:nth-of-type(3) {
   top: 50px;
   width: 8vw;
   opacity: .2;
   transform: scaleX(-1);
   animation: fly linear 10s infinite;
-  animation-direction: reverse;
-}
+  animation-direction: reverse; }
 
-/* line 236, app.scss */
+/* line 237, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .plane:nth-of-type(4) {
   top: 190px;
   width: 15vw;
-  animation: fly linear 10s infinite;
-}
+  animation: fly linear 10s infinite; }
 
-/* line 242, app.scss */
+/* line 243, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #helicopter {
   width: 5vw;
   height: auto;
@@ -237,28 +210,25 @@ nav a {
   top: 40vh;
   left: -15vw;
   animation: flyHeli ease-in-out 12s infinite;
-  z-index: 1;
-}
+  z-index: 1; }
 
-/* line 252, app.scss */
+/* line 253, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #land {
   background-color: #0f2f34;
   height: 80px;
   width: 100%;
   position: absolute;
-  bottom: 0;
-}
+  bottom: 0; }
 
-/* line 260, app.scss */
+/* line 261, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #city {
   width: 100vw;
   position: absolute;
   bottom: 80px;
   left: 0;
-  z-index: 0;
-}
+  z-index: 0; }
 
-/* line 268, app.scss */
+/* line 269, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #factory {
   width: 60vw;
   position: absolute;
@@ -266,16 +236,14 @@ nav a {
   right: 0;
   z-index: 0;
   vertical-align: bottom;
-  display: table-cell;
-}
-/* line 276, app.scss */
-#factory .factory-img {
-  height: 50vh;
-  width: auto;
-  vertical-align: bottom;
-}
+  display: table-cell; }
+  /* line 277, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #factory .factory-img {
+    height: 50vh;
+    width: auto;
+    vertical-align: bottom; }
 
-/* line 283, app.scss */
+/* line 284, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .smoke-1 {
   background-color: aliceblue;
   border-radius: -50%;
@@ -284,10 +252,9 @@ nav a {
   width: 120px;
   position: absolute;
   bottom: 80%;
-  left: 3.5%;
-}
+  left: 3.5%; }
 
-/* line 294, app.scss */
+/* line 295, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #smoke-2 {
   z-index: -1;
   height: 360px;
@@ -296,85 +263,74 @@ nav a {
   /**background: url('img/smoke_sprite.png') left no-repeat;**/
   top: -60%;
   right: 19%;
-  /**animation: play 8s steps(317) infinite;**/
-}
+  /**animation: play 8s steps(317) infinite;**/ }
 
 /**
    * SEC-3 
    */
-/* line 310, app.scss */
+/* line 311, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-3 {
-  background: url("/img/stars_medium.png") #1A535C;
-}
-/* line 312, app.scss */
-#section-3 .year-wrapper {
-  font-family: "Stellar", "Roboto Slab", sans-serif;
-  font-size: 1.5em;
-  z-index: 3;
-  width: 100px;
-  display: table;
-  letter-spacing: 0.1em;
-}
-/* line 320, app.scss */
-#section-3 .section-3-years {
-  color: white;
-  opacity: 0.5;
-  position: relative;
-  height: 55px;
-  margin-bottom: 15px;
-  animation: all 2s linear;
-}
-/* line 328, app.scss */
-#section-3 .section-3-years div {
-  line-height: 0;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(0, -50%);
-}
-/* line 336, app.scss */
-#section-3 h1 {
-  color: white;
-  text-transform: uppercase;
-  font-family: "Stellar", "Roboto Slab", sans-serif;
-}
-/* line 341, app.scss */
-#section-3 h1:before {
-  content: "";
-  background-color: white;
-}
-/* line 346, app.scss */
-#section-3 #sec-3-p {
-  font-size: 1rem;
-  padding: 0;
-  color: white;
-}
+  background: url("/img/stars_medium.png") #1A535C; }
+  /* line 313, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-3 .year-wrapper {
+    font-family: "Stellar", "Roboto Slab", sans-serif;
+    font-size: 1.5em;
+    z-index: 3;
+    width: 100px;
+    display: table;
+    letter-spacing: 0.1em; }
+  /* line 321, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-3 .section-3-years {
+    color: white;
+    opacity: 0.5;
+    position: relative;
+    height: 55px;
+    margin-bottom: 15px;
+    animation: all 2s linear; }
+  /* line 329, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-3 .section-3-years div {
+    line-height: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%); }
+  /* line 337, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-3 h1 {
+    color: white;
+    text-transform: uppercase;
+    font-family: "Stellar", "Roboto Slab", sans-serif; }
+  /* line 342, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-3 h1:before {
+    content: "";
+    background-color: white; }
+  /* line 347, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-3 #sec-3-p {
+    font-size: 1rem;
+    padding: 0;
+    color: white; }
 
-/* line 353, app.scss */
+/* line 354, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .statistic {
-  margin-top: 18px;
-}
+  margin-top: 18px; }
 
-/* line 358, app.scss */
+/* line 359, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-3 .statistic h2 {
   margin-top: -25px;
   color: #4ECDC4;
   line-height: 1em;
   font-size: 9em;
   margin-bottom: 20px;
-  font-family: "Stellar", "Roboto Slab", sans-serif;
-}
+  font-family: "Stellar", "Roboto Slab", sans-serif; }
 
-/* line 367, app.scss */
+/* line 368, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-3 .statistic p {
   color: white;
   opacity: .8;
   font-size: 1.1em;
-  letter-spacing: 0.1em;
-}
+  letter-spacing: 0.1em; }
 
-/* line 374, app.scss */
+/* line 375, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .section-3-years:after {
   content: "";
   background-color: #FF6B6B;
@@ -386,15 +342,13 @@ nav a {
   opacity: 1;
   z-index: 0;
   transition: all 0.3s ease 0s;
-  -webkit-transition: all 0.3s ease 0s;
-}
+  -webkit-transition: all 0.3s ease 0s; }
 
-/* line 388, app.scss */
+/* line 389, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .section-3-years:hover:after {
-  width: 120px;
-}
+  width: 120px; }
 
-/* line 392, app.scss */
+/* line 393, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #earth-shadow {
   position: absolute;
   border-radius: 50%;
@@ -406,35 +360,31 @@ nav a {
   left: 70%;
   transform: translate(-50%, -50%);
   cursor: pointer;
-  z-index: -1;
-}
+  z-index: -1; }
 
-/* line 406, app.scss */
+/* line 407, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .earth-wrapper {
   position: absolute;
   top: 0;
   z-index: 0;
   width: 100%;
   height: 100vh;
-  margin-top: 0;
-}
-/* line 413, app.scss */
-.earth-wrapper .asteroids-belt {
-  border-radius: 50%;
-  top: 50%;
-  left: 70%;
-  position: absolute;
-  z-index: 0;
-}
-/* line 419, app.scss */
-.earth-wrapper .asteroids-belt:before {
-  left: 50%;
-  border-radius: 100px;
-  content: "";
-  position: absolute;
-}
+  margin-top: 0; }
+  /* line 414, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .earth-wrapper .asteroids-belt {
+    border-radius: 50%;
+    top: 50%;
+    left: 70%;
+    position: absolute;
+    z-index: 0; }
+    /* line 420, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    .earth-wrapper .asteroids-belt:before {
+      left: 50%;
+      border-radius: 100px;
+      content: "";
+      position: absolute; }
 
-/* line 428, app.scss */
+/* line 429, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .asteroids-belt {
   z-index: 5;
   opacity: 1;
@@ -444,22 +394,20 @@ nav a {
   margin-top: -300px;
   margin-left: -300px;
   animation: orb 150s linear infinite;
-  overflow: hidden;
-}
-/* line 438, app.scss */
-.asteroids-belt:before {
-  z-index: 99;
-  top: 50%;
-  height: 210px;
-  width: 210px;
-  margin-left: -105px;
-  margin-top: -105px;
-  background: transparent;
-  border-radius: 140px !important;
-  box-shadow: 392px 121px 0 -104px rgba(255, 255, 255, 0.678) , -44px -175px 0 -104px rgba(255,255,255, 0.328) , 130px -341px 0 -104px rgba(255,255,255, 0.653) , -130px 311px 0 -104px rgba(255,255,255, 0.308) , 208px -295px 0 -104px rgba(255,255,255, 0.627) , -441px 391px 0 -104px rgba(255,255,255, 0.717) , -440px 371px 0 -104px rgba(255,255,255, 0.083) , -39px 356px 0 -104px rgba(255,255,255, 0.544) , -107px -394px 0 -104px rgba(255,255,255, 0.536) , 336px 76px 0 -104px rgba(255,255,255, 0.634) , -413px -420px 0 -104px rgba(255,255,255, 0.948) , 137px 341px 0 -104px rgba(255,255,255, 0.969) , -382px -142px 0 -104px rgba(255,255,255, 0.651) , 12px 224px 0 -104px rgba(255,255,255, 0.477) , -290px 93px 0 -104px rgba(255,255,255, 0.587) , -190px -165px 0 -104px rgba(255,255,255, 0.048) , 69px 431px 0 -104px rgba(255,255,255, 0.029) , 210px 348px 0 -104px rgba(255,255,255, 0.458) , 102px 27px 0 -104px rgba(255,255,255, 0.331) , 1px -172px 0 -104px rgba(255,255,255, 0.169) , 177px -116px 0 -104px rgba(255,255,255, 0.033) , -314px -60px 0 -104px rgba(255,255,255, 0.772) , 39px -354px 0 -104px rgba(255,255,255, 0.004) , 240px -390px 0 -104px rgba(255,255,255, 0.16) , -290px -276px 0 -104px rgba(255,255,255, 0.744) , -425px 158px 0 -104px rgba(255,255,255, 0.606) , -34px 268px 0 -104px rgba(255,255,255, 0.536) , -100px -278px 0 -104px rgba(255,255,255, 0.401) , -56px -312px 0 -104px rgba(255,255,255, 0.53) , 441px -99px 0 -104px rgba(255,255,255, 0.203) , 305px 404px 0 -104px rgba(255,255,255, 0.657) , 0px -282px 0 -104px rgba(255,255,255, 0.85) , 1px -379px 0 -104px rgba(255,255,255, 0.757) , -242px 25px 0 -104px rgba(255,255,255, 0.888) , -330px -68px 0 -104px rgba(255,255,255, 0.234) , -285px 201px 0 -104px rgba(255,255,255, 0.176) , -292px -344px 0 -104px rgba(255,255,255, 0.413) , 183px 66px 0 -104px rgba(255,255,255, 0.267) , -397px -73px 0 -104px rgba(255,255,255, 0.646) , 101px 326px 0 -104px rgba(255,255,255, 0.043) , -43px -107px 0 -104px rgba(255,255,255, 0.608) , 322px -406px 0 -104px rgba(255,255,255, 0.033) , 44px -114px 0 -104px rgba(255,255,255, 0.092) , -61px 159px 0 -104px rgba(255,255,255, 0.451) , -291px 22px 0 -104px rgba(255,255,255, 0.653) , -96px 358px 0 -104px rgba(255,255,255, 0.963) , 278px -419px 0 -104px rgba(255,255,255, 0.852) , 310px 424px 0 -104px rgba(255,255,255, 0.836) , -224px 107px 0 -104px rgba(255,255,255, 0.075) , 56px -276px 0 -104px rgba(255,255,255, 0.643) , -163px 40px 0 -104px rgba(255,255,255, 0.16) , 73px 177px 0 -104px rgba(255,255,255, 0.136) , 329px -326px 0 -104px rgba(255,255,255, 0.763) , -132px -205px 0 -104px rgba(255,255,255, 0.324) , -424px 189px 0 -104px rgba(255,255,255, 0.411) , 21px -260px 0 -104px rgba(255,255,255, 0.921) , 86px -135px 0 -104px rgba(255,255,255, 0.193) , -443px 133px 0 -104px rgba(255,255,255, 0.463) , 126px 440px 0 -104px rgba(255,255,255, 0.345) , 406px 336px 0 -104px rgba(255,255,255, 0.073) , -362px 414px 0 -104px rgba(255,255,255, 0.619) , -370px 364px 0 -104px rgba(255,255,255, 0.26) , -342px 348px 0 -104px rgba(255,255,255, 0.156) , 247px 62px 0 -104px rgba(255,255,255, 0.776) , -154px -194px 0 -104px rgba(255,255,255, 0.877) , -217px -266px 0 -104px rgba(255,255,255, 0.725) , 274px 260px 0 -104px rgba(255,255,255, 0.457) , -64px 284px 0 -104px rgba(255,255,255, 0.932) , -410px 388px 0 -104px rgba(255,255,255, 0.787) , 121px -193px 0 -104px rgba(255,255,255, 0.96) , -181px -135px 0 -104px rgba(255,255,255, 0.789) , 364px 413px 0 -104px rgba(255,255,255, 0.604) , 118px -220px 0 -104px rgba(255,255,255, 0.147) , 371px 279px 0 -104px rgba(255,255,255, 0.687) , 376px 270px 0 -104px rgba(255,255,255, 0.118) , 296px 417px 0 -104px rgba(255,255,255, 0.895) , -130px -441px 0 -104px rgba(255,255,255, 0.708) , -330px -207px 0 -104px rgba(255,255,255, 0.355) , 270px 108px 0 -104px rgba(255,255,255, 0.056) , -357px -135px 0 -104px rgba(255,255,255, 0.731) , 53px -376px 0 -104px rgba(255,255,255, 0.589) , -424px -37px 0 -104px rgba(255,255,255, 0.653) , 293px 201px 0 -104px rgba(255,255,255, 0.956) , -410px -316px 0 -104px rgba(255,255,255, 0.083) , 37px -138px 0 -104px rgba(255,255,255, 0.178) , -94px 441px 0 -104px rgba(255,255,255, 0.966) , 167px 260px 0 -104px rgba(255,255,255, 0.2) , -223px 395px 0 -104px rgba(255,255,255, 0.441) , 41px 432px 0 -104px rgba(255,255,255, 0.376) , -199px -106px 0 -104px rgba(255,255,255, 0.709) , -9px -227px 0 -104px rgba(255,255,255, 0.62) , 393px -61px 0 -104px rgba(255,255,255, 0.626) , 207px 392px 0 -104px rgba(255,255,255, 0.428) , 43px 394px 0 -104px rgba(255,255,255, 0.818) , -154px -380px 0 -104px rgba(255,255,255, 0.387) , 76px -98px 0 -104px rgba(255,255,255, 0.257) , -14px -44px 0 -104px rgba(255,255,255, 0.953) , -144px -392px 0 -104px rgba(255,255,255, 0.381) , 249px 151px 0 -104px rgba(255,255,255, 0.992) , 260px -162px 0 -104px rgba(255,255,255, 0.3) , 161px 83px 0 -104px rgba(255,255,255, 0.845) , -317px 244px 0 -104px rgba(255,255,255, 0.743) , 133px 9px 0 -104px rgba(255,255,255, 0.103) , 412px -396px 0 -104px rgba(255,255,255, 0.189) , 93px 352px 0 -104px rgba(255,255,255, 0.516) , -269px 291px 0 -104px rgba(255,255,255, 0.701) , -376px -100px 0 -104px rgba(255,255,255, 0.403) , 76px 225px 0 -104px rgba(255,255,255, 0.291) , -389px 111px 0 -104px rgba(255,255,255, 0.61) , -401px 170px 0 -104px rgba(255,255,255, 0.994) , 2px 382px 0 -104px rgba(255,255,255, 0.869) , -82px 232px 0 -104px rgba(255,255,255, 0.873) , -113px 74px 0 -104px rgba(255,255,255, 0.583) , 239px -61px 0 -104px rgba(255,255,255, 0.853) , -67px 105px 0 -104px rgba(255,255,255, 0.054) , 39px -294px 0 -104px rgba(255,255,255, 0.256) , 285px 351px 0 -104px rgba(255,255,255, 0.988) , 350px 274px 0 -104px rgba(255,255,255, 0.705) , 219px 165px 0 -104px rgba(255,255,255, 0.983) , -260px 271px 0 -104px rgba(255,255,255, 0.803) , -229px 380px 0 -104px rgba(255,255,255, 0.324) , -114px -87px 0 -104px rgba(255,255,255, 0.414) , -287px -243px 0 -104px rgba(255,255,255, 0.788) , 328px 34px 0 -104px rgba(255,255,255, 0.931) , -174px -424px 0 -104px rgba(255,255,255, 0.24) , -318px 296px 0 -104px rgba(255,255,255, 0.317) , 288px -107px 0 -104px rgba(255,255,255, 0.029) , 140px -241px 0 -104px rgba(255,255,255, 0.614) , -239px 267px 0 -104px rgba(255,255,255, 0.349) , -212px 118px 0 -104px rgba(255,255,255, 0.735) , -365px 428px 0 -104px rgba(255,255,255, 0.128) , -57px 438px 0 -104px rgba(255,255,255, 0.028) , 12px -294px 0 -104px rgba(255,255,255, 0.564) , -159px -202px 0 -104px rgba(255,255,255, 0.376) , 11px -241px 0 -104px rgba(255,255,255, 0.117) , 224px 211px 0 -104px rgba(255,255,255, 0.417) , 327px 204px 0 -104px rgba(255,255,255, 0.96) , -45px 416px 0 -104px rgba(255,255,255, 0.645) , -118px 406px 0 -104px rgba(255,255,255, 0.595) , 357px 377px 0 -104px rgba(255,255,255, 0.452) , 24px -237px 0 -104px rgba(255,255,255, 0.997) , 276px -246px 0 -104px rgba(255,255,255, 0.426) , -244px -431px 0 -104px rgba(255,255,255, 0.957) , 188px 188px 0 -104px rgba(255,255,255, 0.177) , -263px 210px 0 -104px rgba(255,255,255, 0.272) , -257px -314px 0 -104px rgba(255,255,255, 0.653) , 149px 205px 0 -104px rgba(255,255,255, 0.103) , 82px 296px 0 -104px rgba(255,255,255, 0.075) , -135px -203px 0 -104px rgba(255,255,255, 0.706) , 289px -169px 0 -104px rgba(255,255,255, 0.367) , -222px 275px 0 -104px rgba(255,255,255, 0.214) , -8px -116px 0 -104px rgba(255,255,255, 0.004) , -40px 435px 0 -104px rgba(255,255,255, 0.673) , 23px 317px 0 -104px rgba(255,255,255, 0.886) , -245px 336px 0 -104px rgba(255,255,255, 0.834) , 389px 157px 0 -104px rgba(255,255,255, 0.763) , -361px 170px 0 -104px rgba(255,255,255, 0.646) , -420px -139px 0 -104px rgba(255,255,255, 0.847) , -440px 116px 0 -104px rgba(255,255,255, 0.56) , 335px -34px 0 -104px rgba(255,255,255, 0.334) , -406px -114px 0 -104px rgba(255,255,255, 0.717) , -61px 78px 0 -104px rgba(255,255,255, 0.562) , -49px 329px 0 -104px rgba(255,255,255, 0.795) , 387px 341px 0 -104px rgba(255,255,255, 0.671) , 181px 372px 0 -104px rgba(255,255,255, 0.553) , 445px 384px 0 -104px rgba(255,255,255, 0.529) , -63px -2px 0 -104px rgba(255,255,255, 0.329) , 432px -414px 0 -104px rgba(255,255,255, 0.362) , -113px -297px 0 -104px rgba(255,255,255, 0.863) , -73px 14px 0 -104px rgba(255,255,255, 0.628) , -362px -53px 0 -104px rgba(255,255,255, 0.158) , 401px -33px 0 -104px rgba(255,255,255, 0.322) , 377px 184px 0 -104px rgba(255,255,255, 0.479) , -233px 41px 0 -104px rgba(255,255,255, 0.016) , -165px 54px 0 -104px rgba(255,255,255, 0.12) , 354px -417px 0 -104px rgba(255,255,255, 0.648) , 48px 235px 0 -104px rgba(255,255,255, 0.263) , 385px 15px 0 -104px rgba(255,255,255, 0.489) , -354px -182px 0 -104px rgba(255,255,255, 0.983) , 371px -443px 0 -104px rgba(255,255,255, 0.999) , 303px -425px 0 -104px rgba(255,255,255, 0.028) , 290px -37px 0 -104px rgba(255,255,255, 0.929) , -271px -373px 0 -104px rgba(255,255,255, 0.43) , -41px -216px 0 -104px rgba(255,255,255, 0.234) , 166px 120px 0 -104px rgba(255,255,255, 0.339) , -369px 299px 0 -104px rgba(255,255,255, 0.145) , -192px 159px 0 -104px rgba(255,255,255, 0.251) , -17px 178px 0 -104px rgba(255,255,255, 0.584) , 228px 186px 0 -104px rgba(255,255,255, 0.04) , -161px 57px 0 -104px rgba(255,255,255, 0.395) , -148px 126px 0 -104px rgba(255,255,255, 0.183) , -415px -379px 0 -104px rgba(255,255,255, 0.629) , 422px -301px 0 -104px rgba(255,255,255, 0.838) , -53px 17px 0 -104px rgba(255,255,255, 0.34) , 123px 185px 0 -104px rgba(255,255,255, 0.593) , 208px 247px 0 -104px rgba(255,255,255, 0.3) , -275px 194px 0 -104px rgba(255,255,255, 0.496) , 156px 342px 0 -104px rgba(255,255,255, 0.716) , -191px 272px 0 -104px rgba(255,255,255, 0.56) , 328px -250px 0 -104px rgba(255,255,255, 0.166) , 436px -350px 0 -104px rgba(255,255,255, 0.844) , -87px -422px 0 -104px rgba(255,255,255, 0.345) , -314px -67px 0 -104px rgba(255,255,255, 0.362) , 82px -302px 0 -104px rgba(255,255,255, 0.025) , -198px 46px 0 -104px rgba(255,255,255, 0.924) , 429px 37px 0 -104px rgba(255,255,255, 0.883) , 43px 402px 0 -104px rgba(255,255,255, 0.893) , -152px -363px 0 -104px rgba(255,255,255, 0.582) , 38px 374px 0 -104px rgba(255,255,255, 0.551) , 404px 150px 0 -104px rgba(255,255,255, 0.762) , -376px -14px 0 -104px rgba(255,255,255, 0.889) , -105px 350px 0 -104px rgba(255,255,255, 0.106) , -139px -386px 0 -104px rgba(255,255,255, 0.7) , -345px -245px 0 -104px rgba(255,255,255, 0.92) , -354px 354px 0 -104px rgba(255,255,255, 0.063) , -223px -305px 0 -104px rgba(255,255,255, 0.902) , -316px 261px 0 -104px rgba(255,255,255, 0.43) , -350px -133px 0 -104px rgba(255,255,255, 0.11) , 59px -202px 0 -104px rgba(255,255,255, 0.18) , 396px 366px 0 -104px rgba(255,255,255, 0.471) , 13px -298px 0 -104px rgba(255,255,255, 0.72) , -418px 299px 0 -104px rgba(255,255,255, 0.418) , 430px 114px 0 -104px rgba(255,255,255, 0.706) , -146px 202px 0 -104px rgba(255,255,255, 0.172) , 133px 183px 0 -104px rgba(255,255,255, 0.903) , 107px -282px 0 -104px rgba(255,255,255, 0.669) , -76px 142px 0 -104px rgba(255,255,255, 0.018) , -33px 346px 0 -104px rgba(255,255,255, 0.955) , -24px 141px 0 -104px rgba(255,255,255, 0.767) , -363px 184px 0 -104px rgba(255,255,255, 0.707) , 442px 145px 0 -104px rgba(255,255,255, 0.441) , -117px 386px 0 -104px rgba(255,255,255, 0.249) , 35px 412px 0 -104px rgba(255,255,255, 0.156) , -280px 371px 0 -104px rgba(255,255,255, 0.063) , 32px -191px 0 -104px rgba(255,255,255, 0.772) , -409px 266px 0 -104px rgba(255,255,255, 0.105) , 164px -350px 0 -104px rgba(255,255,255, 0.185) , 51px 62px 0 -104px rgba(255,255,255, 0.582) , 394px 356px 0 -104px rgba(255,255,255, 0.173) , 12px 202px 0 -104px rgba(255,255,255, 0.997) , 388px -405px 0 -104px rgba(255,255,255, 0.457) , 330px 382px 0 -104px rgba(255,255,255, 0.504) , -389px 299px 0 -104px rgba(255,255,255, 0.033) , 244px -207px 0 -104px rgba(255,255,255, 0.776) , -196px 188px 0 -104px rgba(255,255,255, 0.361) , -241px -15px 0 -104px rgba(255,255,255, 0.647) , 170px -398px 0 -104px rgba(255,255,255, 0.811) , -276px 421px 0 -104px rgba(255,255,255, 0.456) , 283px 60px 0 -104px rgba(255,255,255, 0.401) , -198px -340px 0 -104px rgba(255,255,255, 0.251) , -324px -306px 0 -104px rgba(255,255,255, 0.817) , 323px 321px 0 -104px rgba(255,255,255, 0.201) , -414px 335px 0 -104px rgba(255,255,255, 0.369) , 198px -47px 0 -104px rgba(255,255,255, 0.237) , -175px 170px 0 -104px rgba(255,255,255, 0.726) , -223px -273px 0 -104px rgba(255,255,255, 0.052) , 68px -371px 0 -104px rgba(255,255,255, 0.791) , 396px 417px 0 -104px rgba(255,255,255, 0.253) , 334px -33px 0 -104px rgba(255,255,255, 0.514) , 415px -137px 0 -104px rgba(255,255,255, 0.167) , -392px 289px 0 -104px rgba(255,255,255, 0.165) , -319px 209px 0 -104px rgba(255,255,255, 0.617) , -128px -73px 0 -104px rgba(255,255,255, 0.221) , 220px 426px 0 -104px rgba(255,255,255, 0.412) , -112px -292px 0 -104px rgba(255,255,255, 0.841) , 380px 336px 0 -104px rgba(255,255,255, 0.521) , -421px 436px 0 -104px rgba(255,255,255, 0.598) , -216px 391px 0 -104px rgba(255,255,255, 0.509) , -116px 175px 0 -104px rgba(255,255,255, 0.824) , -95px -410px 0 -104px rgba(255,255,255, 0.096) , 106px 97px 0 -104px rgba(255,255,255, 0.886) , 402px -357px 0 -104px rgba(255,255,255, 0.08) , 53px -154px 0 -104px rgba(255,255,255, 0.001) , -107px 423px 0 -104px rgba(255,255,255, 0.61) , 97px 49px 0 -104px rgba(255,255,255, 0.828) , 142px 24px 0 -104px rgba(255,255,255, 0.279) , -220px 139px 0 -104px rgba(255,255,255, 0.518) , 114px 11px 0 -104px rgba(255,255,255, 0.599) , 64px 55px 0 -104px rgba(255,255,255, 0.386) , 408px -73px 0 -104px rgba(255,255,255, 0.186) , 276px -115px 0 -104px rgba(255,255,255, 0.444) , -153px -395px 0 -104px rgba(255,255,255, 0.574) , -436px 51px 0 -104px rgba(255,255,255, 0.13) , -188px -413px 0 -104px rgba(255,255,255, 0.292) , -277px -107px 0 -104px rgba(255,255,255, 0.799) , -355px 74px 0 -104px rgba(255,255,255, 0.992) , 374px 260px 0 -104px rgba(255,255,255, 0.139) , -409px -133px 0 -104px rgba(255,255,255, 0.776) , 220px -109px 0 -104px rgba(255,255,255, 0.333) , 112px -194px 0 -104px rgba(255,255,255, 0.729) , 271px 381px 0 -104px rgba(255,255,255, 0.214) , -423px 298px 0 -104px rgba(255,255,255, 0.468) , -425px 160px 0 -104px rgba(255,255,255, 0.504) , 167px 15px 0 -104px rgba(255,255,255, 0.121) , -224px 307px 0 -104px rgba(255,255,255, 0.552) , 254px -301px 0 -104px rgba(255,255,255, 0.62) , -243px 114px 0 -104px rgba(255,255,255, 0.213) , 273px -206px 0 -104px rgba(255,255,255, 0.516) , -91px -316px 0 -104px rgba(255,255,255, 0.547) , 293px 421px 0 -104px rgba(255,255,255, 0.548) , -3px -86px 0 -104px rgba(255,255,255, 0.147) , 156px 416px 0 -104px rgba(255,255,255, 0.49) , -20px -388px 0 -104px rgba(255,255,255, 0.131) , -65px -225px 0 -104px rgba(255,255,255, 0.515) , -178px 85px 0 -104px rgba(255,255,255, 0.664) , -191px -340px 0 -104px rgba(255,255,255, 0.961) , 3px 271px 0 -104px rgba(255,255,255, 0.541) , -232px -112px 0 -104px rgba(255,255,255, 0.169) , -161px 188px 0 -104px rgba(255,255,255, 0.854) , 284px -414px 0 -104px rgba(255,255,255, 0.606) , -2px 425px 0 -104px rgba(255,255,255, 0.63) , -301px 307px 0 -104px rgba(255,255,255, 0.095) , 119px -87px 0 -104px rgba(255,255,255, 0.517) , -217px 25px 0 -104px rgba(255,255,255, 0.578) , 98px 11px 0 -104px rgba(255,255,255, 0.041) , -441px -260px 0 -104px rgba(255,255,255, 0.247) , -136px -308px 0 -104px rgba(255,255,255, 0.572) , -361px -121px 0 -104px rgba(255,255,255, 0.204) , 213px 162px 0 -104px rgba(255,255,255, 0.591) , 52px 390px 0 -104px rgba(255,255,255, 0.275) , -430px -309px 0 -104px rgba(255,255,255, 0.136) , 252px 315px 0 -104px rgba(255,255,255, 0.702) , -272px 236px 0 -104px rgba(255,255,255, 0.243) , 382px 166px 0 -104px rgba(255,255,255, 0.615) , 245px 77px 0 -104px rgba(255,255,255, 0.526) , -246px 210px 0 -104px rgba(255,255,255, 0.391) , -387px 29px 0 -104px rgba(255,255,255, 0.61) , -257px -389px 0 -104px rgba(255,255,255, 0.391) , -211px -360px 0 -104px rgba(255,255,255, 0.398) , -121px 189px 0 -104px rgba(255,255,255, 0.691) , -221px 370px 0 -104px rgba(255,255,255, 0.004) , -140px 216px 0 -104px rgba(255,255,255, 0.464) , 337px 309px 0 -104px rgba(255,255,255, 0.166) , 90px 169px 0 -104px rgba(255,255,255, 0.462) , 122px -428px 0 -104px rgba(255,255,255, 0.852) , 15px 382px 0 -104px rgba(255,255,255, 0.611) , -100px -73px 0 -104px rgba(255,255,255, 0.748) , 424px -232px 0 -104px rgba(255,255,255, 0.456) , -16px -410px 0 -104px rgba(255,255,255, 0.982) , -286px -281px 0 -104px rgba(255,255,255, 0.41) , 361px -403px 0 -104px rgba(255,255,255, 0.354) , -317px -21px 0 -104px rgba(255,255,255, 0.998) , -297px 247px 0 -104px rgba(255,255,255, 0.35) , -217px 171px 0 -104px rgba(255,255,255, 0.876) , -443px 125px 0 -104px rgba(255,255,255, 0.218) , -356px 379px 0 -104px rgba(255,255,255, 0.482) , -426px 57px 0 -104px rgba(255,255,255, 0.92) , -259px 56px 0 -104px rgba(255,255,255, 0.482) , 266px 214px 0 -104px rgba(255,255,255, 0.691) , 77px 173px 0 -104px rgba(255,255,255, 0.161) , 387px 98px 0 -104px rgba(255,255,255, 0.31) , -322px 377px 0 -104px rgba(255,255,255, 0.208) , 113px -225px 0 -104px rgba(255,255,255, 0.947) , 212px 42px 0 -104px rgba(255,255,255, 0.317) , 115px 259px 0 -104px rgba(255,255,255, 0.481) , -32px -413px 0 -104px rgba(255,255,255, 0.53) , -381px 56px 0 -104px rgba(255,255,255, 0.714) , 326px 157px 0 -104px rgba(255,255,255, 0.722) , 74px 345px 0 -104px rgba(255,255,255, 0.597) , -423px 436px 0 -104px rgba(255,255,255, 0.44) , -198px -116px 0 -104px rgba(255,255,255, 0.449) , 317px 425px 0 -104px rgba(255,255,255, 0.306) , -83px 425px 0 -104px rgba(255,255,255, 0.545) , -252px 397px 0 -104px rgba(255,255,255, 0.331) , -193px 29px 0 -104px rgba(255,255,255, 0.515) , -343px 325px 0 -104px rgba(255,255,255, 0.603) , -58px -55px 0 -104px rgba(255,255,255, 0.686) , -354px -148px 0 -104px rgba(255,255,255, 0.296) , -81px -221px 0 -104px rgba(255,255,255, 0.34) , 133px 67px 0 -104px rgba(255,255,255, 0.734) , 360px -229px 0 -104px rgba(255,255,255, 0.213) , 286px -442px 0 -104px rgba(255,255,255, 0.25) , 57px -386px 0 -104px rgba(255,255,255, 0.559) , -351px 142px 0 -104px rgba(255,255,255, 0.004) , -144px -113px 0 -104px rgba(255,255,255, 0.104) , 97px 141px 0 -104px rgba(255,255,255, 0.983) , -434px 145px 0 -104px rgba(255,255,255, 0.579) , 99px -167px 0 -104px rgba(255,255,255, 0.47) , 406px 78px 0 -104px rgba(255,255,255, 0.109) , 46px -207px 0 -104px rgba(255,255,255, 0.393) , 282px -210px 0 -104px rgba(255,255,255, 0.496) , -113px 155px 0 -104px rgba(255,255,255, 0.706) , 305px 309px 0 -104px rgba(255,255,255, 0.564) , 125px 2px 0 -104px rgba(255,255,255, 0.698) , 89px 411px 0 -104px rgba(255,255,255, 0.485) , -440px 211px 0 -104px rgba(255,255,255, 0.928) , -360px 438px 0 -104px rgba(255,255,255, 0.845) , 183px 302px 0 -104px rgba(255,255,255, 0.54) , 354px 293px 0 -104px rgba(255,255,255, 0.994) , -269px 107px 0 -104px rgba(255,255,255, 0.194);
-}
+  overflow: hidden; }
+  /* line 439, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .asteroids-belt:before {
+    z-index: 99;
+    top: 50%;
+    height: 210px;
+    width: 210px;
+    margin-left: -105px;
+    margin-top: -105px;
+    background: transparent;
+    border-radius: 140px !important;
+    box-shadow: -268px 51px 0 -104px rgba(255, 255, 255, 0.27) , -409px -299px 0 -104px rgba(255,255,255, 0.071) , -135px 73px 0 -104px rgba(255,255,255, 0.262) , 210px 254px 0 -104px rgba(255,255,255, 0.261) , -57px 194px 0 -104px rgba(255,255,255, 0.901) , 238px -420px 0 -104px rgba(255,255,255, 0.621) , -109px 191px 0 -104px rgba(255,255,255, 0.884) , -93px -327px 0 -104px rgba(255,255,255, 0.346) , 182px 107px 0 -104px rgba(255,255,255, 0.887) , 164px 186px 0 -104px rgba(255,255,255, 0.026) , 295px 329px 0 -104px rgba(255,255,255, 0.708) , -130px -423px 0 -104px rgba(255,255,255, 0.986) , -418px -159px 0 -104px rgba(255,255,255, 0.713) , -400px -192px 0 -104px rgba(255,255,255, 0.922) , 395px -24px 0 -104px rgba(255,255,255, 0.404) , 75px 111px 0 -104px rgba(255,255,255, 0.125) , -160px -438px 0 -104px rgba(255,255,255, 0.19) , -144px -426px 0 -104px rgba(255,255,255, 0.45) , 173px 342px 0 -104px rgba(255,255,255, 0.176) , 315px 385px 0 -104px rgba(255,255,255, 0.913) , 39px 80px 0 -104px rgba(255,255,255, 0.922) , 132px -401px 0 -104px rgba(255,255,255, 0.878) , 29px -76px 0 -104px rgba(255,255,255, 0.604) , -78px 117px 0 -104px rgba(255,255,255, 0.996) , 209px 80px 0 -104px rgba(255,255,255, 0.829) , 152px 417px 0 -104px rgba(255,255,255, 0.892) , 42px -31px 0 -104px rgba(255,255,255, 0.949) , 247px 391px 0 -104px rgba(255,255,255, 0.477) , -125px 403px 0 -104px rgba(255,255,255, 0.842) , -335px 184px 0 -104px rgba(255,255,255, 0.033) , 414px -285px 0 -104px rgba(255,255,255, 0.291) , 315px -326px 0 -104px rgba(255,255,255, 0.78) , -290px 382px 0 -104px rgba(255,255,255, 0.048) , 10px 383px 0 -104px rgba(255,255,255, 0.396) , 116px 226px 0 -104px rgba(255,255,255, 0.593) , -79px -321px 0 -104px rgba(255,255,255, 0.757) , 243px -216px 0 -104px rgba(255,255,255, 0.518) , -351px 101px 0 -104px rgba(255,255,255, 0.237) , -264px 370px 0 -104px rgba(255,255,255, 0.284) , -324px -187px 0 -104px rgba(255,255,255, 0.913) , 232px 146px 0 -104px rgba(255,255,255, 0.205) , -213px 103px 0 -104px rgba(255,255,255, 0.627) , 165px 7px 0 -104px rgba(255,255,255, 0.82) , 336px -157px 0 -104px rgba(255,255,255, 0.575) , 26px -143px 0 -104px rgba(255,255,255, 0.035) , 380px -38px 0 -104px rgba(255,255,255, 0.061) , 127px -292px 0 -104px rgba(255,255,255, 0.112) , -218px -371px 0 -104px rgba(255,255,255, 0.577) , 405px 160px 0 -104px rgba(255,255,255, 0.893) , -78px 46px 0 -104px rgba(255,255,255, 0.134) , -170px 120px 0 -104px rgba(255,255,255, 0.388) , 123px 398px 0 -104px rgba(255,255,255, 0.112) , -310px 386px 0 -104px rgba(255,255,255, 0.885) , -343px -255px 0 -104px rgba(255,255,255, 0.47) , -288px -358px 0 -104px rgba(255,255,255, 0.226) , 423px 347px 0 -104px rgba(255,255,255, 0.048) , -379px -264px 0 -104px rgba(255,255,255, 0.403) , -195px -236px 0 -104px rgba(255,255,255, 0.872) , 92px 98px 0 -104px rgba(255,255,255, 0.078) , 366px -290px 0 -104px rgba(255,255,255, 0.088) , -248px 246px 0 -104px rgba(255,255,255, 0.106) , 31px 304px 0 -104px rgba(255,255,255, 0.866) , 60px 431px 0 -104px rgba(255,255,255, 0.926) , -242px 105px 0 -104px rgba(255,255,255, 0.807) , 412px -423px 0 -104px rgba(255,255,255, 0.85) , -55px 435px 0 -104px rgba(255,255,255, 0.474) , 156px -281px 0 -104px rgba(255,255,255, 0.434) , -123px 410px 0 -104px rgba(255,255,255, 0.635) , -240px 114px 0 -104px rgba(255,255,255, 0.738) , 359px -343px 0 -104px rgba(255,255,255, 0.883) , 154px -363px 0 -104px rgba(255,255,255, 0.301) , -34px 10px 0 -104px rgba(255,255,255, 0.06) , -265px 404px 0 -104px rgba(255,255,255, 0.702) , -128px -333px 0 -104px rgba(255,255,255, 0.636) , -121px -318px 0 -104px rgba(255,255,255, 0.268) , 11px -344px 0 -104px rgba(255,255,255, 0.162) , -321px -290px 0 -104px rgba(255,255,255, 0.244) , 16px -420px 0 -104px rgba(255,255,255, 0.161) , 394px -435px 0 -104px rgba(255,255,255, 0.767) , -74px -231px 0 -104px rgba(255,255,255, 0.134) , -7px -429px 0 -104px rgba(255,255,255, 0.323) , 101px 319px 0 -104px rgba(255,255,255, 0.547) , 233px 212px 0 -104px rgba(255,255,255, 0.171) , 205px -291px 0 -104px rgba(255,255,255, 0.415) , 282px 320px 0 -104px rgba(255,255,255, 0.037) , -247px 141px 0 -104px rgba(255,255,255, 0.823) , 269px 276px 0 -104px rgba(255,255,255, 0.111) , -187px -120px 0 -104px rgba(255,255,255, 0.275) , -229px -406px 0 -104px rgba(255,255,255, 0.469) , -152px -350px 0 -104px rgba(255,255,255, 0.334) , -166px -288px 0 -104px rgba(255,255,255, 0.079) , -414px 242px 0 -104px rgba(255,255,255, 0.345) , 171px 121px 0 -104px rgba(255,255,255, 0.323) , -120px 221px 0 -104px rgba(255,255,255, 0.568) , 154px -75px 0 -104px rgba(255,255,255, 0.606) , 93px -19px 0 -104px rgba(255,255,255, 0.625) , -157px -122px 0 -104px rgba(255,255,255, 0.556) , 199px 72px 0 -104px rgba(255,255,255, 0.298) , -422px -317px 0 -104px rgba(255,255,255, 0.29) , 67px 411px 0 -104px rgba(255,255,255, 0.001) , -258px -105px 0 -104px rgba(255,255,255, 0.843) , 333px -182px 0 -104px rgba(255,255,255, 0.293) , -9px 151px 0 -104px rgba(255,255,255, 0.517) , -58px 71px 0 -104px rgba(255,255,255, 0.242) , -253px -21px 0 -104px rgba(255,255,255, 0.499) , 151px 59px 0 -104px rgba(255,255,255, 0.631) , 432px -256px 0 -104px rgba(255,255,255, 0.632) , 238px -152px 0 -104px rgba(255,255,255, 0.62) , -377px 197px 0 -104px rgba(255,255,255, 0.573) , -114px -169px 0 -104px rgba(255,255,255, 0.515) , -216px 408px 0 -104px rgba(255,255,255, 0.438) , -313px 75px 0 -104px rgba(255,255,255, 0.215) , -198px 348px 0 -104px rgba(255,255,255, 0.046) , -348px -195px 0 -104px rgba(255,255,255, 0.562) , -22px -43px 0 -104px rgba(255,255,255, 0.307) , -441px 80px 0 -104px rgba(255,255,255, 0.628) , -416px 215px 0 -104px rgba(255,255,255, 0.209) , 94px 9px 0 -104px rgba(255,255,255, 0.415) , 328px 421px 0 -104px rgba(255,255,255, 0.054) , 344px -126px 0 -104px rgba(255,255,255, 0.085) , -326px -305px 0 -104px rgba(255,255,255, 0.584) , 223px 254px 0 -104px rgba(255,255,255, 0.904) , -401px -117px 0 -104px rgba(255,255,255, 0.18) , 116px 318px 0 -104px rgba(255,255,255, 0.892) , -291px 301px 0 -104px rgba(255,255,255, 0.859) , 28px 342px 0 -104px rgba(255,255,255, 0.402) , -236px -78px 0 -104px rgba(255,255,255, 0.053) , 229px -23px 0 -104px rgba(255,255,255, 0.264) , 351px 333px 0 -104px rgba(255,255,255, 0.074) , 150px 392px 0 -104px rgba(255,255,255, 0.717) , 287px -317px 0 -104px rgba(255,255,255, 0.802) , -344px -154px 0 -104px rgba(255,255,255, 0.248) , -277px -237px 0 -104px rgba(255,255,255, 0.318) , 192px -315px 0 -104px rgba(255,255,255, 0.798) , 205px 144px 0 -104px rgba(255,255,255, 0.7) , 370px -192px 0 -104px rgba(255,255,255, 0.893) , 288px -131px 0 -104px rgba(255,255,255, 0.175) , 349px 375px 0 -104px rgba(255,255,255, 0.14) , 356px 21px 0 -104px rgba(255,255,255, 0.069) , -68px 423px 0 -104px rgba(255,255,255, 0.292) , 361px 332px 0 -104px rgba(255,255,255, 0.699) , -349px 91px 0 -104px rgba(255,255,255, 0.937) , 426px 258px 0 -104px rgba(255,255,255, 0.382) , -393px -24px 0 -104px rgba(255,255,255, 0.807) , -84px 214px 0 -104px rgba(255,255,255, 0.523) , 387px 410px 0 -104px rgba(255,255,255, 0.612) , 127px 267px 0 -104px rgba(255,255,255, 0.373) , 177px -78px 0 -104px rgba(255,255,255, 0.098) , -10px -287px 0 -104px rgba(255,255,255, 0.199) , 254px -136px 0 -104px rgba(255,255,255, 0.963) , 49px 375px 0 -104px rgba(255,255,255, 0.018) , -443px 326px 0 -104px rgba(255,255,255, 0.061) , 3px -70px 0 -104px rgba(255,255,255, 0.879) , -92px -44px 0 -104px rgba(255,255,255, 0.93) , -358px 238px 0 -104px rgba(255,255,255, 0.055) , 171px 145px 0 -104px rgba(255,255,255, 0.63) , 23px -383px 0 -104px rgba(255,255,255, 0.982) , -273px -352px 0 -104px rgba(255,255,255, 0.279) , 117px 38px 0 -104px rgba(255,255,255, 0.39) , 22px -75px 0 -104px rgba(255,255,255, 0.028) , 267px -261px 0 -104px rgba(255,255,255, 0.358) , 241px -25px 0 -104px rgba(255,255,255, 0.984) , 438px 14px 0 -104px rgba(255,255,255, 0.178) , 58px 227px 0 -104px rgba(255,255,255, 0.635) , -309px -276px 0 -104px rgba(255,255,255, 0.68) , 151px 156px 0 -104px rgba(255,255,255, 0.285) , 100px 335px 0 -104px rgba(255,255,255, 0.911) , 358px 435px 0 -104px rgba(255,255,255, 0.615) , -206px 31px 0 -104px rgba(255,255,255, 0.525) , -256px 292px 0 -104px rgba(255,255,255, 0.737) , -393px -137px 0 -104px rgba(255,255,255, 0.983) , 62px 324px 0 -104px rgba(255,255,255, 0.156) , 391px -119px 0 -104px rgba(255,255,255, 0.65) , 416px 271px 0 -104px rgba(255,255,255, 0.795) , -157px -402px 0 -104px rgba(255,255,255, 0.537) , 111px -323px 0 -104px rgba(255,255,255, 0.607) , -309px -117px 0 -104px rgba(255,255,255, 0.985) , -163px -78px 0 -104px rgba(255,255,255, 0.815) , 60px -438px 0 -104px rgba(255,255,255, 0.435) , 217px 30px 0 -104px rgba(255,255,255, 0.895) , -341px -134px 0 -104px rgba(255,255,255, 0.441) , 313px 174px 0 -104px rgba(255,255,255, 0.125) , -118px 68px 0 -104px rgba(255,255,255, 0.542) , -332px 216px 0 -104px rgba(255,255,255, 0.504) , 171px -91px 0 -104px rgba(255,255,255, 0.32) , -62px 342px 0 -104px rgba(255,255,255, 0.805) , 436px 139px 0 -104px rgba(255,255,255, 0.611) , -175px 60px 0 -104px rgba(255,255,255, 0.367) , 177px -208px 0 -104px rgba(255,255,255, 0.838) , -441px -76px 0 -104px rgba(255,255,255, 0.988) , -40px 369px 0 -104px rgba(255,255,255, 0.365) , -1px -35px 0 -104px rgba(255,255,255, 0.804) , -416px -238px 0 -104px rgba(255,255,255, 0.681) , 166px -437px 0 -104px rgba(255,255,255, 0.151) , -55px 72px 0 -104px rgba(255,255,255, 0.067) , 287px 6px 0 -104px rgba(255,255,255, 0.567) , -89px 160px 0 -104px rgba(255,255,255, 0.51) , 103px 438px 0 -104px rgba(255,255,255, 0.45) , 357px 114px 0 -104px rgba(255,255,255, 0.379) , 232px 395px 0 -104px rgba(255,255,255, 0.609) , -85px 32px 0 -104px rgba(255,255,255, 0.016) , 140px -271px 0 -104px rgba(255,255,255, 0.697) , -256px -331px 0 -104px rgba(255,255,255, 0.655) , -164px 177px 0 -104px rgba(255,255,255, 0.312) , -27px -131px 0 -104px rgba(255,255,255, 0.834) , -174px -193px 0 -104px rgba(255,255,255, 0.461) , 53px 270px 0 -104px rgba(255,255,255, 0.084) , -384px 244px 0 -104px rgba(255,255,255, 0.875) , 341px -208px 0 -104px rgba(255,255,255, 0.254) , 323px -272px 0 -104px rgba(255,255,255, 0.566) , 281px -97px 0 -104px rgba(255,255,255, 0.485) , 338px 159px 0 -104px rgba(255,255,255, 0.066) , 171px 227px 0 -104px rgba(255,255,255, 0.634) , -146px 16px 0 -104px rgba(255,255,255, 0.799) , 399px -70px 0 -104px rgba(255,255,255, 0.296) , -141px 256px 0 -104px rgba(255,255,255, 0.017) , -139px -120px 0 -104px rgba(255,255,255, 0.798) , 79px 262px 0 -104px rgba(255,255,255, 0.052) , 342px -305px 0 -104px rgba(255,255,255, 0.443) , -173px -178px 0 -104px rgba(255,255,255, 0.875) , 341px 412px 0 -104px rgba(255,255,255, 0.582) , -343px 210px 0 -104px rgba(255,255,255, 0.56) , -318px -232px 0 -104px rgba(255,255,255, 0.372) , -382px 130px 0 -104px rgba(255,255,255, 0.187) , 347px 356px 0 -104px rgba(255,255,255, 0.117) , 267px -275px 0 -104px rgba(255,255,255, 0.255) , 42px -94px 0 -104px rgba(255,255,255, 0.894) , 297px -236px 0 -104px rgba(255,255,255, 0.542) , 239px -73px 0 -104px rgba(255,255,255, 0.517) , 300px 289px 0 -104px rgba(255,255,255, 0.545) , 14px 64px 0 -104px rgba(255,255,255, 0.88) , 154px -390px 0 -104px rgba(255,255,255, 0.978) , 390px -148px 0 -104px rgba(255,255,255, 0.445) , -121px 358px 0 -104px rgba(255,255,255, 0.405) , -290px -245px 0 -104px rgba(255,255,255, 0.813) , 158px -261px 0 -104px rgba(255,255,255, 0.759) , 355px 271px 0 -104px rgba(255,255,255, 0.617) , 286px 377px 0 -104px rgba(255,255,255, 0.177) , 278px 170px 0 -104px rgba(255,255,255, 0.503) , 6px -373px 0 -104px rgba(255,255,255, 0.077) , 396px -6px 0 -104px rgba(255,255,255, 0.944) , 94px -297px 0 -104px rgba(255,255,255, 0.515) , 378px 65px 0 -104px rgba(255,255,255, 0.506) , 40px -200px 0 -104px rgba(255,255,255, 0.183) , 245px 380px 0 -104px rgba(255,255,255, 0.076) , 115px 98px 0 -104px rgba(255,255,255, 0.493) , 74px -395px 0 -104px rgba(255,255,255, 0.372) , -171px 266px 0 -104px rgba(255,255,255, 0.553) , 70px -196px 0 -104px rgba(255,255,255, 0.236) , 354px -134px 0 -104px rgba(255,255,255, 0.562) , 35px 289px 0 -104px rgba(255,255,255, 0.122) , -296px 243px 0 -104px rgba(255,255,255, 0.106) , 24px -180px 0 -104px rgba(255,255,255, 0.768) , 18px 330px 0 -104px rgba(255,255,255, 0.498) , 209px -181px 0 -104px rgba(255,255,255, 0.71) , 15px 204px 0 -104px rgba(255,255,255, 0.021) , -20px 79px 0 -104px rgba(255,255,255, 0.668) , 177px -411px 0 -104px rgba(255,255,255, 0.301) , 352px -290px 0 -104px rgba(255,255,255, 0.063) , 313px 327px 0 -104px rgba(255,255,255, 0.167) , -264px 280px 0 -104px rgba(255,255,255, 0.516) , 426px -142px 0 -104px rgba(255,255,255, 0.084) , 308px -297px 0 -104px rgba(255,255,255, 0.404) , 22px -385px 0 -104px rgba(255,255,255, 0.551) , 301px 243px 0 -104px rgba(255,255,255, 0.339) , 81px 61px 0 -104px rgba(255,255,255, 0.891) , 172px -59px 0 -104px rgba(255,255,255, 0.481) , 203px -209px 0 -104px rgba(255,255,255, 0.113) , 69px -107px 0 -104px rgba(255,255,255, 0.404) , -165px 316px 0 -104px rgba(255,255,255, 0.515) , 345px -356px 0 -104px rgba(255,255,255, 0.297) , 109px 22px 0 -104px rgba(255,255,255, 0.857) , 103px 215px 0 -104px rgba(255,255,255, 0.953) , -101px 410px 0 -104px rgba(255,255,255, 0.247) , -384px 136px 0 -104px rgba(255,255,255, 0.188) , 224px -312px 0 -104px rgba(255,255,255, 0.751) , -231px 220px 0 -104px rgba(255,255,255, 0.511) , 177px -9px 0 -104px rgba(255,255,255, 0.888) , -87px -384px 0 -104px rgba(255,255,255, 0.778) , 289px 215px 0 -104px rgba(255,255,255, 0.464) , -19px 12px 0 -104px rgba(255,255,255, 0.114) , -24px -271px 0 -104px rgba(255,255,255, 0.752) , -6px -112px 0 -104px rgba(255,255,255, 0.205) , 375px -425px 0 -104px rgba(255,255,255, 0.652) , -440px -406px 0 -104px rgba(255,255,255, 0.211) , -194px 43px 0 -104px rgba(255,255,255, 0.035) , 17px 316px 0 -104px rgba(255,255,255, 0.311) , 425px -65px 0 -104px rgba(255,255,255, 0.544) , -234px 390px 0 -104px rgba(255,255,255, 0.388) , -127px -373px 0 -104px rgba(255,255,255, 0.626) , -85px -25px 0 -104px rgba(255,255,255, 0.416) , -387px 296px 0 -104px rgba(255,255,255, 0.732) , 11px -266px 0 -104px rgba(255,255,255, 0.466) , 136px -240px 0 -104px rgba(255,255,255, 0.906) , -360px 317px 0 -104px rgba(255,255,255, 0.473) , -196px -133px 0 -104px rgba(255,255,255, 0.212) , 270px -139px 0 -104px rgba(255,255,255, 0.719) , -32px 432px 0 -104px rgba(255,255,255, 0.073) , -145px -121px 0 -104px rgba(255,255,255, 0.602) , 340px 106px 0 -104px rgba(255,255,255, 0.002) , -360px -102px 0 -104px rgba(255,255,255, 0.191) , -158px 142px 0 -104px rgba(255,255,255, 0.226) , 28px 42px 0 -104px rgba(255,255,255, 0.949) , -170px -274px 0 -104px rgba(255,255,255, 0.587) , -296px -377px 0 -104px rgba(255,255,255, 0.157) , -17px -182px 0 -104px rgba(255,255,255, 0.667) , 170px -413px 0 -104px rgba(255,255,255, 0.99) , 204px 408px 0 -104px rgba(255,255,255, 0.256) , 247px 126px 0 -104px rgba(255,255,255, 0.272) , -379px -120px 0 -104px rgba(255,255,255, 0.407) , 192px 30px 0 -104px rgba(255,255,255, 0.899) , 283px -126px 0 -104px rgba(255,255,255, 0.019) , 129px 232px 0 -104px rgba(255,255,255, 0.999) , -30px -237px 0 -104px rgba(255,255,255, 0.356) , 260px 390px 0 -104px rgba(255,255,255, 0.694) , 411px 51px 0 -104px rgba(255,255,255, 0.402) , -403px 192px 0 -104px rgba(255,255,255, 0.113) , -416px -425px 0 -104px rgba(255,255,255, 0.013) , 301px 272px 0 -104px rgba(255,255,255, 0.976) , 156px 301px 0 -104px rgba(255,255,255, 0.386) , 385px 368px 0 -104px rgba(255,255,255, 0.388) , 145px -84px 0 -104px rgba(255,255,255, 0.58) , 391px 371px 0 -104px rgba(255,255,255, 0.676) , 132px 60px 0 -104px rgba(255,255,255, 0.975) , -55px -216px 0 -104px rgba(255,255,255, 0.734) , -439px 315px 0 -104px rgba(255,255,255, 0.738) , -126px 322px 0 -104px rgba(255,255,255, 0.612) , 250px -69px 0 -104px rgba(255,255,255, 0.291) , 251px 398px 0 -104px rgba(255,255,255, 0.772) , -217px 33px 0 -104px rgba(255,255,255, 0.323) , 362px -407px 0 -104px rgba(255,255,255, 0.538) , -192px -37px 0 -104px rgba(255,255,255, 0.753) , -284px -396px 0 -104px rgba(255,255,255, 0.883) , 42px -389px 0 -104px rgba(255,255,255, 0.762) , -179px -303px 0 -104px rgba(255,255,255, 0.678) , 366px 327px 0 -104px rgba(255,255,255, 0.139) , 86px 169px 0 -104px rgba(255,255,255, 0.223) , -227px 264px 0 -104px rgba(255,255,255, 0.536) , -190px 136px 0 -104px rgba(255,255,255, 0.532) , -232px 159px 0 -104px rgba(255,255,255, 0.475) , -405px -143px 0 -104px rgba(255,255,255, 0.043) , 127px -410px 0 -104px rgba(255,255,255, 0.459) , 155px -67px 0 -104px rgba(255,255,255, 0.502) , 324px 355px 0 -104px rgba(255,255,255, 0.602) , -205px -255px 0 -104px rgba(255,255,255, 0.076) , -154px -367px 0 -104px rgba(255,255,255, 0.147) , -94px -137px 0 -104px rgba(255,255,255, 0.344) , 344px -287px 0 -104px rgba(255,255,255, 0.693) , -275px -329px 0 -104px rgba(255,255,255, 0.028) , 104px -236px 0 -104px rgba(255,255,255, 0.787) , -440px -252px 0 -104px rgba(255,255,255, 0.396) , 243px -177px 0 -104px rgba(255,255,255, 0.349) , 158px -380px 0 -104px rgba(255,255,255, 0.931) , 387px 226px 0 -104px rgba(255,255,255, 0.759) , -158px 391px 0 -104px rgba(255,255,255, 0.057) , 25px -306px 0 -104px rgba(255,255,255, 0.577) , -261px 438px 0 -104px rgba(255,255,255, 0.7) , 205px 257px 0 -104px rgba(255,255,255, 0.211) , -409px -294px 0 -104px rgba(255,255,255, 0.064) , -233px -315px 0 -104px rgba(255,255,255, 0.299) , -337px 219px 0 -104px rgba(255,255,255, 0.92) , -143px 336px 0 -104px rgba(255,255,255, 0.45) , 422px 408px 0 -104px rgba(255,255,255, 0.55) , 231px -360px 0 -104px rgba(255,255,255, 0.651) , 38px 68px 0 -104px rgba(255,255,255, 0.369) , -153px 47px 0 -104px rgba(255,255,255, 0.297) , -163px 185px 0 -104px rgba(255,255,255, 0.866) , -385px -38px 0 -104px rgba(255,255,255, 0.394) , -147px -422px 0 -104px rgba(255,255,255, 0.46) , -288px -261px 0 -104px rgba(255,255,255, 0.24) , 210px -391px 0 -104px rgba(255,255,255, 0.595) , -290px 374px 0 -104px rgba(255,255,255, 0.332) , -35px 145px 0 -104px rgba(255,255,255, 0.608) , 223px 51px 0 -104px rgba(255,255,255, 0.302) , 57px -245px 0 -104px rgba(255,255,255, 0.614) , -118px -311px 0 -104px rgba(255,255,255, 0.317) , 190px 127px 0 -104px rgba(255,255,255, 0.21) , -429px -40px 0 -104px rgba(255,255,255, 0.506) , 18px -381px 0 -104px rgba(255,255,255, 0.689) , 117px 395px 0 -104px rgba(255,255,255, 0.619) , 207px -222px 0 -104px rgba(255,255,255, 0.188) , -301px 355px 0 -104px rgba(255,255,255, 0.501) , -358px 242px 0 -104px rgba(255,255,255, 0.483) , -134px -234px 0 -104px rgba(255,255,255, 0.515) , -384px 229px 0 -104px rgba(255,255,255, 0.203) , -320px 144px 0 -104px rgba(255,255,255, 0.099) , 419px -8px 0 -104px rgba(255,255,255, 0.963) , 77px -103px 0 -104px rgba(255,255,255, 0.938) , -369px -290px 0 -104px rgba(255,255,255, 0.466) , 330px 394px 0 -104px rgba(255,255,255, 0.363); }
 
-/* line 451, app.scss */
+/* line 452, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .satellite-wrapper {
   width: 700px;
   height: 700px;
@@ -467,10 +415,9 @@ nav a {
   left: 70%;
   position: absolute;
   transform: translate(-50%, -50%);
-  z-index: 0;
-}
+  z-index: 0; }
 
-/* line 461, app.scss */
+/* line 462, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .datatipWrapper {
   position: absolute;
   width: 400px;
@@ -478,28 +425,25 @@ nav a {
   z-index: 3;
   top: 50%;
   left: 65%;
-  transform: translate(-50%, -50%);
-}
+  transform: translate(-50%, -50%); }
 
-/* line 471, app.scss */
+/* line 472, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .dataTip {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 3;
   transform-origin: 50% 50%;
-  animation: orb 15s linear infinite;
-}
+  animation: orb 15s linear infinite; }
 
-/* line 480, app.scss */
+/* line 481, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .datatipWrapper .dataTip-data {
   position: absolute;
   left: 50%;
   z-index: 0;
-  transform: translate(-50%, -50%);
-}
+  transform: translate(-50%, -50%); }
 
-/* line 487, app.scss */
+/* line 488, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .satellite {
   z-index: 0;
   width: 100%;
@@ -507,19 +451,17 @@ nav a {
   position: absolute;
   z-index: 0;
   transform-origin: 50% 50%;
-  animation: orb 15s linear infinite;
-}
+  animation: orb 15s linear infinite; }
 
-/* line 497, app.scss */
+/* line 498, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .satellite img {
   width: 80px;
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translateY(-50%);
-}
+  transform: translateY(-50%); }
 
-/* line 505, app.scss */
+/* line 506, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .signal {
   height: 200px;
   width: 200px;
@@ -529,117 +471,102 @@ nav a {
   left: -45px;
   transform: translateY(-50%);
   border: 2px solid #fff;
-  transform-origin: bottom;
-}
+  transform-origin: bottom; }
 
 /**
    * SEC-4
    */
-/* line 522, app.scss */
+/* line 523, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-4 {
   background: #FFE66D;
-  z-index: 0;
-}
-/* line 525, app.scss */
-#section-4 h1 {
-  padding: 0;
-  color: white;
-  z-index: 999;
-  text-transform: uppercase;
-  font-family: "Stellar", "Roboto Slab", sans-serif;
-  opacity: 0;
-}
-/* line 533, app.scss */
-#section-4 h1:before {
-  content: "";
-  background-color: white;
-}
-/* line 538, app.scss */
-#section-4 p {
-  color: white;
-  opacity: 0;
-}
+  z-index: 0; }
+  /* line 526, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-4 h1 {
+    padding: 0;
+    color: white;
+    z-index: 999;
+    text-transform: uppercase;
+    font-family: "Stellar", "Roboto Slab", sans-serif;
+    opacity: 0; }
+  /* line 534, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-4 h1:before {
+    content: "";
+    background-color: white; }
+  /* line 539, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-4 p {
+    color: white;
+    opacity: 0; }
 
-/* line 544, app.scss */
+/* line 545, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .cntr {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
-}
+  z-index: 1; }
 
-/* line 552, app.scss */
+/* line 553, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .icon-menu {
   width: 44px;
   height: 44px;
   position: absolute;
   right: 36px;
   z-index: 99;
-  top: 36px;
-}
+  top: 36px; }
 
-/* line 561, app.scss */
+/* line 562, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #city2 {
   bottom: 0;
   position: absolute;
   left: 0;
-  z-index: 9;
-}
+  z-index: 9; }
 
-/* line 568, app.scss */
+/* line 569, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #windowsHolder {
   bottom: -0.5%;
   position: absolute;
   left: 0;
   z-index: 999;
-  width: 100%;
-}
+  width: 100%; }
 
-/* line 576, app.scss */
+/* line 577, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .clouds {
   width: 200px;
   position: absolute;
   z-index: 0;
-  opacity: .2;
-}
+  opacity: .2; }
 
-/* line 583, app.scss */
+/* line 584, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #cloud-1 {
   top: 20%;
   left: 50%;
-  animation: fly linear 45s infinite;
-}
+  animation: fly linear 45s infinite; }
 
-/* line 590, app.scss */
+/* line 591, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #cloud-2 {
   top: 50%;
   left: 20%;
-  animation: fly linear 25s infinite;
-}
+  animation: fly linear 25s infinite; }
 
-/* line 597, app.scss */
+/* line 598, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #cloud-3 {
   top: 10%;
   left: 30%;
-  animation: fly linear 35s infinite;
-}
+  animation: fly linear 35s infinite; }
 
-/* line 604, app.scss */
+/* line 605, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #cloud-4 {
   top: 30%;
   left: 10%;
-  animation: fly linear 65s infinite;
-}
+  animation: fly linear 65s infinite; }
 
-/* line 611, app.scss */
+/* line 612, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #cloud-5 {
   top: 40%;
   left: 00%;
-  animation: fly linear 40s infinite;
-}
+  animation: fly linear 40s infinite; }
 
-/* line 618, app.scss */
+/* line 619, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .sun {
   height: 200px;
   width: 200px;
@@ -648,10 +575,9 @@ nav a {
   border-radius: 50%;
   position: absolute;
   z-index: 999;
-  background-color: #FF6B6B;
-}
+  background-color: #FF6B6B; }
 
-/* line 629, app.scss */
+/* line 630, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .sunRay {
   height: 250px;
   width: 250px;
@@ -663,20 +589,18 @@ nav a {
   background-color: #FF6B6B;
   transform: translate(-50%, -50%);
   opacity: 0.5;
-  box-shadow: 0 0 0 20px rgba(255, 107, 107, 0.5), 0 0 0 40px rgba(255, 107, 107, 0.3);
-}
+  box-shadow: 0 0 0 20px rgba(255, 107, 107, 0.5), 0 0 0 40px rgba(255, 107, 107, 0.3); }
 
-/* line 643, app.scss */
+/* line 644, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .bulb-wrapper {
   width: 35vh;
   height: 50vh;
   right: 5%;
   position: absolute;
   top: 0;
-  z-index: 99;
-}
+  z-index: 99; }
 
-/* line 652, app.scss */
+/* line 653, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #bulb {
   padding-bottom: 100%;
   position: absolute;
@@ -685,10 +609,9 @@ nav a {
   top: 0;
   z-index: 99;
   left: 50%;
-  transform: translate(-50%, 0);
-}
+  transform: translate(-50%, 0); }
 
-/* line 663, app.scss */
+/* line 664, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .lightray {
   position: absolute;
   background-color: rgba(255, 230, 109, 0.6);
@@ -699,20 +622,18 @@ nav a {
   transform: translate(0, -50%);
   right: 1%;
   z-index: 0;
-  display: none;
-}
+  display: none; }
 
-/* line 676, app.scss */
+/* line 677, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .handler-wrapper {
   height: auto;
   position: absolute;
   top: -20%;
   right: 40%;
   width: 19.34px;
-  z-index: 999;
-}
+  z-index: 999; }
 
-/* line 685, app.scss */
+/* line 686, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .handler-ripple {
   background-color: #4ECDC4;
   width: 1.5em;
@@ -724,40 +645,35 @@ nav a {
   position: absolute;
   bottom: 0%;
   -webkit-animation: ripple 2s linear infinite;
-  animation: ripple 2s linear infinite;
-}
+  animation: ripple 2s linear infinite; }
 
 /**
    * SEC-5
    */
-/* line 704, app.scss */
+/* line 705, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-5 {
-  background-color: #1A535C;
-}
-/* line 706, app.scss */
-#section-5 h1 {
-  padding: 0;
-  color: white;
-  z-index: 999;
-  text-transform: uppercase;
-  font-family: "Stellar", "Roboto Slab", sans-serif;
-}
-/* line 714, app.scss */
-#section-5 h1:before {
-  content: "";
-  background-color: white;
-}
+  background-color: #1A535C; }
+  /* line 707, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-5 h1 {
+    padding: 0;
+    color: white;
+    z-index: 999;
+    text-transform: uppercase;
+    font-family: "Stellar", "Roboto Slab", sans-serif; }
+  /* line 715, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-5 h1:before {
+    content: "";
+    background-color: white; }
 
-/* line 721, app.scss */
+/* line 722, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #worldmap {
   width: 100%;
   height: auto;
   position: absolute;
   min-width: 300px;
-  left: 0;
-}
+  left: 0; }
 
-/* line 729, app.scss */
+/* line 730, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .circle-ripple {
   background-color: #FFE66D;
   width: 1em;
@@ -766,144 +682,123 @@ nav a {
   cursor: pointer;
   position: absolute;
   -webkit-animation: ripple 2s linear infinite;
-  animation: ripple 2s linear infinite;
-}
+  animation: ripple 2s linear infinite; }
 
-/* line 740, app.scss */
+/* line 741, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #na {
   left: 18%;
-  top: 29%;
-}
+  top: 29%; }
 
-/* line 745, app.scss */
+/* line 746, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #la {
   left: 30%;
-  top: 65%;
-}
+  top: 65%; }
 
-/* line 750, app.scss */
+/* line 751, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #eu {
   left: 49%;
-  top: 26%;
-}
+  top: 26%; }
 
-/* line 755, app.scss */
+/* line 756, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #af {
   left: 54%;
-  top: 55%;
-}
+  top: 55%; }
 
-/* line 760, app.scss */
+/* line 761, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #ru {
   left: 67%;
-  top: 18%;
-}
+  top: 18%; }
 
-/* line 765, app.scss */
+/* line 766, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #cas {
   left: 60%;
-  top: 29%;
-}
+  top: 29%; }
 
-/* line 770, app.scss */
+/* line 771, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #me {
   left: 61%;
-  top: 44%;
-}
+  top: 44%; }
 
-/* line 775, app.scss */
+/* line 776, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #ind {
   left: 69%;
-  top: 43%;
-}
+  top: 43%; }
 
-/* line 780, app.scss */
+/* line 781, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #other {
   left: 78%;
-  top: 57%;
-}
+  top: 57%; }
 
-/* line 785, app.scss */
+/* line 786, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #jap {
   left: 86%;
-  top: 32%;
-}
+  top: 32%; }
 
-/* line 790, app.scss */
+/* line 791, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #aus {
   left: 86%;
-  top: 73%;
-}
+  top: 73%; }
 
-/* line 795, app.scss */
+/* line 796, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #chi {
   left: 78%;
-  top: 30%;
-}
+  top: 30%; }
 
-/* line 800, app.scss */
+/* line 801, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .nameBubble {
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
-  z-index: 999;
-}
-/* line 806, app.scss */
-.nameBubble #mainBubble {
-  min-width: 50px;
-  min-height: 10px;
-  border-radius: 2px;
-  background-color: #ffffff;
-  padding: 2px 7px 3px 7px;
-  text-align: center;
-  font-size: 0.8em;
-  font-weight: 600;
-  white-space: nowrap;
-}
+  z-index: 999; }
+  /* line 807, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .nameBubble #mainBubble {
+    min-width: 50px;
+    min-height: 10px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    padding: 2px 7px 3px 7px;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 600;
+    white-space: nowrap; }
 
-/* line 820, app.scss */
+/* line 821, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .continent {
   color: white;
   opacity: 1;
   position: absolute;
-  font-size: 1em;
-}
+  font-size: 1em; }
 
-/* line 827, app.scss */
+/* line 828, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .continent-content {
   position: relative;
-  height: 50vh;
-}
+  height: 50vh; }
 
-/* line 832, app.scss */
+/* line 833, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .hidden {
   background-color: aqua;
-  display: none;
-}
+  display: none; }
 
-/* line 837, app.scss */
+/* line 838, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .continent:not(.hidden) {
   -webkit-transition: background-color 5s;
-  transition: background-color 5s;
-}
+  transition: background-color 5s; }
 
-/* line 842, app.scss */
+/* line 843, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .continent-total {
   text-align: right;
   position: relative;
   height: 50vh;
-  color: #616674;
-}
+  color: #616674; }
 
-/* line 849, app.scss */
+/* line 850, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .continent-total #totalTitle {
   top: 10%;
   width: 100%;
-  color: #0f2f34;
-}
+  color: #0f2f34; }
 
-/* line 855, app.scss */
+/* line 856, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .continent-total #totalNumber {
   top: 2%;
   position: absolute;
@@ -911,75 +806,64 @@ nav a {
   font-size: 6em;
   color: white;
   vertical-align: top;
-  margin: 0;
-}
-/* line 863, app.scss */
-.continent-total #totalNumber ::after {
-  content: "Gt";
-}
+  margin: 0; }
+  /* line 864, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .continent-total #totalNumber ::after {
+    content: "Gt"; }
 
-/* line 868, app.scss */
+/* line 869, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .continent-total #totalNumber:after {
   content: "gt";
-  font-size: 0.2em;
-}
+  font-size: 0.2em; }
 
-/* line 873, app.scss */
+/* line 874, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .activated {
-  background-color: #FF6B6B;
-}
+  background-color: #FF6B6B; }
 
 /**
    * Section-6
    */
-/* line 882, app.scss */
+/* line 883, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-6 {
-  background-color: #FFE66D;
-}
-/* line 884, app.scss */
-#section-6 h2 {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 200;
-  font-size: 2em;
-}
-/* line 890, app.scss */
-#section-6 h1 {
-  text-align: center;
-}
+  background-color: #FFE66D; }
+  /* line 885, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-6 h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 2em; }
+  /* line 891, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-6 h1 {
+    text-align: center; }
 
-/* line 895, app.scss */
+/* line 896, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .findoutWrapper {
   position: absolute;
   height: 70vh;
   width: 100%;
-  left: 0;
-}
-/* line 900, app.scss */
-.findoutWrapper .findout-content {
-  top: 20%;
-  position: absolute;
-  left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%);
-}
-/* line 907, app.scss */
-.findoutWrapper .findout {
-  text-decoration: underline;
-  cursor: pointer;
-}
-/* line 911, app.scss */
-.findoutWrapper .target-content {
-  top: 5%;
-  height: 400px;
-  width: 400px;
-  background-color: gray;
-  position: absolute;
-  left: 150%;
-  transform: translate(-50%, 0);
-}
+  left: 0; }
+  /* line 901, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .findoutWrapper .findout-content {
+    top: 20%;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%); }
+  /* line 908, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .findoutWrapper .findout {
+    text-decoration: underline;
+    cursor: pointer; }
+  /* line 912, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .findoutWrapper .target-content {
+    top: 5%;
+    height: 400px;
+    width: 400px;
+    background-color: gray;
+    position: absolute;
+    left: 150%;
+    transform: translate(-50%, 0); }
 
-/* line 922, app.scss */
+/* line 923, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .dragSection-wrapper {
   position: absolute;
   width: 70vw;
@@ -992,154 +876,152 @@ nav a {
   text-align: center;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-}
+  justify-content: space-between; }
 
-/* line 937, app.scss */
+/* line 938, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .dragSection-wrapper .dragItems {
   width: 400px;
   background-color: aqua;
-  margin-right: 40px;
-}
+  margin-right: 40px; }
 
-/* line 943, app.scss */
+/* line 944, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .dragSection-wrapper .dragItems:last-child {
-  margin-right: 0;
-}
+  margin-right: 0; }
 
 /**
    * Section 7
    */
-/* line 952, app.scss */
+/* line 953, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-7 {
-  background-color: #FFE66D;
-}
-/* line 954, app.scss */
-#section-7 h1 {
-  text-transform: uppercase;
-  color: #F7FFF7;
-  line-height: 1.1em;
-  font-family: "Stellar", "Roboto Slab", sans-serif;
-}
-/* line 960, app.scss */
-#section-7 h1:before {
-  content: "";
-  background-color: white;
-}
+  background-color: #F7FFF7; }
+  /* line 955, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-7 h1 {
+    text-transform: uppercase;
+    color: #353535;
+    line-height: 1.1em;
+    font-family: "Stellar", "Roboto Slab", sans-serif; }
+  /* line 961, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-7 h1:before {
+    content: "";
+    background-color: #353535; }
 
-/* line 967, app.scss */
+/* line 968, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .section7-wrapper {
   width: 90vw;
   display: flex;
   justify-content: space-between;
   padding: 0 200px;
   position: absolute;
-  bottom: 20%;
+  top: 40%;
   left: 50%;
-  transform: translate(-50%, 0);
-}
+  transform: translate(-50%, 0); }
 
-/* line 978, app.scss */
+/* line 979, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .markup {
+  font-family: "Stellar", "Roboto Slab", sans-serif;
+  color: #353535;
+  text-align: center;
+  text-transform: uppercase;
   width: 15vw;
-}
+  cursor: pointer; }
+
+/* line 989, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+.coal-video, .coal-content {
+  display: none;
+  margin-top: 20px; }
+
+/* line 993, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+.coal-content div:nth-child(1) {
+  text-align: right;
+  padding-right: 20px; }
+
+/* line 999, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+.coal-content p {
+  color: #353535; }
+
+/* line 1002, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+#coalRocks {
+  margin-bottom: -10px;
+  padding: 0;
+  min-height: 80px; }
+
+/* line 1007, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+#coal {
+  margin: 0; }
 
 @keyframes ripple {
   0% {
-    box-shadow: 0px 0px 0px 0px rgba(72, 74, 81, 0.3);
-  }
+    box-shadow: 0px 0px 0px 0px rgba(72, 74, 81, 0.3); }
   80% {
-    box-shadow: 0px 0px 0px 50px rgba(72, 74, 81, 0);
-  }
-}
+    box-shadow: 0px 0px 0px 50px rgba(72, 74, 81, 0); } }
+
 @keyframes traffic {
   from {
-    transform: translateX(-100vw);
-  }
+    transform: translateX(-100vw); }
   to {
-    transform: translateX(150vw);
-  }
-}
+    transform: translateX(150vw); } }
+
 @keyframes animatedBackground {
   from {
-    transform: translateX(0%);
-  }
+    transform: translateX(0%); }
   to {
-    transform: translateX(100%);
-  }
-}
+    transform: translateX(100%); } }
+
 @keyframes animatedBackground {
   from {
-    transform: translateX(0%);
-  }
+    transform: translateX(0%); }
   to {
-    transform: translateX(100%);
-  }
-}
+    transform: translateX(100%); } }
+
 @keyframes fly {
   0% {
-    left: -15vw;
-  }
+    left: -15vw; }
   100% {
-    left: 115vw;
-  }
-}
+    left: 115vw; } }
+
 @keyframes flyHeli {
   0% {
     left: -15vw;
-    transform: translateY(0px) rotate();
-  }
+    transform: translateY(0px) rotate(); }
   30% {
     left: 50vw;
-    transform: translateY(-20px) rotate(5deg);
-  }
+    transform: translateY(-20px) rotate(5deg); }
   40% {
-    left: 50vw;
-  }
+    left: 50vw; }
   60% {
     left: 115vw;
-    transform: translateY(0px) rotate(0);
-  }
+    transform: translateY(0px) rotate(0); }
   100% {
-    left: 115vw;
-  }
-}
+    left: 115vw; } }
+
 @keyframes orb {
   from {
-    transform: rotate(0deg);
-  }
+    transform: rotate(0deg); }
   to {
-    transform: rotate(-360deg);
-  }
-}
+    transform: rotate(-360deg); } }
+
 @keyframes satellite {
   from {
-    transform: rotate(0deg);
-  }
+    transform: rotate(0deg); }
   to {
-    transform: rotate(360deg);
-  }
-}
+    transform: rotate(360deg); } }
+
 @keyframes pulsate {
   0% {
     transform: scale(0.1);
-    opacity: 0.0;
-  }
+    opacity: 0.0; }
   100% {
     transform: scale(1.2);
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
+
 @keyframes play {
   100% {
-    background-position: -117607px;
-  }
-}
+    background-position: -117607px; } }
+
 @keyframes leaves {
   0% {
-    transform: scale(1);
-  }
+    transform: scale(1); }
   100% {
-    transform: scale(2);
-  }
-}
+    transform: scale(2); } }
+
+/*# sourceMappingURL=app.css.map */

@@ -469,20 +469,40 @@ Draggable.create(".dragItems", {
 
 //SEC-7
 var s = Snap("#coal");
+
 var shapes;
-Snap.load("/img/coaloilgas/coal.svg", onSVGLoaded ) ;
-function onSVGLoaded( data ){ 
+Snap.load("/img/coaloilgas/coal.svg", cartLoad ) ;
+function cartLoad( data ){ 
     s.append( data );
-    shapes = $(".coal-1, .coal-2, .coal-3, .coal-4, .coal-5");
+    shapes = $(".coal-1, .coal-2, .coal-4, .coal-5");
     tl7.set(shapes, {drawSVG:"0%"});
+    tl7.set($(".coal-3"), {drawSVG:"50% 50%"});
+}
+var r = Snap("#coalRocks");
+Snap.load("/img/coaloilgas/coalrocks.svg", rockLoad );
+function rockLoad( data ){ 
+    r.append( data );
+    rocks = $(".rocks");
+tl7.set(rocks , {y:"-120px"});
 }
 
 tl7 = new TimelineMax({});
 $('#coal').hover(
     function () {
-        
-        tl7.fromTo(shapes , 1, {drawSVG:"0%"}, {drawSVG:"100%"});
+        tl7.to($(".coal-3") , 0.5, {drawSVG:"100%"})
+        tl7.fromTo(shapes , 0.5, {drawSVG:"0%"}, {drawSVG:"100%"},"-=0.5");
+        tl7.staggerTo(rocks , 0.4, {y:"20px",ease:Power2.easeIn},0.1);
     }, function () {
-      
+       tl7.to(shapes , 0.2, {drawSVG:"0%"});
+        tl7.to($(".coal-3") , 0.2, {drawSVG:"50% 50%"});
+        tl7.set(rocks, {y:"-120px"});
+    }
+);
+
+$(".markup").click(
+    function (){
+        $(".markup").toggle();
+        $(".coal-video").fadeIn("slow");
+        $(".coal-content").fadeIn("slow");
     }
 );
