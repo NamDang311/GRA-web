@@ -438,8 +438,8 @@ function fadedAni() {
 
 };
 
-//sec-6
-//Section "how much"
+//SEC-6
+
 
 $(".findout").click(
     function () {
@@ -466,3 +466,23 @@ Draggable.create(".dragItems", {
         };
     }
 });
+
+//SEC-7
+var s = Snap("#coal");
+var shapes;
+Snap.load("/img/coaloilgas/coal.svg", onSVGLoaded ) ;
+function onSVGLoaded( data ){ 
+    s.append( data );
+    shapes = $(".coal-1, .coal-2, .coal-3, .coal-4, .coal-5");
+    tl7.set(shapes, {drawSVG:"0%"});
+}
+
+tl7 = new TimelineMax({});
+$('#coal').hover(
+    function () {
+        
+        tl7.fromTo(shapes , 1, {drawSVG:"0%"}, {drawSVG:"100%"});
+    }, function () {
+      
+    }
+);
