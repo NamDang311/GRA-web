@@ -11,39 +11,23 @@ $('#section-1 h1').glitch();
 
 
 //SEC-2
-var stage = new PIXI.Container()
-    , renderer = PIXI.autoDetectRenderer(371, 360, {
-        backgroundColor: 0x1099bb
-        , transparent: true
-    });
-document.getElementById('smoke-2').appendChild(renderer.view);
-var frames = [];
-var movie;
-setup();
-
-function setup() {
-    for (var i = 1; i < 318; i++) {
-        frames.push(PIXI.Texture.fromImage('../smoke/comp 1_' + i + '.png'));
-
-    };
-    movie = new PIXI.extras.MovieClip(frames);
-    movie.play();
-    movie.animationSpeed = 0.5;
-    stage.addChild(movie);
-    animate();
-
+smoketl = new TimelineMax({repeat:-1});
+var smokeLines;
+var smoke2 = Snap("#smoke-2")
+Snap.load("/img/smoke.svg", smokeLoad ) ;
+function smokeLoad( data ){ 
+    smoke2.append( data );
+    smokeLines = $("#smoke-line-2, #smoke-line-1,#smoke-line-3");
+    smoketl.set(smokeLines, {drawSVG:"0%"})
+        .to($("#smoke-line-1"),1,{drawSVG:"100%",ease:Power0.easeNone})
+        .to($("#smoke-line-2"),1, {drawSVG:"100%",ease:Power0.easeNone})
+        .to($("#smoke-line-3"),1, {drawSVG:"100%",ease:Power0.easeNone})
+    .to(smokeLines,2, {opacity:0})
+    ;
 }
 
-function animate() {
-    renderer.render(stage);
-    requestAnimationFrame(animate);
-}
-
-
-//SEC-2
 d3.xml("/img/helicopter.svg", "image/svg+xml", function (error, xml) {
-    if (error) throw error;
-    document.getElementById('helicopter').appendChild(xml.documentElement);
+    if (error) throw error;  document.getElementById('helicopter').appendChild(xml.documentElement);
     animateTop();
 });
 
@@ -61,7 +45,20 @@ function animateTop() {
     });
 };
 
-
+TweenLite.set($(".aviation-data"), {
+    scale: 0
+    , transformOrigin: "50% 50% 0"
+    , ease: Power3.easeOut
+})
+$(".airballoon-ripple").click (
+    function (){
+        $(this).fadeOut("slow");
+        TweenLite.to($(".aviation-data"), 0.5, {
+         scale: 1
+        , ease: Power3.easeOut
+    });
+    }
+);
 //SEC - 3
 
 var slideVal = [1, 1.02, 1.04, 1.11, 1.13, 1.2];

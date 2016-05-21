@@ -1,62 +1,42 @@
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 258.3 159.37">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #7e818c;
-      }
-
-      .cls-2 {
-        fill: #484a51;
-      }
-
-      .cls-3, .cls-5 {
-        fill: none;
-        stroke-miterlimit: 10;
-        stroke-width: 2px;
-      }
-
-      .cls-3 {
-        stroke: #7e818c;
-      }
-
-      .cls-4 {
-        fill: #8d8f99;
-      }
-
-      .cls-5 {
-        stroke: #484a51;
-      }
-    </style>
-  </defs>
-  <title>truck</title>
-  <g>
-    <path class="cls-1" d="M2057.14,1824.11v-22.87c0-12,1.76-24.56-5.8-34.73a69.35,69.35,0,0,0-29-22.31c-12.94-5.28-27.45-3.78-41.09-3.74,0.25,10.35,0,20.76,0,31.12V1865H2085v-23.24a17.62,17.62,0,0,0-17.62-17.62h-10.27Z" transform="translate(-1826.72 -1724)"/>
-    <polygon class="cls-2" points="149.63 0 125.28 0 125.28 8 150.28 8 150.28 119 155.28 119 155.28 0 149.63 0"/>
-    <polygon class="cls-2" points="34.27 119 16.25 119 4.28 119 4.28 124 17.28 124 17.28 126.06 17.28 141 258.28 141 258.28 119 34.27 119"/>
-    <g>
-      <circle class="cls-1" cx="18.68" cy="140.69" r="18.68"/>
-      <circle class="cls-2" cx="18.68" cy="140.69" r="11.22"/>
-      <g>
-        <line class="cls-3" x1="14.11" y1="140.69" x2="23.25" y2="140.69"/>
-        <line class="cls-3" x1="18.68" y1="136.12" x2="18.68" y2="145.26"/>
-      </g>
-    </g>
-    <rect class="cls-2" x="43.88" y="111.35" width="49.04" height="8.38"/>
-    <path class="cls-4" d="M2057,1801.24c0-7.73.87-15.24-.65-23.24H2010v21.63c0,9.58,8.87,18.37,19.18,18.37H2057v-16.76Z" transform="translate(-1826.72 -1724)"/>
-    <g>
-      <circle class="cls-1" cx="196.64" cy="140.69" r="18.68"/>
-      <circle class="cls-2" cx="196.64" cy="140.69" r="11.22"/>
-      <g>
-        <line class="cls-3" x1="192.07" y1="140.69" x2="201.21" y2="140.69"/>
-        <line class="cls-3" x1="196.64" y1="136.12" x2="196.64" y2="145.26"/>
-      </g>
-    </g>
-    <rect class="cls-2" x="214.93" y="114.06" width="39.56" height="11.03" rx="4.55" ry="4.55"/>
-    <line class="cls-5" x1="168.26" y1="111.41" x2="176.2" y2="111.41"/>
-    <line class="cls-5" x1="158.08" y1="111.35" x2="166.03" y2="111.35"/>
-    <line class="cls-5" x1="168.26" y1="115.57" x2="176.2" y2="115.57"/>
-    <line class="cls-5" x1="158.08" y1="115.52" x2="166.03" y2="115.52"/>
-    <line class="cls-5" x1="168.26" y1="107.9" x2="176.2" y2="107.9"/>
-    <line class="cls-5" x1="158.08" y1="107.84" x2="166.03" y2="107.84"/>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 151 92.6" style="enable-background:new 0 0 151 92.6;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#2F404F;stroke-width:2;stroke-miterlimit:10;}
+	.st1{fill:#2F404F;}
+	.st2{fill:#FFFFFF;stroke:#2F404F;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#2F404F;stroke-miterlimit:10;}
+</style>
+<title>truck</title>
+<path class="st0" d="M133.8,58.1l0-13.3c0-7,1-14.3-3.4-20.2c-4.4-5.7-10.2-10.2-16.8-13c-7.5-3.1-15.9-2.2-23.9-2.2
+	c0.1,6,0,12.1,0,18.1v54.3H150V68.4c0-5.7-4.6-10.2-10.2-10.2l0,0L133.8,58.1L133.8,58.1z"/>
+<polygon class="st1" points="86.3,0 72.2,0 72.2,4.6 86.7,4.6 86.7,69.1 89.6,69.1 89.6,0 "/>
+<polygon class="st0" points="19.9,69.1 9.4,69.1 2.5,69.1 2.5,72 10,72 10,73.2 10,81.9 150,81.9 150,69.1 "/>
+<g>
+	<circle class="st1" cx="10.8" cy="81.7" r="10.8"/>
+	<circle class="st0" cx="10.8" cy="81.7" r="6.5"/>
+	<g>
+		<line class="st2" x1="8.2" y1="81.7" x2="13.5" y2="81.7"/>
+		<line class="st2" x1="10.8" y1="79.1" x2="10.8" y2="84.4"/>
+	</g>
+</g>
+<rect x="25.5" y="67.1" class="st1" width="28.5" height="4.9"/>
+<path class="st0" d="M133.7,44.9c0-4.5,0.5-8.9-0.4-13.5h-26.9v12.6c0,5.6,5.2,10.7,11.1,10.7h16.2V44.9z"/>
+<g>
+	<circle class="st1" cx="114.2" cy="81.7" r="10.8"/>
+	<circle class="st2" cx="114.2" cy="81.7" r="6.5"/>
+	<g>
+		<line class="st3" x1="111.5" y1="81.7" x2="116.9" y2="81.7"/>
+		<line class="st3" x1="114.2" y1="79.1" x2="114.2" y2="84.4"/>
+	</g>
+</g>
+<path class="st1" d="M127.5,66.2h17.7c1.5,0,2.6,1.2,2.6,2.6V70c0,1.5-1.2,2.6-2.6,2.6h-17.7c-1.5,0-2.6-1.2-2.6-2.6v-1.1
+	C124.8,67.4,126,66.2,127.5,66.2z"/>
+<line class="st3" x1="97.7" y1="62.2" x2="102.3" y2="62.2"/>
+<line class="st3" x1="91.8" y1="62.2" x2="96.4" y2="62.2"/>
+<line class="st3" x1="97.7" y1="65.5" x2="102.3" y2="65.5"/>
+<line class="st3" x1="91.8" y1="65.5" x2="96.4" y2="65.5"/>
+<line class="st3" x1="97.7" y1="58.9" x2="102.3" y2="58.9"/>
+<line class="st3" x1="91.8" y1="58.9" x2="96.4" y2="58.9"/>
 </svg>
