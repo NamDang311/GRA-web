@@ -1,55 +1,21 @@
-
-
 .earth {
-    height: 300px;
-    width: 300px;
+    height: 20vw;
+    width: 20vw;
+    min-width: 300px;
+    min-height: 300px;
     border-radius: 50%;
-    background-color: #083040;
+    background: url("../img/flag/uk.png")  #1A535C;
+    background-size: cover;
     position: absolute;
-    top: 50%;
-    left: 70%;
+    top:30%;
+    left:70%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    overflow: hidden;
     z-index: 2;
+    text-align: center;
 }
 
 
-/* Land */
-
-.earth:before {
-    content: "";
-    position: absolute;
-    background:#133C42;
-    height: 30px;
-    width: 75px;
-    left: 0;
-    top: 50px;
-    display: block;
-    border-radius: 40px;
-    -webkit-animation: rotateElement linear 25s infinite;
-    animation: rotateElement linear 25s infinite;
-    box-shadow: 0px 75px 0 -5px#133C42, 5px 35px 0 -3px#133C42, 35px 125px 0 -9px#133C42, 120px -15px 0 -7px#133C42, 135px -55px 0 -9px#133C42, 150px 25px 0 7px#133C42, 220px 70px 0 -2px#133C42, 235px -35px 0 -3px#133C42, 280px 85px 0 3px#133C42, 320px 30px 0 1px#133C42, 400px 0 0 0#133C42, 400px 75px 0 -5px#133C42, 405px 35px 0 -3px#133C42, 435px 125px 0 -9px#133C42, 520px -15px 0 -7px#133C42, 535px -55px 0 -9px#133C42, 550px 25px 0 7px#133C42, 620px 70px 0 -2px#133C42, 635px -35px 0 -3px#133C42, 680px 85px 0 3px#133C42, 720px 30px 0 1px#133C42;
-}
-
-
-/* Clouds */
-
-.earth:after {
-    content: "";
-    position: absolute;
-    background: white;
-    height: 30px;
-    width: 70px;
-    left: px;
-    top: 110px;
-    display: block;
-    border-radius: 40px;
-    -webkit-animation: rotateElement linear 15s infinite;
-    animation: rotateElement linear 15s infinite;
-    box-shadow: 10px 50px 0 3px #F7FFF7, 50px -15px 0 2px #F7FFF7, 70px 70px 0 -1px #F7FFF7, 100px 25px 0 1px #F7FFF7, 110px 105px 0 -4px #F7FFF7, 140px 75px 0 -3px #F7FFF7, 250px -25px 0 -1px #F7FFF7, 210px 50px 0 1px #F7FFF7, 340px 130px 0 1px #F7FFF7, 400px 0px 0 0 #F7FFF7, 410px 50px 0 3px #F7FFF7, 500px 25px 0 1px #F7FFF7, 450px -15px 0 2px #F7FFF7, 470px 70px 0 -1px #F7FFF7, 540px 75px 0 -3px #F7FFF7, 510px 105px 0 -4px #F7FFF7, 650px -25px 0 -1px #F7FFF7, 610px 50px 0 1px #F7FFF7, 940px 150px 0 10px #F7FFF7;
-    ;
-}
 
 .moon-wrapper{
     width: 100%;
@@ -57,13 +23,9 @@
     position: absolute;
    z-index: 0;
     border-radius: 50%;
-  
     animation: orb 40s linear infinite;
-    
-    
-   
-    
 }
+
 .moon {
     height: 70px;
     width: 70px;

@@ -17,9 +17,6 @@ $asteroids-belt-pl: 210px;
 $base-font-size: 0.8em;
 $base-line-height: 1.5;
 $header-line-height: 1.25;
-
-
-
 @function alphaRandom() {
     @return random(1000)*.001;
 }
@@ -37,7 +34,6 @@ $bp-medium: 64em; // 1024px
 $bp-large: 85.375em; // 1366px
 $bp-xlarge: 120em; // 1920px
 $bp-xxlarge: 160em; // 2560px
-
 // Media Queries
 $mq-small: "(min-width: #{$bp-small})";
 $mq-medium: "(min-width: #{$bp-medium})";
@@ -46,32 +42,26 @@ $mq-xlarge: "(min-width: #{$bp-xlarge})";
 $mq-xxlarge: "(min-width: #{$bp-xxlarge})";
 $mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
 
-
 /**
    * START
    */
 
-
 body {
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-
-  @media #{$mq-medium} {
-    font-size: $base-font-size*1.2;
-    line-height: $base-line-height*1.2;
-  }
-
-  @media #{$mq-large} {
-    font-size: $base-font-size*1.3;
-  }
-
-  @media #{$mq-xlarge} {
-    font-size: $base-font-size*1.4;
-  }
-
-  @media #{$mq-xxlarge} {
-    font-size: $base-font-size*1.6;
-  }
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    @media #{$mq-medium} {
+        font-size: $base-font-size*1.2;
+        line-height: $base-line-height*1.2;
+    }
+    @media #{$mq-large} {
+        font-size: $base-font-size*1.3;
+    }
+    @media #{$mq-xlarge} {
+        font-size: $base-font-size*1.4;
+    }
+    @media #{$mq-xxlarge} {
+        font-size: $base-font-size*1.6;
+    }
 }
 
 .line {
@@ -86,15 +76,19 @@ body {
 }
 
 .bold {
-  font-weight:bold;
+    font-weight: bold;
 }
+
 
 /**
    * SEC-1
    */
 
+h1 {
+    line-height: 1.1em;
+    font-family: $fonth;
+}
 
-h1 {line-height: 1.1em;}
 p {
     font-family: $fontp;
     font-weight: 200;
@@ -196,12 +190,11 @@ nav a {
 
 #section-2 {
     background-color: $white;
-    
     .row h1 {
         font-family: $fonth;
         text-transform: uppercase;
         line-height: 1.1em;
-        color:$dark;
+        color: $dark;
     }
     .row h1:before {
         @extend .line;
@@ -211,7 +204,7 @@ nav a {
     .row p {
         font-family: $fontp;
         font-size: 1em;
-        color:$dark;
+        color: $dark;
         letter-spacing: 0.05em;
     }
 }
@@ -297,13 +290,13 @@ nav a {
     width: 100%;
     position: absolute;
     bottom: 0;
-    .road-line{
+    .road-line {
         position: absolute;
-        top:0
+        top: 0
     }
-    .road-line-2{
+    .road-line-2 {
         position: absolute;
-        bottom:0
+        bottom: 0
     }
 }
 
@@ -316,17 +309,14 @@ nav a {
 }
 
 #factory {
-
     width: 60vw;
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: 0;
     vertical-align: bottom;
-
     .factory-img {
         height: 100%;
-        
         vertical-align: bottom;
     }
 }
@@ -352,49 +342,35 @@ nav a {
 
 .airballoon {
     z-index: 2;
-    width:13vw;
+    width: 13vw;
     position: absolute;
-    top:10vh;
-    right:34vw;
-     -webkit-animation-name: Floating;
+    top: 10vh;
+    right: 34vw;
+    -webkit-animation-name: Floating;
     -webkit-animation-duration: 3s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: ease-in-out;
     text-align: center;
-    margin-bottom:50px;
+    margin-bottom: 50px;
     img {
         width: 100%;
-         margin-bottom:10px;
+        margin-bottom: 10px;
     }
-    
 }
 
-.airballoon-ripple{
+.airballoon-ripple {
     background-color: $red;
     width: 1.5em;
     height: 1.5em;
     border-radius: 50%;
-    margin-top:50px;
-    margin:0 auto;
+    margin-top: 50px;
+    margin: 0 auto;
     cursor: pointer;
     bottom: -10%;
     -webkit-animation: ripple 2s linear infinite;
     animation: ripple 2s linear infinite;
 }
 
-.section-2 .data {
-    
-   
-    p {
-      
-    }
-    h1 {
-       
-    }
-    h1 sup {
-    
-    }
-}    
 
 /**
    * SEC-3 
@@ -402,110 +378,128 @@ nav a {
 
 #section-3 {
     background: url('/img/stars_medium.png') $darkBlue;
+    color: white;
     .year-wrapper {
         font-family: $fonth;
         font-size: 1.5em;
-        z-index: 3;
-        width: 100px;
-        display: table;
+        width: 100%;
         letter-spacing: 0.1em;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.8em;
     }
     .section-3-years {
-        color: white;
-        opacity: 0.5;
-        position: relative;
-        height: 55px;
-        margin-bottom: 15px;
+        opacity: 0.8;
         animation: all 2s linear;
     }
     .section-3-years div {
-        line-height: 0;
         cursor: pointer;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translate(0, -50%);
+        position: relative;
     }
-    h1 {
+    .open h1 {
         color: white;
         text-transform: uppercase;
         font-family: $fonth;
     }
-    h1:before {
+    .open h1:before {
         @extend .line;
         content: "";
         background-color: white;
     }
     #sec-3-p {
-        font-size: 1rem;
         padding: 0;
         color: white;
     }
 }
 
-.statistic {
-    margin-top: 18px;
-  
+.case {
+    top:50%;
+    left:50%;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    h1{
+        
+        font-size: 2em;
+        white-space: nowrap;
+        margin-top: -0.5em;
+        margin-bottom: 0.5em;
+    }
+    p {
+        font-size: 0.8em;
+        font-weight: 200;
+    text-transform: uppercase;
+}
+    .line-break {
+        height:1px;
+        width:100px;
+        background-color: white;
+        margin: 0 auto 10px auto;
+        opacity:.2;
+    }
 }
 
+
+.statistic {
+    margin-top: 80px;
+}
+
+
+
 #section-3 .statistic h2 {
+    
     margin-top: -25px;
-    color: $lightBlue;
+    color: $red;
     line-height: 1em;
-    font-size: 9em;
+    font-size: 5em;
     margin-bottom: 20px;
-      font-family: $fonth;
+    font-family: $fonth;
 }
 
 #section-3 .statistic p {
     color: white;
-    opacity: .8;
     font-size: 1.1em;
     letter-spacing: 0.1em;
 }
 
-.section-3-years:after {
-    content: "";
-    background-color: $red;
-    width: 0;
+
+
+
+.time-line-wrapper {
+    position: relative;
+}
+
+.time-line {
+    width: 100%;
     height: 4px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    opacity: 1;
-    z-index: 0;
-    transition: all 0.3s ease 0s;
-    -webkit-transition: all 0.3s ease 0s;
+    background-color: lighten($darkBlue, 10);
+    border-radius: 3px;
 }
 
-.section-3-years:hover:after {
-    width: 120px;
-}
-
-#earth-shadow {
-    position: absolute;
-    border-radius: 50%;
-    width: 320px;
-    height: 320px;
-    background-color: dimgray;
-    opacity: .5;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    z-index: -1;
+.time-line-dot-wrapper {
+    padding-left: 1em;
+    padding-right: 1.1em;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px;
+    .time-line-dot {
+        height: 1em;
+        width: 1em;
+        background-color: $darkBlue;
+        border: 3px solid lighten($darkBlue, 20);
+        border-radius: 50%;
+        top: -7px;
+    }
 }
 
 .earth-wrapper {
-    position: absolute;
-    top: 0;
     z-index: 0;
     width: 100%;
-    height: 100vh;
+    height: 450px;
     margin-top: 0;
     .asteroids-belt {
         border-radius: 50%;
-        top: 50%;
+        top: 30%;
         left: 70%;
         position: absolute;
         z-index: 0;
@@ -542,9 +536,9 @@ nav a {
 }
 
 .satellite-wrapper {
-    width: 700px;
-    height: 700px;
-    top: 50%;
+    width: 600px;
+    height: 600px;
+    top: 30%;
     left: 70%;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -767,11 +761,13 @@ nav a {
 }
 
 .handler-wrapper {
+    overflow-y: hidden;
     height: auto;
     position: absolute;
-    top: -20%;
+    top: 0%;
     right: 40%;
-    width: 19.34px;
+    width: 24px;
+    height: 300px;
     z-index: 999;
 }
 
@@ -802,7 +798,6 @@ nav a {
         z-index: 999;
         text-transform: uppercase;
         font-family: $fonth;
-        
     }
     h1:before {
         @extend .line;
@@ -1063,42 +1058,45 @@ nav a {
     justify-content: space-between;
     padding: 0 200px;
     position: absolute;
-   top: 40%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, 0);
 }
 
 .markup {
     font-family: $fonth;
-    color:$dark;
+    color: $dark;
     text-align: center;
     text-transform: uppercase;
     width: 15vw;
     cursor: pointer;
-  
 }
 
-.coal-video, .coal-content {
+.coal-video,
+.coal-content {
     display: none;
     margin-top: 20px;
 }
-.coal-content div:nth-child(1){
+
+.coal-content div:nth-child(1) {
     text-align: right;
     padding-right: 20px;
+}
 
-    
+.coal-content p {
+    color: $dark;
 }
-.coal-content p{
-    color:$dark;
-}
+
 #coalRocks {
-    margin-bottom:-10px;
+    margin-bottom: -10px;
     padding: 0;
     min-height: 80px;
 }
+
 #coal {
-    margin:0;
+    margin: 0;
 }
+
 @keyframes ripple {
     0% {
         box-shadow: 0px 0px 0px 0px rgba(72, 74, 81, 0.3)
@@ -1116,10 +1114,17 @@ nav a {
         transform: translateX(150vw);
     }
 }
-@keyframes Floating{
-    from {-webkit-transform:translate(0, 0px);}
-    65% {-webkit-transform:translate(0, 15px);}
-    to {-webkit-transform: translate(0, -0px);    }    
+
+@keyframes Floating {
+    from {
+        -webkit-transform: translate(0, 0px);
+    }
+    65% {
+        -webkit-transform: translate(0, 15px);
+    }
+    to {
+        -webkit-transform: translate(0, -0px);
+    }
 }
 
 @keyframes fly {

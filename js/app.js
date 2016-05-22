@@ -64,31 +64,37 @@ $(".airballoon-ripple").click (
 var slideVal = [1, 1.02, 1.04, 1.11, 1.13, 1.2];
 var yearsAr = $(".section-3-years").toArray();
 var curClick = 5;
-var earthAr = [22.5, 24, 26, 30, 34, 40];
-var statco2;
+var earthAr = [22.5, 24, 26, 30, 34, 40],
+tempAr=[0.5,0.4,0.4,0.7,0.7,0.9];
+var statco2,stattemperature;
 var statcompare = 0;
 $(".section-3-years").click(
     function () {
         var $notthis = $(".section-3-years").not(this);
         TweenLite.to($(this), .5, {
-            fontSize: '1.3em'
-            , opacity: 1
+            opacity: 1
         , });
         TweenLite.to($notthis, .2, {
-            fontSize: '1em'
-            , opacity: 0.5
+            opacity: 0.5
         , });
+        
+        //timeline-dot
+        TweenLite.to($(".time-line-dot:eq("+$(".section-3-years").index(this)+")"), .2, {
+            backgroundColor:"#FFE66D",borderColor:"#FFE66D"
+        , });
+        var dotleft=$(".time-line-dot").not($(".time-line-dot:eq("+$(".section-3-years").index(this)+")"));
+        TweenLite.to(dotleft, .2, {
+            backgroundColor:"#1A535C",borderColor:"#257784"
+        , });
+        
+        
+        
         curClick = $.inArray(this, yearsAr);
 
-        //scale earth shadow
-        TweenLite.to($("#earth-shadow"), 1, {
-            scale: slideVal[curClick]
-            , transformOrigin: "50% 50% 0"
-        });
-
         //Change data
-        statcompare = earthAr[curClick] * 100 / 22.5;
-        statco2 = earthAr[curClick];
+        statcompare = (earthAr[curClick] * 100 / 22.5)-100;
+        statco2= earthAr[curClick];
+        stattemperature=tempAr[curClick];
         statisticCount();
 
         // add midLine
@@ -105,6 +111,7 @@ function statisticCount() {
             return value.toFixed(1).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
         }
     });
+    
     $("#stat-compare").countTo({
         from: 0
         , to: statcompare
@@ -114,16 +121,22 @@ function statisticCount() {
             return value.toFixed(1) + "%"
         }
     });
+    
+     $("#stat-temperature").countTo({
+        from: 0
+        , to: stattemperature
+        , speed: 400
+        , refreshInterval: 10
+        , formatter: function (value, options) {
+            return "+ " + value.toFixed(1) + " deg"
+        }
+    });
 };
-
-
 
 
 TweenLite.set($('.datatipWrapper'), {
     ease: Power3.easeOut
 })
-
-
 
 $("#earth-shadow").mouseout(function (e) {
     TweenLite.to($("#toolTip"), 0.2, {
