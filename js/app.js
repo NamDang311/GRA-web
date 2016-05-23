@@ -4,165 +4,79 @@ $(".main").onepage_scroll({
     pagination: true
     , loop: false
 });
+
+//Scroll Magic
+var controller = new ScrollMagic.Controller();
+
 //SEC-1 
-$('#section-1 h1').glitch();
-
-
+//END-SEC-1
 
 
 //SEC-2
-smoketl = new TimelineMax({repeat:-1});
-var smokeLines;
-var smoke2 = Snap("#smoke-2")
-Snap.load("/img/smoke.svg", smokeLoad ) ;
-function smokeLoad( data ){ 
-    smoke2.append( data );
-    smokeLines = $("#smoke-line-2, #smoke-line-1,#smoke-line-3");
-    smoketl.set(smokeLines, {drawSVG:"0%"})
-        .to($("#smoke-line-1"),1,{drawSVG:"100%",ease:Power0.easeNone})
-        .to($("#smoke-line-2"),1, {drawSVG:"100%",ease:Power0.easeNone})
-        .to($("#smoke-line-3"),1, {drawSVG:"100%",ease:Power0.easeNone})
-    .to(smokeLines,2, {opacity:0})
-    ;
+
+var tl2 = new TimelineMax({});
+var shapes;
+Snap.load("/img/coaloilgas/coal.svg", rockLoad);
+function rockLoad(data) {
+    var r = Snap("#coal-cart");
+    r.append(data);
+    shapes = $(".cart-2, .cart-3, .cart-4");
+    rocks = $(".rocks");
+    tl2.add(TweenMax.fromTo($(".cart-1"), 0.5, {
+            drawSVG: "50% 50%"
+        }, {
+            drawSVG: "100%"
+        }))
+        .add(TweenMax.from(shapes,0.5, {
+            drawSVG: "0%"
+        }, "-=1"))
+        .staggerFromTo(rocks, 0.3, {
+            y: "-120px"
+            , ease: Power2.easeIn
+            , opacity: 0
+        }, {
+            y: "0px"
+            , ease: Power2.easeIn
+            , opacity: 1
+        }, 0.1)
+        .fromTo($("#pickaxe"), 0.5, {
+             rotation:-180,
+            opacity: 0
+            , y: "-160px"
+        }, {
+        rotation:0,
+            y: "0px"
+            , opacity: 1
+        },"-=0.25");
+
 }
 
-d3.xml("/img/helicopter.svg", "image/svg+xml", function (error, xml) {
-    if (error) throw error;  document.getElementById('helicopter').appendChild(xml.documentElement);
-    animateTop();
-});
+$('#coal').hover(
+    function () {
 
-function animateTop() {
-    var $rotar = $('#top');
-    var tl = new TimelineMax({
-        repeat: -1
-        , repeatDelay: 3
-    });
-    tl.from($rotar, 0.2, {
-        rotationY: 360
-        , ease: Power0.easeNone
-        , repeat: -1
-        , transformOrigin: "50% 0 0"
-    });
-};
+    }
+    , function () {
 
-TweenLite.set($(".aviation-data"), {
-    scale: 0
-    , transformOrigin: "50% 50% 0"
-    , ease: Power3.easeOut
-})
-$(".airballoon-ripple").click (
-    function (){
-        $(this).fadeOut("slow");
-        TweenLite.to($(".aviation-data"), 0.5, {
-         scale: 1
-        , ease: Power3.easeOut
-    });
     }
 );
-//SEC - 3
 
-var slideVal = [1, 1.02, 1.04, 1.11, 1.13, 1.2];
-var yearsAr = $(".section-3-years").toArray();
-var curClick = 5;
-var earthAr = [22.5, 24, 26, 30, 34, 40],
-tempAr=[0.5,0.4,0.4,0.7,0.7,0.9];
-var statco2,stattemperature;
-var statcompare = 0;
-$(".section-3-years").click(
+$(".markup").click(
     function () {
-        var $notthis = $(".section-3-years").not(this);
-        TweenLite.to($(this), .5, {
-            opacity: 1
-        , });
-        TweenLite.to($notthis, .2, {
-            opacity: 0.5
-        , });
-        
-        //timeline-dot
-        TweenLite.to($(".time-line-dot:eq("+$(".section-3-years").index(this)+")"), .2, {
-            backgroundColor:"#FFE66D",borderColor:"#FFE66D"
-        , });
-        var dotleft=$(".time-line-dot").not($(".time-line-dot:eq("+$(".section-3-years").index(this)+")"));
-        TweenLite.to(dotleft, .2, {
-            backgroundColor:"#1A535C",borderColor:"#257784"
-        , });
-        
-        
-        
-        curClick = $.inArray(this, yearsAr);
+        $(".markup").toggle();
+        $(".coal-video").fadeIn("slow");
+        $(".coal-content").fadeIn("slow");
+    }
+);
 
-        //Change data
-        statcompare = (earthAr[curClick] * 100 / 22.5)-100;
-        statco2= earthAr[curClick];
-        stattemperature=tempAr[curClick];
-        statisticCount();
+var scene2 = new ScrollMagic.Scene({
+        triggerElement: "#section-2"
+    })
+    .setTween(tl2).addTo(controller);
 
-        // add midLine
-        $(this).addClass("midLine");
-    });
-
-function statisticCount() {
-    $("#stat-co2").countTo({
-        from: 0
-        , to: statco2
-        , speed: 400
-        , refreshInterval: 10
-        , formatter: function (value, options) {
-            return value.toFixed(1).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
-        }
-    });
-    
-    $("#stat-compare").countTo({
-        from: 0
-        , to: statcompare
-        , speed: 400
-        , refreshInterval: 10
-        , formatter: function (value, options) {
-            return value.toFixed(1) + "%"
-        }
-    });
-    
-     $("#stat-temperature").countTo({
-        from: 0
-        , to: stattemperature
-        , speed: 400
-        , refreshInterval: 10
-        , formatter: function (value, options) {
-            return "+ " + value.toFixed(1) + " deg"
-        }
-    });
-};
+//END-SEC-2
 
 
-TweenLite.set($('.datatipWrapper'), {
-    ease: Power3.easeOut
-})
-
-$("#earth-shadow").mouseout(function (e) {
-    TweenLite.to($("#toolTip"), 0.2, {
-        ease: Power0.easeNone
-        , scale: 0
-        , transformOrigin: "50% 50% 0"
-        , immediateRender: true
-    });
-
-
-});
-
-
-TweenMax.staggerFromTo($(".signal"), 10, {
-    scale: 0
-    , opacity: 0.3
-    , transformOrigin: "50% 50% 0"
-, }, {
-    scale: 0.8
-    , repeat: -1
-    , opacity: 0
-}, 1);
-//END- of - SEC - 3
-
-
-/// SEC-4
+// SEC-4
 Draggable.create(".handler-wrapper", {
     type: "y"
     , bounds: {
@@ -214,8 +128,11 @@ function lightUp() {
     });
     d3.selectAll(".city-windows").transition().delay(function (d, i) {
         return i * 60;
-    }).duration(500).ease("sin").style("fill", "#FFE66D");
+    }).duration(500).ease("sin").style("fill", "#FFF").style("opacity", 1);
     d3.select("#bulbBody").transition().duration(500).ease("sin").style("fill", "#FFE66D");
+    d3.selectAll(" .city2-1").transition().duration(1000).ease("sin").style("fill", "#1A535C").style("stroke", "#4ECDC4");
+    d3.selectAll(" .city2-0").transition().duration(1000).ease("sin").style("fill", "#1A535C");
+
 };
 
 function sunSet() {
@@ -243,6 +160,10 @@ d3.xml("img/bulb.svg", "image/svg+xml", function (error, xml) {
     document.getElementById('bulb').appendChild(xml.documentElement);
 });
 
+d3.xml("img/city2.svg", "image/svg+xml", function (error, xml) {
+    if (error) throw error;
+    document.getElementById('city2').appendChild(xml.documentElement);
+});
 
 d3.xml("img/clouds/clouds-1.svg", "image/svg+xml", function (error, xml) {
     if (error) throw error;
@@ -270,9 +191,177 @@ d3.xml("img/windows.svg", "image/svg+xml", function (error, xml) {
     if (error) throw error;
     document.getElementById('windowsHolder').appendChild(xml.documentElement);
 });
+//END-SEC-4
+
+//SEC-5
+smoketl = new TimelineMax({
+    repeat: -1
+});
+var smokeLines;
+var smoke2 = Snap("#smoke-2")
+Snap.load("/img/smoke.svg", smokeLoad);
+
+function smokeLoad(data) {
+    smoke2.append(data);
+    smokeLines = $("#smoke-line-2, #smoke-line-1,#smoke-line-3");
+    smoketl.set(smokeLines, {
+            drawSVG: "0%"
+        })
+        .to($("#smoke-line-1"), 1, {
+            drawSVG: "100%"
+            , ease: Power0.easeNone
+        })
+        .to($("#smoke-line-2"), 1, {
+            drawSVG: "100%"
+            , ease: Power0.easeNone
+        })
+        .to($("#smoke-line-3"), 1, {
+            drawSVG: "100%"
+            , ease: Power0.easeNone
+        })
+        .to(smokeLines, 2, {
+            opacity: 0
+        });
+}
 
 
-// SEC-5
+
+function animateTop() {
+    var $rotar = $('#top');
+    var tl = new TimelineMax({
+        repeat: -1
+        , repeatDelay: 3
+    });
+    tl.from($rotar, 0.2, {
+        rotationY: 360
+        , ease: Power0.easeNone
+        , repeat: -1
+        , transformOrigin: "50% 0 0"
+    });
+};
+
+TweenLite.set($(".aviation-data"), {
+    scale: 0
+    , transformOrigin: "50% 50% 0"
+    , ease: Power3.easeOut
+})
+$(".airballoon-ripple").click(
+    function () {
+        $(this).fadeOut("slow");
+        TweenLite.to($(".aviation-data"), 0.5, {
+            scale: 1
+            , ease: Power3.easeOut
+        });
+    }
+);
+
+//END-SEC-5
+
+//SEC - 7
+var slideVal = [1, 1.02, 1.04, 1.11, 1.13, 1.2];
+var yearsAr = $(".section-7-years").toArray();
+var curClick = 5;
+var earthAr = [22.5, 24, 26, 30, 34, 40]
+    , tempAr = [0.5, 0.4, 0.4, 0.7, 0.7, 0.9];
+var statco2, stattemperature;
+var statcompare = 0;
+$(".section-7-years").click(
+    function () {
+        var $notthis = $(".section-7-years").not(this);
+        TweenLite.to($(this), .5, {
+            opacity: 1
+        , });
+        TweenLite.to($notthis, .2, {
+            opacity: 0.5
+        , });
+
+        //timeline-dot
+        TweenLite.to($(".time-line-dot:eq(" + $(".section-7-years").index(this) + ")"), .2, {
+            backgroundColor: "#FFE66D"
+            , borderColor: "#FFE66D"
+        , });
+        var dotleft = $(".time-line-dot").not($(".time-line-dot:eq(" + $(".section-7-years").index(this) + ")"));
+        TweenLite.to(dotleft, .2, {
+            backgroundColor: "#1A535C"
+            , borderColor: "#257784"
+        , });
+
+
+
+        curClick = $.inArray(this, yearsAr);
+
+        //Change data
+        statcompare = (earthAr[curClick] * 100 / 22.5) - 100;
+        statco2 = earthAr[curClick];
+        stattemperature = tempAr[curClick];
+        statisticCount();
+
+        // add midLine
+        $(this).addClass("midLine");
+    });
+
+function statisticCount() {
+    $("#stat-co2").countTo({
+        from: 0
+        , to: statco2
+        , speed: 400
+        , refreshInterval: 10
+        , formatter: function (value, options) {
+            return value.toFixed(1).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
+        }
+    });
+
+    $("#stat-compare").countTo({
+        from: 0
+        , to: statcompare
+        , speed: 400
+        , refreshInterval: 10
+        , formatter: function (value, options) {
+            return value.toFixed(1) + "%"
+        }
+    });
+
+    $("#stat-temperature").countTo({
+        from: 0
+        , to: stattemperature
+        , speed: 400
+        , refreshInterval: 10
+        , formatter: function (value, options) {
+            return "+ " + value.toFixed(1) + " deg"
+        }
+    });
+};
+
+
+TweenLite.set($('.datatipWrapper'), {
+    ease: Power3.easeOut
+})
+
+$("#earth-shadow").mouseout(function (e) {
+    TweenLite.to($("#toolTip"), 0.2, {
+        ease: Power0.easeNone
+        , scale: 0
+        , transformOrigin: "50% 50% 0"
+        , immediateRender: true
+    });
+
+
+});
+
+
+TweenMax.staggerFromTo($(".signal"), 10, {
+    scale: 0
+    , opacity: 0.3
+    , transformOrigin: "50% 50% 0"
+, }, {
+    scale: 0.8
+    , repeat: -1
+    , opacity: 0
+}, 1);
+
+//END-SEC-7
+
+// SEC-8
 d3.xml("img/worldmap.svg", "image/svg+xml", function (error, xml) {
     if (error) throw error;
     document.getElementById('worldmap').appendChild(xml.documentElement);
@@ -285,7 +374,7 @@ var trigger = true;
 var topPos1 = 0;
 var leftPos1 = 3;
 var clickCount = 0;
-var clickedAr=[];
+var clickedAr = [];
 
 TweenMax.set($("#worldmap"), {
     perspective: 1000
@@ -339,19 +428,20 @@ $('.circle-ripple').bind('click', function (event) {
 //Show name of country
 $('.circle-ripple').hover(
     function () {
-        if ( $.inArray(this, clickedAr) < 0){
-       
-        TweenLite.to($(".nameBubble"), 0.5, {
-            opacity: 1
-        });
-        $("#mainBubble").html(nameAr[$.inArray(this, myAr)]);
-        $(".nameBubble").css({
-            left: Math.round($(this).position().left * 100 / $(this).parent().width()) + "%"
-            , top: $(this).position().top * 100 / $(this).parent().height() - 10 + "%"
-            , transform: "translate(-45%,-23%)"
-        });
+        if ($.inArray(this, clickedAr) < 0) {
+
+            TweenLite.to($(".nameBubble"), 0.5, {
+                opacity: 1
+            });
+            $("#mainBubble").html(nameAr[$.inArray(this, myAr)]);
+            $(".nameBubble").css({
+                left: Math.round($(this).position().left * 100 / $(this).parent().width()) + "%"
+                , top: $(this).position().top * 100 / $(this).parent().height() - 10 + "%"
+                , transform: "translate(-45%,-23%)"
+            });
         }
-    }, function () {
+    }
+    , function () {
         TweenLite.to($(".nameBubble"), 0.5, {
             opacity: 0
         });
@@ -447,10 +537,9 @@ function fadedAni() {
     }
 
 };
+//END-SEC-8
 
-//SEC-6
-
-
+//SEC-9
 $(".findout").click(
     function () {
         TweenLite.to($(".findoutWrapper"), 1, {
@@ -476,43 +565,4 @@ Draggable.create(".dragItems", {
         };
     }
 });
-
-//SEC-7
-var s = Snap("#coal");
-
-var shapes;
-Snap.load("/img/coaloilgas/coal.svg", cartLoad ) ;
-function cartLoad( data ){ 
-    s.append( data );
-    shapes = $(".coal-1, .coal-2, .coal-4, .coal-5");
-    tl7.set(shapes, {drawSVG:"0%"});
-    tl7.set($(".coal-3"), {drawSVG:"50% 50%"});
-}
-var r = Snap("#coalRocks");
-Snap.load("/img/coaloilgas/coalrocks.svg", rockLoad );
-function rockLoad( data ){ 
-    r.append( data );
-    rocks = $(".rocks");
-tl7.set(rocks , {y:"-120px"});
-}
-
-tl7 = new TimelineMax({});
-$('#coal').hover(
-    function () {
-        tl7.to($(".coal-3") , 0.5, {drawSVG:"100%"})
-        tl7.fromTo(shapes , 0.5, {drawSVG:"0%"}, {drawSVG:"100%"},"-=0.5");
-        tl7.staggerTo(rocks , 0.4, {y:"20px",ease:Power2.easeIn},0.1);
-    }, function () {
-       tl7.to(shapes , 0.2, {drawSVG:"0%"});
-        tl7.to($(".coal-3") , 0.2, {drawSVG:"50% 50%"});
-        tl7.set(rocks, {y:"-120px"});
-    }
-);
-
-$(".markup").click(
-    function (){
-        $(".markup").toggle();
-        $(".coal-video").fadeIn("slow");
-        $(".coal-content").fadeIn("slow");
-    }
-);
+//END-SEC-9

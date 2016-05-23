@@ -3,10 +3,12 @@
     <style>
       .cls-1 {
         fill: none;
+        
       }
 
       .city-windows {
-        fill: #1A535C;
+        fill: #FFE66D;
+        opacity:0;
       }
     </style>
   </defs>

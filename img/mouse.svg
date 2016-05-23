@@ -1,14 +1,29 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 31.96">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #fff;
-      }
-    </style>
-  </defs>
-  <title>mouse</title>
-  <g>
-    <path class="cls-1" d="M50.2,34a10,10,0,0,0-10,10v12a10,10,0,1,0,20,0V44A10,10,0,0,0,50.2,34ZM59,56a8.82,8.82,0,1,1-17.65,0V44A8.82,8.82,0,1,1,59,44V56Z" transform="translate(-40.2 -33.97)"/>
-    <path class="cls-1" d="M50.2,41.34a0.6,0.6,0,0,0-.59.59v4.43a0.59,0.59,0,1,0,1.18,0V41.93A0.6,0.6,0,0,0,50.2,41.34Z" transform="translate(-40.2 -33.97)"/>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="150px" height="150px" viewBox="30.5 -9.5 1554 813" style="enable-background:new 0 0 52 77.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+    circle {
+  animation: scroll 1.5s ease infinite;
+}
+
+@keyframes scroll {
+  0% { 
+    opacity: 0;
+    cy: 481;
+  }
+  33% {
+    opacity: 1;
+  }
+  100% { 
+    opacity: 0;
+    cy: 231;
+  }
+}
+</style>
+<path class="st0" d="M28.1,0h-4.3C22.6,0,0,0.5,0,23.8v30.3c0,1,0.4,23.8,23.8,23.8h4.3c1.4,0,23.8-0.6,23.8-23.8V23.8
+	C52,22.8,51.6,0,28.1,0z M47.6,54.1c0,18.9-17.5,19.5-19.5,19.5h-4.3C5,73.6,4.3,56.1,4.3,54.1V23.8C4.3,5,21.8,4.3,23.8,4.3h4.3
+	c18.9,0,19.5,17.5,19.5,19.5V54.1z"/>
+<circle class="st0" cx="26" cy="22.7" r="4.4"/>
 </svg>

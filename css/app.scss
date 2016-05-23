@@ -12,6 +12,7 @@ $lightBlue: #4ECDC4;
 $dark:#353535;
 $red:#FF6B6B;
 $white:#ffffff;
+$black:#171723;
 $asteroids-belt-orb: 600px;
 $asteroids-belt-pl: 210px;
 $base-font-size: 0.8em;
@@ -80,10 +81,6 @@ body {
 }
 
 
-/**
-   * SEC-1
-   */
-
 h1 {
     line-height: 1.1em;
     font-family: $fonth;
@@ -99,7 +96,11 @@ li {
     font-family: $fontp;
 }
 
-#section-1 {
+/**
+   * SEC-0
+   */
+
+#section-0 {
     background-color: $red;
     background: url("../img/smoke2.jpg");
     background-size: cover;
@@ -180,23 +181,344 @@ nav a {
 
 
 /**
-   * End of SEC-1
+   * End of SEC-0
    */
 
 
 /**
-   * SEC-2 
+   * SEC-1
    */
 
+#section-1 {
+   
+    text-align: center;
+    background: $yellow;
+    .row {
+        
+    }
+    
+    p {
+        font-size: 1.2em;
+        color:$dark;
+        font-family:"montserrat";
+        max-width:960px;
+        width:60vw;
+        margin:15vw auto 0 auto;
+        
+    }
+}
+
+
+
+/**
+   * End of SEC-1
+   */
+
+/**
+   * SEC-2
+   */
 #section-2 {
     background-color: $white;
-    .row h1 {
+    h1 {
+        text-transform: uppercase;
+        color: $dark;
+        line-height: 1.1em;
+        font-family: $fonth;
+    }
+    h1:before {
+        @extend .line;
+        content: "";
+        background-color: $dark;
+    }
+}
+
+.section2-wrapper {
+    width: 90vw;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.markup {
+    color: $dark;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+  
+}
+#coal-wrap {
+    position: relative;
+    height:50vh;
+    width: 100%;
+     outline: 2px solid transparent;
+    transition:  outline-color 0.4s;
+      h2 {
+        font-family: $fontp;
+        font-weight: 600;
+    }
+    .underline {
+        width:100px;
+        height:4px;
+        background-color: $dark;
+        margin:0 auto;
+    }
+    .tone {
+        z-index: -1;
+        position: absolute;
+        top:0;
+        width:100%;
+    }
+    #coal-cart {
+        position: absolute;
+        bottom:0;
+        width: 90%;
+        left:50%;
+        transform: translate(-50%,0);
+    }
+}
+
+.markup:hover #coal-wrap{
+    outline:2px solid $yellow;
+}
+.coal-video,
+.coal-content {
+    display: none;
+    margin-top: 20px;
+}
+
+.coal-content div:nth-child(1) {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.coal-content p {
+    color: $dark;
+}
+
+#coalRocks {
+    margin-bottom: -10px;
+    padding: 0;
+    min-height: 80px;
+}
+
+#coal {
+    margin: 0;
+}
+
+/**
+   * End of SEC-2
+   */
+
+/**
+   * SEC-3
+   */
+
+/**
+   * End of SEC-3
+   */
+
+/**
+   * SEC-4
+   */
+
+#section-4 {
+    background: $yellow;
+    z-index: 0;
+    h1 {
+        padding: 0;
+        color: white;
+        z-index: 999;
+        text-transform: uppercase;
+        font-family: $fonth;
+        opacity: 0;
+    }
+    h1:before {
+        @extend .line;
+        content: "";
+        background-color: white;
+    }
+    p {
+        color: white;
+        opacity: 0;
+    }
+}
+
+.cntr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.icon-menu {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    right: 36px;
+    z-index: 99;
+    top: 36px;
+}
+
+#city2 {
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    z-index: 9;
+    width: 100vw;
+}
+
+#windowsHolder {
+    bottom: -0.5%;
+    position: absolute;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+.clouds {
+    width: 200px;
+    position: absolute;
+    z-index: 0;
+    opacity: .2;
+}
+
+#cloud-1,
+{
+    top: 20%;
+    left: 50%;
+    animation: fly linear 45s infinite;
+}
+
+#cloud-2,
+{
+    top: 50%;
+    left: 20%;
+    animation: fly linear 25s infinite;
+}
+
+#cloud-3,
+{
+    top: 10%;
+    left: 30%;
+    animation: fly linear 35s infinite;
+}
+
+#cloud-4,
+{
+    top: 30%;
+    left: 10%;
+    animation: fly linear 65s infinite;
+}
+
+#cloud-5,
+{
+    top: 40%;
+    left: 00%;
+    animation: fly linear 40s infinite;
+}
+
+.sun {
+    height: 200px;
+    width: 200px;
+    top: 15%;
+    left: 15%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 999;
+    background-color: $red;
+}
+
+.sunRay {
+    height: 250px;
+    width: 250px;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 999;
+    background-color: $red;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+    box-shadow: 0 0 0 20px rgba(255, 107, 107, .5), 0 0 0 40px rgba(255, 107, 107, .3);
+}
+
+.bulb-wrapper {
+    width: 35vh;
+    height: 50vh;
+    right: 5%;
+    position: absolute;
+    top: 0;
+    z-index: 99;
+}
+
+#bulb {
+    padding-bottom: 100%;
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    top: 0;
+    z-index: 99;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.lightray {
+    position: absolute;
+    background-color: transparentize($yellow, 0.4);
+    width: 50vh;
+    height: 50vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 1%;
+    z-index: 0;
+    display: none;
+}
+
+.handler-wrapper {
+    overflow-y: hidden;
+    height: auto;
+    position: absolute;
+    top: 0%;
+    right: 40%;
+    width: 24px;
+    height: 300px;
+    z-index: 999;
+}
+
+.handler-ripple {
+    background-color: #4ECDC4;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+    position: absolute;
+    bottom: 0%;
+    -webkit-animation: ripple 2s linear infinite;
+    animation: ripple 2s linear infinite;
+}
+
+/**
+   * END OF SEC-4
+   */
+
+/**
+   * SEC-5 
+   */
+
+#section-5 {
+    background-color: $white;
+    .open h1 {
         font-family: $fonth;
         text-transform: uppercase;
         line-height: 1.1em;
         color: $dark;
     }
-    .row h1:before {
+    .open h1:before {
         @extend .line;
         content: "";
         background-color: black;
@@ -373,11 +695,90 @@ nav a {
 
 
 /**
-   * SEC-3 
+   * SEC-6 
+   */
+/**
+   * Section-6
    */
 
-#section-3 {
-    background: url('/img/stars_medium.png') $darkBlue;
+#section-6 {
+    background-color: $yellow;
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 200;
+        font-size: 2em;
+    }
+    h1 {
+        text-align: center;
+    }
+}
+
+.findoutWrapper {
+    position: absolute;
+    height: 70vh;
+    width: 100%;
+    left: 0;
+    .findout-content {
+        top: 20%;
+        position: absolute;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+    }
+    .findout {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .target-content {
+        top: 5%;
+        height: 400px;
+        width: 400px;
+        background-color: gray;
+        position: absolute;
+        left: 150%;
+        transform: translate(-50%, 0);
+    }
+}
+
+.dragSection-wrapper {
+    position: absolute;
+    width: 70vw;
+    max-width: 900px;
+    max-height: 150px;
+    height: 15vw;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.dragSection-wrapper .dragItems {
+    width: 400px;
+    background-color: aqua;
+    margin-right: 40px;
+}
+
+.dragSection-wrapper .dragItems:last-child {
+    margin-right: 0;
+}
+
+
+
+/**
+   * END OF SEC 6
+   */
+
+
+/**
+   * SEC-7 
+   */
+
+#section-7 {
+    background: url('/img/stars_medium.png') $black;
     color: white;
     .year-wrapper {
         font-family: $fonth;
@@ -388,11 +789,11 @@ nav a {
         justify-content: space-between;
         margin-bottom: 0.8em;
     }
-    .section-3-years {
+    .section-7-years {
         opacity: 0.8;
         animation: all 2s linear;
     }
-    .section-3-years div {
+    .section-7-years div {
         cursor: pointer;
         position: relative;
     }
@@ -406,10 +807,6 @@ nav a {
         content: "";
         background-color: white;
     }
-    #sec-3-p {
-        padding: 0;
-        color: white;
-    }
 }
 
 .case {
@@ -419,7 +816,6 @@ nav a {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     h1{
-        
         font-size: 2em;
         white-space: nowrap;
         margin-top: -0.5em;
@@ -446,7 +842,7 @@ nav a {
 
 
 
-#section-3 .statistic h2 {
+#section-7 .statistic h2 {
     
     margin-top: -25px;
     color: $red;
@@ -456,7 +852,7 @@ nav a {
     font-family: $fonth;
 }
 
-#section-3 .statistic p {
+#section-7 .statistic p {
     color: white;
     font-size: 1.1em;
     letter-spacing: 0.1em;
@@ -602,195 +998,12 @@ nav a {
 }
 
 
-/**
-   * SEC-4
-   */
-
-#section-4 {
-    background: $yellow;
-    z-index: 0;
-    h1 {
-        padding: 0;
-        color: white;
-        z-index: 999;
-        text-transform: uppercase;
-        font-family: $fonth;
-        opacity: 0;
-    }
-    h1:before {
-        @extend .line;
-        content: "";
-        background-color: white;
-    }
-    p {
-        color: white;
-        opacity: 0;
-    }
-}
-
-.cntr {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-}
-
-.icon-menu {
-    width: 44px;
-    height: 44px;
-    position: absolute;
-    right: 36px;
-    z-index: 99;
-    top: 36px;
-}
-
-#city2 {
-    bottom: 0;
-    position: absolute;
-    left: 0;
-    z-index: 9;
-}
-
-#windowsHolder {
-    bottom: -0.5%;
-    position: absolute;
-    left: 0;
-    z-index: 999;
-    width: 100%;
-}
-
-.clouds {
-    width: 200px;
-    position: absolute;
-    z-index: 0;
-    opacity: .2;
-}
-
-#cloud-1,
-{
-    top: 20%;
-    left: 50%;
-    animation: fly linear 45s infinite;
-}
-
-#cloud-2,
-{
-    top: 50%;
-    left: 20%;
-    animation: fly linear 25s infinite;
-}
-
-#cloud-3,
-{
-    top: 10%;
-    left: 30%;
-    animation: fly linear 35s infinite;
-}
-
-#cloud-4,
-{
-    top: 30%;
-    left: 10%;
-    animation: fly linear 65s infinite;
-}
-
-#cloud-5,
-{
-    top: 40%;
-    left: 00%;
-    animation: fly linear 40s infinite;
-}
-
-.sun {
-    height: 200px;
-    width: 200px;
-    top: 15%;
-    left: 15%;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 999;
-    background-color: $red;
-}
-
-.sunRay {
-    height: 250px;
-    width: 250px;
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 999;
-    background-color: $red;
-    transform: translate(-50%, -50%);
-    opacity: 0.5;
-    box-shadow: 0 0 0 20px rgba(255, 107, 107, .5), 0 0 0 40px rgba(255, 107, 107, .3);
-}
-
-.bulb-wrapper {
-    width: 35vh;
-    height: 50vh;
-    right: 5%;
-    position: absolute;
-    top: 0;
-    z-index: 99;
-}
-
-#bulb {
-    padding-bottom: 100%;
-    position: absolute;
-    width: 80%;
-    height: 100%;
-    top: 0;
-    z-index: 99;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-
-.lightray {
-    position: absolute;
-    background-color: transparentize($yellow, 0.4);
-    width: 50vh;
-    height: 50vh;
-    border-radius: 50%;
-    top: 50%;
-    transform: translate(0, -50%);
-    right: 1%;
-    z-index: 0;
-    display: none;
-}
-
-.handler-wrapper {
-    overflow-y: hidden;
-    height: auto;
-    position: absolute;
-    top: 0%;
-    right: 40%;
-    width: 24px;
-    height: 300px;
-    z-index: 999;
-}
-
-.handler-ripple {
-    background-color: #4ECDC4;
-    width: 1.5em;
-    height: 1.5em;
-    border-radius: 50%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    cursor: pointer;
-    position: absolute;
-    bottom: 0%;
-    -webkit-animation: ripple 2s linear infinite;
-    animation: ripple 2s linear infinite;
-}
-
 
 /**
-   * SEC-5
+   * SEC-8
    */
 
-#section-5 {
+#section-8 {
     background-color: $darkBlue;
     h1 {
         padding: 0;
@@ -963,139 +1176,6 @@ nav a {
 }
 
 
-/**
-   * Section-6
-   */
-
-#section-6 {
-    background-color: $yellow;
-    h2 {
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: 200;
-        font-size: 2em;
-    }
-    h1 {
-        text-align: center;
-    }
-}
-
-.findoutWrapper {
-    position: absolute;
-    height: 70vh;
-    width: 100%;
-    left: 0;
-    .findout-content {
-        top: 20%;
-        position: absolute;
-        left: 50%;
-        text-align: center;
-        transform: translate(-50%, -50%);
-    }
-    .findout {
-        text-decoration: underline;
-        cursor: pointer;
-    }
-    .target-content {
-        top: 5%;
-        height: 400px;
-        width: 400px;
-        background-color: gray;
-        position: absolute;
-        left: 150%;
-        transform: translate(-50%, 0);
-    }
-}
-
-.dragSection-wrapper {
-    position: absolute;
-    width: 70vw;
-    max-width: 900px;
-    max-height: 150px;
-    height: 15vw;
-    bottom: 5%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.dragSection-wrapper .dragItems {
-    width: 400px;
-    background-color: aqua;
-    margin-right: 40px;
-}
-
-.dragSection-wrapper .dragItems:last-child {
-    margin-right: 0;
-}
-
-
-/**
-   * Section 7
-   */
-
-#section-7 {
-    background-color: $white;
-    h1 {
-        text-transform: uppercase;
-        color: $dark;
-        line-height: 1.1em;
-        font-family: $fonth;
-    }
-    h1:before {
-        @extend .line;
-        content: "";
-        background-color: $dark;
-    }
-}
-
-.section7-wrapper {
-    width: 90vw;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 200px;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, 0);
-}
-
-.markup {
-    font-family: $fonth;
-    color: $dark;
-    text-align: center;
-    text-transform: uppercase;
-    width: 15vw;
-    cursor: pointer;
-}
-
-.coal-video,
-.coal-content {
-    display: none;
-    margin-top: 20px;
-}
-
-.coal-content div:nth-child(1) {
-    text-align: right;
-    padding-right: 20px;
-}
-
-.coal-content p {
-    color: $dark;
-}
-
-#coalRocks {
-    margin-bottom: -10px;
-    padding: 0;
-    min-height: 80px;
-}
-
-#coal {
-    margin: 0;
-}
 
 @keyframes ripple {
     0% {

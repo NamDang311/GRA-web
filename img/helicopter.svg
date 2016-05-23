@@ -3,41 +3,41 @@
 <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 223.4 101.7" style="enable-background:new 0 0 223.4 101.7;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#2F404F;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
-	.st1{fill:#1B1D1B;stroke:#2F404F;stroke-width:6;stroke-linecap:round;stroke-miterlimit:10;}
-	.st2{fill:#2F404F;stroke:#1B1D1B;stroke-width:6;stroke-linecap:round;stroke-miterlimit:10;}
-	.st3{fill:#FF6B6B;stroke:#2F404F;stroke-width:3;stroke-miterlimit:10;}
-	.st4{fill:none;stroke:#2F404F;stroke-width:3;stroke-miterlimit:10;}
-	.st5{fill:#2F404F;}
-	.st6{fill:#FDFFFD;stroke:#2F404F;stroke-width:3;stroke-miterlimit:10;}
-	.st7{fill:none;stroke:#2F404F;stroke-width:2;stroke-miterlimit:10;}
-	.st8{fill:#FFFFFF;stroke:#2F404F;stroke-width:2;stroke-miterlimit:10;}
-	.st9{fill:#FFE66D;}
-	.st10{fill:none;stroke:#2F404F;stroke-miterlimit:10;}
+	.helicopter0{fill:none;stroke:#2F404F;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.helicopter1{fill:#1B1D1B;stroke:#2F404F;stroke-width:6;stroke-linecap:round;stroke-miterlimit:10;}
+	.helicopter2{fill:#2F404F;stroke:#1B1D1B;stroke-width:6;stroke-linecap:round;stroke-miterlimit:10;}
+	.helicopter3{fill:#FF6B6B;stroke:#2F404F;stroke-width:3;stroke-miterlimit:10;}
+	.helicopter4{fill:none;stroke:#2F404F;stroke-width:3;stroke-miterlimit:10;}
+	.helicopter5{fill:#2F404F;}
+	.helicopter6{fill:#FDFFFD;stroke:#2F404F;stroke-width:3;stroke-miterlimit:10;}
+	.helicopter7{fill:none;stroke:#2F404F;stroke-width:2;stroke-miterlimit:10;}
+	.helicopter8{fill:#FFFFFF;stroke:#2F404F;stroke-width:2;stroke-miterlimit:10;}
+	.helicopter9{fill:#FFE66D;}
+	.helicopter10{fill:none;stroke:#2F404F;stroke-miterlimit:10;}
 </style>
 <g>
-	<line class="st0" x1="152.6" y1="89.4" x2="152.6" y2="99.7"/>
-	<line class="st0" x1="121.7" y1="89.4" x2="121.7" y2="99.7"/>
-	<line class="st0" x1="99.5" y1="99.7" x2="175.4" y2="99.7"/>
+	<line class="helicopter0" x1="152.6" y1="89.4" x2="152.6" y2="99.7"/>
+	<line class="helicopter0" x1="121.7" y1="89.4" x2="121.7" y2="99.7"/>
+	<line class="helicopter0" x1="99.5" y1="99.7" x2="175.4" y2="99.7"/>
 </g>
 <title>helicopter</title>
-<path class="st1" d="M170,98.3"/>
-<path class="st2" d="M154.5,82.9"/>
-<path class="st3" d="M142.2,54.7V15.6c-18.3,0-34.1,9.9-40.8,23.9H18.2l8.6,7.5l53.4,5.4l18.7,10.4c3.9,16.3,19.2,28.9,38.2,30.8
+<path class="helicopter1" d="M170,98.3"/>
+<path class="helicopter2" d="M154.5,82.9"/>
+<path class="helicopter3" d="M142.2,54.7V15.6c-18.3,0-34.1,9.9-40.8,23.9H18.2l8.6,7.5l53.4,5.4l18.7,10.4c3.9,16.3,19.2,28.9,38.2,30.8
 	c21.4,2.8,41.1-12.2,44-33.7c0.2-1.7,0.3-3.5,0.3-5.2L142.2,54.7L142.2,54.7z"/>
-<circle class="st4" cx="18.2" cy="39.5" r="15.2"/>
-<path class="st5" d="M132.7,0L132.7,0c2.1,0,3.9,1.7,3.9,3.9l0,0v10.4l0,0h-7.7l0,0V3.9C128.8,1.7,130.6,0,132.7,0L132.7,0z"/>
-<path class="st6" d="M101.4,39.5H18.2l5.3,4.6h118.6V15.6C123.8,15.6,108.1,25.5,101.4,39.5z"/>
-<circle class="st5" cx="114.4" cy="37.4" r="3.7"/>
-<path class="st7" d="M176.5,54.7v-2.4c-0.1-18.5-15.1-33.5-33.6-33.6h-0.7v36H176.5L176.5,54.7z"/>
-<path class="st8" d="M109.5,14.2h33.7l0,0v11.6l0,0h-33.7c-3.2,0-5.8-2.6-5.8-5.8l0,0C103.7,16.8,106.3,14.2,109.5,14.2z"/>
+<circle class="helicopter4" cx="18.2" cy="39.5" r="15.2"/>
+<path class="helicopter5" d="M132.7,0L132.7,0c2.1,0,3.9,1.7,3.9,3.9l0,0v10.4l0,0h-7.7l0,0V3.9C128.8,1.7,130.6,0,132.7,0L132.7,0z"/>
+<path class="helicopter6" d="M101.4,39.5H18.2l5.3,4.6h118.6V15.6C123.8,15.6,108.1,25.5,101.4,39.5z"/>
+<circle class="helicopter5" cx="114.4" cy="37.4" r="3.7"/>
+<path class="helicopter7" d="M176.5,54.7v-2.4c-0.1-18.5-15.1-33.5-33.6-33.6h-0.7v36H176.5L176.5,54.7z"/>
+<path class="helicopter8" d="M109.5,14.2h33.7l0,0v11.6l0,0h-33.7c-3.2,0-5.8-2.6-5.8-5.8l0,0C103.7,16.8,106.3,14.2,109.5,14.2z"/>
 <g id="top">
-	<rect x="41.2" y="6.4" class="st5" width="182.3" height="1.5"/>
-	<rect x="45.4" y="6.4" class="st9" width="7" height="1.5"/>
-	<rect x="213" y="6.4" class="st9" width="7" height="1.5"/>
+	<rect x="41.2" y="6.4" class="helicopter5" width="182.3" height="1.5"/>
+	<rect x="45.4" y="6.4" class="helicopter9" width="7" height="1.5"/>
+	<rect x="213" y="6.4" class="helicopter9" width="7" height="1.5"/>
 </g>
-<rect x="123.4" y="14.2" class="st10" width="19.7" height="11.5"/>
-<line class="st10" x1="157.3" y1="25.7" x2="148.6" y2="34.3"/>
-<line class="st10" x1="163.8" y1="31.8" x2="158.2" y2="37.5"/>
-<line class="st10" x1="155.3" y1="40.3" x2="148.2" y2="47.4"/>
+<rect x="123.4" y="14.2" class="helicopter10" width="19.7" height="11.5"/>
+<line class="helicopter10" x1="157.3" y1="25.7" x2="148.6" y2="34.3"/>
+<line class="helicopter10" x1="163.8" y1="31.8" x2="158.2" y2="37.5"/>
+<line class="helicopter10" x1="155.3" y1="40.3" x2="148.2" y2="47.4"/>
 </svg>
