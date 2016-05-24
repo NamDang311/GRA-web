@@ -4,7 +4,7 @@ sans-serif;
 $fontp:'Roboto Condensed',
 sans-serif;
 $blue:#2b90d9;
-$gray:#d9e1e8;
+$gray:#f3f3f3;
 $yellow:#FFE66D;
 $neutral:#F7FFF7;
 $darkBlue: #1A535C;
@@ -232,12 +232,8 @@ nav a {
     }
 }
 
-.section2-wrapper {
-    width: 90vw;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, 0);
+.section-2-items-wrapper {
+   margin-top:50px;
 }
 
 .markup {
@@ -245,22 +241,25 @@ nav a {
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
-  
 }
-#coal-wrap {
+
+.markup-items {
     position: relative;
     height:50vh;
-    width: 100%;
+    width: 90%;
      outline: 2px solid transparent;
     transition:  outline-color 0.4s;
+    padding-top: 30px;
       h2 {
+        font-size: 4em;
         font-family: $fontp;
         font-weight: 600;
+        letter-spacing: 0.2em;
     }
     .underline {
         width:100px;
         height:4px;
-        background-color: $dark;
+        background-color: $yellow;
         margin:0 auto;
     }
     .tone {
@@ -271,15 +270,23 @@ nav a {
     }
     #coal-cart {
         position: absolute;
-        bottom:0;
-        width: 90%;
+        bottom:5%;
+        width: 50%;
         left:50%;
         transform: translate(-50%,0);
     }
+    #oil-cart {
+        @extend #coal-cart;
+        width: 90%;
+    }
+    #gas-cart {
+        @extend #coal-cart;
+        width: 70%;
+    }
 }
 
-.markup:hover #coal-wrap{
-    outline:2px solid $yellow;
+.markup:hover .markup-items{
+    outline:4px solid $dark;
 }
 .coal-video,
 .coal-content {

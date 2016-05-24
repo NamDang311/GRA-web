@@ -13,21 +13,21 @@ var controller = new ScrollMagic.Controller();
 
 
 //SEC-2
-
-var tl2 = new TimelineMax({});
-var shapes;
+//---Coal animation
+var tlcoal = new TimelineMax({});
 Snap.load("/img/coaloilgas/coal.svg", rockLoad);
+
 function rockLoad(data) {
     var r = Snap("#coal-cart");
     r.append(data);
-    shapes = $(".cart-2, .cart-3, .cart-4");
-    rocks = $(".rocks");
-    tl2.add(TweenMax.fromTo($(".cart-1"), 0.5, {
+    var cartShapes = $(".cart-2, .cart-3, .cart-4");
+    var rocks = $(".rocks");
+    tlcoal.add(TweenMax.fromTo($(".cart-1"), 0.5, {
             drawSVG: "50% 50%"
         }, {
             drawSVG: "100%"
         }))
-        .add(TweenMax.from(shapes,0.5, {
+        .add(TweenMax.from(cartShapes, 0.5, {
             drawSVG: "0%"
         }, "-=1"))
         .staggerFromTo(rocks, 0.3, {
@@ -40,25 +40,111 @@ function rockLoad(data) {
             , opacity: 1
         }, 0.1)
         .fromTo($("#pickaxe"), 0.5, {
-             rotation:-180,
-            opacity: 0
+            rotation: -180
+            , opacity: 0
             , y: "-160px"
         }, {
-        rotation:0,
-            y: "0px"
+            rotation: 0
+            , y: "0px"
             , opacity: 1
-        },"-=0.25");
+        }, "-=0.25");
 
 }
 
-$('#coal').hover(
-    function () {
+////---Oil animation
+var tloil = new TimelineMax({
+    delay: 0.2
+});
+var oilShapes;
+Snap.load("/img/coaloilgas/oil.svg", oilLoad);
 
-    }
-    , function () {
+function oilLoad(data) {
+    var o = Snap("#oil-cart");
+    o.append(data);
+    oilShapes = $("#oil-lower, #oil-lower_1_");
+    tloil.fromTo($('#oil-body'), 0.5, {
+            css: {
+                scaleX: 0
+                , transformOrigin: '50% 50%'
+            }
+        }, {
+            css: {
+                scaleX: 1
+            }
+        })
+        .fromTo(" .oil-st1", 2, {
+            drawSVG: "0"
+        }, {
+            drawSVG: "100%"
+        })
+        .fromTo(" .oil-st8, #oil-circle", 0.5, {
+            drawSVG: "0"
+        }, {
+            drawSVG: "100%"
+        }, "-=2")
+        .fromTo($('#oil-pattern'), 0.5, {
+            css: {
+                scaleY: 0
+            }
+        }, {
+            css: {
+                scaleY: 1
+            }
+        }, "-=2")
+        .fromTo(oilShapes, 0.5, {
+            css: {
+                scaleX: 0
+                , transformOrigin: '50% 50%'
+            }
+        }, {
+            css: {
+                scaleX: 1
+            }
+        }, "-=2.5")
+        .fromTo('#oil-drop', 0.5, {
+            y: "-=50px"
+            , opacity: 0
+        }, {
+            y: 0
+            , opacity: 1
+        }, "-=1.45")
+};
 
-    }
-);
+////---Gas animation
+var tlgas = new TimelineMax({
+    delay: 0.2
+});
+var gasShapes;
+Snap.load("/img/coaloilgas/gas.svg", gasLoad);
+
+function gasLoad(data) {
+    var g = Snap("#gas-cart");
+    g.append(data);
+    tlgas.fromTo("#gas-body", 0.3, {
+        css: {
+            scale: 0
+            , transformOrigin: '50% 50%'
+        }
+    }, {
+        css: {
+            scale: 1
+        }
+    })
+
+    .fromTo(" .gas-st2, #gas-window", 0.5, {
+            drawSVG: "0"
+        }, {
+            drawSVG: "100%"
+        })
+        .staggerFrom(".gas-st0", 0.3, {
+            y: "-=150px"
+            , opacity: 0
+        },0.1,"-=0.5")
+        .from("#gas-wheel_2_,#gas-wheel_1_,#gas-wheel", 0.4, {
+            x: "-=150px"
+            , opacity: 0
+        }, 0.1)
+};
 
 $(".markup").click(
     function () {
@@ -68,10 +154,18 @@ $(".markup").click(
     }
 );
 
-var scene2 = new ScrollMagic.Scene({
+var scenecoal = new ScrollMagic.Scene({
         triggerElement: "#section-2"
     })
-    .setTween(tl2).addTo(controller);
+    .setTween(tlcoal).addTo(controller);
+var sceneoil = new ScrollMagic.Scene({
+        triggerElement: "#section-2"
+    })
+    .setTween(tloil).addTo(controller);
+var scenegas = new ScrollMagic.Scene({
+        triggerElement: "#section-2"
+    })
+    .setTween(tlgas).addTo(controller);
 
 //END-SEC-2
 

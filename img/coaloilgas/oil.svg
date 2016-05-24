@@ -1,106 +1,45 @@
-<svg id="Layer_4" data-name="Layer 4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 364.9 186.47">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #7e818c;
-      }
-
-      .cls-2, .cls-3, .cls-6, .cls-7, .cls-8, .cls-9 {
-        fill: none;
-        stroke-miterlimit: 10;
-      }
-
-      .cls-2, .cls-3 {
-        stroke: #44495e;
-      }
-
-      .cls-2, .cls-9 {
-        stroke-width: 3px;
-      }
-
-      .cls-4 {
-        fill: #8d8f99;
-      }
-
-      .cls-5 {
-        fill: #484a51;
-      }
-
-      .cls-6 {
-        stroke: #7e818c;
-      }
-
-      .cls-6, .cls-7 {
-        stroke-width: 2px;
-      }
-
-      .cls-7, .cls-9 {
-        stroke: #484a51;
-      }
-
-      .cls-8 {
-        stroke: #8d8f99;
-      }
-    </style>
-  </defs>
-  <title>_oil</title>
-  <g id="oil">
-    <rect class="cls-1" x="155.86" y="12.8" width="48.26" height="11.33"/>
-    <rect class="cls-1" x="152.57" y="8.04" width="54.84" height="4.75" rx="2.17" ry="2.17"/>
-    <line class="cls-2" x1="162.86" x2="162.86" y2="8.04"/>
-    <line class="cls-2" x1="197.11" x2="197.11" y2="8.04"/>
-    <line class="cls-2" x1="179.99" y1="2.38" x2="179.99" y2="8.04"/>
-    <line class="cls-3" x1="169.93" y1="2.38" x2="190.04" y2="2.38"/>
-    <rect class="cls-1" x="8.2" y="24.13" width="340.25" height="118.79" rx="20" ry="20"/>
-    <rect class="cls-4" y="144.97" width="356.65" height="14.61"/>
-    <polygon class="cls-5" points="310.54 155 305.13 132 276.55 132 271.14 149 257.85 149 227.47 132 129.18 132 98.8 149 84 149 78.58 132 50.01 132 44.6 155 8.65 155 8.65 165 348.65 165 348.65 155 310.54 155"/>
-    <g>
-      <circle class="cls-1" cx="46.89" cy="169.23" r="17.24"/>
-      <circle class="cls-5" cx="46.89" cy="169.23" r="10.36"/>
-      <g>
-        <line class="cls-6" x1="42.67" y1="169.23" x2="51.11" y2="169.23"/>
-        <line class="cls-6" x1="46.89" y1="165.01" x2="46.89" y2="173.45"/>
-      </g>
-    </g>
-    <g>
-      <circle class="cls-1" cx="133.96" cy="169.23" r="17.24"/>
-      <circle class="cls-5" cx="133.96" cy="169.23" r="10.36"/>
-      <g>
-        <line class="cls-6" x1="129.74" y1="169.23" x2="138.17" y2="169.23"/>
-        <line class="cls-6" x1="133.96" y1="165.01" x2="133.96" y2="173.45"/>
-      </g>
-    </g>
-    <g>
-      <circle class="cls-1" cx="221.02" cy="169.23" r="17.24"/>
-      <circle class="cls-5" cx="221.02" cy="169.23" r="10.36"/>
-      <g>
-        <line class="cls-6" x1="216.8" y1="169.23" x2="225.24" y2="169.23"/>
-        <line class="cls-6" x1="221.02" y1="165.01" x2="221.02" y2="173.45"/>
-      </g>
-    </g>
-    <g>
-      <circle class="cls-1" cx="308.08" cy="169.23" r="17.24"/>
-      <circle class="cls-5" cx="308.08" cy="169.23" r="10.36"/>
-      <g>
-        <line class="cls-6" x1="303.87" y1="169.23" x2="312.3" y2="169.23"/>
-        <line class="cls-6" x1="308.08" y1="165.01" x2="308.08" y2="173.45"/>
-      </g>
-    </g>
-    <line class="cls-7" x1="154.45" y1="139.2" x2="188.71" y2="139.2"/>
-    <g>
-      <line class="cls-7" x1="162.86" y1="154.23" x2="162.86" y2="8.04"/>
-      <line class="cls-7" x1="197.11" y1="8.04" x2="197.11" y2="154.23"/>
-      <line class="cls-7" x1="162.86" y1="23.87" x2="197.11" y2="23.87"/>
-      <line class="cls-7" x1="162.86" y1="47.03" x2="197.11" y2="47.03"/>
-      <line class="cls-7" x1="162.86" y1="70.2" x2="197.11" y2="70.2"/>
-      <line class="cls-7" x1="162.86" y1="93.36" x2="197.11" y2="93.36"/>
-      <line class="cls-7" x1="162.86" y1="116.52" x2="197.11" y2="116.52"/>
-    </g>
-    <rect class="cls-4" x="59.26" y="24.13" width="9.75" height="108.23"/>
-    <rect class="cls-4" x="285.97" y="24.13" width="9.75" height="108.23"/>
-    <line class="cls-8" x1="356.65" y1="152.27" x2="364.9" y2="152.27"/>
-    <line class="cls-8" x1="82.15" y1="48.2" x2="82.15" y2="56.35"/>
-    <path class="cls-5" d="M2517.38,593.87c-2.06,3.39-6.68,10.38-6.68,14.08a6.68,6.68,0,0,0,13.36,0C2524.06,604.25,2519.54,597.26,2517.38,593.87Z" transform="translate(-2407.35 -520)"/>
-    <circle class="cls-9" cx="110.03" cy="84.25" r="19.7"/>
+<svg id="Layer_4" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 208.7 400" >
+  <style>
+    .oil-top{fill:#FFFFFF;stroke:#2F404F;stroke-width:1.1833;stroke-miterlimit:10;} .oil-st1{fill:none;stroke:#2F404F;stroke-width:1.1833;stroke-miterlimit:10;} .oil-st2{fill:none;stroke:#2F404F;stroke-width:1.775;stroke-miterlimit:10;} .oil-st3{fill:#FFFFFF;stroke:#2F404F;stroke-width:2;stroke-miterlimit:10;} .oil-st4{fill:none;stroke:#2F404F;stroke-width:1.7574;stroke-miterlimit:10;} .oil-st5{fill:#FFFFFF;stroke:#2F404F;stroke-width:1.775;stroke-miterlimit:10;} .oil-st6{fill:#FFFFFF;stroke:#2F404F;stroke-width:1.5;stroke-miterlimit:10;} .oil-st7{fill:#2F404F;} .oil-st8{fill:#FFFFFF;stroke:#2F404F;stroke-width:2;stroke-miterlimit:10;}
+  </style>
+  <g id="oil-top">
+    <path id="lid_1_" class="oil-top" d="M91.1 296.1h28.6v3.7H91.1z"/>
+    <path id="lid" class="oil-top" d="M90.4 293.3h29.9c.7 0 1.3.6 1.3 1.3v.2c0 .7-.6 1.3-1.3 1.3H90.4c-.7 0-1.3-.6-1.3-1.3v-.2c0-.7.6-1.3 1.3-1.3z"/>
+  </g>
+  <g id="oil-top_1_">
+    <path class="oil-st1" d="M105.3 289.9v3.4"/>
+    <path class="oil-st2" d="M95.2 288.5v4.8M115.5 288.5v4.8"/>
+    <path class="oil-st1" d="M99.4 289.9h11.9"/>
+  </g>
+  <path id="oil-body" class="oil-st3" d="M15.5 299.8h177.6c6.5 0 11.8 5.3 11.8 11.8v46.6c0 6.5-5.3 11.8-11.8 11.8H15.5c-6.5 0-11.8-5.3-11.8-11.8v-46.6c0-6.5 5.3-11.8 11.8-11.8z"/>
+  <path id="oil-lower_1_" class="oil-st4" d="M.9 373.4h206.9v9.5H.9z"/>
+  <path id="oil-lower" class="oil-st3" d="M182.6 380.2l-3.2-13.6h-16.9l-3.2 10.1h-7.9l-18-10.1H75.3l-18 10.1h-8.8l-3.2-10.1H28.4l-3.2 13.6H4v5.9h201.1v-5.9z"/>
+  <g id="oil-ladder">
+    <path class="oil-st1" d="M95.2 379.8v-86.5M115.5 293.3v86.5M95.2 302.6h20.3M95.2 316.3h20.3M95.2 330.1h20.3M95.2 343.8h20.3M95.2 357.5h20.3"/>
+  </g>
+  <g id="oil-pattern">
+    <path class="oil-st5" d="M33.9 299.8h5.8v66.8h-5.8zM168 299.8h5.8v66.8H168z"/>
+  </g>
+  <circle id="oil-circle" class="oil-st6" cx="67.5" cy="329.5" r="11.7"/>
+  <path id="oil-drop" class="oil-st7" d="M67.5 323.3c-1.2 2-4 6.1-4 8.3 0 2.2 1.8 4 4 4s4-1.8 4-4c-.1-2.1-2.7-6.2-4-8.3z"/>
+  <g class="oil-wheel">
+    <circle class="oil-st8" cx="25.9" cy="388" r="10.9"/>
+    <circle class="oil-st8" cx="25.9" cy="388" r="6.6"/>
+    <path class="oil-st8" d="M23.2 388h5.3m-2.6-2.7v5.3"/>
+  </g>
+  <g class="oil-wheel">
+    <circle class="oil-st8" cx="58.9" cy="388" r="10.9"/>
+    <circle class="oil-st8" cx="58.9" cy="388" r="6.6"/>
+    <path class="oil-st8" d="M56.3 388h5.3m-2.7-2.7v5.3"/>
+  </g>
+  <g class="oil-wheel">
+    <circle class="oil-st8" cx="149.7" cy="388" r="10.9"/>
+    <circle class="oil-st8" cx="149.7" cy="388" r="6.6"/>
+    <path class="oil-st8" d="M147 388h5.3m-2.6-2.7v5.3"/>
+  </g>
+  <g class="oil-wheel">
+    <circle class="oil-st8" cx="182.7" cy="388" r="10.9"/>
+    <circle class="oil-st8" cx="182.7" cy="388" r="6.6"/>
+    <path class="oil-st8" d="M180.1 388h5.3m-2.7-2.7v5.3"/>
   </g>
 </svg>
