@@ -9,6 +9,7 @@ $yellow:#FBF18F;
 $neutral:#F7FFF7;
 $darkBlue: #1A535C;
 $lightBlue: #9CDEEE;
+$brown:#725744;
 $dark:#353535;
 $red:#FF6B6B;
 $white:#ffffff;
@@ -119,6 +120,7 @@ li {
     }
 }
 
+
 section {
     padding-top: 50px;
 }
@@ -191,24 +193,33 @@ nav a {
 
 #section-1 {
    
-    text-align: center;
-    background: $yellow;
+    text-align:center;
+    background:#CFA98E;
     .row {
-        
+        margin-top: 80px;
     }
-    
+    h1{
+        color:#725744;
+        letter-spacing: 10px;
+        font-size: 7em;
+    }
     p {
         font-size: 1.2em;
         color:$dark;
         font-family:"montserrat";
         max-width:960px;
         width:60vw;
-        margin:10vw auto 0 auto;
+        margin:5vw auto 0 auto;
         
     }
 }
 
-
+.linebreak {
+        height:2px;
+        width:100px;
+        background-color: $dark;
+        margin:100px auto 0 auto;
+    }
 
 /**
    * End of SEC-1
@@ -321,17 +332,20 @@ nav a {
    * SEC-3
    */
 #section-3{
-    background-color: $lightBlue;
+    background-color: $darkBlue;
     .open h1 {
         font-family: $fonth;
         text-transform: uppercase;
         line-height: 1.1em;
-        color: $dark;
+        color: $white;
     }
     .open h1:before {
         @extend .line;
         content: "";
-        background-color: $black;
+        background-color: $white;
+    }
+    p {
+        color: $white;
     }
 }
 

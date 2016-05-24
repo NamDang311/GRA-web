@@ -3,13 +3,13 @@
     <style>
       .\35 88af7b0-e326-4132-bef6-566ada0cdfff {
         fill: none;
-        stroke: #fff;
+        stroke: #153D43;
         stroke-miterlimit: 10;
         stroke-width: 3px;
       }
 
       .\35 45ff95c-4a13-4855-8c1a-0e0087f430a9 {
-        fill: #fff;
+        fill: #CFA98E;
       }
         .manu-circle{
         fill:none;
