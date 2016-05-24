@@ -106,7 +106,7 @@ li {
     background-size: cover;
     z-index: -2;
     .row {
-        padding-top: 320px;
+        margin:auto 0;
     }
     h1 {
         font-family: $fonth;
@@ -203,7 +203,7 @@ nav a {
         font-family:"montserrat";
         max-width:960px;
         width:60vw;
-        margin:15vw auto 0 auto;
+        margin:10vw auto 0 auto;
         
     }
 }
