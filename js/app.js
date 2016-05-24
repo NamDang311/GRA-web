@@ -293,7 +293,7 @@ smoketl = new TimelineMax({
 });
 var smokeLines;
 var smoke2 = Snap("#smoke-2")
-Snap.load("/img/smoke.svg", smokeLoad);
+Snap.load("img/smoke.svg", smokeLoad);
 
 function smokeLoad(data) {
     smoke2.append(data);
@@ -547,7 +547,7 @@ var nameAr = [];
 var barWidth = [];
 $.ajax({
     type: "GET"
-    , url: "/worlddata.xml"
+    , url: "worlddata.xml"
     , dataType: "xml"
     , success: function (xml) {
 
