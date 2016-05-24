@@ -15,7 +15,7 @@ var controller = new ScrollMagic.Controller();
 //SEC-2
 //---Coal animation
 var tlcoal = new TimelineMax({});
-Snap.load("/img/coaloilgas/coal.svg", rockLoad);
+Snap.load("img/coaloilgas/coal.svg", rockLoad);
 
 function rockLoad(data) {
     var r = Snap("#coal-cart");
@@ -56,7 +56,7 @@ var tloil = new TimelineMax({
     delay: 0.2
 });
 var oilShapes;
-Snap.load("/img/coaloilgas/oil.svg", oilLoad);
+Snap.load("img/coaloilgas/oil.svg", oilLoad);
 
 function oilLoad(data) {
     var o = Snap("#oil-cart");
@@ -115,7 +115,7 @@ var tlgas = new TimelineMax({
     delay: 0.2
 });
 var gasShapes;
-Snap.load("/img/coaloilgas/gas.svg", gasLoad);
+Snap.load("img/coaloilgas/gas.svg", gasLoad);
 
 function gasLoad(data) {
     var g = Snap("#gas-cart");
