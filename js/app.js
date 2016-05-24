@@ -169,6 +169,73 @@ var scenegas = new ScrollMagic.Scene({
 
 //END-SEC-2
 
+// SEC-3
+Snap.load("img/humansector/fuel.svg", function(data){
+    Snap("#section-3-image-1").append(data);
+    TweenLite.set($(".fuel-circle"),{drawSVG:0});
+});
+Snap.load("img/humansector/crops.svg", function(data){
+    Snap("#section-3-image-0").append(data);
+    TweenLite.set($(".crops-circle"),{drawSVG:0});
+});
+Snap.load("img/humansector/manu.svg", function(data){
+    Snap("#section-3-image-2").append(data);
+    TweenLite.set($(".manu-circle"),{drawSVG:0});
+});
+
+$(".section-3-items").click (
+    function (){
+        TweenLite.to($(this),1,{css:{marginTop:"50px",opacity:1}});
+        var t=$(".section-3-items").index(this);
+       TweenLite.to( $(".section-3-items-data:eq("+t+")"),1,{opacity:1});
+        sec3Count(t);
+    }
+);
+
+function sec3Count(t) {
+    switch (t){
+        case 0:
+      $("#stat-crops").countTo({
+        from: 0
+        , to: 9
+        , speed: 600
+        , refreshInterval: 10
+        , formatter: function (value, options) {
+            return value.toFixed(0) + "%"
+        }
+    });
+            TweenLite.to($(".crops-circle"),1,{drawSVG:"9%"});
+             break;
+        case 1:   
+    $("#stat-fuel").countTo({
+        from: 0
+        , to: 87
+        , speed: 600
+        , refreshInterval: 10
+        , formatter: function (value, options) {
+          return value.toFixed(0) + "%"
+        }
+    });
+             TweenLite.to($(".fuel-circle"),1,{drawSVG:"87%"});
+            break;
+        case 2:
+    $("#stat-manu").countTo({
+        from: 0
+        , to: 4
+        , speed: 600
+        , refreshInterval: 10
+        , formatter: function (value, options) {
+            return value.toFixed(0) + "%"
+        }
+    });
+             TweenLite.to($(".manu-circle"),1,{drawSVG:"4%"});
+             break;
+   
+    }
+};
+
+//
+// END-SEC-3
 
 // SEC-4
 Draggable.create(".handler-wrapper", {
@@ -371,13 +438,13 @@ $(".section-7-years").click(
 
         //timeline-dot
         TweenLite.to($(".time-line-dot:eq(" + $(".section-7-years").index(this) + ")"), .2, {
-            backgroundColor: "#FFE66D"
-            , borderColor: "#FFE66D"
+            backgroundColor: "#FBF18F"
+            , borderColor: "#FBF18F"
         , });
         var dotleft = $(".time-line-dot").not($(".time-line-dot:eq(" + $(".section-7-years").index(this) + ")"));
         TweenLite.to(dotleft, .2, {
-            backgroundColor: "#1A535C"
-            , borderColor: "#257784"
+            backgroundColor: "#9CDEEE"
+            , borderColor: "#45C1DF"
         , });
 
 

@@ -1,0 +1,26 @@
+<svg id="58b313bf-f065-47ce-9507-fa6b0fa0bb40" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94.77 94.77">
+  <defs>
+    <style>
+      .\35 88af7b0-e326-4132-bef6-566ada0cdfff {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .\35 45ff95c-4a13-4855-8c1a-0e0087f430a9 {
+        fill: #fff;
+      }
+        .manu-circle{
+        fill:none;
+        stroke: #FBF18F;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <title>manufaturer</title>
+  <circle class="588af7b0-e326-4132-bef6-566ada0cdfff" cx="47.38" cy="47.38" r="45.88"/>
+  <path class="545ff95c-4a13-4855-8c1a-0e0087f430a9" d="M27.32,39.25L44,48.9V39.25l16.71,9.55V27.32H72.68V48.81h0V72.68H27.32V39.25M63.13,53.58L46.42,43.39V53L29.7,43.39V70.3H70.3V48.81h0V29.7H63.13V53.58M34.48,56h7.16v2.39H34.48V56m0,7.16H46.42v2.39H34.48V63.13M51.19,56h7.16v2.39H51.19V56m0,7.16H65.52v2.39H51.19V63.13Z" transform="translate(-2.62 -2.62)"/>
+    <path  class="manu-circle" d="M47.4,1.5c25.3,0,45.9,20.5,45.9,45.9S72.7,93.3,47.4,93.3S1.5,72.7,1.5,47.4S22,1.5,47.4,1.5"/>
+</svg>

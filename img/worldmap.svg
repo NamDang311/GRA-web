@@ -3,7 +3,8 @@
 <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1454.2 608.7" style="enable-background:new 0 0 1454.2 608.7;" xml:space="preserve">
 <style type="text/css">
-	.map{fill:#3C6E71;}
+	.map{fill:#9CDEEE;
+   }
 </style>
 <title>worldmap</title>
 <path class="map" d="M618.5,21.8c1.8,0.1,3.5,2.2,5.2,3.4c-1,1.3-1.9,3-3.2,4c-4.6,3.5-9.8,6.5-14.2,10.3c-3.8,3.4-7.7,6.5-4.1,13.6
