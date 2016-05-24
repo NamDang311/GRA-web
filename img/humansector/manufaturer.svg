@@ -1,0 +1,19 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94.77 94.77">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>manufaturer</title>
+  <circle class="cls-1" cx="47.38" cy="47.38" r="45.88"/>
+  <path class="cls-2" d="M27.32,39.25L44,48.9V39.25l16.71,9.55V27.32H72.68V48.81h0V72.68H27.32V39.25M63.13,53.58L46.42,43.39V53L29.7,43.39V70.3H70.3V48.81h0V29.7H63.13V53.58M34.48,56h7.16v2.39H34.48V56m0,7.16H46.42v2.39H34.48V63.13M51.19,56h7.16v2.39H51.19V56m0,7.16H65.52v2.39H51.19V63.13Z" transform="translate(-2.62 -2.62)"/>
+</svg>

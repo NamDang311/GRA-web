@@ -320,7 +320,24 @@ nav a {
 /**
    * SEC-3
    */
-
+#section-3{
+    background-color: $lightBlue;
+    .open h1 {
+        font-family: $fonth;
+        text-transform: uppercase;
+        line-height: 1.1em;
+        color: $dark;
+    }
+    .open h1:before {
+        @extend .line;
+        content: "";
+        background-color: black;
+    }
+    
+}
+#section-3 .section-3-items{
+    
+}
 /**
    * End of SEC-3
    */
