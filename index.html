@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="css/onepage-scroll.css" />
     <link rel="stylesheet" href="css/jquery-ui.css" />
     <link rel="stylesheet" href="css/menu_sideslide.css" />
+    <link rel="stylesheet" href="fonts/stellar.css" />
     <link rel="stylesheet" href="css/flex-layout-attribute.min.css" />
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto+Condensed:400,300|Roboto:400,300,500' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -31,7 +33,7 @@
                     <div>03</div><span>Flood</span></a>
                 <a href="#">
                     <div>02</div><span>Heatwave</span></a>
-                <a href="#">
+                <a href="index.html">
                     <div>01</div><span>Home</span></a>
 
             </div>
@@ -62,10 +64,14 @@
         <section id="section-1">
             <div class="row">
                 <div class="small-10 small-offset-1 medium-10 medium-centered large-10 large-offset-1 large-centered columns">
-                   <h1>HI CITIZEN OF THE EARTH!</h1>
+                   <div><h1 id="sec-1-title">CITIZEN OF THE EARTH!</h1></div>
+               
+                   <h2 id="co2-amount">40,000,000,000 </h2>
+                   <div id="unit" >tonnes</div>
+                   <h1>IS THE AMOUNT OF CO2 HUMAN RELEASED<br />AT THE END OF 2015</h1>
                    <div class="linebreak"></div>
                     <p>There are both natural and human sources of carbon dioxide emissions.
-                        <br />Natural sources include decomposition, ocean release and respiration. Human sources come from activities like cement production, deforestation as well as the burning of fossil fuels like coal, oil and natural gas. Due to human activities, the atmospheric concentration of carbon dioxide has been rising extensively since the Industrial Revolution and has now reached dangerous levels not seen in the last 3 million years.
+                        <br />Due to human activities, the atmospheric concentration of carbon dioxide has been rising extensively since the Industrial Revolution and has now reached dangerous levels not seen in the last 3 million years.
                         <br />
                         <br />Human sources of carbon dioxide emissions are much smaller than natural emissions but they have upset the natural balance that existed for many thousands of years before the influence of humans. This is because natural sinks remove around the same quantity of carbon dioxide from the atmosphere than are produced by natural sources.This had kept carbon dioxide levels balanced and in a safe range. But human sources of emissions have upset the natural balance by adding extra carbon dioxide to the atmosphere without removing any.</p>
                 </div>
@@ -177,10 +183,10 @@
         <!--Electric Sector-->
         <section id="section-4">
             <div class="row">
-                <div class="small-4 medium-4 medium-offset-1 large-4 columns">
+                <div class="small-4 medium-4 medium-offset-1 large-4 columns open">
 
-                    <h1>THE<br />ENERGY</h1>
-                    <p>Electricity and heat generation is the economic sector that produces the largest amount of man-made carbon dioxide emissions. This sector produced 41% of fossil fuel related carbon dioxide emissions in 2010. Around the world, this sector relies heavily on coal, the most carbon-intensive of fossil fuels, explaining this sector giant carbon footprint.5</p>
+                    <h1>THE<br />ENERGY SECTOR</h1>
+                    <p>Electricity and heat generation is the economic sector that produces the largest amount of man-made carbon dioxide emissions. This sector produced 41% of fossil fuel related carbon dioxide emissions in 2010. Around the world, this sector relies heavily on coal, the most carbon-intensive of fossil fuels, explaining this sector giant carbon footprint.</p>
 
                 </div>
                 <div class="lightray"></div>
@@ -202,9 +208,17 @@
                     <div id="windowsHolder"></div>
                 </div>
 
-                <div class="handler-wrapper">
-                    <img id="handler" src="img/handler.svg" alt="">
-                    <div class="handler-ripple"></div>
+                <div class="handler">
+                  <div class="handler-wrapper">
+                   <div class="handler-zone">
+                        <img id="handler" src="img/handler.svg" alt="">
+                    </div>
+                    </div>
+                <div class="handler-ripple"></div>
+                <div class="handler-hint">
+                <h1>Turn on the light</h1>
+                <img id="arrow" src="img/arrowdown.svg" alt="">
+                </div>
 
                 </div>
             </div>
@@ -548,6 +562,7 @@
     <script src="js/bodymovin.js"></script>
     <script src="js/jquery.onepage-scroll.js"></script>
     <script src="js/vendor/jquery.arctext.js"></script>
+     <script src="js/vendor/typed.js"></script>
     <script src="js/vendor/what-input.min.js"></script>
     <script src="js/foundation.min.js"></script>
     <script src="js/vendor/d3.v3.min.js"></script>

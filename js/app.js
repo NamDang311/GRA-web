@@ -9,6 +9,38 @@ $(".main").onepage_scroll({
 var controller = new ScrollMagic.Controller();
 
 //SEC-1 
+
+var tlintro = new TimelineMax({});
+var sceneintro = new ScrollMagic.Scene({
+        triggerElement: "#section-1"
+    })
+    .addTo(controller)
+    .on("enter", function (event) {
+        introAnimation();
+    });
+
+function introAnimation() {
+    $("#sec-1-title").typed({
+        strings: ["CITIZEN OF THE EARTH!"]
+        , typeSpeed: 80
+        , callback: function () {
+            $(".typed-cursor").css({
+                "animation": "none"
+                , "opacity": "0"
+                , "-webkit-animation": "none"
+            });
+            $("#co2-amount").countTo({
+                from: 0
+                , to: 40000000000
+                , speed: 2000
+                , refreshInterval: 20
+                , formatter: function (value, options) {
+                    return value.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+                }
+            });
+        }
+    });
+};
 //END-SEC-1
 
 
@@ -139,7 +171,7 @@ function gasLoad(data) {
         .staggerFrom(".gas-st0", 0.3, {
             y: "-=150px"
             , opacity: 0
-        },0.1,"-=0.5")
+        }, 0.1, "-=0.5")
         .from("#gas-wheel_2_,#gas-wheel_1_,#gas-wheel", 0.4, {
             x: "-=150px"
             , opacity: 0
@@ -170,67 +202,89 @@ var scenegas = new ScrollMagic.Scene({
 //END-SEC-2
 
 // SEC-3
-Snap.load("img/humansector/fuel.svg", function(data){
+Snap.load("img/humansector/fuel.svg", function (data) {
     Snap("#section-3-image-1").append(data);
-    TweenLite.set($(".fuel-circle"),{drawSVG:0});
+    TweenLite.set($(".fuel-circle"), {
+        drawSVG: 0
+    });
 });
-Snap.load("img/humansector/crops.svg", function(data){
+Snap.load("img/humansector/crops.svg", function (data) {
     Snap("#section-3-image-0").append(data);
-    TweenLite.set($(".crops-circle"),{drawSVG:0});
+    TweenLite.set($(".crops-circle"), {
+        drawSVG: 0
+    });
 });
-Snap.load("img/humansector/manu.svg", function(data){
+Snap.load("img/humansector/manu.svg", function (data) {
     Snap("#section-3-image-2").append(data);
-    TweenLite.set($(".manu-circle"),{drawSVG:0});
+    TweenLite.set($(".manu-circle"), {
+        drawSVG: 0
+    });
 });
 
-$(".section-3-items").click (
-    function (){
-        TweenLite.to($(this),1,{css:{marginTop:"50px",opacity:1}});
-        var t=$(".section-3-items").index(this);
-       TweenLite.to( $(".section-3-items-data:eq("+t+")"),1,{opacity:1});
-        sec3Count(t);
+$(".section-3-items").click(
+    function () {
+        if (!$(this).hasClass("clicked")) {
+            $(this).addClass("clicked");
+            TweenLite.to($(this), 1, {
+                css: {
+                    marginTop: "50px"
+                    , opacity: 1
+                }
+            });
+            var t = $(".section-3-items").index(this);
+            TweenLite.to($(".section-3-items-data:eq(" + t + ")"), 1, {
+                opacity: 1
+            });
+            sec3Count(t);
+        }
     }
 );
 
 function sec3Count(t) {
-    switch (t){
-        case 0:
-      $("#stat-crops").countTo({
-        from: 0
-        , to: 9
-        , speed: 600
-        , refreshInterval: 10
-        , formatter: function (value, options) {
-            return value.toFixed(0) + "%"
-        }
-    });
-            TweenLite.to($(".crops-circle"),1,{drawSVG:"9%"});
-             break;
-        case 1:   
-    $("#stat-fuel").countTo({
-        from: 0
-        , to: 87
-        , speed: 600
-        , refreshInterval: 10
-        , formatter: function (value, options) {
-          return value.toFixed(0) + "%"
-        }
-    });
-             TweenLite.to($(".fuel-circle"),1,{drawSVG:"87%"});
-            break;
-        case 2:
-    $("#stat-manu").countTo({
-        from: 0
-        , to: 4
-        , speed: 600
-        , refreshInterval: 10
-        , formatter: function (value, options) {
-            return value.toFixed(0) + "%"
-        }
-    });
-             TweenLite.to($(".manu-circle"),1,{drawSVG:"4%"});
-             break;
-   
+    switch (t) {
+    case 0:
+        $("#stat-crops").countTo({
+            from: 0
+            , to: 9
+            , speed: 600
+            , refreshInterval: 10
+            , formatter: function (value, options) {
+                return value.toFixed(0) + "%"
+            }
+        });
+        TweenLite.to($(".crops-circle"), 1, {
+            drawSVG: "9%"
+        });
+        break;
+    case 1:
+        $("#stat-fuel").countTo({
+            from: 0
+            , to: 87
+            , speed: 600
+            , refreshInterval: 10
+            , formatter: function (value, options) {
+                return value.toFixed(0) + "%"
+            }
+        });
+        TweenLite.to($(".fuel-circle"), 1, {
+            drawSVG: "87%"
+        });
+        break;
+    case 2:
+        $("#stat-manu").countTo({
+            from: 0
+            , to: 4
+            , speed: 600
+            , refreshInterval: 10
+            , formatter: function (value, options) {
+                return value.toFixed(0) + "%"
+            }
+        });
+        TweenLite.to($(".manu-circle"), 1, {
+            drawSVG: "4%"
+        });
+        break;
+
     }
 };
 
@@ -238,7 +292,7 @@ function sec3Count(t) {
 // END-SEC-3
 
 // SEC-4
-Draggable.create(".handler-wrapper", {
+Draggable.create(".handler", {
     type: "y"
     , bounds: {
         maxY: 120
@@ -247,13 +301,21 @@ Draggable.create(".handler-wrapper", {
     }
     , throwProps: true
     , edgeResistance: 1
+    , onDragStart: function () {
+        $(".handler-wrapper").css("overflow-y", "visible");
+        $(".handler-hint").fadeOut("slow");
+    }
     , onDragEnd: function () {
+
         lightUp();
         sunSet();
         revealText();
-        TweenLite.to($(".handler-wrapper"), 1, {
+        TweenLite.to($(".handler"), 1, {
             y: 0
             , ease: Elastic.easeOut
+            , onComplete: function () {
+                $(".handler-wrapper").css("overflow-y", "hidden");
+            }
         });
     }
 });
@@ -289,7 +351,7 @@ function lightUp() {
     });
     d3.selectAll(".city-windows").transition().delay(function (d, i) {
         return i * 60;
-    }).duration(500).ease("sin").style("fill", "#FFF").style("opacity", 1);
+    }).duration(500).ease("sin").style("fill", "#FBF18F").style("opacity", 1);
     d3.select("#bulbBody").transition().duration(500).ease("sin").style("fill", "#FFE66D");
     d3.selectAll(" .city2-1").transition().duration(1000).ease("sin").style("fill", "#1A535C").style("stroke", "#4ECDC4");
     d3.selectAll(" .city2-0").transition().duration(1000).ease("sin").style("fill", "#1A535C");
@@ -712,8 +774,6 @@ $(".findout").click(
 Draggable.create(".dragItems", {
     type: "x,y"
     , onDragEnd: function (e) {
-
-        //checks if at least 50% of the surface area of either element is overlapping:
         if (this.hitTest(".target-content", "50%")) {
             alert("Adsasd");
         } else {
