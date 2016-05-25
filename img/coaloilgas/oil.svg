@@ -25,21 +25,21 @@
   <g class="oil-wheel">
     <circle class="oil-st8" cx="25.9" cy="388" r="10.9"/>
     <circle class="oil-st8" cx="25.9" cy="388" r="6.6"/>
-    <path class="oil-st8" d="M23.2 388h5.3m-2.6-2.7v5.3"/>
+    
   </g>
   <g class="oil-wheel">
     <circle class="oil-st8" cx="58.9" cy="388" r="10.9"/>
     <circle class="oil-st8" cx="58.9" cy="388" r="6.6"/>
-    <path class="oil-st8" d="M56.3 388h5.3m-2.7-2.7v5.3"/>
+    
   </g>
   <g class="oil-wheel">
     <circle class="oil-st8" cx="149.7" cy="388" r="10.9"/>
     <circle class="oil-st8" cx="149.7" cy="388" r="6.6"/>
-    <path class="oil-st8" d="M147 388h5.3m-2.6-2.7v5.3"/>
+
   </g>
   <g class="oil-wheel">
     <circle class="oil-st8" cx="182.7" cy="388" r="10.9"/>
     <circle class="oil-st8" cx="182.7" cy="388" r="6.6"/>
-    <path class="oil-st8" d="M180.1 388h5.3m-2.7-2.7v5.3"/>
+    
   </g>
 </svg>

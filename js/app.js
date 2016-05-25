@@ -216,13 +216,32 @@ $(".section-3-items").click(
     function () {
         if (!$(this).hasClass("clicked")) {
             $(this).addClass("clicked");
+            var t = $(".section-3-items").index(this);
+            if (t==0){
             TweenLite.to($(this), 1, {
                 css: {
-                    marginTop: "50px"
+                    marginTop: "90px"
                     , opacity: 1
                 }
             });
-            var t = $(".section-3-items").index(this);
+            } else {
+                if (t==1){
+            TweenLite.to($(this), 1, {
+                css: {
+                    marginTop: "0px"
+                    , opacity: 1
+                }
+            });
+                } else {
+                    TweenLite.to($(this), 1, {
+                css: {
+                    marginTop: "150px"
+                    , opacity: 1
+                }
+            });
+                    
+            }
+            };
             TweenLite.to($(".section-3-items-data:eq(" + t + ")"), 1, {
                 opacity: 1
             });

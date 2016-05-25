@@ -1,6 +1,6 @@
 <svg id="Layer_4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208.7 400">
   <style>
-    .gas-st0{fill:#1D2C38;} .gas-st1{fill:#FFFFFF;stroke:#2F404F;stroke-width:2;stroke-miterlimit:10;} .gas-st2{fill:none;stroke:#2F404F;stroke-width:4;stroke-miterlimit:10;} .gas-st3{fill:none;stroke:#2F404F;stroke-width:2;stroke-miterlimit:10;} .st4{fill:#2F404F;} .gas-st5{fill:#FFFFFF;stroke:#2F404F;stroke-width:2.4712;stroke-miterlimit:10;} .gas-st6{fill:none;stroke:#2F404F;stroke-width:2.4712;stroke-miterlimit:10;}
+    .gas-st0{fill:#1D2C38;} .gas-st1{fill:#FFFFFF;stroke:#2F404F;stroke-width:2;stroke-miterlimit:10;} .gas-st2{fill:none;stroke:#2F404F;stroke-width:4;stroke-miterlimit:10;} .gas-st3{fill:none;stroke:#2F404F;stroke-width:2;stroke-miterlimit:10;} .st4{fill:#2F404F;} .gas-st5{fill:#fff;stroke:#2F404F;stroke-width:2.4712;stroke-miterlimit:10;} .gas-st6{fill:none;stroke:#2F404F;stroke-width:2.4712;stroke-miterlimit:10;} .gas-st7 {fill:#fff;stroke:#2F404F;stroke-width:2.4712;stroke-miterlimit:10;}
   </style>
   <title>
     _gas
@@ -24,18 +24,18 @@
   <circle id="gas-pattern" class="gas-st4" cx="187.7" cy="347.3" r="1.4"/>
   <g id="gas-wheel_2_">
     <circle class="gas-st5" cx="173.1" cy="384.6" r="13.9"/>
-    <circle class="gas-st5" cx="173.1" cy="384.6" r="8.4"/>
-    <path class="gas-st6" d="M169.8 384.6h6.8m-3.5-3.4v6.8"/>
+    <circle class="gas-st7" cx="173.1" cy="384.6" r="8.4"/>
+  
   </g>
   <g id="gas-wheel_1_">
     <circle class="gas-st5" cx="66.6" cy="384.6" r="13.9"/>
-    <circle class="gas-st5" cx="66.6" cy="384.6" r="8.4"/>
-    <path class="gas-st6" d="M63.2 384.6H70m-3.4-3.4v6.8"/>
+    <circle class="gas-st7" cx="66.6" cy="384.6" r="8.4"/>
+
   </g>
   <g id="gas-wheel">
     <circle class="gas-st5" cx="27.7" cy="384.6" r="13.9"/>
-    <circle class="gas-st5" cx="27.7" cy="384.6" r="8.4"/>
-    <path class="gas-st6" d="M24.3 384.6h6.8m-3.4-3.4v6.8"/>
+    <circle class="gas-st7" cx="27.7" cy="384.6" r="8.4"/>
+
   </g>
   <path id="gas-pattern_2_" class="gas-st4" d="M146.5 337.4l-10.9-2.3v-2.4l10.9 2.3z"/>
 </svg>

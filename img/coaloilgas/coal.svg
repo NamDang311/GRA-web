@@ -16,11 +16,11 @@
   <g id="cart-2">
     <circle class="cart-3" cx="54.9" cy="379.6" r="18.4"/>
     <circle class="cart-3" cx="54.9" cy="379.6" r="11.1"/>
-    <path class="cart-3" d="M50.4 379.6h9m-4.5-4.5v9"/>
+  
   </g>
   <g id="cart-2_1_">
     <circle class="cart-3" cx="134.3" cy="379.6" r="18.4"/>
     <circle class="cart-3" cx="134.3" cy="379.6" r="11.1"/>
-    <path class="cart-4" d="M129.8 379.6h9m-4.5-4.5v9"/>
+   
   </g>
 </svg>
