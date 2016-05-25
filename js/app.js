@@ -11,24 +11,17 @@ var controller = new ScrollMagic.Controller();
 //SEC-1 
 
 var tlintro = new TimelineMax({});
+tlintro.fromTo("#sec-1-title",1,{y:"+=220px",opacity:1},{y:0,opacity:1}).staggerFromTo($("#co2-amount, #unit"),1,{y:"+=160px",opacity:0},{y:"0",opacity:1},0.2)
+.from("#sec-1-subtitle",0.7,{y:"+=120px",opacity:0}).from(".linebreak",0.5,{css:{scaleX:0,transformOrigin:"50% 50%"}}).from("#section-1 p",1,{opacity:0})
+;
+;
 var sceneintro = new ScrollMagic.Scene({
         triggerElement: "#section-1"
-    })
-    .addTo(controller)
-    .on("enter", function (event) {
+    }).setTween(tlintro).addTo(controller).on("enter", function (event) {
         introAnimation();
     });
 
 function introAnimation() {
-    $("#sec-1-title").typed({
-        strings: ["CITIZEN OF THE EARTH!"]
-        , typeSpeed: 80
-        , callback: function () {
-            $(".typed-cursor").css({
-                "animation": "none"
-                , "opacity": "0"
-                , "-webkit-animation": "none"
-            });
             $("#co2-amount").countTo({
                 from: 0
                 , to: 40000000000
@@ -38,8 +31,6 @@ function introAnimation() {
                     return value.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
                 }
             });
-        }
-    });
 };
 //END-SEC-1
 

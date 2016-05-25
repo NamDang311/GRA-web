@@ -3,10 +3,9 @@ $fonth:'stellarmedium',
 sans-serif;
 $fontp:'Roboto Condensed',
 sans-serif;
-$blue:#2b90d9;
+
 $gray:#f3f3f3;
 $yellow:#FBF18F;
-$neutral:#F7FFF7;
 $darkBlue: #1A535C;
 $lightBlue: #9CDEEE;
 $brown:#725744;
@@ -14,6 +13,7 @@ $dark:#353535;
 $red:#FF6B6B;
 $white:#ffffff;
 $black:#171723;
+
 $asteroids-belt-orb: 600px;
 $asteroids-belt-pl: 210px;
 $base-font-size: 0.8em;
@@ -215,32 +215,35 @@ nav a {
         margin-top: 20px;
     }
     #sec-1-title {
-       display: inline;
+    
     }
     h1 {
         color: #725744;
-        letter-spacing: 10px;
-        font-size: 3em;
+        letter-spacing: 5px;
+        font-size: 2em;
+       
     }
     h2 {
-        color: darken(#725744, 10);
+        color: white;
         letter-spacing: 10px;
-        font-size: 9vw;
+        font-size: 8vw;
+         margin-top: -20px;
     }
     #unit {
-        color: darken(#725744, 10);
+        color: white;
         letter-spacing: 2px;
-        font-size: 3vw;
+        font-size: 2.7vw;
         margin-top:-3vw;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
     p {
         font-size: 1em;
         color: $dark;
         font-family: 'Roboto Slab', serif;
-        max-width: 960px;
-        width: 60vw;
-        margin: 20px auto 0 auto;
+        max-width: 1280px;
+        width: 70vw;
+        margin: 15px auto 0 auto;
+        line-height: 2em;
     }
 }
 
@@ -248,7 +251,7 @@ nav a {
     height: 3px;
     width: 100px;
     background-color: #725744;
-    margin: 50px auto 0 auto;
+    margin: 40px auto 0 auto;
 }
 
 
