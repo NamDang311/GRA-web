@@ -11,26 +11,46 @@ var controller = new ScrollMagic.Controller();
 //SEC-1 
 
 var tlintro = new TimelineMax({});
-tlintro.fromTo("#sec-1-title",1,{y:"+=220px",opacity:1},{y:0,opacity:1}).staggerFromTo($("#co2-amount, #unit"),1,{y:"+=160px",opacity:0},{y:"0",opacity:1},0.2)
-.from("#sec-1-subtitle",0.7,{y:"+=120px",opacity:0}).from(".linebreak",0.5,{css:{scaleX:0,transformOrigin:"50% 50%"}}).from("#section-1 p",1,{opacity:0})
-;
-;
+tlintro.fromTo("#sec-1-title", 1, {
+        y: "+=220px"
+        , opacity: 1
+    }, {
+        y: 0
+        , opacity: 1
+    }).staggerFromTo($("#co2-amount, #unit"), 1, {
+        y: "+=160px"
+        , opacity: 0
+    }, {
+        y: "0"
+        , opacity: 1
+    }, 0.2)
+    .from("#sec-1-subtitle", 0.7, {
+        y: "+=120px"
+        , opacity: 0
+    }).from(".linebreak", 0.5, {
+        css: {
+            scaleX: 0
+            , transformOrigin: "50% 50%"
+        }
+    }).from("#section-1 p", 1, {
+        opacity: 0
+    });;
 var sceneintro = new ScrollMagic.Scene({
-        triggerElement: "#section-1"
-    }).setTween(tlintro).addTo(controller).on("enter", function (event) {
-        introAnimation();
-    });
+    triggerElement: "#section-1"
+}).setTween(tlintro).addTo(controller).on("enter", function (event) {
+    introAnimation();
+});
 
 function introAnimation() {
-            $("#co2-amount").countTo({
-                from: 0
-                , to: 40000000000
-                , speed: 2000
-                , refreshInterval: 20
-                , formatter: function (value, options) {
-                    return value.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-                }
-            });
+    $("#co2-amount").countTo({
+        from: 0
+        , to: 40000000000
+        , speed: 2000
+        , refreshInterval: 20
+        , formatter: function (value, options) {
+            return value.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+        }
+    });
 };
 //END-SEC-1
 
@@ -190,6 +210,7 @@ var scenegas = new ScrollMagic.Scene({
     })
     .setTween(tlgas).addTo(controller);
 
+
 //END-SEC-2
 
 // SEC-3
@@ -217,30 +238,30 @@ $(".section-3-items").click(
         if (!$(this).hasClass("clicked")) {
             $(this).addClass("clicked");
             var t = $(".section-3-items").index(this);
-            if (t==0){
-            TweenLite.to($(this), 1, {
-                css: {
-                    marginTop: "90px"
-                    , opacity: 1
-                }
-            });
+            if (t == 0) {
+                TweenLite.to($(this), 1, {
+                    css: {
+                        marginTop: "90px"
+                        , opacity: 1
+                    }
+                });
             } else {
-                if (t==1){
-            TweenLite.to($(this), 1, {
-                css: {
-                    marginTop: "0px"
-                    , opacity: 1
-                }
-            });
+                if (t == 1) {
+                    TweenLite.to($(this), 1, {
+                        css: {
+                            marginTop: "0px"
+                            , opacity: 1
+                        }
+                    });
                 } else {
                     TweenLite.to($(this), 1, {
-                css: {
-                    marginTop: "150px"
-                    , opacity: 1
+                        css: {
+                            marginTop: "150px"
+                            , opacity: 1
+                        }
+                    });
+
                 }
-            });
-                    
-            }
             };
             TweenLite.to($(".section-3-items-data:eq(" + t + ")"), 1, {
                 opacity: 1
@@ -515,7 +536,7 @@ $(".section-7-years").click(
         , });
         var dotleft = $(".time-line-dot").not($(".time-line-dot:eq(" + $(".section-7-years").index(this) + ")"));
         TweenLite.to(dotleft, .2, {
-            backgroundColor: "#9CDEEE"
+            backgroundColor: "#1A535C"
             , borderColor: "#45C1DF"
         , });
 

@@ -72,7 +72,7 @@ body {
     zoom: 1;
     width: 80px;
     height: 0.1em;
-    margin-bottom: 0.4em;
+    margin-bottom: 0.5em;
     margin-left: -90px;
     margin-right: 10px;
 }
@@ -694,20 +694,48 @@ nav a {
     width: 15vw;
     height: auto;
     position: absolute;
-    bottom: 5px;
+    bottom: 20%;
     left: 0;
-    -webkit-animation: traffic linear 15s infinite;
-    animation: traffic linear 15s infinite;
+    -webkit-animation: traffic linear 9s infinite;
+    animation: traffic linear 9s infinite;
 }
 
 #truck {
-    width: 10vw;
+    width: 12vw;
     height: auto;
     position: absolute;
-    bottom: 5px;
-    left: 30%;
-    -webkit-animation: traffic linear 15s infinite;
-    animation: traffic linear 15s infinite;
+    bottom: 20%;
+    left: 20%;
+    -webkit-animation: traffic linear 12s infinite;
+    animation: traffic linear 12s infinite;
+}
+#truck2 {
+    width: 12vw;
+    height: auto;
+    position: absolute;
+    bottom: 20%;
+    left: 00%;
+    -webkit-animation: traffic linear 18s infinite;
+    animation: traffic linear 18s infinite;
+}
+
+#car{
+    width: 7vw;
+    height: auto;
+    position: absolute;
+    bottom: 20%;
+    left: 40%;
+    -webkit-animation: traffic linear 10s infinite;
+    animation: traffic linear 10s infinite;
+}
+#bigcar{
+    width: 7vw;
+    height: auto;
+    position: absolute;
+    bottom: 20%;
+    left: 60%;
+    -webkit-animation: traffic linear 8s infinite;
+    animation: traffic linear 8s infinite;
 }
 
 .plane {
@@ -762,21 +790,34 @@ nav a {
     height: 8vh;
     width: 100%;
     position: absolute;
-    bottom: 0;
-    .road-line {
-        position: absolute;
-        top: 0
-    }
+    bottom: 20%;
+    
+   
     .road-line-2 {
         position: absolute;
-        bottom: 0
+        bottom: 0;
+        height: 1vw;
+        transform: translate(0,40%);
+    
     }
+}
+#sea {
+    position: absolute;
+    bottom: 5%;
+    left:0;
+    height: 20px;
+    width: 100vw ;
+    background-image: url(../img/sea.svg);
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+     animation: seawave 15s linear infinite;
+    -webkit-animation: seawave 15s linear infinite;
 }
 
 #city {
     width: 100vw;
     position: absolute;
-    bottom: 5px;
+    bottom: 20%;
     left: 0;
     z-index: 0;
 }
@@ -784,7 +825,7 @@ nav a {
 #factory {
     width: 60vw;
     position: absolute;
-    bottom: 0;
+    bottom: 20%;
     right: 0;
     z-index: 0;
     vertical-align: bottom;
@@ -815,7 +856,7 @@ nav a {
 
 .airballoon {
     z-index: 2;
-    width: 13vw;
+    width: 8vw;
     position: absolute;
     top: 10vh;
     right: 34vw;
@@ -892,6 +933,7 @@ nav a {
         margin-bottom: 0.8em;
     }
     .section-7-years {
+        color:white;
         opacity: 0.8;
         animation: all 2s linear;
     }
@@ -912,6 +954,7 @@ nav a {
 }
 
 .case {
+    color:white;
     top: 50%;
     left: 50%;
     position: absolute;
@@ -929,11 +972,11 @@ nav a {
         text-transform: uppercase;
     }
     .line-break {
-        height: 1px;
+        height: 2px;
         width: 100px;
         background-color: white;
         margin: 0 auto 10px auto;
-        opacity: .2;
+        opacity: .5;
     }
 }
 
@@ -955,7 +998,9 @@ nav a {
     font-size: 1.1em;
     letter-spacing: 0.1em;
 }
-
+.timeline-main-wrapper {
+    margin-top: 0vh;
+}
 .time-line-wrapper {
     position: relative;
 }
@@ -1027,8 +1072,8 @@ nav a {
 }
 
 .satellite-wrapper {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     top: 30%;
     left: 70%;
     position: absolute;
@@ -1099,15 +1144,16 @@ nav a {
 
 #section-8 {
     background-color: $white;
-    h1 {
+    .open h1 {
         padding: 0;
         z-index: 999;
         text-transform: uppercase;
         font-family: $fonth;
     }
-    h1:before {
+    .open h1:before {
         @extend .line;
         content: "";
+        background-color: black;
     }
 }
 
@@ -1130,80 +1176,6 @@ nav a {
     animation: ripple 2s linear infinite;
 }
 
-
-/**
-   * Section-9
-   */
-
-#section-9 {
-    background-color: $yellow;
-    h2 {
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: 200;
-        font-size: 2em;
-    }
-    h1 {
-        text-align: center;
-    }
-}
-
-.findoutWrapper {
-    position: absolute;
-    height: 70vh;
-    width: 100%;
-    left: 0;
-    .findout-content {
-        top: 20%;
-        position: absolute;
-        left: 50%;
-        text-align: center;
-        transform: translate(-50%, -50%);
-    }
-    .findout {
-        text-decoration: underline;
-        cursor: pointer;
-    }
-    .target-content {
-        top: 5%;
-        height: 400px;
-        width: 400px;
-        background-color: gray;
-        position: absolute;
-        left: 150%;
-        transform: translate(-50%, 0);
-    }
-}
-
-.dragSection-wrapper {
-    position: absolute;
-    width: 70vw;
-    max-width: 900px;
-    max-height: 150px;
-    height: 15vw;
-    bottom: 5%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.dragSection-wrapper .dragItems {
-    width: 400px;
-    background-color: aqua;
-    margin-right: 40px;
-}
-
-.dragSection-wrapper .dragItems:last-child {
-    margin-right: 0;
-}
-
-
-/**
-   * END OF SEC 9
-   */
 
 #na {
     left: 18%;
@@ -1339,6 +1311,83 @@ nav a {
 .activated {
     background-color: $red;
 }
+/**
+   * Section-9
+   */
+
+#section-9 {
+    background-color: $yellow;
+   .open h1 {
+        font-family: $fonth;
+        text-transform: uppercase;
+        line-height: 1.1em;
+        color: $dark;
+    }
+    .open h1:before {
+        @extend .line;
+        content: "";
+        background-color: black;
+    }
+    .open p {
+        font-family: $fontp;
+        font-size: 1em;
+        color: $dark;
+        letter-spacing: 0.05em;
+    }
+}
+
+
+
+/**
+   * END OF SEC 9
+   */
+
+/**
+   * HEATWAVE
+   */
+#section-heatwave{
+   .open h1 {
+        font-family: $fonth;
+        text-transform: uppercase;
+        
+        color: $dark;
+        font-size: 10em;
+      
+    }
+    blockquote {
+        margin-bottom:32px;
+    }
+    .open p {
+        font-family: $fontp;
+        font-size: 1.2em;
+        color: $dark;
+        letter-spacing: 0.05em;
+        font-weight: 200;
+        line-height: 2em;
+    }
+    img {
+        position: absolute;
+        width: 500px;
+        z-index: -1;
+        opacity: .03;
+    }
+}
+#section-heatwave-2{
+    background: black;
+}
+
+.section-video { 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+   
+    transform: translate(-50%,-50%);
+
+}
+/**
+   * END OF HEATWAVE
+   */
+
 
 @keyframes ripple {
     0% {
@@ -1454,4 +1503,13 @@ nav a {
         opacity: 0;
         transform: translate(-50%, 150%);
     }
+}
+
+@keyframes seawave {
+   from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+@-webkit-keyframes seawave {
+   from { background-position: 0 0; }
+	to { background-position: 100% 0; }
 }

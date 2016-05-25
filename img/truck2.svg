@@ -1,0 +1,61 @@
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 119.26 63.89">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2f404f;
+      }
+
+      .cls-2, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke: #2f404f;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-width: 2px;
+      }
+
+      .cls-3, .cls-5 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <title>truck2</title>
+  <g>
+    <line class="cls-1" x1="47" y1="33.89" x2="47" y2="36.89"/>
+    <path class="cls-1" d="M159.5,23.48a1.25,1.25,0,0,1-1.5-1.2V18.7a1.54,1.54,0,0,1,3,0v3.59A1.25,1.25,0,0,1,159.5,23.48Z" transform="translate(-112 15)"/>
+  </g>
+  <rect class="cls-2" x="1" y="35.67" width="80.76" height="19.9"/>
+  <polygon class="cls-2" points="77.83 32.57 15 32.57 1 16.79 1 1 77.83 1 77.83 32.57"/>
+  <path class="cls-2" d="M82,2h26.72a9.53,9.53,0,0,1,9.53,9.53v44a0,0,0,0,1,0,0H82a0,0,0,0,1,0,0V2A0,0,0,0,1,82,2Z"/>
+  <line class="cls-3" x1="81.76" y1="35.67" x2="118.26" y2="35.67"/>
+  <path class="cls-3" d="M92.5,9.89h25.76a0,0,0,0,1,0,0V28a0,0,0,0,1,0,0H97.13a4.63,4.63,0,0,1-4.63-4.63V9.89A0,0,0,0,1,92.5,9.89Z"/>
+  <g>
+    <circle class="cls-1" cx="28.89" cy="53.09" r="10.8"/>
+    <circle class="cls-4" cx="28.89" cy="53.09" r="6.5"/>
+    <g>
+      <line class="cls-5" x1="26.19" y1="53.09" x2="31.59" y2="53.09"/>
+      <line class="cls-5" x1="28.89" y1="50.49" x2="28.89" y2="55.79"/>
+    </g>
+  </g>
+  <g>
+    <circle class="cls-1" cx="98.22" cy="53.09" r="10.8"/>
+    <circle class="cls-4" cx="98.22" cy="53.09" r="6.5"/>
+    <g>
+      <line class="cls-5" x1="95.52" y1="53.09" x2="100.92" y2="53.09"/>
+      <line class="cls-5" x1="98.22" y1="50.49" x2="98.22" y2="55.79"/>
+    </g>
+  </g>
+  <line class="cls-3" x1="19.17" y1="7.17" x2="19.17" y2="27.33"/>
+  <line class="cls-3" x1="27.83" y1="7.17" x2="27.83" y2="27.33"/>
+  <line class="cls-3" x1="36.5" y1="7.17" x2="36.5" y2="27.33"/>
+  <line class="cls-3" x1="45.17" y1="7.17" x2="45.17" y2="27.33"/>
+  <line class="cls-3" x1="53.83" y1="7.17" x2="53.83" y2="27.33"/>
+  <line class="cls-3" x1="62.5" y1="7.17" x2="62.5" y2="27.33"/>
+  <line class="cls-3" x1="71.17" y1="7.17" x2="71.17" y2="27.33"/>
+  <rect class="cls-5" x="113.2" y="40.49" width="5.06" height="7.54"/>
+  <rect class="cls-4" x="43.22" y="39.73" width="32.33" height="5.13"/>
+</svg>
