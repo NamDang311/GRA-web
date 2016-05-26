@@ -138,14 +138,14 @@ li {
    */
 
 #section-0 {
-    background-color: $red;
-    background: url("../img/smoke2.jpg");
+    background-color: $darkBlue;
+//    background: url("../img/smoke2.jpg");
     background-size: cover;
     z-index: -2;
     .row {
         margin: auto 0;
     }
-    h1 {
+    .open h1 {
         font-family: $fonth;
         text-transform: uppercase;
         font-size: 12em;
@@ -176,32 +176,19 @@ nav a {
     z-index: -999;
 }
 
-#findout {
-    font-family: $fonth;
-    color: white;
-    margin: 0 auto;
-    text-align: center;
-    font-style: italic;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    bottom: 7%;
-    letter-spacing: 0.08rem;
-    font-size: 1.3rem;
+.question-section {
+    padding-top:150px;
+    h1{
+        font-size: 5em;
+        color:white;
+    }
 }
-
-#findout:after {
-    content: "";
-    background: url(../img/mouse.svg) no-repeat;
-    width: 20px;
-    height: 32px;
-    bottom: -180%;
-    left: 50%;
+.spaceship{
     position: absolute;
-    transform: translate(-50%, -50%);
+    left:100%;
+    bottom:0;
+
 }
-
-
 /**
    * End of SEC-0
    */
@@ -237,10 +224,10 @@ nav a {
         margin-bottom: 5px;
     }
     p {
-        font-size: 1em;
+        font-size: 0.9em;
         color: $dark;
         font-family: 'Roboto Slab', serif;
-        max-width: 1280px;
+        max-width: 1260px;
         width: 70vw;
         margin: 15px auto 0 auto;
         line-height: 2em;
@@ -951,6 +938,9 @@ nav a {
         content: "";
         background-color: white;
     }
+    p{
+        color: white;
+    }
 }
 
 .case {
@@ -1072,8 +1062,8 @@ nav a {
 }
 
 .satellite-wrapper {
-    width: 500px;
-    height: 500px;
+    width: 650px;
+    height: 650px;
     top: 30%;
     left: 70%;
     position: absolute;
@@ -1243,13 +1233,13 @@ nav a {
     left: 0;
     opacity: 0;
     z-index: 999;
+    color: white;
     #mainBubble {
         min-width: 50px;
         min-height: 10px;
         border-radius: 2px;
-        background-color: #ffffff;
+        background-color: $darkBlue;
         padding: 2px 7px 3px 7px;
-        ;
         text-align: center;
         font-size: 0.8em;
         font-weight: 600;

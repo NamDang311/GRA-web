@@ -8,12 +8,27 @@ $(".main").onepage_scroll({
 //Scroll Magic
 var controller = new ScrollMagic.Controller();
 
-//SEC-1 
+//SEC-0
+$('#yes-answer').on('click', 
+    function(){
+          $(".main").moveDown();
+    }
+);
+$('#no-answer').on('click', 
+    function(){
+          TweenMax.to(
+              $(".spaceship"),1,{css:{left:"50%"}}
+                     );
+    
+    }
+);
 
-var tlintro = new TimelineMax({});
+
+//SEC-1 
+var tlintro = new TimelineMax({delay:0.5});
 tlintro.fromTo("#sec-1-title", 1, {
         y: "+=220px"
-        , opacity: 1
+        , opacity: 0
     }, {
         y: 0
         , opacity: 1
@@ -23,7 +38,7 @@ tlintro.fromTo("#sec-1-title", 1, {
     }, {
         y: "0"
         , opacity: 1
-    }, 0.2)
+    }, 0.2,"+=0.3")
     .from("#sec-1-subtitle", 0.7, {
         y: "+=120px"
         , opacity: 0
@@ -45,7 +60,7 @@ function introAnimation() {
     $("#co2-amount").countTo({
         from: 0
         , to: 40000000000
-        , speed: 2000
+        , speed: 3000
         , refreshInterval: 20
         , formatter: function (value, options) {
             return value.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
@@ -648,9 +663,7 @@ $('.circle-ripple').bind('click', function (event) {
             , scale: parseFloat(dataAr[curbtn])
             , force3D: false
         });
-    };
-
-    clickedAr.push(this);
+      clickedAr.push(this);
     //set Pos Country+ Bars
     if (clickCount == 4) {
         clickCount = 0;
@@ -675,7 +688,11 @@ $('.circle-ripple').bind('click', function (event) {
         }, {
             width: barWidth[curbtn]
         });
-    }
+    }  
+        
+    };
+
+    
 });
 
 
@@ -759,38 +776,6 @@ function addNumber(curbtn) {
 };
 
 
-
-
-//Faded effect.
-var didScroll = true;
-var visibleEl;
-
-function fadedAni() {
-    visibleEl = $(".circle-ripple").visible();
-    if (didScroll && !visibleEl) {
-        didScroll = false;
-        $("#totalTitle, #totalNumber").each(
-            function () {
-                TweenLite.fromTo($(this), 2, {
-                    css: {
-                        left: "-=100vw"
-                        , opacity: 0
-
-                    }
-                }, {
-                    css: {
-                        left: "+=100vw"
-                        , opacity: 1
-
-                    }
-                    , onComplete: function () {
-                        didScroll = true;
-                    }
-                })
-            });
-    }
-
-};
 //END-SEC-8
 
 //SEC-9
