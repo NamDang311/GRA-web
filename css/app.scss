@@ -1,8 +1,9 @@
-$fonth:'stellarmedium',
+$fonth:'Miller Display',
 'Roboto Slab',
 sans-serif;
 $fontp:'Roboto Condensed',
 sans-serif;
+$fonts:'Miller Display',serif;
 $gray:#f3f3f3;
 $yellow:#FBF18F;
 $darkBlue: #1A535C;
@@ -72,9 +73,8 @@ body {
     zoom: 1;
     width: 80px;
     height: 0.1em;
-    margin-bottom: 0.5em;
-    margin-left: -90px;
-    margin-right: 10px;
+    margin-bottom: 1em;
+
 }
 
 .bold {
@@ -84,13 +84,26 @@ body {
 h1 {
     line-height: $header-line-height;
     font-family: $fonth;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-transform: capitalize
 }
 
 p {
     font-family: $fontp;
     font-weight: 200;
     line-height: $base-line-height;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.08em;
+    font-size: 1.1em;
+    max-width: 600px;
+    margin:0 auto;
+}
+h3 {
+    line-height: $header-line-height;
+    font-family: $fonts;
+    font-weight: 400;
+    font-size:1.2em;
+    letter-spacing: 0.05em;
 }
 
 html,
@@ -139,7 +152,6 @@ li {
 
 #section-0 {
     background-color: $darkBlue;
-//    background: url("../img/smoke2.jpg");
     background-size: cover;
     z-index: -2;
     .row {
@@ -201,10 +213,19 @@ nav a {
 #section-1 {
     text-align: center;
     background: #CFA98E;
-    .row {
-        margin-top: 20px;
+    .smoke-bg {
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height: 100%;
+        background: url(../img/smoke_PNG965.png);
+        background-size: cover;
+        opacity: .2;
     }
-    #sec-1-title {}
+    .row {
+        margin-top: 120px;
+    }
     h1 {
         color: #725744;
         letter-spacing: 5px;
@@ -224,13 +245,33 @@ nav a {
         margin-bottom: 5px;
     }
     p {
-        font-size: 0.9em;
-        color: $dark;
-        font-family: 'Roboto Slab', serif;
+        
+        font-size: 1.2em;
+        color: #725744;
         max-width: 1260px;
         width: 70vw;
-        margin: 15px auto 0 auto;
+        margin: 25px auto 25px auto;
         line-height: 2em;
+    }
+    h3 {
+        color:$dark;
+        display:inline;
+        position: relative;
+ cursor: pointer;
+    a {
+        color:$dark;
+        
+        }
+    }
+    h3:after{
+        content:"";
+        background-color:$dark;
+        height:1px;
+        width:100%;
+        position: absolute;
+        bottom: 0;left:-1.2%;
+       
+        
     }
 }
 
@@ -245,18 +286,18 @@ nav a {
    */
 
 #section-2 {
+    text-align: center;
     background-color: $white;
     h1 {
-        text-transform: uppercase;
-        color: $dark;
+      
+        color: $black;
         line-height: 1.1em;
         font-family: $fonth;
     }
-    h1:before {
-        @extend .line;
-        content: "";
-        background-color: $dark;
+    .line {
+        background: $dark;
     }
+    
 }
 
 .section-2-items-wrapper {
@@ -363,17 +404,16 @@ nav a {
    */
 
 #section-3 {
+    text-align: center;
     background-color: $darkBlue;
     .open h1 {
         font-family: $fonth;
-        text-transform: uppercase;
+       
         line-height: 1.1em;
         color: $white;
     }
-    .open h1:before {
-        @extend .line;
-        content: "";
-        background-color: $white;
+    .line {
+        background: white;
     }
     p {
         color: $white;
@@ -383,24 +423,25 @@ nav a {
 .section-3-items-wrapper {}
 
 #section-3 .section-3-items {
-    margin-top: 35vh;
+    margin-top: 40vh;
     text-align: center;
-    width: 22%;
+    width: 15%;
     max-width: 350px;
     min-width: 150px;
     cursor: pointer;
     opacity: 0.5;
     transition: opacity 0.2s ease-in;
     h1 {
+        font-family: $fonts;
         opacity: .3;
         width: 100%;
         font-size: 7vw;
         white-space: nowrap;
     }
     p {
-        margin-top: -20px;
-        font-size: 1.2em;
-        font-weight: 400;
+        margin-top: 0px;
+        font-size: 1em;
+        font-weight: 200;
     }
     .section-3-image {
         width: 100%;
@@ -426,6 +467,7 @@ nav a {
 
 #section-4 {
     overflow: hidden;
+    text-align: center;
     background: $yellow;
     .open h1 {
         padding: 0;
@@ -434,11 +476,7 @@ nav a {
         font-family: $fonth;
         opacity: 0;
     }
-    .open h1:before {
-        @extend .line;
-        content: "";
-        background-color: white;
-    }
+   
     .open p {
         color: white;
         opacity: 0;
@@ -649,18 +687,15 @@ nav a {
    */
 
 #section-5 {
+    text-align: center;
     background-color: $white;
     .open h1 {
         font-family: $fonth;
-        text-transform: uppercase;
+
         line-height: 1.1em;
         color: $dark;
     }
-    .open h1:before {
-        @extend .line;
-        content: "";
-        background-color: black;
-    }
+   
     .open p {
         font-family: $fontp;
         font-size: 1em;
@@ -778,27 +813,34 @@ nav a {
     width: 100%;
     position: absolute;
     bottom: 20%;
-    
-   
+
     .road-line-2 {
         position: absolute;
         bottom: 0;
         height: 1vw;
+        width: 100%;
+        left:0;
         transform: translate(0,40%);
     
     }
 }
 #sea {
     position: absolute;
-    bottom: 5%;
+    bottom: 0;
     left:0;
-    height: 20px;
+    height: 80px;
     width: 100vw ;
     background-image: url(../img/sea.svg);
 	background-position: 0px 0px;
 	background-repeat: repeat-x;
-     animation: seawave 15s linear infinite;
-    -webkit-animation: seawave 15s linear infinite;
+    animation: seawave 24s linear infinite;
+    -webkit-animation: seawave 24s linear infinite;
+}
+#dock {
+    width:20vw;
+    position: absolute;
+    bottom: 0;
+    left:0;
 }
 
 #city {
@@ -846,7 +888,7 @@ nav a {
     width: 8vw;
     position: absolute;
     top: 10vh;
-    right: 34vw;
+    left: 5vw;
     -webkit-animation-name: Floating;
     -webkit-animation-duration: 3s;
     -webkit-animation-iteration-count: infinite;
@@ -878,6 +920,7 @@ nav a {
    */
 
 #section-6 {
+    text-align: center;
     background-color: $white;
     .open h1 {
         font-family: $fonth;
@@ -885,11 +928,7 @@ nav a {
         line-height: 1.1em;
         color: $dark;
     }
-    .open h1:before {
-        @extend .line;
-        content: "";
-        background-color: black;
-    }
+    
     .open p {
         font-family: $fontp;
         font-size: 1em;
@@ -933,11 +972,7 @@ nav a {
         text-transform: uppercase;
         font-family: $fonth;
     }
-    .open h1:before {
-        @extend .line;
-        content: "";
-        background-color: white;
-    }
+    
     p{
         color: white;
     }
@@ -1313,11 +1348,7 @@ nav a {
         line-height: 1.1em;
         color: $dark;
     }
-    .open h1:before {
-        @extend .line;
-        content: "";
-        background-color: black;
-    }
+   
     .open p {
         font-family: $fontp;
         font-size: 1em;

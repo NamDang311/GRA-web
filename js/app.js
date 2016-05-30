@@ -256,7 +256,7 @@ $(".section-3-items").click(
             if (t == 0) {
                 TweenLite.to($(this), 1, {
                     css: {
-                        marginTop: "90px"
+                        marginTop: "170px"
                         , opacity: 1
                     }
                 });
@@ -264,14 +264,14 @@ $(".section-3-items").click(
                 if (t == 1) {
                     TweenLite.to($(this), 1, {
                         css: {
-                            marginTop: "0px"
+                            marginTop: "80px"
                             , opacity: 1
                         }
                     });
                 } else {
                     TweenLite.to($(this), 1, {
                         css: {
-                            marginTop: "150px"
+                            marginTop: "230px"
                             , opacity: 1
                         }
                     });
