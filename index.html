@@ -22,7 +22,6 @@
     <div class="menu-wrap">
         <nav class="menu-right">
             <div class="icon-list">
-
                 <a href="#">
                     <div>06</div><span>What we can do</span></a>
                 <a href="#">
@@ -35,7 +34,6 @@
                     <div>02</div><span>Heatwave</span></a>
                 <a href="index.html">
                     <div>01</div><span>Home</span></a>
-
             </div>
         </nav>
         <button class="close-button" id="close-button">Close Menu</button>
@@ -48,12 +46,21 @@
             <div class="row">
                 <div class="small-8 small-centered medium-4 medium-centered large-8 large-centered open" style="text-align:center;">
                     <h1>2015</h1>
-                    <h1>BE AWARE</h1>
-                    <h2>Are you a citizen of the Earth?</h2>
+                    <h2>BE AWARE</h2>
+                    
                 </div>
-
+<div class="opening">
+    <div class="motionCircle" id="motionCircle-1"></div>
+    <div class="motionCircle" id="motionCircle-2"></div>
+</div>
             </div>
-
+            <div class="section-scroll">
+				<a href="#" class="link-section">
+					<div class="mouse">
+						<div class="wheel"></div>
+					</div>
+				</a>
+			</div>
         </section>
 
         <!--Intro-->
@@ -239,7 +246,7 @@
             <div class="row ">
                 <div class="small-6 small-centered medium-6 medium-offset-1 medium-centered large-6 large-centered columns open">
                     <h1>Transportation Sector</h1>
-                    <p>The transportation sector is the <span class="bold">second largest</span> source of anthropogenic carbon dioxide emissions. Transporting goods and people around the world produced 22% of fossil fuel related carbon dioxide emissions in 2010.
+                    <p>The transportation sector is the <span class="highlight">second largest</span> source of anthropogenic carbon dioxide emissions. Transporting goods and people around the world produced 22% of fossil fuel related carbon dioxide emissions in 2010.
                     </p>
                 </div>
             </div>
@@ -287,8 +294,8 @@
                 <img class="plane" src="img/plane.svg" alt="plane">
                 <img class="plane" src="img/plane.svg" alt="plane">
 
-
-                <img id="city" src="img/city.svg" alt="city">
+                <div id="linecity"></div>
+                
                 <img id="bus" src="img/bus.svg" alt="bus">
                 <img id="truck" src="img/truck.svg" alt="truck">
 
@@ -478,42 +485,14 @@
         <section id="section-8">
 
             <div class="row">
-                <div class="small-4 medium-8 medium-offset-1 large-4 columns open">
+                <div class="small-6 small-centered medium-6 medium-offset-1 medium-centered large-6 large-centered columns open">
                     <h1>Energy-related CO<sub>2</sub> emissions in selected regions in 2014 </h1>
+                    <div class="line"></div>
                 </div>
-                <div class="small-4 medium-6 large-8 columns"></div>
+                
             </div>
             <div class="row">
-                <div class="medium-6 medium-centered large-6 large-centered columns " style="position:relative;height:34vh;">
-                    <div id="worldmap">
-                        <div class="nameBubble">
-                            <div id="mainBubble"></div>
-                        </div>
-                        <div class="circle-ripple" id="na"></div>
-                        <div class="circle-ripple" id="la"></div>
-                        <div class="circle-ripple" id="eu"></div>
-                        <div class="circle-ripple" id="af"></div>
-                        <div class="circle-ripple" id="ru"></div>
-                        <div class="circle-ripple" id="cas"></div>
-                        <div class="circle-ripple" id="me"></div>
-                        <div class="circle-ripple" id="chi"></div>
-                        <div class="circle-ripple" id="ind"></div>
-                        <div class="circle-ripple" id="other"></div>
-                        <div class="circle-ripple" id="jap"></div>
-                        <div class="circle-ripple" id="aus"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="medium-3 large-2 large-offset-1 columns">
-                    <div class="continent-total">
-                        <h3 id="totalTitle">Total CO<sup>2</sup> </h3>
-                        <div id="totalNumber">0</div>
-                    </div>
-
-                </div>
-                <div class="medium-9 large-9 columns">
-
+                <div class="medium-3 medium-offset-1 large-3 columns">
                     <div class="continent-content">
                         <h3 class="continent continent-0 name-0 hidden">North America</h3>
                         <div class="continent continent-0 data-0 hidden"> </div>
@@ -541,12 +520,38 @@
                         <div class="continent continent-11 data-11 hidden"></div>
                     </div>
                 </div>
+                <div class="medium-4 large-4  columns " style="position:relative;height:30vh;">
+                    <div id="worldmap">
+                       <img src="img/worldmap.png">
+                        <div class="nameBubble">
+                            <div id="mainBubble"></div>
+                        </div>
+                        <div class="circle-ripple" id="na"></div>
+                        <div class="circle-ripple" id="la"></div>
+                        <div class="circle-ripple" id="eu"></div>
+                        <div class="circle-ripple" id="af"></div>
+                        <div class="circle-ripple" id="ru"></div>
+                        <div class="circle-ripple" id="cas"></div>
+                        <div class="circle-ripple" id="me"></div>
+                        <div class="circle-ripple" id="chi"></div>
+                        <div class="circle-ripple" id="ind"></div>
+                        <div class="circle-ripple" id="other"></div>
+                        <div class="circle-ripple" id="jap"></div>
+                        <div class="circle-ripple" id="aus"></div>
+                    </div>
+                </div>
+                <div class="medium-2 large-2 end columns">
+                    <div class="continent-total">
+                       <h3 id="totalTitle">Total CO<sub>2</sub> </h3>
+                       <div id="totalNumber">0</div>
+                        <h3 id="totalTitle">Total CO<sub>2</sub> </h3>
+                       <div id="totalNumber">0</div>
+                          
+                        
+                    </div>
 
-
-
+                </div>
             </div>
-
-
         </section>
 
         <!--Comparison-->

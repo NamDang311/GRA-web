@@ -1,3 +1,7 @@
+$(window).load(function () {
+  
+});
+               
 //One-Page 
 $(document).foundation();
 $(".main").onepage_scroll({
@@ -9,20 +13,8 @@ $(".main").onepage_scroll({
 var controller = new ScrollMagic.Controller();
 
 //SEC-0
-$('#yes-answer').on('click', 
-    function(){
-          $(".main").moveDown();
-    }
-);
-$('#no-answer').on('click', 
-    function(){
-          TweenMax.to(
-              $(".spaceship"),1,{css:{left:"50%"}}
-                     );
-    
-    }
-);
-
+var tlopening = new TimelineMax({delay:0.5});
+tlopening.to(("#motionCircle-1"),2,{left:"50%"}).to(("#motionCircle-2"),2,{right:"50%"},"-=2");;
 
 //SEC-1 
 var tlintro = new TimelineMax({delay:0.5});
@@ -396,7 +388,7 @@ function lightUp() {
         , ease: Power3.easeOut
     });
     d3.selectAll(".city-windows").transition().delay(function (d, i) {
-        return i * 60;
+        return i * 120;
     }).duration(500).ease("sin").style("fill", "#FBF18F").style("opacity", 1);
     d3.select("#bulbBody").transition().duration(500).ease("sin").style("fill", "#FFE66D");
     d3.selectAll(" .city2-1").transition().duration(1000).ease("sin").style("fill", "#1A535C").style("stroke", "#4ECDC4");
@@ -492,23 +484,16 @@ function smokeLoad(data) {
             opacity: 0
         });
 }
-
-
-
-function animateTop() {
-    var $rotar = $('#top');
-    var tl = new TimelineMax({
-        repeat: -1
-        , repeatDelay: 3
-    });
-    tl.from($rotar, 0.2, {
-        rotationY: 360
-        , ease: Power0.easeNone
-        , repeat: -1
-        , transformOrigin: "50% 0 0"
-    });
+Snap.load("img/city.svg", cityLoad);
+function cityLoad(data){
+    Snap("#linecity").append(data);
+    TweenMax.fromTo($("#wheelstar"), 25, {rotation:"0deg",transformOrigin:"290.4px 296px"},{
+            rotation:"360deg"
+            ,repeat:-1,ease:Power0.easeNone
+        });
+    
+  
 };
-
 TweenLite.set($(".aviation-data"), {
     scale: 0
     , transformOrigin: "50% 50% 0"
@@ -525,6 +510,8 @@ $(".airballoon-ripple").click(
 );
 
 //END-SEC-5
+//SEC - 6
+
 
 //SEC - 7
 var slideVal = [1, 1.02, 1.04, 1.11, 1.13, 1.2];
@@ -631,17 +618,12 @@ TweenMax.staggerFromTo($(".signal"), 10, {
 //END-SEC-7
 
 // SEC-8
-d3.xml("img/worldmap.svg", "image/svg+xml", function (error, xml) {
-    if (error) throw error;
-    document.getElementById('worldmap').appendChild(xml.documentElement);
-});
 
 
 // click map
 var myAr = $(".circle-ripple").toArray();
 var trigger = true;
 var topPos1 = 0;
-var leftPos1 = 3;
 var clickCount = 0;
 var clickedAr = [];
 
@@ -665,22 +647,15 @@ $('.circle-ripple').bind('click', function (event) {
         });
       clickedAr.push(this);
     //set Pos Country+ Bars
-    if (clickCount == 4) {
-        clickCount = 0;
-        leftPos1 = leftPos1 + 28;
-        topPos1 = 0
-    };
-    clickCount = clickCount + 1;
     if (!$(".name-" + curbtn + "").hasClass("clicked")) {
         addNumber(curbtn);
         $(".continent-" + curbtn + "").removeClass("hidden");
         $(".name-" + curbtn + "").css({
             top: topPos1 + "%"
-            , left: leftPos1 + "%"
+         
         }).addClass("clicked");
         $(".data-" + curbtn + "").css({
             top: (topPos1 + 6) + "%"
-            , left: leftPos1 + "%"
         });
         topPos1 = topPos1 + 10;
         TweenLite.fromTo($(".data-" + curbtn + ""), 1, {
