@@ -74,6 +74,7 @@
               $this.unbind('touchmove', touchmove);
             }
           }
+            event.preventDefault();
         }
 
       });

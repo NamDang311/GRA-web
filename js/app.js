@@ -1,7 +1,7 @@
 $(window).load(function () {
-  
+
 });
-               
+
 //One-Page 
 $(document).foundation();
 $(".main").onepage_scroll({
@@ -13,11 +13,46 @@ $(".main").onepage_scroll({
 var controller = new ScrollMagic.Controller();
 
 //SEC-0
-var tlopening = new TimelineMax({delay:0.5});
-tlopening.to(("#motionCircle-1"),2,{left:"50%"}).to(("#motionCircle-2"),2,{right:"50%"},"-=2");;
+var tlopening = new TimelineMax({
+    delay: 0.5
+});
+TweenMax.set((".outerCircle"), {
+    perspective: 1000
+    , scale: 0
+})
+TweenMax.set(("#motionCircle-6"), {
+    opacity:0
+    , scale: 1.4
+})
+tlopening.to(("#motionCircle-1"), 0.6, {
+    left: "50%"
+    , ease: Power1.easeIn
+}).to(("#motionCircle-2"), 0.6, {
+    right: "50%"
+    , ease: Power1.easeIn
+}, "-=0.6").set(("#motionCircle-1,#motionCircle-2"), {
+    opacity: 0
+}).to(("#motionCircle-3"), 3, {
+    scale: 1.4
+    , ease: Back.easeOut.config(1),force3D:false
+}).to(("#motionCircle-4"), 3, {
+    scale: 1.4
+    , ease: Back.easeOut.config(2),force3D:false
+}, "-=3").to(("#motionCircle-5"), 3, {
+    scale: 1.4
+    , ease: Back.easeOut.config(4),force3D:false
+}, "-=3").to(("#motionCircle-6"), 2, {
+    opacity:0.2
+    , ease: Power0.easeNone
+}).to(("#section-0 .open h1"), 1, {
+    opacity:1
+    , ease: Power0.easeNone
+});;
 
 //SEC-1 
-var tlintro = new TimelineMax({delay:0.5});
+var tlintro = new TimelineMax({
+    delay: 0.5
+});
 tlintro.fromTo("#sec-1-title", 1, {
         y: "+=220px"
         , opacity: 0
@@ -30,7 +65,7 @@ tlintro.fromTo("#sec-1-title", 1, {
     }, {
         y: "0"
         , opacity: 1
-    }, 0.2,"+=0.3")
+    }, 0.2, "+=0.3")
     .from("#sec-1-subtitle", 0.7, {
         y: "+=120px"
         , opacity: 0
@@ -485,14 +520,19 @@ function smokeLoad(data) {
         });
 }
 Snap.load("img/city.svg", cityLoad);
-function cityLoad(data){
+
+function cityLoad(data) {
     Snap("#linecity").append(data);
-    TweenMax.fromTo($("#wheelstar"), 25, {rotation:"0deg",transformOrigin:"290.4px 296px"},{
-            rotation:"360deg"
-            ,repeat:-1,ease:Power0.easeNone
-        });
-    
-  
+    TweenMax.fromTo($("#wheelstar"), 25, {
+        rotation: "0deg"
+        , transformOrigin: "290.4px 296px"
+    }, {
+        rotation: "360deg"
+        , repeat: -1
+        , ease: Power0.easeNone
+    });
+
+
 };
 TweenLite.set($(".aviation-data"), {
     scale: 0
@@ -645,29 +685,29 @@ $('.circle-ripple').bind('click', function (event) {
             , scale: parseFloat(dataAr[curbtn])
             , force3D: false
         });
-      clickedAr.push(this);
-    //set Pos Country+ Bars
-    if (!$(".name-" + curbtn + "").hasClass("clicked")) {
-        addNumber(curbtn);
-        $(".continent-" + curbtn + "").removeClass("hidden");
-        $(".name-" + curbtn + "").css({
-            top: topPos1 + "%"
-         
-        }).addClass("clicked");
-        $(".data-" + curbtn + "").css({
-            top: (topPos1 + 6) + "%"
-        });
-        topPos1 = topPos1 + 10;
-        TweenLite.fromTo($(".data-" + curbtn + ""), 1, {
-            width: 0
-        }, {
-            width: barWidth[curbtn]
-        });
-    }  
-        
+        clickedAr.push(this);
+        //set Pos Country+ Bars
+        if (!$(".name-" + curbtn + "").hasClass("clicked")) {
+            addNumber(curbtn);
+            $(".continent-" + curbtn + "").removeClass("hidden");
+            $(".name-" + curbtn + "").css({
+                top: topPos1 + "%"
+
+            }).addClass("clicked");
+            $(".data-" + curbtn + "").css({
+                top: (topPos1 + 6) + "%"
+            });
+            topPos1 = topPos1 + 10;
+            TweenLite.fromTo($(".data-" + curbtn + ""), 1, {
+                width: 0
+            }, {
+                width: barWidth[curbtn]
+            });
+        }
+
     };
 
-    
+
 });
 
 
