@@ -13,40 +13,57 @@ $(".main").onepage_scroll({
 var controller = new ScrollMagic.Controller();
 
 //SEC-0
+
+//    TweenMax.set((".motionLine"),{drawSVG:"100% 100%"});
+
 var tlopening = new TimelineMax({
     delay: 0.5
 });
 TweenMax.set((".outerCircle"), {
-  width:"0vw",height:"0vw"
-   
-})
+    width: "0vw"
+    , height: "0vw"
+});
+
 TweenMax.set(("#motionCircle-6"), {
-    opacity:0,  width:"55vw",height:"55vw"
+    opacity: 0
+    , width: "55vw"
+    , height: "55vw"
 })
 tlopening.to(("#motionCircle-1"), 0.6, {
-    left: "50%"
-    , ease: Power1.easeIn
-}).to(("#motionCircle-2"), 0.6, {
-    right: "50%"
-    , ease: Power1.easeIn
-}, "-=0.6").set(("#motionCircle-1,#motionCircle-2"), {
-    opacity: 0
-}).to(("#motionCircle-3"), 3, {
-     width:"55vw",height:"55vw"
-    , ease: Back.easeOut.config(1)
-}).to(("#motionCircle-4"), 3, {
-      width:"55vw",height:"55vw"
-    , ease: Back.easeOut.config(2)
-}, "-=3").to(("#motionCircle-5"), 3, {
-      width:"55vw",height:"55vw"
-    , ease: Back.easeOut.config(4)
-}, "-=3").to(("#motionCircle-6"), 2, {
-    opacity:0.2
-    , ease: Power0.easeNone
-}).to(("#section-0 .open h1"), 1, {
-    opacity:1
-    , ease: Power0.easeNone
-});;
+        left: "50%"
+        , ease: Power1.easeIn
+    }).to(("#motionCircle-2"), 0.6, {
+        right: "50%"
+        , ease: Power1.easeIn
+    }, "-=0.6").set(("#motionCircle-1,#motionCircle-2"), {
+        opacity: 0
+    }).fromTo(".motionLine", 2, {
+        drawSVG: "0%"
+    }, {
+        drawSVG: "100%",ease: Power1.easeOut
+    }, "-=0")
+    .to(".motionLine", 3, {
+        drawSVG: "100% 100%",
+    }, "-=1.8")
+    .to(("#motionCircle-3"), 3, {
+        width: "55vw"
+        , height: "55vw"
+        , ease: Back.easeOut.config(1)
+    },"-=3.2").to(("#motionCircle-4"), 3, {
+        width: "55vw"
+        , height: "55vw"
+        , ease: Back.easeOut.config(2)
+    }, "-=3").to(("#motionCircle-5"), 3, {
+        width: "55vw"
+        , height: "55vw"
+        , ease: Back.easeOut.config(4)
+    }, "-=3").to(("#motionCircle-6"), 2, {
+        opacity: 0.2
+        , ease: Power0.easeNone
+    }).to(("#section-0 .open h1"), 1, {
+        opacity: 1
+        , ease: Power0.easeNone
+    });;
 
 //SEC-1 
 var tlintro = new TimelineMax({
