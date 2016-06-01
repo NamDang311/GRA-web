@@ -17,12 +17,11 @@ var tlopening = new TimelineMax({
     delay: 0.5
 });
 TweenMax.set((".outerCircle"), {
-    perspective: 1000
-    , scale: 0
+  width:"0vw",height:"0vw"
+   
 })
 TweenMax.set(("#motionCircle-6"), {
-    opacity:0
-    , scale: 1.4
+    opacity:0,  width:"55vw",height:"55vw"
 })
 tlopening.to(("#motionCircle-1"), 0.6, {
     left: "50%"
@@ -33,14 +32,14 @@ tlopening.to(("#motionCircle-1"), 0.6, {
 }, "-=0.6").set(("#motionCircle-1,#motionCircle-2"), {
     opacity: 0
 }).to(("#motionCircle-3"), 3, {
-    scale: 1.4
-    , ease: Back.easeOut.config(1),force3D:false
+     width:"55vw",height:"55vw"
+    , ease: Back.easeOut.config(1)
 }).to(("#motionCircle-4"), 3, {
-    scale: 1.4
-    , ease: Back.easeOut.config(2),force3D:false
+      width:"55vw",height:"55vw"
+    , ease: Back.easeOut.config(2)
 }, "-=3").to(("#motionCircle-5"), 3, {
-    scale: 1.4
-    , ease: Back.easeOut.config(4),force3D:false
+      width:"55vw",height:"55vw"
+    , ease: Back.easeOut.config(4)
 }, "-=3").to(("#motionCircle-6"), 2, {
     opacity:0.2
     , ease: Power0.easeNone

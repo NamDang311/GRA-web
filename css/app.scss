@@ -124,12 +124,15 @@ h3 {
     background-size: cover;
     z-index: -2;
     .row {
-        margin: 280px auto 0 auto;
+
     }
     .open h1 {
-        
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
         font-family: $fonth;
-        font-size: 10em;
+        font-size: 10vw;
         font-weight: 500;
         color: white;
         line-height: 0.8em;
@@ -163,7 +166,10 @@ nav a {
     margin:80px auto;
     height:2px;
     width:100px;
-    background:$dark;
+    background:$brown;
+}
+.opening {
+    margin:0 auto;
 }
 .opening .motionCircle {
     width:1em;
@@ -183,8 +189,9 @@ nav a {
     transform:translate(50%,-50%);
 }
 .outerCircle {
-    width:30em;
-    height:30em;
+   
+    width:50vw;
+    height:50vw;
     border:2px solid white;
     border-radius:50%;
     position: absolute;
@@ -204,8 +211,8 @@ nav a {
     position: absolute;
     bottom: 2%;
     left: 50%;
-    width: 30px;
-    height: 48px;
+    width: 24px ;
+    height: 34px;
     cursor: pointer;
     z-index: 3;
     .mouse{
@@ -218,13 +225,13 @@ nav a {
     border: 2px solid #fff;
     -moz-border-radius: 15px;
     -webkit-border-radius: 15px;
-    border-radius: 15px;
+    border-radius: 10px;
     }
     .wheel{
     display: block;
     margin: 0 0 0 -2px;
     position: absolute;
-    top: 10px;
+    top: 5px;
     left: 50%;
     width: 4px;
     height: 4px;
