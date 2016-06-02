@@ -3,7 +3,7 @@ $fonth:'Miller Display',
 sans-serif;
 $fontp:'Source Sans Pro','Roboto Condensed',
 sans-serif;
-$fonts:'Miller Display',serif;
+$fonts:'Stellar',serif;
 $gray:#f3f3f3;
 $yellow:#FBF18F;
 $darkBlue: #1A535C;
@@ -112,7 +112,9 @@ h3 {
     letter-spacing: 0.05em;
 }
 
-
+section {
+    padding-top: 50px;
+}
 
 
 /**
@@ -120,31 +122,47 @@ h3 {
    */
 
 #section-0 {
-    background-color: $darkBlue;
-    background-size: cover;
     z-index: -2;
-    .row {
-
-    }
-    .open h1 {
+ padding-top: 0px;
+     text-align: center;
+     h1 {
         position: absolute;
         top:50%;
-        left:50%;
-        transform: translate(-50%,-50%);
-        font-family: $fonth;
+        left:54.5%;
+        transform: translate(-50%,-60%);
+        font-family: $fonts;
+         text-transform: uppercase;
         font-size: 10vw;
         font-weight: 500;
         color: white;
-        line-height: 0.8em;
-        letter-spacing: 0.2em;
-        opacity: 0;
+        line-height: 1em;
+        letter-spacing: 1em;
+      text-align: center;
+         padding: 0;
+         margin:0;
+        
     }
    
 }
-
-section {
-    padding-top: 50px;
+.video-container{
+    width: 70vw;
+    height:70vw;
+    min-width: 500px;
+     position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+    video {
+        width: 100%;
+        opacity: 1;
+    }
 }
+#motion-video {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -60%);
+    }
+
+
 
 nav {
     height: 50px;
@@ -162,14 +180,13 @@ nav a {
     z-index: -999;
 }
 
-.linebreak {
-    margin:80px auto;
-    height:2px;
-    width:100px;
-    background:$brown ;
-}
+
 .opening {
     margin:0 auto;
+    width: 50vw;
+    height:50vw;
+    position: absolute;
+    
 }
 .opening .motionCircle {
     width:1em;
@@ -252,7 +269,10 @@ nav a {
     animation: scroll-wheel 1.8s linear 0s infinite normal none;
     }
 }
-
+#oilrig{
+      width: 40px;
+    position: absolute;
+}
 /**
    * End of SEC-0
    */
@@ -276,7 +296,7 @@ nav a {
         opacity: .3;
     }
     .row {
-        margin-top: 120px;
+        margin-top: 80px;
     }
     h1 {
         color: #725744;
@@ -287,7 +307,7 @@ nav a {
         color: white;
         letter-spacing: 10px;
         font-size: 8vw;
-        margin-top: -20px;
+        margin-top: -10px;
     }
     #unit {
         color: white;
@@ -300,16 +320,15 @@ nav a {
         
         font-size: 1.2em;
         color: #725744;
-        max-width: 1260px;
-        width: 70vw;
-        margin: 25px auto 25px auto;
+        max-width: 960px;
+        margin: 25px auto 100px auto;
         line-height: 2em;
     }
     h3 {
         color:$dark;
         display:inline;
         position: relative;
- cursor: pointer;
+         cursor: pointer;
     a {
         color:$dark;
         
@@ -326,7 +345,12 @@ nav a {
         
     }
 }
-
+.linebreak {
+    margin:40px auto;
+    height:2px;
+    width:100px;
+    background:$brown ;
+}
 
 /**
    * End of SEC-1
@@ -1221,12 +1245,11 @@ nav a {
    */
 
 #section-8 {
-    background-color: white;
+    background-color: $yellow;
     text-align: center;
     .open h1 {
         padding: 0;
         z-index: 999;
-        text-transform: uppercase;
         font-family: $fonth;
     }
    
@@ -1243,77 +1266,39 @@ nav a {
 
 .circle-ripple {
     background-color: $yellow;
-    border: 2px solid darken($yellow,50);
-    
-    width: 0.8em;
-    height: 0.8em;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     cursor: pointer;
     position: absolute;
-    -webkit-animation: ripple 2s linear infinite;
-    animation: ripple 2s linear infinite;
 }
 
 
-#na {
-    left: 18%;
-    top: 29%;
+#cn {
+    left: 72%;
+    top: 38%;
 }
 
-#la {
-    left: 30%;
-    top: 65%;
-}
-
-#eu {
-    left: 49%;
-    top: 26%;
-}
-
-#af {
-    left: 54%;
-    top: 55%;
-}
-
-#ru {
-    left: 67%;
-    top: 18%;
-}
-
-#cas {
-    left: 60%;
-    top: 29%;
-}
-
-#me {
-    left: 61%;
-    top: 44%;
+#usa {
+    left: 19%;
+    top: 41%;
 }
 
 #ind {
     left: 69%;
-    top: 43%;
+    top: 49%;
 }
 
-#other {
-    left: 78%;
-    top: 57%;
+#ru{
+    left: 77%;
+    top: 17%;
 }
 
-#jap {
-    left: 86%;
-    top: 32%;
+#ja {
+    left: 85%;
+    top: 42%;
 }
 
-#aus {
-    left: 86%;
-    top: 73%;
-}
-
-#chi {
-    left: 78%;
-    top: 30%;
-}
 
 .nameBubble {
     position: absolute;
@@ -1326,7 +1311,7 @@ nav a {
         min-width: 50px;
         min-height: 10px;
         border-radius: 2px;
-        background-color: $darkBlue;
+        background-color: $red;
         padding: 2px 7px 3px 7px;
         text-align: center;
         font-size: 0.8em;
@@ -1344,6 +1329,10 @@ nav a {
 .continent-content {
     position: relative;
     height: 50vh;
+    img {
+        margin-bottom: 3px;
+        margin-right: 5px;
+    }
 }
 
 .hidden {
@@ -1357,19 +1346,23 @@ nav a {
 }
 
 .continent-total {
-    text-align: right;
+    text-align:left;
     position: relative;
     height: 50vh;
-    color: #616674
-}
-
-.continent-total #totalTitle {
-    color: darken($darkBlue, 10);
+    color: #020e37;
+    padding-left:40px;
+    h3 {
+        font-family: $fontp;}
+    
+    div {
+        margin-bottom:80px;
+    }
 }
 
 .continent-total #totalNumber {
-    line-height: 0.10em;
-    font-size: 6em;
+    font-family: $fonth;
+    line-height: 0.80em;
+    font-size: 4em;
     vertical-align: top;
     margin: 0;
     padding:0;
@@ -1382,6 +1375,11 @@ nav a {
 
 .activated {
     background-color: $red;
+}
+
+.timespanMark{
+    padding:0 15px 0 15px;
+    font-weight: bold;
 }
 /**
    * Section-9

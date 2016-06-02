@@ -15,55 +15,94 @@ var controller = new ScrollMagic.Controller();
 //SEC-0
 
 //    TweenMax.set((".motionLine"),{drawSVG:"100% 100%"});
+//
+//var tlopening = new TimelineMax({
+//    delay: 0.5
+//});
+//TweenMax.set((".outerCircle"), {
+//    width: "0vw"
+//    , height: "0vw"
+//});
+//
+//TweenMax.set(("#motionCircle-6"), {
+//    opacity: 0
+//    , width: "35vw"
+//    , height: "35vw"
+//})
+//tlopening.to(("#motionCircle-1"), 0.6, {
+//        left: "50%"
+//        , ease: Power1.easeIn
+//    }).to(("#motionCircle-2"), 0.6, {
+//        right: "50%"
+//        , ease: Power1.easeIn
+//    }, "-=0.6").set(("#motionCircle-1,#motionCircle-2"), {
+//        opacity: 0
+//    }).fromTo(".motionLine", 2, {
+//        drawSVG: "0%"
+//    }, {
+//        drawSVG: "100%",ease: Power1.easeOut
+//    }, "-=0")
+//    .to(".motionLine", 3, {
+//        drawSVG: "100% 100%",
+//    }, "-=1.8")
+//    .to(("#motionCircle-3"), 3, {
+//        width: "35vw"
+//        , height: "35vw"
+//        , ease: Back.easeOut.config(1)
+//    },"-=3.2").to(("#motionCircle-4"), 3, {
+//        width: "35vw"
+//        , height: "35vw"
+//        , ease: Back.easeOut.config(2)
+//    }, "-=3").to(("#motionCircle-5"), 3, {
+//        width: "35vw"
+//        , height: "35vw"
+//        , ease: Back.easeOut.config(4)
+//    }, "-=3").to(("#motionCircle-6"), 2, {
+//        opacity: 0.2
+//        , ease: Power0.easeNone
+//    }).to(("#section-0 .open h1"), 1, {
+//        opacity: 1
+//        , ease: Power0.easeNone
+//    });;
 
-var tlopening = new TimelineMax({
-    delay: 0.5
-});
-TweenMax.set((".outerCircle"), {
-    width: "0vw"
-    , height: "0vw"
-});
+//Snap.load("img/opening/oilrig.svg", oilrigLoad);
+//function oilrigLoad(data) {
+//   Snap("#oilrig").append(data);
+//};
 
-TweenMax.set(("#motionCircle-6"), {
-    opacity: 0
-    , width: "55vw"
-    , height: "55vw"
-})
-tlopening.to(("#motionCircle-1"), 0.6, {
-        left: "50%"
-        , ease: Power1.easeIn
-    }).to(("#motionCircle-2"), 0.6, {
-        right: "50%"
-        , ease: Power1.easeIn
-    }, "-=0.6").set(("#motionCircle-1,#motionCircle-2"), {
-        opacity: 0
-    }).fromTo(".motionLine", 2, {
-        drawSVG: "0%"
-    }, {
-        drawSVG: "100%",ease: Power1.easeOut
-    }, "-=0")
-    .to(".motionLine", 3, {
-        drawSVG: "100% 100%",
-    }, "-=1.8")
-    .to(("#motionCircle-3"), 3, {
-        width: "55vw"
-        , height: "55vw"
-        , ease: Back.easeOut.config(1)
-    },"-=3.2").to(("#motionCircle-4"), 3, {
-        width: "55vw"
-        , height: "55vw"
-        , ease: Back.easeOut.config(2)
-    }, "-=3").to(("#motionCircle-5"), 3, {
-        width: "55vw"
-        , height: "55vw"
-        , ease: Back.easeOut.config(4)
-    }, "-=3").to(("#motionCircle-6"), 2, {
-        opacity: 0.2
-        , ease: Power0.easeNone
-    }).to(("#section-0 .open h1"), 1, {
-        opacity: 1
-        , ease: Power0.easeNone
-    });;
+(function () {
+  var bv = new Bideo();
+  bv.init({
+    // Video element
+    videoEl: document.querySelector('#background-video'),
+
+    // Container element
+    container: document.querySelector('#section-0'),
+
+    // Resize
+    resize: true,
+
+    // Array of objects containing the src and type
+    // of different video formats to add
+    src: [
+      {
+        src: 'img/opening/bg.mp4',
+        type: 'video/mp4'
+      }
+    ],
+
+    // What to do once video loads (initial frame)
+    onLoad: function () {
+//      document.querySelector('#video_cover').style.display = 'none';
+        
+    }
+  });
+}());
+
+
+
+
+
 
 //SEC-1 
 var tlintro = new TimelineMax({
@@ -674,9 +713,6 @@ TweenMax.staggerFromTo($(".signal"), 10, {
 //END-SEC-7
 
 // SEC-8
-
-
-// click map
 var myAr = $(".circle-ripple").toArray();
 var trigger = true;
 var topPos1 = 0;
@@ -686,7 +722,9 @@ var clickedAr = [];
 TweenMax.set($("#worldmap"), {
     perspective: 1000
 });
+
 $('.circle-ripple').bind('click', function (event) {
+   
     var curbtn = $.inArray(this, myAr);
     if (!$(this).hasClass("activated")) {
         $(this).addClass("activated");
@@ -698,10 +736,11 @@ $('.circle-ripple').bind('click', function (event) {
 
         }, {
             opacity: 0.8
-            , scale: parseFloat(dataAr[curbtn])
+            , scale: parseFloat(dataAr[curbtn])/2.5
             , force3D: false
         });
         clickedAr.push(this);
+        
         //set Pos Country+ Bars
         if (!$(".name-" + curbtn + "").hasClass("clicked")) {
             addNumber(curbtn);
@@ -713,6 +752,7 @@ $('.circle-ripple').bind('click', function (event) {
             $(".data-" + curbtn + "").css({
                 top: (topPos1 + 6) + "%"
             });
+            
             topPos1 = topPos1 + 10;
             TweenLite.fromTo($(".data-" + curbtn + ""), 1, {
                 width: 0
@@ -732,54 +772,49 @@ $('.circle-ripple').hover(
     function () {
         if ($.inArray(this, clickedAr) < 0) {
 
-            TweenLite.to($(".nameBubble"), 0.5, {
-                opacity: 1
-            });
+            TweenLite.to($(".nameBubble"), 0.5, {css:{autoAlpha:1}});
             $("#mainBubble").html(nameAr[$.inArray(this, myAr)]);
             $(".nameBubble").css({
                 left: Math.round($(this).position().left * 100 / $(this).parent().width()) + "%"
-                , top: $(this).position().top * 100 / $(this).parent().height() - 10 + "%"
+                , top: $(this).position().top * 100 / $(this).parent().height() - 13 + "%"
                 , transform: "translate(-45%,-23%)"
             });
         }
     }
     , function () {
-        TweenLite.to($(".nameBubble"), 0.5, {
-            opacity: 0
-        });
+        TweenLite.to($(".nameBubble"), 0.5, {css:{autoAlpha:0}});
     }
 );
 
 var dataAr = [];
 var nameAr = [];
 var barWidth = [];
+
 $.ajax({
     type: "GET"
     , url: "worlddata.xml"
     , dataType: "xml"
     , success: function (xml) {
-
-        for (t = 0; t <= 12; t++) {
+        for (t = 0; t <= 4; t++) {
             dataAr.push($(xml).find('data:eq(' + t + ')').text());
             nameAr.push($(xml).find('name:eq(' + t + ')').text());
+                 
         }
         if (trigger) {
             appendData();
             trigger = !trigger;
         }
     },
-
-
 });
-
+ 
 function appendData() {
-    for (a = 0; a <= 12; a++) {
+    for (a = 0; a <= 4; a++) {
         $(".data-" + a + "").css({
             height: "10px"
             , position: "absolute"
             , top: "0"
             , "background-color": "#e6665a"
-            , width: parseFloat(dataAr[a]) * 30
+            , width: parseFloat(dataAr[a])*10
         , });
         barWidth.push($(".data-" + a + "").css("width"));
     }
@@ -822,7 +857,7 @@ Draggable.create(".dragItems", {
     type: "x,y"
     , onDragEnd: function (e) {
         if (this.hitTest(".target-content", "50%")) {
-            alert("Adsasd");
+            
         } else {
             TweenLite.to(e.target, 0.3, {
                 x: 0

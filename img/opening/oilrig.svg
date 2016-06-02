@@ -1,0 +1,24 @@
+<svg id="b911c8f1-f214-45c3-a069-b64dad4f4c36" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73.33 67.16">
+  <defs>
+    <style>
+      .a2b134d6-fc80-416f-86b0-b30b4dbd8917 {
+        fill: #fff;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <title>oil rig</title>
+  <g>
+    <line class="a2b134d6-fc80-416f-86b0-b30b4dbd8917" x1="4.63" y1="3.71" x2="4.75" y2="65.27"/>
+    <line class="a2b134d6-fc80-416f-86b0-b30b4dbd8917" x1="4.63" y1="4.63" x2="59.23" y2="35.41"/>
+    <polygon class="a2b134d6-fc80-416f-86b0-b30b4dbd8917" points="45.9 66.11 20.94 66.16 30.19 21.44 36.48 21.43 45.9 66.11"/>
+    <rect class="a2b134d6-fc80-416f-86b0-b30b4dbd8917" x="619.06" y="132.3" width="7.01" height="7.01" transform="translate(-502.24 366.25) rotate(-45.11)"/>
+    <circle class="a2b134d6-fc80-416f-86b0-b30b4dbd8917" cx="593.86" cy="119.41" r="3.63" transform="translate(-391 463.33) rotate(-60.59)"/>
+    <line class="a2b134d6-fc80-416f-86b0-b30b4dbd8917" x1="26.92" y1="37.27" x2="39.82" y2="37.25"/>
+    <line class="a2b134d6-fc80-416f-86b0-b30b4dbd8917" x1="25.05" y1="46.27" x2="41.79" y2="46.24"/>
+    <line class="a2b134d6-fc80-416f-86b0-b30b4dbd8917" x1="22.64" y1="57.93" x2="44.28" y2="57.89"/>
+    <path class="a2b134d6-fc80-416f-86b0-b30b4dbd8917" d="M661.14,141.7l-14,7.55,0.33,16S664.44,159.79,661.14,141.7Z" transform="translate(-589.23 -114.78)"/>
+  </g>
+</svg>

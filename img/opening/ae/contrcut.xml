@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<NewtonSettings majorVersion="1" minorVersion="2">
+    <preview zoom="765.000000" panX="0.000000" panY="0.000000" bgColorR="0.000000" bgColorG="0.000000" bgColorB="0.000000" />
+    <solver timeDivider="1.000000" tolerance="50.000000" stepsPerFrame="2" />
+    <gravity magnitude="50.000000" direction="90.000000" takeValueFrom="0" />
+    <bodies>
+        <body layerID="201" index="1" name="controller Outlines" type="1" density="1.000000" friction="0.500000" restitution="0.300000" meshPrecision="2" linearVelocityMagnitude="0.000000" linearVelocityDirection="0.000000" angularVelocity="0.000000" linearDamping="0.000000" angularDamping="0.000000" aematicDamping="0.500000" aematicTension="1.000000" categoryBits="1" maskBits="65535" fixedRotation="0" gravityScale="1.000000" useConvexHull="0" magnetismType="0" magnetIntensity="10.000000" magnetDistance="100.000000" acceptMagnetism="1" openShapeLineWidth="0.015000" colorR="1.000000" colorG="1.000000" colorB="1.000000" positionX="1.468426" positionY="-0.977357" angle="0.000000" aematicAnchorX="0.000000" aematicAnchorY="0.000000" />
+        <body layerID="200" index="2" name="package Outlines" type="2" density="1.000000" friction="0.500000" restitution="0.300000" meshPrecision="10" linearVelocityMagnitude="0.000000" linearVelocityDirection="0.000000" angularVelocity="0.000000" linearDamping="1.000000" angularDamping="1.000000" aematicDamping="0.500000" aematicTension="1.000000" categoryBits="1" maskBits="65535" fixedRotation="0" gravityScale="1.000000" useConvexHull="0" magnetismType="0" magnetIntensity="10.000000" magnetDistance="100.000000" acceptMagnetism="1" openShapeLineWidth="0.015000" colorR="1.000000" colorG="1.000000" colorB="1.000000" positionX="1.473510" positionY="0.199494" angle="0.000000" aematicAnchorX="0.000000" aematicAnchorY="0.000000" />
+    </bodies>
+    <joints>
+        <joint type="0" bodyAId="1" bodyBId="0" bodyALayerID="200" bodyBLayerID="201" bodyALayerIndex="2" bodyBLayerIndex="1" bodyALayerName="package Outlines" bodyBLayerName="controller Outlines" anchorAX="-0.000999" anchorAY="0.000429" anchorBX="-0.003605" anchorBY="0.408345" frequency="0.000000" damping="0.000000" collideConnected="1" />
+    </joints>
+    <presets />
+</NewtonSettings>
