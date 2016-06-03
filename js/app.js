@@ -1,7 +1,6 @@
 $(window).load(function () {
 
 });
-
 //One-Page 
 $(document).foundation();
 $(".main").onepage_scroll({

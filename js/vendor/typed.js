@@ -1,434 +1,447 @@
-// The MIT License (MIT)
-
-// Typed.js | Copyright (c) 2014 Matt Boldt | www.mattboldt.com
-
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
-
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
-
-
-
-
-! function($) {
-
-    "use strict";
-
-    var Typed = function(el, options) {
-
-        // chosen element to manipulate text
-        this.el = $(el);
-
-        // options
-        this.options = $.extend({}, $.fn.typed.defaults, options);
-
-        // attribute to type into
-        this.isInput = this.el.is('input');
-        this.attr = this.options.attr;
-
-        // show cursor
-        this.showCursor = this.isInput ? false : this.options.showCursor;
-
-        // text content of element
-        this.elContent = this.attr ? this.el.attr(this.attr) : this.el.text()
-
-        // html or plain text
-        this.contentType = this.options.contentType;
-
-        // typing speed
-        this.typeSpeed = this.options.typeSpeed;
-
-        // add a delay before typing starts
-        this.startDelay = this.options.startDelay;
-
-        // backspacing speed
-        this.backSpeed = this.options.backSpeed;
-
-        // amount of time to wait before backspacing
-        this.backDelay = this.options.backDelay;
-
-        // div containing strings
-        this.stringsElement = this.options.stringsElement;
-
-        // input strings of text
-        this.strings = this.options.strings;
-
-        // character number position of current string
-        this.strPos = 0;
-
-        // current array position
-        this.arrayPos = 0;
-
-        // number to stop backspacing on.
-        // default 0, can change depending on how many chars
-        // you want to remove at the time
-        this.stopNum = 0;
-
-        // Looping logic
-        this.loop = this.options.loop;
-        this.loopCount = this.options.loopCount;
-        this.curLoop = 0;
-
-        // for stopping
-        this.stop = false;
-
-        // custom cursor
-        this.cursorChar = this.options.cursorChar;
-
-        // shuffle the strings
-        this.shuffle = this.options.shuffle;
-        // the order of strings
-        this.sequence = [];
-
-        // All systems go!
-        this.build();
-    };
-
-    Typed.prototype = {
-
-        constructor: Typed
-
-        ,
-        init: function() {
-            // begin the loop w/ first current string (global self.strings)
-            // current string will be passed as an argument each time after this
-            var self = this;
-            self.timeout = setTimeout(function() {
-                for (var i=0;i<self.strings.length;++i) self.sequence[i]=i;
-
-                // shuffle the array if true
-                if(self.shuffle) self.sequence = self.shuffleArray(self.sequence);
-
-                // Start typing
-                self.typewrite(self.strings[self.sequence[self.arrayPos]], self.strPos);
-            }, self.startDelay);
-        }
-
-        ,
-        build: function() {
-            var self = this;
-            // Insert cursor
-            if (this.showCursor === true) {
-                this.cursor = $("<span class=\"typed-cursor\">" + this.cursorChar + "</span>");
-                this.el.after(this.cursor);
-            }
-            if (this.stringsElement) {
-                self.strings = [];
-                this.stringsElement.hide();
-                var strings = this.stringsElement.find('p');
-                $.each(strings, function(key, value){
-                    self.strings.push($(value).html());
-                });
-            }
-            this.init();
-        }
-
-        // pass current string state to each function, types 1 char per call
-        ,
-        typewrite: function(curString, curStrPos) {
-            // exit when stopped
-            if (this.stop === true) {
-                return;
-            }
-
-            // varying values for setTimeout during typing
-            // can't be global since number changes each time loop is executed
-            var humanize = Math.round(Math.random() * (100 - 30)) + this.typeSpeed;
-            var self = this;
-
-            // ------------- optional ------------- //
-            // backpaces a certain string faster
-            // ------------------------------------ //
-            // if (self.arrayPos == 1){
-            //  self.backDelay = 50;
-            // }
-            // else{ self.backDelay = 500; }
-
-            // contain typing function in a timeout humanize'd delay
-            self.timeout = setTimeout(function() {
-                // check for an escape character before a pause value
-                // format: \^\d+ .. eg: ^1000 .. should be able to print the ^ too using ^^
-                // single ^ are removed from string
-                var charPause = 0;
-                var substr = curString.substr(curStrPos);
-                if (substr.charAt(0) === '^') {
-                    var skip = 1; // skip atleast 1
-                    if (/^\^\d+/.test(substr)) {
-                        substr = /\d+/.exec(substr)[0];
-                        skip += substr.length;
-                        charPause = parseInt(substr);
-                    }
-
-                    // strip out the escape character and pause value so they're not printed
-                    curString = curString.substring(0, curStrPos) + curString.substring(curStrPos + skip);
-                }
-
-                if (self.contentType === 'html') {
-                    // skip over html tags while typing
-                    var curChar = curString.substr(curStrPos).charAt(0)
-                    if (curChar === '<' || curChar === '&') {
-                        var tag = '';
-                        var endTag = '';
-                        if (curChar === '<') {
-                            endTag = '>'
-                        } else {
-                            endTag = ';'
-                        }
-                        while (curString.substr(curStrPos).charAt(0) !== endTag) {
-                            tag += curString.substr(curStrPos).charAt(0);
-                            curStrPos++;
-                        }
-                        curStrPos++;
-                        tag += endTag;
-                    }
-                }
-
-                // timeout for any pause after a character
-                self.timeout = setTimeout(function() {
-                    if (curStrPos === curString.length) {
-                        // fires callback function
-                        self.options.onStringTyped(self.arrayPos);
-
-                        // is this the final string
-                        if (self.arrayPos === self.strings.length - 1) {
-                            // animation that occurs on the last typed string
-                            self.options.callback();
-
-                            self.curLoop++;
-
-                            // quit if we wont loop back
-                            if (self.loop === false || self.curLoop === self.loopCount)
-                                return;
-                        }
-
-                        self.timeout = setTimeout(function() {
-                            self.backspace(curString, curStrPos);
-                        }, self.backDelay);
-                    } else {
-
-                        /* call before functions if applicable */
-                        if (curStrPos === 0)
-                            self.options.preStringTyped(self.arrayPos);
-
-                        // start typing each new char into existing string
-                        // curString: arg, self.el.html: original text inside element
-                        var nextString = curString.substr(0, curStrPos + 1);
-                        if (self.attr) {
-                            self.el.attr(self.attr, nextString);
-                        } else {
-                            if (self.isInput) {
-                                self.el.val(nextString);
-                            } else if (self.contentType === 'html') {
-                                self.el.html(nextString);
-                            } else {
-                                self.el.text(nextString);
-                            }
-                        }
-
-                        // add characters one by one
-                        curStrPos++;
-                        // loop the function
-                        self.typewrite(curString, curStrPos);
-                    }
-                    // end of character pause
-                }, charPause);
-
-                // humanized value for typing
-            }, humanize);
-
-        }
-
-        ,
-        backspace: function(curString, curStrPos) {
-            // exit when stopped
-            if (this.stop === true) {
-                return;
-            }
-
-            // varying values for setTimeout during typing
-            // can't be global since number changes each time loop is executed
-            var humanize = Math.round(Math.random() * (100 - 30)) + this.backSpeed;
-            var self = this;
-
-            self.timeout = setTimeout(function() {
-
-                // ----- this part is optional ----- //
-                // check string array position
-                // on the first string, only delete one word
-                // the stopNum actually represents the amount of chars to
-                // keep in the current string. In my case it's 14.
-                // if (self.arrayPos == 1){
-                //  self.stopNum = 14;
-                // }
-                //every other time, delete the whole typed string
-                // else{
-                //  self.stopNum = 0;
-                // }
-
-                if (self.contentType === 'html') {
-                    // skip over html tags while backspacing
-                    if (curString.substr(curStrPos).charAt(0) === '>') {
-                        var tag = '';
-                        while (curString.substr(curStrPos).charAt(0) !== '<') {
-                            tag -= curString.substr(curStrPos).charAt(0);
-                            curStrPos--;
-                        }
-                        curStrPos--;
-                        tag += '<';
-                    }
-                }
-
-                // ----- continue important stuff ----- //
-                // replace text with base text + typed characters
-                var nextString = curString.substr(0, curStrPos);
-                if (self.attr) {
-                    self.el.attr(self.attr, nextString);
-                } else {
-                    if (self.isInput) {
-                        self.el.val(nextString);
-                    } else if (self.contentType === 'html') {
-                        self.el.html(nextString);
-                    } else {
-                        self.el.text(nextString);
-                    }
-                }
-
-                // if the number (id of character in current string) is
-                // less than the stop number, keep going
-                if (curStrPos > self.stopNum) {
-                    // subtract characters one by one
-                    curStrPos--;
-                    // loop the function
-                    self.backspace(curString, curStrPos);
-                }
-                // if the stop number has been reached, increase
-                // array position to next string
-                else if (curStrPos <= self.stopNum) {
-                    self.arrayPos++;
-
-                    if (self.arrayPos === self.strings.length) {
-                        self.arrayPos = 0;
-
-                        // Shuffle sequence again
-                        if(self.shuffle) self.sequence = self.shuffleArray(self.sequence);
-
-                        self.init();
-                    } else
-                        self.typewrite(self.strings[self.sequence[self.arrayPos]], curStrPos);
-                }
-
-                // humanized value for typing
-            }, humanize);
-
-        }
-        /**
-         * Shuffles the numbers in the given array.
-         * @param {Array} array
-         * @returns {Array}
-         */
-        ,shuffleArray: function(array) {
-            var tmp, current, top = array.length;
-            if(top) while(--top) {
-                current = Math.floor(Math.random() * (top + 1));
-                tmp = array[current];
-                array[current] = array[top];
-                array[top] = tmp;
-            }
-            return array;
-        }
-
-        // Start & Stop currently not working
-
-        // , stop: function() {
-        //     var self = this;
-
-        //     self.stop = true;
-        //     clearInterval(self.timeout);
-        // }
-
-        // , start: function() {
-        //     var self = this;
-        //     if(self.stop === false)
-        //        return;
-
-        //     this.stop = false;
-        //     this.init();
-        // }
-
-        // Reset and rebuild the element
-        ,
-        reset: function() {
-            var self = this;
-            clearInterval(self.timeout);
-            var id = this.el.attr('id');
-            this.el.after('<span id="' + id + '"/>')
-            this.el.remove();
-            if (typeof this.cursor !== 'undefined') {
-                this.cursor.remove();
-            }
-            // Send the callback
-            self.options.resetCallback();
-        }
-
-    };
-
-    $.fn.typed = function(option) {
-        return this.each(function() {
-            var $this = $(this),
-                data = $this.data('typed'),
-                options = typeof option == 'object' && option;
-            if (!data) $this.data('typed', (data = new Typed(this, options)));
-            if (typeof option == 'string') data[option]();
-        });
-    };
-
-    $.fn.typed.defaults = {
-        strings: ["These are the default values...", "You know what you should do?", "Use your own!", "Have a great day!"],
-        stringsElement: null,
-        // typing speed
-        typeSpeed: 0,
-        // time before typing starts
-        startDelay: 0,
-        // backspacing speed
-        backSpeed: 0,
-        // shuffle the strings
-        shuffle: false,
-        // time before backspacing
-        backDelay: 500,
-        // loop
-        loop: false,
-        // false = infinite
-        loopCount: false,
-        // show cursor
-        showCursor: true,
-        // character for cursor
-        cursorChar: "|",
-        // attribute to type (null == text)
-        attr: null,
-        // either html or text
-        contentType: 'html',
-        // call when done callback function
-        callback: function() {},
-        // starting callback function before each string
-        preStringTyped: function() {},
-        //callback for every typed string
-        onStringTyped: function() {},
-        // callback for reset
-        resetCallback: function() {}
-    };
-
-
-}(window.jQuery);
+'use strict'
+
+/**
+ * @summary Helloworld.js is a VanillaJS plugin that generates random text effects.
+ *
+ * @version 0.1.0
+ * https://github.com/vanderlanth/HelloWorld.js
+ *
+ * Copyright (c) 2015+ Nicolas Lanthemann aka. vanderlanth | Interactive Media Designer
+ * vanderlanth@gmail.com
+ *
+ * @license
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ *
+ * --------------------------------------------------------------------
+ *
+ * This documentation contains the informations about how to use the plugin
+ * and how the plugin works globally.
+ * Just send me a message if you have a question or else. Hope you like it !
+ *
+ * PS: It's my first documentation, please be nice :)
+ *
+ * @readonly
+ *
+ * --------------------------------------------------------------------
+ *
+ * @todo Write a 'not-so-bad' documentation
+ * @todo Update the main class
+ * @todo Change text during animation transition #magic for the official presentation doh
+ * @todo Bower file
+ * @todo Post on Github
+ * @todo Open a beer
+ *
+ * --------------------------------------------------------------------
+ *
+ * @class main class of the plugin  |			| Assign the plugin to an element
+ *
+ * @param element 					| String	| Select DOM element
+ *
+ * @param minChanges & maxChanges 	| int		| Number min & max of random changes for each letters during the animation
+ * @default							| 10 and 100
+ *
+ * @param type						| string	| Type of character that generate the animation
+ * @default							| 'char'
+ * @example							| 'int', 'char' or yourOwnVariableOrArrayIfYouWant
+ *
+ * @param restartKey				| int		| Keycode that allows to restart the animation
+ * @default							| false
+ *
+ * @param kerning					| int		| Allow to adapt the letter-spacing
+ * @default							| 55
+ *
+ * @param unity 					| string 	| Unity of the letter-spacing
+ * @default							| 'px'
+ * @example							| 'px', '%', 'rem', 'pizza', 'em'
+ *
+ */
+var RandomCharacterAnimation = function(options) {
+
+/**
+ * @default value for each parameters
+ *
+ */
+
+	var defaults = {
+		d_element	: '',
+		d_type		: 'char',
+		d_min		: 10,
+		d_max		: 100,
+		d_kerning	: 10,
+	}
+
+	this.size;
+	this.getLettersArray	= [];
+	this.getLettersChanges	= [];
+	this.kerningSize		= [];
+	this.currentChange		= 0;
+	this.char				= 'abcdefghijklmnopqrstuvwxyz0123456789!?*()@£$%^&_-+=[]{}:;\'"\\|<>,./~`×';
+	this.charArray 			= [];
+	this.requestId;
+
+
+	// Create options by extending defaults with the passed in arguments
+	if (arguments[0] && typeof arguments[0] === "object") {
+      this.options = _extendDefaults(defaults, arguments[0]);
+	}
+
+}
+
+/**
+  * @function _extendDefaults
+  * @description set defaults parameters if undefined
+  * @param source 		| get defaults parameters
+  * @param properties | choose & set the defaults
+  * @private
+  *
+  */
+
+function _extendDefaults(source, properties) {
+	var property;
+	for (property in properties) {
+		if (properties.hasOwnProperty(property)) {
+			source[property] = properties[property];
+		}
+	}
+	return source;
+}
+
+
+RandomCharacterAnimation.prototype = {
+
+	// Private functions
+
+	/**
+	 * @function _random
+	 * @description generate a random number
+	 * @param minNb & maxNb 	| allows to generate the number between 20 and 50 for example
+	 * @private
+	 *
+	 */
+
+	_random: function(minNb, maxNb) {
+		return Math.floor(Math.random() * (maxNb - minNb) + minNb);
+	},
+
+	/**
+	 * @function _getElementSize
+	 * @description get the length of the DOM element and push in an array
+	 * @param minNb & maxNb 	| allows to generate the number between 20 and 50 for example
+	 * @private
+	 *
+	 */
+
+	_getElementSize: function() {
+		var i, thisLetter;
+		var element_selected = document.querySelector(this.options.d_element).textContent;
+
+			for (i in element_selected) {
+				thisLetter = element_selected[i];
+				this.getLettersArray.push(thisLetter);
+			}
+			return this.getLettersArray;
+
+	},
+
+	/**
+	 * @function _setStructure
+	 * @description display a span for every letter that will allow the animation
+	 * @private
+	 *
+	 */
+
+	_setStructure: function() {
+		var element = document.querySelector(this.options.d_element);
+		element.innerHTML = '';
+
+		var i, j, characterContainer, thisContainer, array, kerningSize;
+
+		for (i in this.getLettersArray) {
+			characterContainer = document.createElement('span');
+			array = this.getLettersArray[i];
+
+			// display a whitespace
+			if (array === ' ') {
+					characterContainer.innerHTML = '&nbsp';
+			}
+
+			characterContainer.classList.add('randomCharacter');
+			element.appendChild(characterContainer);
+
+			var letter = document.createTextNode(array);
+
+			// ♫ one mooore hack ♫
+			characterContainer.appendChild(letter);
+			characterContainer.style.opacity = '0';
+		}
+
+	},
+
+	/**
+	 * @function _setKerning
+	 * @description adapt the letter spacing
+	 * @description very useful if you're not using a monospace font
+	 * @description don't try to delete this function
+	 * @description except if you want new eyes
+	 * @private
+	 *
+	 */
+
+	_setKerning: function() {
+
+		var kerning = this.options.d_kerning;
+		var elem = document.querySelector(this.options.d_element);
+
+		var i, j, thisContainer, array, kerningSize;
+
+		for (i = 0; i < this.getLettersArray.length; i++) {
+			j = i + 1; //hack
+			thisContainer = elem.querySelector('.randomCharacter:nth-child(' + j + ')');
+			thisContainer.style.padding = '0' + (Math.sqrt(kerning) / thisContainer.offsetWidth) + 'px';
+			kerningSize = thisContainer.offsetWidth;
+			this.kerningSize.push(kerningSize);
+			thisContainer.style.width = kerningSize + 'px';
+		}
+	},
+
+	/**
+	 * @function _convertStringToArray
+	 * @description transform every string to an array
+	 * @description useful if you want to use your own character to generate the animation
+	 * @param charType 	| type of character
+	 * @private
+	 *
+	 */
+
+	_convertStringToArray: function(charType) {
+		var i, thisChar;
+		for (i = 0; i < this.char.length; i++) {
+				thisChar = this.char[i];
+				this.charArray.push(thisChar);
+		}
+	},
+
+	/**
+	 * @function _setChange
+	 * @description set when each letter will change until the end of the animation
+	 * @private
+	 *
+	 */
+
+	_setChange: function() {
+		var i, setChange;
+
+		for (i in this.getLettersArray) {
+				setChange = this._random(this.options.d_min, this.options.d_max);
+				this.getLettersChanges.push(setChange);
+		}
+	},
+
+	/**
+	 * @function _generateRandomCharacter
+	 * @description the core of the animation
+	 * @description generate a new character randomly
+	 * @descritpion everytime the function is called
+	 * @param charType 	| type of character
+	 * @private
+	 *
+	 */
+
+	_generateRandomCharacter: function() {
+
+		var charType = this.options.d_type;
+		var elem = document.querySelector(this.options.d_element);
+
+		this.currentChange++;
+
+		var chooseRandomLetter = this._random(0, this.getLettersArray.length);
+		var generateContent, setContent, getChar;
+		var changesPlaces = elem.querySelector('.randomCharacter:nth-child(' + (chooseRandomLetter + 1) + ')');
+
+		if (charType === 'int') {
+				generateContent = this._random(0, 9);
+		} else if (charType === 'char') {
+				getChar = this._random(0, this.charArray.length);
+				generateContent = this.charArray[getChar];
+		} else {
+				getChar = this._random(0, charType.length);
+				generateContent = charType[getChar];
+		}
+
+		changesPlaces.innerHTML = generateContent;
+		changesPlaces.style.opacity = '1';
+		elem.style.opacity = '1'
+
+	},
+
+	/**
+	 * @function _checkNbChanges
+	 * @description check the current number of changes
+	 * @descritpion everytime the function is called
+	 * @description and display the original letter asap.
+	 * @private
+	 *
+	 */
+
+	_checkNbChanges: function() {
+		var i, j, k, thisChar, setContent, thisContainer;
+		var elem = document.querySelector(this.options.d_element);
+
+		for (i = 0; i < this.getLettersArray.length; i++) {
+			j = i + 1; //hack
+			thisChar = this.getLettersChanges[i];
+			thisContainer = elem.querySelector('.randomCharacter:nth-child(' + j + ')');
+			setContent = this.getLettersArray[i];
+
+			if (this.currentChange > thisChar) {
+					thisContainer.innerHTML = setContent;
+			}
+		}
+	},
+
+	/**
+	 * @function _loop
+	 * @description requestAnimationFrame
+	 * @private
+	 *
+	 */
+
+	_loop: function() {
+
+	var self = this;
+
+	this.requestId = requestAnimationFrame(function() {
+			self._loop();
+
+			if (self.currentChange > self.options.d_max) {
+					self.stop();
+			}
+
+		});
+
+		self._generateRandomCharacter(self.options.d_type);
+		self._checkNbChanges();
+
+	},
+
+	// Public functions
+
+	/**
+	 * @function restart
+	 * @description allows to restart the animation.
+	 * @description useful for hover or else
+	 * @param key 	| allows a key to restart the animation
+	 * @default 		| false
+	 * @public
+	 *
+	 */
+
+	restart: function() {
+		this.currentChange = 0;
+		this._setChange();
+		this._loop();
+	},
+
+	/**
+	 * @function start
+	 * @description trigger the animation
+	 * @public
+	 *
+	 */
+
+	start: function() {
+
+		this._getElementSize();
+		this._setStructure();
+		this._setKerning();
+		this._setChange();
+		this._convertStringToArray();
+
+		this._loop();
+
+	},
+
+	/**
+	 * @function stop
+	 * @description stop the requestAnimaionFrame #notEnoughObvious ♫ ♫
+	 * @public
+	 *
+	 */
+
+	stop: function() {
+		window.cancelAnimationFrame(this.requestId);
+	}
+
+};
+
+// Multiple Usage - For example for list
+var animations = [
+
+	
+]
+
+var obj = [];
+
+for (var optionsAnim in animations) {
+	var random = new RandomCharacterAnimation(animations[optionsAnim]);
+	random.start();
+	obj.push(random);
+}
+
+/**
+ * @function getIndexOfElementInParent
+ * @param element 	| selected node element. best use is like is event.target.parentNode
+ * because if you this function it means that most probably there are others same
+ * element in the same level
+ * @description this function get the index of the selected element
+ * @public
+ *
+ */
+
+function getIndexOfElementInParent(element){
+	var parent = element.parentNode;
+	for (var index = 0; index <= parent.children.length - 1; index++){
+		if(parent.children[index] === element){
+			return index;
+		}
+	}
+};
+
+/**
+ * @function newEvent
+ * @param selected_element_class 	| this is too obvious, and it's a string.
+ * @param _event 					| event, for example 'mouseenter'
+ * @description this function is just an example. Feel free to
+ * create your own function
+ * @public
+ *
+ */
+
+function newEvent(selected_element_class, _event){
+	var items = document.querySelectorAll(selected_element_class);
+	for (var i = 0; i <= items.length - 1; i++){
+		items.item(i).addEventListener(_event, function(event) {
+			// call getIndexOfElementInParent
+			var currentItemIndex = getIndexOfElementInParent(event.target.parentNode)
+			obj[currentItemIndex].restart();
+		}, false);
+	}
+};
+
+newEvent('#title-1','mouseenter');
