@@ -52,16 +52,16 @@
     <div class="main homepage" style="z-index:3;">
         <!--Opening-->
         <section id="section-0">
-      
-          <div class="video-container">
-           <video id="motion-video" src="img/opening/final_1_1.mp4" loop muted autoplay></video>
-           </div>
-          <video id="background-video" loop muted autoplay></video>
-            <div>
-            <h1 id="title-1">BE</h1>
-            <h1 id="title-2">AWARE</h1>
+
+            <div class="video-container">
+                <video id="motion-video" src="img/opening/final_1_1.mp4" loop muted autoplay></video>
             </div>
-<!--
+            <video id="background-video" loop muted autoplay></video>
+            <div id="section-0-title-wrap">
+                <h1 id="title-1">BE</h1>
+                <h1 id="title-2">AWARE</h1>
+            </div>
+            <!--
                     <div class="opening">
                         <div class="motionCircle" id="motionCircle-1"></div>
                         <div class="motionCircle" id="motionCircle-2"></div>
@@ -82,8 +82,8 @@
                     
                     </div>
 -->
-                    
-               
+
+
             <div class="section-scroll">
                 <a href="#" class="link-section">
                     <div class="mouse">
@@ -99,8 +99,8 @@
             <div class="row">
                 <div class="small-10 small-offset-1 medium-10 medium-centered large-10 large-offset-1 large-centered columns">
                     <div>
-                        <h1 id="sec-1-title">CITIZEN OF THE EARTH!</h1></div>
-
+                        <h1 id="sec-1-title">CITIZEN OF THE EARTH!</h1>
+                    </div>
                     <h2 id="co2-amount">40,000,000,000 </h2>
                     <div id="unit">tonnes</div>
                     <h1 id="sec-1-subtitle">IS THE AMOUNT OF CO<sub>2</sub> HUMAN RELEASED<br />AT THE END OF 2015</h1>
@@ -109,11 +109,6 @@
                     <p>As a global society – we aren’t changing.
                         <br/> Our road are congested, our city streets are saturated with smog, and our oceans are being inundated by plants and ships that dirty the water until sea life cannot sustain itself.</p>
                     <h3><a href="http://www.slate.com/blogs/bad_astronomy/2014/08/20/atmospheric_co2_humans_put_40_billion_tons_into_the_air_annually.html" target="_blank">Read more</a></h3>
-
-
-
-
-
                 </div>
 
             </div>
@@ -228,9 +223,10 @@
         <!--Electric Sector-->
         <section id="section-4">
             <div class="row">
-                <div class="small-6 small-centered medium-6 medium-offset-1 medium-centered large-6 large-centered columns open">
+                <div class="small-5  medium-5 medium-offset-1 large-5  columns open">
 
                     <h1>THE<br />ENERGY SECTOR</h1>
+                    <div class="linebreak"></div>
                     <p>Electricity and heat generation is the economic sector that produces the largest amount of man-made carbon dioxide emissions. This sector produced 41% of fossil fuel related carbon dioxide emissions in 2010. Around the world, this sector relies heavily on coal, the most carbon-intensive of fossil fuels, explaining this sector giant carbon footprint.</p>
 
                 </div>
@@ -273,20 +269,41 @@
         <!--Transportation Sector-->
         <section id="section-5">
             <div class="row ">
-                <div class="small-6 small-centered medium-6 medium-offset-1 medium-centered large-6 large-centered columns open">
+                <div class="small-5 small-centered medium-5 medium-offset-1 medium-centered large-4 large-centered columns open">
+                    <div class="line"></div>
                     <h1>Transportation Sector</h1>
-                    <p>The transportation sector is the <span class="highlight">second largest</span> source of anthropogenic carbon dioxide emissions. Transporting goods and people around the world produced 22% of fossil fuel related carbon dioxide emissions in 2010.
-                    </p>
-                </div>
-            </div>
-            <div class="row ">
-                <div class="small-4 small-offset-1 medium-5 medium-offset-1 large-4 columns ">
-                    <h1>Aviation</h1>
-                    <p>
 
+                    <p>The transportation sector is the <span class="highlight">second largest</span> source of anthropogenic carbon dioxide emissions. Transporting goods and people around the world produced 22% of fossil fuel related carbon dioxide emissions.
                     </p>
+                    <div class="section-5-table">
+                           <ul>
+                               <li>0<sup>%</sup></li>
+                               <li>20</li>
+                               <li>40</li>
+                               <li>60</li>
+                               <li>80</li>
+                               <li>100<sup>%</sup></li>
+                           </ul>
+                       </div>
+                    <div class="section-5-data">
+                       <div class="line-data">
+                        
+                        </div>
+                        
+                        <div class="road-data">
+                         
+                        </div>
+                        <div class="marine-data">
+                          
+                        </div>
+                        <div class="aviation-data">
+                            
+                        </div>
+                    </div>
+
                 </div>
             </div>
+
             <div class="row">
                 <div class="large-2">
                     <div class="data">
@@ -307,15 +324,8 @@
             <div class="graphic">
                 <div class="airballoon">
                     <img src="img/airballoon.svg" alt="airballoon">
-                    <div class="airballoon-ripple" id="airballoonTouch"></div>
-                    <div class="data aviation-data">
-
-                        <p>Global aviation
-                            <br />accounts for</p>
-                        <h1>
-                           11<sup>%</sup>
-                      </h1>
-                    </div>
+                    <div class="aviation-ripple" id=""></div>
+                   
                 </div>
 
                 <img class="plane" src="img/plane.svg" alt="plane">
@@ -323,7 +333,12 @@
                 <img class="plane" src="img/plane.svg" alt="plane">
                 <img class="plane" src="img/plane.svg" alt="plane">
 
-                <div id="linecity"></div>
+                <div id="linecity">
+                    <div class="road-ripple" id=""></div>
+                    <div id="land">
+                    <img class="road-line-2" src="img/section-2/road-line-2.svg" alt="factory">
+                    </div>
+                </div>
 
                 <img id="bus" src="img/bus.svg" alt="bus">
                 <img id="truck" src="img/truck.svg" alt="truck">
@@ -331,11 +346,10 @@
                 <img id="car" src="img/car.svg" alt="car">
                 <img id="bigcar" src="img/bigcar.svg" alt="bigcar">
                 <img id="truck2" src="img/truck2.svg" alt="bigcar">
-                <div id="land">
-                    <img class="road-line-2" src="img/section-2/road-line-2.svg" alt="factory">
-                </div>
+                
 
                 <div id="dock">
+                   <div class="marine-ripple" id=""></div>
                     <img src="img/dock.svg" alt="dock">
                 </div>
                 <div id="sea">
@@ -559,7 +573,7 @@
                 </div>
                 <div class="row">
                     <div class="small-6 small-centered medium-4 medium-offset-1 medium-centered large-4 large-centered columns">
-                        <div class="timespan" >
+                        <div class="timespan">
                             <div class="timespanYear" layout="row center-justify">
                                 <div>2002</div>
                                 <div>2003</div>
@@ -607,7 +621,7 @@
     <script src="js/vendor/jquery.countTo.js"></script>
     <script src="js/vendor/jquery.visible.min.js"></script>
     <script src="js/bodymovin.js"></script>
-  
+
     <script src="js/jquery.onepage-scroll.js"></script>
     <script src="js/vendor/jquery.arctext.js"></script>
     <script src="js/vendor/typed.js"></script>

@@ -585,23 +585,65 @@ function cityLoad(data) {
         , repeat: -1
         , ease: Power0.easeNone
     });
-
-
 };
-TweenLite.set($(".aviation-data"), {
-    scale: 0
-    , transformOrigin: "50% 50% 0"
-    , ease: Power3.easeOut
-})
-$(".airballoon-ripple").click(
-    function () {
-        $(this).fadeOut("slow");
-        TweenLite.to($(".aviation-data"), 0.5, {
-            scale: 1
-            , ease: Power3.easeOut
-        });
+
+TweenMax.set(".road-data, .aviation-data, .marine-data",{width:0,autoAlpha:0});
+TweenMax.set($(".section-5-table ul li, .line-data"),{autoAlpha:0});
+$(".road-ripple ").click(
+    function(){
+        checkTimeline(0);
     }
 );
+$(".marine-ripple ").click(
+    function(){
+        checkTimeline(1);
+    }
+);
+$(".aviation-ripple ").click(
+    function(){
+         checkTimeline(2);
+    }
+);
+var timelineTrigger=false;
+function checkTimeline(dataNum){
+    if(!timelineTrigger)
+    {
+        TweenMax.staggerFromTo ( $(".section-5-table ul li"),0.3,{y:"-=60px"},{y:0,autoAlpha:1},0.1);
+        TweenMax.fromTo ( $(".line-data"),0.4,{width:0},{width:"100%",autoAlpha:1,onComplete:dataAnimation(dataNum)},0);
+        timelineTrigger=!timelineTrigger;
+        
+    } else {
+        dataAnimation(dataNum);
+    }
+    ;
+};
+
+function dataAnimation(dataNum){
+    TweenMax.set(".road-data, .aviation-data, .marine-data",{width:0,autoAlpha:0});
+    switch (dataNum) {
+    case 0:
+        TweenMax.fromTo($(".road-data"), 1, {
+       width:0
+    }, {
+         width:"73%",autoAlpha:1
+    });
+        break;
+    case 1:
+        TweenMax.fromTo($(".marine-data"), 1, {
+       width:0
+    }, {
+         width:"14%",autoAlpha:1
+    });
+        break;
+    case 2:
+         TweenMax.fromTo($(".aviation-data"), 1, {
+       width:0
+    }, {
+         width:"11%",autoAlpha:1
+    });
+        break;
+}
+}
 
 //END-SEC-5
 //SEC - 6

@@ -71,8 +71,8 @@ body {
     display: inline-block;
     vertical-align: bottom;
     zoom: 1;
-    width: 80px;
-    height: 0.1em;
+    width: 60px;
+    height: 0.2em;
     margin-bottom: 1em;
     background-color: $dark;
 
@@ -102,7 +102,8 @@ p {
     letter-spacing: 0.08em;
     font-size: 1.1em;
     max-width: 600px;
-    margin:0 auto;
+    margin: 20px auto 0 auto;
+    
 }
 h3 {
     line-height: $header-line-height;
@@ -116,7 +117,7 @@ section {
     padding-top: 50px;
 }
 
-
+.open {text-align: center;}
 /**
    * SEC-0
    */
@@ -339,10 +340,10 @@ nav a {
     h3:after{
         content:"";
         background-color:$dark;
-        height:1px;
+        height:2px;
         width:100%;
         position: absolute;
-        bottom: 0;left:-1.2%;
+        bottom: -30%;left:-1.2%;
        
         
     }
@@ -367,7 +368,6 @@ nav a {
     text-align: center;
     background-color: $white;
     h1 {
-      
         color: $black;
         line-height: 1.1em;
         font-family: $fonth;
@@ -765,11 +765,9 @@ nav a {
    */
 
 #section-5 {
-    text-align: center;
     background-color: $white;
     .open h1 {
         font-family: $fonth;
-
         line-height: 1.1em;
         color: $dark;
     }
@@ -780,8 +778,81 @@ nav a {
         color: $dark;
         letter-spacing: 0.05em;
     }
+    .section-5-table{
+            width: 100%;
+            
+            ul{    
+                
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+                li{
+                    list-style: none;
+                    font-family: $fonth;
+                    font-style: italic;
+                }
+            }
+        }
+    
+    .section-5-data {
+        position: relative;
+        height:16px;
+        font-family: $fonts;
+        .line-data{
+            width: 100%;
+            height:2px;
+            background: $dark;
+            position: absolute;
+            
+            bottom: 50%;
+        }
+        .road-data{
+            position: absolute;
+            top:0;
+            left:0;
+            height: 15px;
+            width:73%;
+            background: $red;
+            &:after{
+                content:"Road Transport";
+                position: absolute;
+                right:0;
+                top:100%;
+            }
+            
+        }
+        .aviation-data{
+            position: absolute;
+            top:0;
+            left:0;
+            height: 15px;
+            width:11%;
+            background: $darkBlue;
+            &:after{
+                content:"Aviation";
+                position: absolute;
+                right:0;
+                top:100%;
+            }
+        }
+        .marine-data{
+            position: absolute;
+            top:0;
+            left:0;
+            height: 15px;
+            width:14%;
+            background: $yellow;
+            &:after{
+                content:"Marine Shipping";
+                position: absolute;
+                right:0;
+                top:100%;
+                white-space: nowrap;
+            }
+        }
+    }
+   
 }
-
 .graphic {
     z-index: 5;
     position: absolute;
@@ -791,7 +862,7 @@ nav a {
 }
 
 #bus {
-    width: 15vw;
+    width: 12vw;
     height: auto;
     position: absolute;
     bottom: 20%;
@@ -801,7 +872,7 @@ nav a {
 }
 
 #truck {
-    width: 12vw;
+    width: 9vw;
     height: auto;
     position: absolute;
     bottom: 20%;
@@ -810,7 +881,7 @@ nav a {
     animation: traffic linear 12s infinite;
 }
 #truck2 {
-    width: 12vw;
+    width: 9vw;
     height: auto;
     position: absolute;
     bottom: 20%;
@@ -820,7 +891,7 @@ nav a {
 }
 
 #car{
-    width: 7vw;
+    width: 6vw;
     height: auto;
     position: absolute;
     bottom: 20%;
@@ -887,10 +958,10 @@ nav a {
 }
 
 #land {
-    height: 8vh;
+  
     width: 100%;
     position: absolute;
-    bottom: 20%;
+    bottom: 2%;
 
     .road-line-2 {
         position: absolute;
@@ -967,7 +1038,7 @@ nav a {
     width: 8vw;
     position: absolute;
     top: 10vh;
-    left: 5vw;
+    right: 15vw;
     -webkit-animation-name: Floating;
     -webkit-animation-duration: 3s;
     -webkit-animation-iteration-count: infinite;
@@ -980,10 +1051,10 @@ nav a {
     }
 }
 
-.airballoon-ripple {
+.aviation-ripple {
     background-color: $red;
-    width: 1.5em;
-    height: 1.5em;
+    width: 1.2em;
+    height: 1.2em;
     border-radius: 50%;
     margin-top: 50px;
     margin: 0 auto;
@@ -992,8 +1063,31 @@ nav a {
     -webkit-animation: ripple 2s linear infinite;
     animation: ripple 2s linear infinite;
 }
+.marine-ripple {
+    background-color: $red;
+    width: 1.1em;
+    height: 1.1em;
+    border-radius: 50%;
+       position: absolute;
+    right:8.5%;
+    bottom: 57%;
+    cursor: pointer;
+    -webkit-animation: ripple 2s linear infinite;
+    animation: ripple 2s linear infinite;
+}
 
-
+.road-ripple {
+    background-color: $red;
+    width: 1.1em;
+    height: 1.1em;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    right:39.5%;
+    bottom: 14%;
+    -webkit-animation: ripple 2s linear infinite;
+    animation: ripple 2s linear infinite;
+}
 /**
    * SEC-6 
    */
