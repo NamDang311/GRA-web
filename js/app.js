@@ -730,11 +730,11 @@ TweenMax.set($("#worldmap"), {
 
 Snap.load("img/circle-dotted.svg", function (data) {
     Snap(".circleDotted").append(data);
-    TweenMax.staggerFromTo(".dotted", 0.1, {
-        autoAlpha: 0
+    TweenMax.staggerFromTo(".dotted", 3, {
+        scale:4,opacity: 0
     }, {
-        autoAlpha: 1
-    }, 0.01);
+        scale:1,opacity: 1
+    }, 0.02);
 });
 
 
@@ -868,29 +868,45 @@ function addNumber(curbtn) {
 //END-SEC-8
 
 //SEC-9
-$(".findout").click(
+
+var thermalCur=0;
+$("#thermal-plus").click(
     function () {
-        TweenLite.to($(".findoutWrapper"), 1, {
-            left: "-=100%"
+        if(thermalCur==4){}else{
+        TweenLite.to($(".thermal-content"), 0.2, {
+            y: "-=100px"
         });
+        thermalCur=thermalCur+1;
+        changeTemp (thermalCur);
+        contentIn(thermalCur);
+        }
     }
 );
-
-Draggable.create(".dragItems", {
-    type: "x,y"
-    , onDragEnd: function (e) {
-        if (this.hitTest(".target-content", "50%")) {
-
-        } else {
-            TweenLite.to(e.target, 0.3, {
-                x: 0
-                , y: 0
-                , top: e.target.originalTop
-                , left: e.target.originalLeft
-            });
-        };
+$("#thermal-minus").click(
+    function () {
+         if(thermalCur==0){}else{
+        TweenLite.to($(".thermal-content"), 0.2, {
+            y: "+=100px"
+        });
+         thermalCur=thermalCur-1;
+        changeTemp (thermalCur);}
+        contentIn(thermalCur);
     }
-});
+);
+TweenMax.set($(".thermal-numbers").not($(".thermal-numbers:eq(0)")),{opacity:0.2});
+function changeTemp (thermalCur){
+    var $g= $(".thermal-numbers").not($(".thermal-numbers:eq("+thermalCur+")"));
+    TweenMax.to($(".thermal-numbers:eq("+thermalCur+")"),0.3,{opacity:1});
+    TweenMax.to($g,0.3,{opacity:0});
+ 
+};
+function contentIn (thermalCur){
+    var g= thermalCur-1;
+    TweenMax.set($(".section-9-article .headline, .section-9-article .content"),{opacity:0});
+     TweenMax.fromTo($(".section-9-article .headline:eq("+thermalCur+")"),0.4,{x:"-=40px",opacity:0},{x:"+=40px",opacity:0.2});
+    TweenMax.fromTo($(".section-9-article .content:eq("+thermalCur+")"),0.4,{x:"+=40px",opacity:0},{x:"-=40px",opacity:1});
+};
+
 //END-SEC-9
 
 //SEC-10
