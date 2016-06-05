@@ -12,90 +12,33 @@ $(".main").onepage_scroll({
 var controller = new ScrollMagic.Controller();
 
 //SEC-0
-
-//    TweenMax.set((".motionLine"),{drawSVG:"100% 100%"});
-//
-//var tlopening = new TimelineMax({
-//    delay: 0.5
-//});
-//TweenMax.set((".outerCircle"), {
-//    width: "0vw"
-//    , height: "0vw"
-//});
-//
-//TweenMax.set(("#motionCircle-6"), {
-//    opacity: 0
-//    , width: "35vw"
-//    , height: "35vw"
-//})
-//tlopening.to(("#motionCircle-1"), 0.6, {
-//        left: "50%"
-//        , ease: Power1.easeIn
-//    }).to(("#motionCircle-2"), 0.6, {
-//        right: "50%"
-//        , ease: Power1.easeIn
-//    }, "-=0.6").set(("#motionCircle-1,#motionCircle-2"), {
-//        opacity: 0
-//    }).fromTo(".motionLine", 2, {
-//        drawSVG: "0%"
-//    }, {
-//        drawSVG: "100%",ease: Power1.easeOut
-//    }, "-=0")
-//    .to(".motionLine", 3, {
-//        drawSVG: "100% 100%",
-//    }, "-=1.8")
-//    .to(("#motionCircle-3"), 3, {
-//        width: "35vw"
-//        , height: "35vw"
-//        , ease: Back.easeOut.config(1)
-//    },"-=3.2").to(("#motionCircle-4"), 3, {
-//        width: "35vw"
-//        , height: "35vw"
-//        , ease: Back.easeOut.config(2)
-//    }, "-=3").to(("#motionCircle-5"), 3, {
-//        width: "35vw"
-//        , height: "35vw"
-//        , ease: Back.easeOut.config(4)
-//    }, "-=3").to(("#motionCircle-6"), 2, {
-//        opacity: 0.2
-//        , ease: Power0.easeNone
-//    }).to(("#section-0 .open h1"), 1, {
-//        opacity: 1
-//        , ease: Power0.easeNone
-//    });;
-
-//Snap.load("img/opening/oilrig.svg", oilrigLoad);
-//function oilrigLoad(data) {
-//   Snap("#oilrig").append(data);
-//};
-
 (function () {
-  var bv = new Bideo();
-  bv.init({
-    // Video element
-    videoEl: document.querySelector('#background-video'),
+    var bv = new Bideo();
+    bv.init({
+        // Video element
+        videoEl: document.querySelector('#background-video'),
 
-    // Container element
-    container: document.querySelector('#section-0'),
+        // Container element
+        container: document.querySelector('#section-0'),
 
-    // Resize
-    resize: true,
+        // Resize
+        resize: true,
 
-    // Array of objects containing the src and type
-    // of different video formats to add
-    src: [
-      {
-        src: 'img/opening/bg.mp4',
-        type: 'video/mp4'
+        // Array of objects containing the src and type
+        // of different video formats to add
+        src: [
+            {
+                src: 'img/opening/bg.mp4'
+                , type: 'video/mp4'
       }
     ],
 
-    // What to do once video loads (initial frame)
-    onLoad: function () {
-//      document.querySelector('#video_cover').style.display = 'none';
-        
-    }
-  });
+        // What to do once video loads (initial frame)
+        onLoad: function () {
+            //      document.querySelector('#video_cover').style.display = 'none';
+
+        }
+    });
 }());
 
 
@@ -587,62 +530,83 @@ function cityLoad(data) {
     });
 };
 
-TweenMax.set(".road-data, .aviation-data, .marine-data",{width:0,autoAlpha:0});
-TweenMax.set($(".section-5-table ul li, .line-data"),{autoAlpha:0});
+TweenMax.set(".road-data, .aviation-data, .marine-data", {
+    width: 0
+    , autoAlpha: 0
+});
+TweenMax.set($(".section-5-table ul li, .line-data"), {
+    autoAlpha: 0
+});
 $(".road-ripple ").click(
-    function(){
+    function () {
         checkTimeline(0);
     }
 );
 $(".marine-ripple ").click(
-    function(){
+    function () {
         checkTimeline(1);
     }
 );
 $(".aviation-ripple ").click(
-    function(){
-         checkTimeline(2);
+    function () {
+        checkTimeline(2);
     }
 );
-var timelineTrigger=false;
-function checkTimeline(dataNum){
-    if(!timelineTrigger)
-    {
-        TweenMax.staggerFromTo ( $(".section-5-table ul li"),0.3,{y:"-=60px"},{y:0,autoAlpha:1},0.1);
-        TweenMax.fromTo ( $(".line-data"),0.4,{width:0},{width:"100%",autoAlpha:1,onComplete:dataAnimation(dataNum)},0);
-        timelineTrigger=!timelineTrigger;
-        
+var timelineTrigger = false;
+
+function checkTimeline(dataNum) {
+    if (!timelineTrigger) {
+        TweenMax.staggerFromTo($(".section-5-table ul li"), 0.3, {
+            y: "-=60px"
+        }, {
+            y: 0
+            , autoAlpha: 1
+        }, 0.1);
+        TweenMax.fromTo($(".line-data"), 0.4, {
+            width: 0
+        }, {
+            width: "100%"
+            , autoAlpha: 1
+            , onComplete: dataAnimation(dataNum)
+        }, 0);
+        timelineTrigger = !timelineTrigger;
+
     } else {
         dataAnimation(dataNum);
-    }
-    ;
+    };
 };
 
-function dataAnimation(dataNum){
-    TweenMax.set(".road-data, .aviation-data, .marine-data",{width:0,autoAlpha:0});
+function dataAnimation(dataNum) {
+    TweenMax.set(".road-data, .aviation-data, .marine-data", {
+        width: 0
+        , autoAlpha: 0
+    });
     switch (dataNum) {
     case 0:
         TweenMax.fromTo($(".road-data"), 1, {
-       width:0
-    }, {
-         width:"73%",autoAlpha:1
-    });
+            width: 0
+        }, {
+            width: "73%"
+            , autoAlpha: 1
+        });
         break;
     case 1:
         TweenMax.fromTo($(".marine-data"), 1, {
-       width:0
-    }, {
-         width:"14%",autoAlpha:1
-    });
+            width: 0
+        }, {
+            width: "14%"
+            , autoAlpha: 1
+        });
         break;
     case 2:
-         TweenMax.fromTo($(".aviation-data"), 1, {
-       width:0
-    }, {
-         width:"11%",autoAlpha:1
-    });
+        TweenMax.fromTo($(".aviation-data"), 1, {
+            width: 0
+        }, {
+            width: "11%"
+            , autoAlpha: 1
+        });
         break;
-}
+    }
 }
 
 //END-SEC-5
@@ -764,8 +728,18 @@ TweenMax.set($("#worldmap"), {
     perspective: 1000
 });
 
+Snap.load("img/circle-dotted.svg", function (data) {
+    Snap(".circleDotted").append(data);
+    TweenMax.staggerFromTo(".dotted", 0.1, {
+        autoAlpha: 0
+    }, {
+        autoAlpha: 1
+    }, 0.01);
+});
+
+
 $('.circle-ripple').bind('click', function (event) {
-   
+
     var curbtn = $.inArray(this, myAr);
     if (!$(this).hasClass("activated")) {
         $(this).addClass("activated");
@@ -777,11 +751,11 @@ $('.circle-ripple').bind('click', function (event) {
 
         }, {
             opacity: 0.8
-            , scale: parseFloat(dataAr[curbtn])/2.5
+            , scale: parseFloat(dataAr[curbtn]) / 2.5
             , force3D: false
         });
         clickedAr.push(this);
-        
+
         //set Pos Country+ Bars
         if (!$(".name-" + curbtn + "").hasClass("clicked")) {
             addNumber(curbtn);
@@ -793,7 +767,7 @@ $('.circle-ripple').bind('click', function (event) {
             $(".data-" + curbtn + "").css({
                 top: (topPos1 + 6) + "%"
             });
-            
+
             topPos1 = topPos1 + 10;
             TweenLite.fromTo($(".data-" + curbtn + ""), 1, {
                 width: 0
@@ -813,7 +787,11 @@ $('.circle-ripple').hover(
     function () {
         if ($.inArray(this, clickedAr) < 0) {
 
-            TweenLite.to($(".nameBubble"), 0.5, {css:{autoAlpha:1}});
+            TweenLite.to($(".nameBubble"), 0.5, {
+                css: {
+                    autoAlpha: 1
+                }
+            });
             $("#mainBubble").html(nameAr[$.inArray(this, myAr)]);
             $(".nameBubble").css({
                 left: Math.round($(this).position().left * 100 / $(this).parent().width()) + "%"
@@ -823,7 +801,11 @@ $('.circle-ripple').hover(
         }
     }
     , function () {
-        TweenLite.to($(".nameBubble"), 0.5, {css:{autoAlpha:0}});
+        TweenLite.to($(".nameBubble"), 0.5, {
+            css: {
+                autoAlpha: 0
+            }
+        });
     }
 );
 
@@ -839,15 +821,15 @@ $.ajax({
         for (t = 0; t <= 4; t++) {
             dataAr.push($(xml).find('data:eq(' + t + ')').text());
             nameAr.push($(xml).find('name:eq(' + t + ')').text());
-                 
+
         }
         if (trigger) {
             appendData();
             trigger = !trigger;
         }
-    },
-});
- 
+    }
+, });
+
 function appendData() {
     for (a = 0; a <= 4; a++) {
         $(".data-" + a + "").css({
@@ -855,7 +837,7 @@ function appendData() {
             , position: "absolute"
             , top: "0"
             , "background-color": "#e6665a"
-            , width: parseFloat(dataAr[a])*10
+            , width: parseFloat(dataAr[a]) * 10
         , });
         barWidth.push($(".data-" + a + "").css("width"));
     }
@@ -898,7 +880,7 @@ Draggable.create(".dragItems", {
     type: "x,y"
     , onDragEnd: function (e) {
         if (this.hitTest(".target-content", "50%")) {
-            
+
         } else {
             TweenLite.to(e.target, 0.3, {
                 x: 0
@@ -910,3 +892,20 @@ Draggable.create(".dragItems", {
     }
 });
 //END-SEC-9
+
+//SEC-10
+$(".impact-contents").hover(function () {
+    TweenMax.fromTo($(".line", this),0.3,{x:"+=300px",opacity:0},{x:"-=300px",opacity:1,transformOrigin:"0 0",ease:Power1.easeOut});
+  
+}, function () {
+    
+});
+//END-SEC-10
+//SEC-11
+$(".msg-wrap h3").hover(function () {
+    TweenMax.fromTo(".msg-wrap .line",0.3,{scaleX:0,x:"+=100%",opacity:0},{scaleX:0.15,x:"-=100%",opacity:1,transformOrigin:"0 0",ease:Power1.easeOut});
+    TweenMax.to(".msg-wrap .line",0.4,{scaleX:1,delay:0.32});
+}, function () {
+    
+});
+//END-SEC-11

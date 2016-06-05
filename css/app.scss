@@ -1,9 +1,11 @@
 $fonth:'Miller Display',
 'Roboto Slab',
 sans-serif;
-$fontp:'Source Sans Pro','Roboto Condensed',
+$fontp:'Source Sans Pro',
+'Roboto Condensed',
 sans-serif;
-$fonts:'Stellar',serif;
+$fonts:'Stellar',
+serif;
 $gray:#f3f3f3;
 $yellow:#FBF18F;
 $darkBlue: #1A535C;
@@ -75,12 +77,11 @@ body {
     height: 0.2em;
     margin-bottom: 1em;
     background-color: $dark;
-
 }
 
-.highlight{
+.highlight {
     font-weight: bold;
-    color:$red;
+    color: $red;
 }
 
 .bold {
@@ -103,13 +104,13 @@ p {
     font-size: 1.1em;
     max-width: 600px;
     margin: 20px auto 0 auto;
-    
 }
+
 h3 {
     line-height: $header-line-height;
     font-family: $fonts;
     font-weight: 400;
-    font-size:1.2em;
+    font-size: 1.2em;
     letter-spacing: 0.05em;
 }
 
@@ -117,55 +118,60 @@ section {
     padding-top: 50px;
 }
 
-.open {text-align: center;}
+.open {
+    text-align: center;
+}
+
+
 /**
    * SEC-0
    */
 
 #section-0 {
     z-index: -2;
- padding-top: 0px;
-     text-align: center;
-     #section-0-title-wrap{
+    padding-top: 0px;
+    text-align: center;
+    #section-0-title-wrap {
         position: absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%,-60%);
-         text-transform: uppercase;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        text-transform: uppercase;
         font-weight: 500;
         color: white;
-         text-align: center;
-         padding: 0;
-         margin:0;
-         h1{
-             font-family: $fonts;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        h1 {
+            font-family: $fonts;
             font-size: 12vw;
-             line-height: 1em;
-             letter-spacing: 5vw;
-             padding-left: 3vw;
-         }
+            line-height: 1em;
+            letter-spacing: 5vw;
+            padding-left: 3vw;
+        }
     }
-   
 }
-.video-container{
+
+.video-container {
     width: 70vw;
-    height:70vw;
+    height: 70vw;
     min-width: 500px;
-     position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     video {
         width: 100%;
         opacity: 1;
     }
 }
+
 #motion-video {
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -60%);
-    }
-
-
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
 
 nav {
     height: 50px;
@@ -183,99 +189,104 @@ nav a {
     z-index: -999;
 }
 
-
 .opening {
-    margin:0 auto;
+    margin: 0 auto;
     width: 50vw;
-    height:50vw;
+    height: 50vw;
     position: absolute;
-    
 }
+
 .opening .motionCircle {
-    width:1em;
-    height:1em;
+    width: 1em;
+    height: 1em;
     background-color: white;
-    border-radius:50%;
+    border-radius: 50%;
     position: absolute;
-    top:50%;
-
+    top: 50%;
 }
+
 #motionCircle-1 {
-    left:-10%;
-    transform:translate(-50%,-50%);
-}
-#motionCircle-2 {
-    right:-10%;
-    transform:translate(50%,-50%);
-}
-.outerCircle {
-    width:50vw;
-    height:50vw;
-    border:2px solid white;
-    border-radius:50%;
-    position: absolute;
-    top:50%;
-   left:50%;
-    transform:translate(-50%,-50%);
+    left: -10%;
+    transform: translate(-50%, -50%);
 }
 
-#motionCircle-6{
+#motionCircle-2 {
+    right: -10%;
+    transform: translate(50%, -50%);
+}
+
+.outerCircle {
+    width: 50vw;
+    height: 50vw;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#motionCircle-6 {
     @extend .outerCircle;
     background: url(../img/worldmap.png);
     background-size: contain;
     z-index: -1;
 }
+
 #circle-line {
-    width:65vw;
-    height:65vw;
+    width: 65vw;
+    height: 65vw;
     position: absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.section-scroll{
+.section-scroll {
     margin: 0 0 0 -15px;
     position: absolute;
     bottom: 2%;
     left: 50%;
-    width: 24px ;
+    width: 24px;
     height: 34px;
     cursor: pointer;
     z-index: 3;
-    .mouse{
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 2px solid #fff;
-    -moz-border-radius: 15px;
-    -webkit-border-radius: 15px;
-    border-radius: 10px;
+    .mouse {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 2px solid #fff;
+        -moz-border-radius: 15px;
+        -webkit-border-radius: 15px;
+        border-radius: 10px;
     }
-    .wheel{
-    display: block;
-    margin: 0 0 0 -2px;
-    position: absolute;
-    top: 5px;
-    left: 50%;
-    width: 4px;
-    height: 4px;
-    background: #fff;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    -moz-animation: scroll-wheel 1.8s linear 0s infinite normal none;
-    -webkit-animation: scroll-wheel 1.8s linear 0s infinite normal none;
-    animation: scroll-wheel 1.8s linear 0s infinite normal none;
+    .wheel {
+        display: block;
+        margin: 0 0 0 -2px;
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        width: 4px;
+        height: 4px;
+        background: #fff;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        -moz-animation: scroll-wheel 1.8s linear 0s infinite normal none;
+        -webkit-animation: scroll-wheel 1.8s linear 0s infinite normal none;
+        animation: scroll-wheel 1.8s linear 0s infinite normal none;
     }
 }
-#oilrig{
-      width: 40px;
+
+#oilrig {
+    width: 40px;
     position: absolute;
 }
+
+
 /**
    * End of SEC-0
    */
@@ -290,9 +301,9 @@ nav a {
     background: #CFA98E;
     .smoke-bg {
         position: absolute;
-        top:0;
-        left:0;
-        width:100%;
+        top: 0;
+        left: 0;
+        width: 100%;
         height: 100%;
         background: url(../img/smoke_PNG965.png);
         background-size: cover;
@@ -320,7 +331,6 @@ nav a {
         margin-bottom: 5px;
     }
     p {
-        
         font-size: 1.2em;
         color: #725744;
         max-width: 960px;
@@ -328,32 +338,32 @@ nav a {
         line-height: 2em;
     }
     h3 {
-        color:$dark;
-        display:inline;
+        color: $dark;
+        display: inline;
         position: relative;
-         cursor: pointer;
-    a {
-        color:$dark;
-        
+        cursor: pointer;
+        a {
+            color: $dark;
         }
     }
-    h3:after{
-        content:"";
-        background-color:$dark;
-        height:2px;
-        width:100%;
+    h3:after {
+        content: "";
+        background-color: $dark;
+        height: 2px;
+        width: 100%;
         position: absolute;
-        bottom: -30%;left:-1.2%;
-       
-        
+        bottom: -30%;
+        left: -1.2%;
     }
 }
+
 .linebreak {
-    margin:40px auto;
-    height:2px;
-    width:100px;
-    background:$brown ;
+    margin: 40px auto;
+    height: 2px;
+    width: 100px;
+    background: $brown;
 }
+
 
 /**
    * End of SEC-1
@@ -375,7 +385,6 @@ nav a {
     .line {
         background: $dark;
     }
-    
 }
 
 .section-2-items-wrapper {
@@ -486,7 +495,6 @@ nav a {
     background-color: $darkBlue;
     .open h1 {
         font-family: $fonth;
-       
         line-height: 1.1em;
         color: $white;
     }
@@ -550,11 +558,9 @@ nav a {
     .open h1 {
         padding: 0;
         color: white;
-        text-transform: uppercase;
         font-family: $fonth;
         opacity: 0;
     }
-   
     .open p {
         color: white;
         opacity: 0;
@@ -771,88 +777,82 @@ nav a {
         line-height: 1.1em;
         color: $dark;
     }
-   
     .open p {
         font-family: $fontp;
         font-size: 1em;
         color: $dark;
         letter-spacing: 0.05em;
     }
-    .section-5-table{
-            width: 100%;
-            
-            ul{    
-                
-                margin-top: 20px;
-                display: flex;
-                justify-content: space-between;
-                li{
-                    list-style: none;
-                    font-family: $fonth;
-                    font-style: italic;
-                }
+    .section-5-table {
+        width: 100%;
+        ul {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            li {
+                list-style: none;
+                font-family: $fonth;
+                font-style: italic;
             }
         }
-    
+    }
     .section-5-data {
         position: relative;
-        height:16px;
+        height: 16px;
         font-family: $fonts;
-        .line-data{
+        .line-data {
             width: 100%;
-            height:2px;
+            height: 2px;
             background: $dark;
             position: absolute;
-            
             bottom: 50%;
         }
-        .road-data{
+        .road-data {
             position: absolute;
-            top:0;
-            left:0;
+            top: 0;
+            left: 0;
             height: 15px;
-            width:73%;
+            width: 73%;
             background: $red;
-            &:after{
-                content:"Road Transport";
+            &:after {
+                content: "Road Transport";
                 position: absolute;
-                right:0;
-                top:100%;
+                right: 0;
+                top: 100%;
             }
-            
         }
-        .aviation-data{
+        .aviation-data {
             position: absolute;
-            top:0;
-            left:0;
+            top: 0;
+            left: 0;
             height: 15px;
-            width:11%;
+            width: 11%;
             background: $darkBlue;
-            &:after{
-                content:"Aviation";
+            &:after {
+                content: "Aviation";
                 position: absolute;
-                right:0;
-                top:100%;
+                right: 0;
+                top: 100%;
             }
         }
-        .marine-data{
+        .marine-data {
             position: absolute;
-            top:0;
-            left:0;
+            top: 0;
+            left: 0;
             height: 15px;
-            width:14%;
+            width: 14%;
             background: $yellow;
-            &:after{
-                content:"Marine Shipping";
+            &:after {
+                content: "Marine Shipping";
                 position: absolute;
-                right:0;
-                top:100%;
+                right: 0;
+                top: 100%;
                 white-space: nowrap;
             }
         }
     }
-   
 }
+
 .graphic {
     z-index: 5;
     position: absolute;
@@ -880,6 +880,7 @@ nav a {
     -webkit-animation: traffic linear 12s infinite;
     animation: traffic linear 12s infinite;
 }
+
 #truck2 {
     width: 9vw;
     height: auto;
@@ -890,7 +891,7 @@ nav a {
     animation: traffic linear 18s infinite;
 }
 
-#car{
+#car {
     width: 6vw;
     height: auto;
     position: absolute;
@@ -899,7 +900,8 @@ nav a {
     -webkit-animation: traffic linear 10s infinite;
     animation: traffic linear 10s infinite;
 }
-#bigcar{
+
+#bigcar {
     width: 7vw;
     height: auto;
     position: absolute;
@@ -958,43 +960,41 @@ nav a {
 }
 
 #land {
-  
     width: 100%;
     position: absolute;
     bottom: 2%;
-
     .road-line-2 {
         position: absolute;
         bottom: 0;
         height: 1vw;
         width: 100%;
-        left:0;
-        transform: translate(0,40%);
-    
+        left: 0;
+        transform: translate(0, 40%);
     }
 }
+
 #sea {
     position: absolute;
     bottom: 0;
-    left:0;
+    left: 0;
     height: 80px;
-    width: 100vw ;
+    width: 100vw;
     background-image: url(../img/sea.svg);
-	background-position: 0px 0px;
-	background-repeat: repeat-x;
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
     animation: seawave 24s linear infinite;
     -webkit-animation: seawave 24s linear infinite;
 }
+
 #dock {
-    width:20vw;
+    width: 20vw;
     position: absolute;
     bottom: 0;
-    left:0;
+    left: 0;
 }
 
 #linecity {
-      width: 100vw;
-  
+    width: 100vw;
     position: absolute;
     bottom: 19%;
     left: 0;
@@ -1063,13 +1063,14 @@ nav a {
     -webkit-animation: ripple 2s linear infinite;
     animation: ripple 2s linear infinite;
 }
+
 .marine-ripple {
     background-color: $red;
     width: 1.1em;
     height: 1.1em;
     border-radius: 50%;
-       position: absolute;
-    right:8.5%;
+    position: absolute;
+    right: 8.5%;
     bottom: 57%;
     cursor: pointer;
     -webkit-animation: ripple 2s linear infinite;
@@ -1083,11 +1084,13 @@ nav a {
     border-radius: 50%;
     cursor: pointer;
     position: absolute;
-    right:39.5%;
+    right: 39.5%;
     bottom: 14%;
     -webkit-animation: ripple 2s linear infinite;
     animation: ripple 2s linear infinite;
 }
+
+
 /**
    * SEC-6 
    */
@@ -1101,7 +1104,6 @@ nav a {
         line-height: 1.1em;
         color: $dark;
     }
-    
     .open p {
         font-family: $fontp;
         font-size: 1em;
@@ -1132,7 +1134,7 @@ nav a {
         margin-bottom: 0.8em;
     }
     .section-7-years {
-        color:white;
+        color: white;
         opacity: 0.8;
         animation: all 2s linear;
     }
@@ -1142,17 +1144,14 @@ nav a {
     }
     .open h1 {
         color: white;
-        text-transform: uppercase;
-        font-family: $fonth;
     }
-    
-    p{
+    p {
         color: white;
     }
 }
 
 .case {
-    color:white;
+    color: white;
     top: 50%;
     left: 50%;
     position: absolute;
@@ -1196,9 +1195,11 @@ nav a {
     font-size: 1.1em;
     letter-spacing: 0.1em;
 }
+
 .timeline-main-wrapper {
     margin-top: 0vh;
 }
+
 .time-line-wrapper {
     position: relative;
 }
@@ -1341,14 +1342,13 @@ nav a {
    */
 
 #section-8 {
-    background-color: $yellow;
+    background-color: white;
     text-align: center;
     .open h1 {
         padding: 0;
         z-index: 999;
         font-family: $fonth;
     }
-   
 }
 
 #worldmap {
@@ -1358,17 +1358,24 @@ nav a {
     min-width: 100px;
     left: 0;
     z-index: 99;
+    overflow: visible;
+    .circleDotted {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
 }
 
 .circle-ripple {
+    overflow: visible;
     background-color: $yellow;
-    width: 10px;
-    height: 10px;
+    width: 13px;
+    height: 13px;
     border-radius: 50%;
     cursor: pointer;
     position: absolute;
 }
-
 
 #cn {
     left: 72%;
@@ -1385,7 +1392,7 @@ nav a {
     top: 49%;
 }
 
-#ru{
+#ru {
     left: 77%;
     top: 17%;
 }
@@ -1394,7 +1401,6 @@ nav a {
     left: 85%;
     top: 42%;
 }
-
 
 .nameBubble {
     position: absolute;
@@ -1442,16 +1448,16 @@ nav a {
 }
 
 .continent-total {
-    text-align:left;
+    text-align: left;
     position: relative;
     height: 50vh;
     color: #020e37;
-    padding-left:40px;
+    padding-left: 40px;
     h3 {
-        font-family: $fontp;}
-    
+        font-family: $fontp;
+    }
     div {
-        margin-bottom:80px;
+        margin-bottom: 80px;
     }
 }
 
@@ -1461,7 +1467,7 @@ nav a {
     font-size: 4em;
     vertical-align: top;
     margin: 0;
-    padding:0;
+    padding: 0;
 }
 
 .continent-total #totalNumber:after {
@@ -1473,51 +1479,155 @@ nav a {
     background-color: $red;
 }
 
-.timespanMark{
-    padding:0 15px 0 15px;
+.timespanMark {
+    padding: 0 15px 0 15px;
     font-weight: bold;
 }
+
+
 /**
    * Section-9
    */
 
 #section-9 {
     background-color: $yellow;
-   .open h1 {
+    .open h1 {
         font-family: $fonth;
         text-transform: uppercase;
         line-height: 1.1em;
         color: $dark;
     }
-   
     .open p {
         font-family: $fontp;
-        font-size: 1em;
+      
         color: $dark;
         letter-spacing: 0.05em;
     }
 }
 
 
-
 /**
    * END OF SEC 9
+   */
+
+
+/**
+   * SEC-10
+   */
+
+#section-10 {
+   background: $darkBlue;
+    .open h1 {
+        color:white;
+        text-transform: none;
+    }
+    .open .line{
+        background:white;
+    }
+}
+
+.impact-items-wrapper {
+    width: 99vw;
+    height: 400px;
+    position: absolute;
+ top:50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+   
+    .impact-items {
+        text-align: left;
+        width: 300px;
+        height:470px;
+        text-transform: capitalize;
+        padding-top:10px;
+        transition: all 0.3s ease-in;
+        cursor: pointer;
+         margin-top: -100px;
+         outline:2px solid rgba(255,255,255,.0);  
+        .impact-contents {
+            width: 90%;
+            margin: 0 auto;
+             
+            img {
+                width: 150px;
+              
+                margin-bottom: 40px;
+            }
+            .line{
+                display: block;
+                background: white;
+            }
+            h1 {
+                color: white;
+                font-family: $fonth;
+                font-size: 1.4em;
+                letter-spacing: 0.2em;
+            }
+            p{
+                font-size: 0.8em;
+                font-weight: 200;
+                color: white;
+            }
+        }
+        &:hover{
+            outline:2px solid $red;    
+        }
+        
+    }
+}
+
+
+/**
+   * END OF SEC 10
+   */
+
+/**
+   *  SEC 11
+   */
+#section-11{
+    background:$red;
+    .msg-wrap{
+        position: absolute;
+        width:100%;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        text-align: center;
+        h1{
+            font-size: 3vw;
+        }
+        h3 a{
+            font-size: 10vw;
+            color:white;
+        }
+        .line{
+            width:70vw;
+            height:4px;
+            background: $white;
+        }
+    }
+}
+
+/**
+   * END OF SEC 10
    */
 
 /**
    * HEATWAVE
    */
-#section-heatwave{
-   .open h1 {
+
+#section-heatwave {
+    .open h1 {
         font-family: $fonth;
         text-transform: uppercase;
-        
         color: $dark;
         font-size: 10em;
-      
     }
     blockquote {
-        margin-bottom:32px;
+        margin-bottom: 32px;
     }
     .open p {
         font-family: $fontp;
@@ -1534,51 +1644,48 @@ nav a {
         opacity: .03;
     }
 }
-#section-heatwave-2{
+
+#section-heatwave-2 {
     background: black;
 }
 
-.section-video { 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-   
-    transform: translate(-50%,-50%);
-
+.section-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+
 /**
    * END OF HEATWAVE
    */
 
 @keyframes scroll-wheel {
     0% {
-        -moz-transform: translate3d(0,0,0);
-        -webkit-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
         opacity: 1
     }
-
     35% {
-        -moz-transform: translate3d(0,7px,0);
-        -webkit-transform: translate3d(0,7px,0);
-        transform: translate3d(0,7px,0);
+        -moz-transform: translate3d(0, 7px, 0);
+        -webkit-transform: translate3d(0, 7px, 0);
+        transform: translate3d(0, 7px, 0);
         opacity: 1
     }
-
     50% {
-        -moz-transform: translate3d(0,10px,0);
-        -webkit-transform: translate3d(0,10px,0);
-        transform: translate3d(0,10px,0);
+        -moz-transform: translate3d(0, 10px, 0);
+        -webkit-transform: translate3d(0, 10px, 0);
+        transform: translate3d(0, 10px, 0);
         opacity: 0
     }
-
     50.001% {
-        -moz-transform: translate3d(0,0,0);
-        -webkit-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
         opacity: 0
     }
-
     80% {
         -moz-transform: translate3d(0, 0, 0);
         -webkit-transform: translate3d(0, 0, 0);
@@ -1595,6 +1702,7 @@ nav a {
         box-shadow: 0px 0px 0px 10px rgba(72, 74, 81, 0)
     }
 }
+
 @keyframes ripple {
     0% {
         box-shadow: 0px 0px 0px 0px rgba(72, 74, 81, 0.3)
@@ -1712,12 +1820,21 @@ nav a {
 }
 
 @keyframes seawave {
-   from { background-position: 0 0; }
-	to { background-position: 100% 0; }
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
 }
+
 @-webkit-keyframes seawave {
-   from { background-position: 0 0; }
-	to { background-position: 100% 0; }
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
 }
 
 @import 'family';
