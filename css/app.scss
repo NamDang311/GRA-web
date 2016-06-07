@@ -403,14 +403,13 @@ nav a {
     }
     .section-2-article{
         margin-left: 2vw;
-       
-        width:48vw;
+        width:45vw;
         height: 100vh;
         text-align: left;
         #backbtn{
             width:30px;
-            margin-top:2vh;
-            margin-bottom: 20vh;
+            margin-top:64px;
+            margin-bottom: 10vh;
             cursor: pointer;
         }
         .line {
@@ -419,7 +418,7 @@ nav a {
         p{
             margin:0;
             font-size: 1em;
-            min-width: 100px;
+           
         }
     }
 }
@@ -1144,18 +1143,21 @@ nav a {
 
 #section-6 {
     text-align: center;
-    background-color: $white;
+    background-color: $darkBlue;
+     color: white;
     .open h1 {
         font-family: $fonth;
-        text-transform: uppercase;
         line-height: 1.1em;
-        color: $dark;
+        
     }
     .open p {
         font-family: $fontp;
         font-size: 1em;
-        color: $dark;
+       
         letter-spacing: 0.05em;
+    }
+    .line{
+        background: white;
     }
 }
 
@@ -1163,226 +1165,6 @@ nav a {
 /**
    * END OF SEC-6 
    */
-
-
-/**
-   * SEC-7 
-   */
-
-#section-7 {
-    background: url('../img/stars_medium.png') $darkBlue;
-    .year-wrapper {
-        font-family: $fonth;
-        font-size: 1.5em;
-        width: 100%;
-        letter-spacing: 0.1em;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 0.8em;
-    }
-    .section-7-years {
-        color: white;
-        opacity: 0.8;
-        animation: all 2s linear;
-    }
-    .section-7-years div {
-        cursor: pointer;
-        position: relative;
-    }
-    .open h1 {
-        color: white;
-    }
-    p {
-        color: white;
-    }
-}
-
-.case {
-    color: white;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    h1 {
-        font-size: 2em;
-        white-space: nowrap;
-        margin-top: -0.5em;
-        margin-bottom: 0.5em;
-    }
-    p {
-        font-size: 0.8em;
-        font-weight: 200;
-        text-transform: uppercase;
-    }
-    .line-break {
-        height: 2px;
-        width: 100px;
-        background-color: white;
-        margin: 0 auto 10px auto;
-        opacity: .5;
-    }
-}
-
-.statistic {
-    margin-top: 80px;
-}
-
-#section-7 .statistic h2 {
-    margin-top: -25px;
-    color: $red;
-    line-height: 1em;
-    font-size: 5em;
-    margin-bottom: 20px;
-    font-family: $fonth;
-}
-
-#section-7 .statistic p {
-    color: white;
-    font-size: 1.1em;
-    letter-spacing: 0.1em;
-}
-
-.timeline-main-wrapper {
-    margin-top: 0vh;
-}
-
-.time-line-wrapper {
-    position: relative;
-}
-
-.time-line {
-    width: 100%;
-    height: 4px;
-    background-color: darken($lightBlue, 20);
-    border-radius: 3px;
-}
-
-.time-line-dot-wrapper {
-    padding-left: 1em;
-    padding-right: 1.1em;
-    display: flex;
-    justify-content: space-between;
-    margin-top: -10px;
-    .time-line-dot {
-        height: 1em;
-        width: 1em;
-        background-color: $darkBlue;
-        border: 3px solid darken($lightBlue, 20);
-        border-radius: 50%;
-        top: -7px;
-    }
-}
-
-.earth-wrapper {
-    z-index: 0;
-    width: 100%;
-    height: 450px;
-    margin-top: 0;
-    .asteroids-belt {
-        border-radius: 50%;
-        top: 30%;
-        left: 70%;
-        position: absolute;
-        z-index: 0;
-        &:before {
-            left: 50%;
-            border-radius: 100px;
-            content: "";
-            position: absolute;
-        }
-    }
-}
-
-.asteroids-belt {
-    z-index: 5;
-    opacity: 1;
-    border-color: transparent !important;
-    height: $asteroids-belt-orb;
-    width: $asteroids-belt-orb;
-    margin-top: -$asteroids-belt-orb / 2;
-    margin-left: -$asteroids-belt-orb / 2;
-    animation: orb 150s linear infinite;
-    overflow: hidden;
-    &:before {
-        z-index: 99;
-        top: 50%;
-        height: $asteroids-belt-pl;
-        width: $asteroids-belt-pl;
-        margin-left: -$asteroids-belt-pl / 2;
-        margin-top: -$asteroids-belt-pl / 2;
-        background: transparent;
-        border-radius: 140px !important;
-        box-shadow: stars(390, 890, -890/2, -104);
-    }
-}
-
-.satellite-wrapper {
-    width: 650px;
-    height: 650px;
-    top: 30%;
-    left: 70%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-}
-
-.datatipWrapper {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    z-index: 3;
-    top: 50%;
-    left: 65%;
-    transform: translate(-50%, -50%);
-}
-
-.dataTip {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 3;
-    transform-origin: 50% 50%;
-    animation: orb 15s linear infinite;
-}
-
-.datatipWrapper .dataTip-data {
-    position: absolute;
-    left: 50%;
-    z-index: 0;
-    transform: translate(-50%, -50%);
-}
-
-.satellite {
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 0;
-    transform-origin: 50% 50%;
-    animation: orb 15s linear infinite;
-}
-
-.satellite img {
-    width: 80px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-}
-
-.signal {
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: -45px;
-    transform: translateY(-50%);
-    border: 2px solid #fff;
-    transform-origin: bottom;
-}
-
 
 /**
    * SEC-8
