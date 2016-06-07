@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/jquery-ui.css" />
     <link rel="stylesheet" href="css/menu_sideslide.css" />
     <link rel="stylesheet" href="fonts/font.css" />
+    <link rel="stylesheet" href="css/tooltipster.css"/>
     <link rel="stylesheet" href="css/flex-layout-attribute.min.css" />
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto+Condensed:400,300|Roboto:400,300,500' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
@@ -136,11 +137,24 @@
 
         <!--Fossil fuel combustion-->
         <section id="section-2">
+           <article>
+           <div class="infoImage"></div>
+           <div class="section-2-article">
+                <div id="backbtn"><img src="img/icons-back.svg"></div>
+               <h1 class="">Big coal, big impact</h1>
+               <div class="line"></div>
+               <p>
+               Coal is the most carbon intensive fossil fuel. For every tonne of coal burned, approximately 2.5 tonnes of CO2e are produced.6 Of all the different types of fossil fuels, coal produces the most carbon dioxide. Because of this and it's high rate of use, coal is the largest fossil fuel source of carbon dioxide emissions. Coal represents one-third of fossil fuels' share of world total primary energy supply but is responsible for 43% of carbon dioxide emissions from fossil fuel use.<br><br>Coal also has significant, and harmful, consequences for the environment. Coal mining degrades surrounding landscapes, burning coal releases toxins into the atmosphere, and coal-generated electricity places heavy demands on water resources. It all adds up to a huge, and costly, impact.</p>
+           </div>
+       </article>
+           <div class="section-2-wrapper">
             <div class="row">
                 <div class="small-6 small-centered medium-6 medium-offset-1 medium-centered large-6 large-centered columns open">
+                   <header>
                     <h1>Fossil fuel combustion</h1>
                     <div class="line"></div>
                     <p>The largest human source of carbon dioxide emissions is from the combustion of fossil fuels. This produces 87% of human carbon dioxide emissions. Burning these fuels releases energy which is most commonly turned into heat, electricity or power for transportation. </p>
+                    </header>
                 </div>
             </div>
             <div class="section-2-items-wrapper ">
@@ -177,21 +191,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="row coal-video">
-                    <div class=" large-6 large-centered columns">
-                        <img src="img/coaloilgas/coal-process.png">
-                    </div>
-                </div>
             </div>
-            <div class="row coal-content">
-                <div class="medium-2 medium-offset-1 large-2 columns">
-                    <h1>COAL</h1>
-                </div>
-                <div class="medium-6 large-6 end columns">
-                    <p>It’s almost impossible to grasp what 40 billion tons means. A cubic kilometer of water weighs a billion tons, but it’s hard to imagine a cube 3.5 kilometers (2.2 miles) on a side—the equivalent amount of water weighing 40 billion tons. The largest class of aircraft carrier weighs about 100,000 tons, but picturing 400,000 of them still strains the imagination (not to mention vaporizing them into the air every year). It’s a vast amount.</p>
-                </div>
-            </div>
-
+</div>
+      
         </section>
 
 
@@ -200,8 +202,8 @@
             <div class="row">
                 <div class="small-5  medium-5 medium-offset-1 large-5  columns open">
 
-                    <h1>THE<br />ENERGY SECTOR</h1>
-                    <div class="linebreak"></div>
+                    <h1>The Energy Sector</h1>
+                    <div class="line"></div>
                     <p>Electricity and heat generation is the economic sector that produces the largest amount of man-made carbon dioxide emissions. This sector produced 41% of fossil fuel related carbon dioxide emissions in 2010. Around the world, this sector relies heavily on coal, the most carbon-intensive of fossil fuels, explaining this sector giant carbon footprint.</p>
 
                 </div>
@@ -505,7 +507,7 @@
 
             <div class="row">
                 <div class="small-6 small-centered medium-6 medium-offset-1 medium-centered large-6 large-centered columns open">
-                    <h1>Top 5 countries with highest Co<sub>2</sub> emissions per capita</h1>
+                    <h1>Top 5 countries with highest Co<sub>2</sub> emissions</h1>
                     <div class="line"></div>
                 </div>
 
@@ -525,50 +527,70 @@
                         <div class="continent continent-4 data-4 hidden"></div>
                     </div>
                 </div>
-                <div class="medium-4 large-4  columns " style="position:relative;height:30vh;">
+                <div class="medium-4 large-3 large-centered columns" style="position:relative">
                     <div id="worldmap">
                         <img src="img/map.png">
                         <div class="circleDotted"></div>
-                        <div class="nameBubble">
-                            <div id="mainBubble"></div>
+                       
+                        <div class="circle-ripple tooltip" id="cn" title="China"></div>
+                        <div class="circle-ripple tooltip" id="usa" title="USA"></div>
+                        <div class="circle-ripple tooltip" id="ind" title="India"></div>
+                        <div class="circle-ripple tooltip" id="ru" title="Russia"></div>
+                        <div class="circle-ripple tooltip" id="ja" title="Japan"></div>
+                    </div>
+                    <div class="">
+                        <div class="data-wrapper">
+                            <div class="continent-total">
+                                <div class="data-flex" style="transform: rotate(30deg);width:100%;height:100%;">
+                                    <h3 class="totalTitle">Selected<br> Country</h3>
+                                    <div class="totalNumber">0</div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="circle-ripple" id="cn"></div>
-                        <div class="circle-ripple" id="usa"></div>
-                        <div class="circle-ripple" id="ind"></div>
-                        <div class="circle-ripple" id="ru"></div>
-                        <div class="circle-ripple" id="ja"></div>
+                        <div class="data-wrapper">
+                            <div class="continent-total">
+                                <div class="data-flex" style="transform: rotate(0deg);width:100%;height:100%;">
+                                    <h3 class="totalTitle">Total CO<sub>2</sub> </h3>
+                                    <div class="totalNumber">0</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-wrapper">
+                            <div class="continent-total">
+                                <div class="data-flex" style="transform: rotate(-30deg);width:100%;height:100%;">
+                                    <h3 class="totalTitle">Recorded<br>in year </h3>
+                                    <div class="totalNumber">0</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="medium-2 large-2 end columns">
-                    <div class="continent-total">
-                        <h3 id="totalTitle">Total CO<sub>2</sub> </h3>
-                        <div id="totalNumber">0</div>
-                        <h3 style="margin-top:20px">Total CO<sub>2</sub> released in this year </h3>
-                        <div id="totalNumber">0</div>
-                    </div>
+
 
                 </div>
-                <div class="row">
-                    <div class="small-6 small-centered medium-4 medium-offset-1 medium-centered large-4 large-centered columns">
-                        <div class="timespan">
-                            <div class="timespanYear" layout="row center-justify">
-                                <div>2002</div>
-                                <div>2003</div>
-                                <div>2004</div>
-                            </div>
-                            <div class="timespanMark" layout="row center-justify">
-                                <div>|</div>
-                                <div>|</div>
-                                <div>|</div>
-                                <div>|</div>
-                                <div>|</div>
-                                <div>|</div>
-                                <div>|</div>
-                                <div>|</div>
-                                <div>|</div>
-                            </div>
 
+            </div>
+            <div class="row">
+                <div class="small-6 small-centered medium-4 medium-offset-1 medium-centered large-4 large-centered columns">
+                    <div class="timespan">
+                        <div class="timespanYear" layout="row center-justify">
+                            <div>2002</div>
+                            <div>2003</div>
+                            <div>2004</div>
                         </div>
+                        <div class="timespanMark" layout="row center-justify">
+                            <div>|</div>
+                            <div>|</div>
+                            <div>|</div>
+                            <div>|</div>
+                            <div>|</div>
+                            <div>|</div>
+                            <div>|</div>
+                            <div>|</div>
+                            <div>|</div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -737,21 +759,21 @@
 
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/jquery.countTo.js"></script>
-    <script src="js/vendor/jquery.visible.min.js"></script>
     <script src="js/bodymovin.js"></script>
-
     <script src="js/jquery.onepage-scroll.js"></script>
-    <script src="js/vendor/jquery.arctext.js"></script>
-    <script src="js/vendor/typed.js"></script>
     <script src="js/vendor/what-input.min.js"></script>
     <script src="js/foundation.min.js"></script>
     <script src="js/vendor/d3.v3.min.js"></script>
     <script src="js/vendor/snap.svg-min.js"></script>
-    <script src="js/vendor/gsap/gsap.js"></script>
+    <script src="js/vendor/gsap/TweenMax.min.js"></script>
+    <script src="js/vendor/gsap/Draggable.min.js"></script>
+    <script src="js/vendor/gsap/DrawSVGPlugin.min.js"></script>
+    <script src="js/vendor/gsap/ThrowPropsPlugin.js"></script>
+    <script src="js/vendor/gsap/SplitText.js"></script>
+    <script src="js/vendor/jquery.tooltipster.min.js"></script>
     <script src="js/menu/classie.js"></script>
     <script src="js/menu/main.js"></script>
     <script src="js/vendor/ScrollMagic.min.js"></script>
-    <script src="js/vendor/pixi.min.js"></script>
     <script src="js/vendor/bideo.js"></script>
     <script src="js/app.js"></script>
 

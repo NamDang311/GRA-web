@@ -227,15 +227,21 @@ function gasLoad(data) {
             , opacity: 0
         }, 0.1)
 };
-
+var tlarticle= new TimelineMax({paused:true});
+var $articleItems=$("#backbtn, .section-2-article h1, .section-2-article p, .section-2-article .line" );
+TweenMax.set(".infoImage",{x:"-=100%",autoAlpha:0});
+TweenMax.set($articleItems,{autoAlpha:0});
+tlarticle.staggerTo(".markup-items",0.5,{autoAlpha:0,y:"+=300px"},0.2).to("header",0.5,{y:"-=200px",autoAlpha:0},0).to(".infoImage",0.5,{x:"+=100%",autoAlpha:1}).staggerFromTo($articleItems,0.5,{autoAlpha:0,x:"+=50px"},{autoAlpha:1,x:0},0.3);
 $(".markup").click(
     function () {
-        $(".markup").toggle();
-        $(".coal-video").fadeIn("slow");
-        $(".coal-content").fadeIn("slow");
+        tlarticle.play().timeScale(1);
     }
 );
-
+$("#backbtn").click(
+    function () {
+        tlarticle.reverse().timeScale(1.4);
+    }
+);
 var scenecoal = new ScrollMagic.Scene({
         triggerElement: "#section-2"
     })
@@ -727,15 +733,48 @@ var clickedAr = [];
 TweenMax.set($("#worldmap"), {
     perspective: 1000
 });
-
+var tlworldmap = new TimelineMax({
+    delay: 0.2
+});
 Snap.load("img/circle-dotted.svg", function (data) {
     Snap(".circleDotted").append(data);
-    TweenMax.staggerFromTo(".dotted", 3, {
-        scale:4,opacity: 0
+    tlworldmap.staggerFromTo("#section-8 .dotted", 1, {
+        scale: 1
+        , opacity: 0
     }, {
-        scale:1,opacity: 1
-    }, 0.02);
+        scale: 1
+        , opacity: 1
+    }, 0.01).
+    from("#section-8 #worldmap img", 0.3, {
+        scale: 0
+    }, "-=0.5").
+    staggerFrom("#section-8 #worldmap .circle-ripple", 0.3, {
+        autoAlpha: 0
+        , y: "-=150px"
+    }, 0.1).
+    fromTo($(".data-wrapper:eq(0)"), 0.5, {
+        rotation: "90"
+    }, {
+        rotation: "-30"
+    }, "-=0.3").
+    fromTo($(".data-wrapper:eq(1)"), 0.5, {
+        rotation: "90"
+    }, {
+        rotation: "0"
+    }, "-=0.3").fromTo($(".data-wrapper:eq(2)"), 0.5, {
+        rotation: "90"
+    }, {
+        rotation: "30"
+    }, "-=0.3").
+    staggerFrom(".continent-total",0.3, {
+        scale:0
+    }, 0.3, "-=0.9");
+
 });
+var sceneworldmap = new ScrollMagic.Scene({
+        triggerElement: "#section-8"
+    })
+    .setTween(tlworldmap).addTo(controller);
 
 
 $('.circle-ripple').bind('click', function (event) {
@@ -744,31 +783,23 @@ $('.circle-ripple').bind('click', function (event) {
     if (!$(this).hasClass("activated")) {
         $(this).addClass("activated");
 
-        TweenLite.fromTo($(this), 1, {
-            scale: 1
-            , transformOrigin: "50% 50% 0"
-            , force3D: false
-
-        }, {
-            opacity: 0.8
-            , scale: parseFloat(dataAr[curbtn]) / 2.5
-            , force3D: false
-        });
         clickedAr.push(this);
 
         //set Pos Country+ Bars
         if (!$(".name-" + curbtn + "").hasClass("clicked")) {
-            addNumber(curbtn);
+            addNumber0(curbtn);
+            addNumber1(curbtn);
+           
             $(".continent-" + curbtn + "").removeClass("hidden");
             $(".name-" + curbtn + "").css({
                 top: topPos1 + "%"
 
             }).addClass("clicked");
             $(".data-" + curbtn + "").css({
-                top: (topPos1 + 6) + "%"
+                top: (topPos1 + 10) + "%"
             });
 
-            topPos1 = topPos1 + 10;
+            topPos1 = topPos1 + 20;
             TweenLite.fromTo($(".data-" + curbtn + ""), 1, {
                 width: 0
             }, {
@@ -780,34 +811,6 @@ $('.circle-ripple').bind('click', function (event) {
 
 
 });
-
-
-//Show name of country
-$('.circle-ripple').hover(
-    function () {
-        if ($.inArray(this, clickedAr) < 0) {
-
-            TweenLite.to($(".nameBubble"), 0.5, {
-                css: {
-                    autoAlpha: 1
-                }
-            });
-            $("#mainBubble").html(nameAr[$.inArray(this, myAr)]);
-            $(".nameBubble").css({
-                left: Math.round($(this).position().left * 100 / $(this).parent().width()) + "%"
-                , top: $(this).position().top * 100 / $(this).parent().height() - 13 + "%"
-                , transform: "translate(-45%,-23%)"
-            });
-        }
-    }
-    , function () {
-        TweenLite.to($(".nameBubble"), 0.5, {
-            css: {
-                autoAlpha: 0
-            }
-        });
-    }
-);
 
 var dataAr = [];
 var nameAr = [];
@@ -836,8 +839,8 @@ function appendData() {
             height: "10px"
             , position: "absolute"
             , top: "0"
-            , "background-color": "#e6665a"
-            , width: parseFloat(dataAr[a]) * 10
+            , "background-color": "#1A535C"
+            , width: parseFloat(dataAr[a]) * 6
         , });
         barWidth.push($(".data-" + a + "").css("width"));
     }
@@ -847,9 +850,9 @@ function appendData() {
 var totalNumber = 0;
 var curNumber = 0;
 
-function addNumber(curbtn) {
+function addNumber1(curbtn) {
     totalNumber = totalNumber + parseFloat(dataAr[curbtn]);
-    $("#totalNumber").countTo({
+    $(".totalNumber:eq(1)").countTo({
         from: curNumber
         , to: totalNumber
         , speed: 400
@@ -864,64 +867,124 @@ function addNumber(curbtn) {
     });
 };
 
+function addNumber0(curbtn) {
+    var z = parseFloat(dataAr[curbtn]);
+    $(".totalNumber:eq(0)").countTo({
+        from: curNumber
+        , to: z
+        , speed: 400
+        , refreshInterval: 10
+        , formatter: function (value, options) {
+            return value.toFixed(1).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
+        }
+        , onComplete: function (value) {
+            curNumber = totalNumber;
+        }
 
-//END-SEC-8
-
+    });
+};
+$(".circle-ripple").tooltipster({
+    
+});
 //SEC-9
 
-var thermalCur=0;
+var thermalCur = 0;
 $("#thermal-plus").click(
     function () {
-        if(thermalCur==4){}else{
-        TweenLite.to($(".thermal-content"), 0.2, {
-            y: "-=100px"
-        });
-        thermalCur=thermalCur+1;
-        changeTemp (thermalCur);
-        contentIn(thermalCur);
+        if (thermalCur == 4) {} else {
+            TweenLite.to($(".thermal-content"), 0.2, {
+                y: "-=100px"
+            });
+            thermalCur = thermalCur + 1;
+            changeTemp(thermalCur);
+            contentIn(thermalCur);
         }
     }
 );
 $("#thermal-minus").click(
     function () {
-         if(thermalCur==0){}else{
-        TweenLite.to($(".thermal-content"), 0.2, {
-            y: "+=100px"
-        });
-         thermalCur=thermalCur-1;
-        changeTemp (thermalCur);}
+        if (thermalCur == 0) {} else {
+            TweenLite.to($(".thermal-content"), 0.2, {
+                y: "+=100px"
+            });
+            thermalCur = thermalCur - 1;
+            changeTemp(thermalCur);
+        }
         contentIn(thermalCur);
     }
 );
-TweenMax.set($(".thermal-numbers").not($(".thermal-numbers:eq(0)")),{opacity:0.2});
-function changeTemp (thermalCur){
-    var $g= $(".thermal-numbers").not($(".thermal-numbers:eq("+thermalCur+")"));
-    TweenMax.to($(".thermal-numbers:eq("+thermalCur+")"),0.3,{opacity:1});
-    TweenMax.to($g,0.3,{opacity:0});
- 
+TweenMax.set($(".thermal-numbers").not($(".thermal-numbers:eq(0)")), {
+    opacity: 0.2
+});
+
+function changeTemp(thermalCur) {
+    var $g = $(".thermal-numbers").not($(".thermal-numbers:eq(" + thermalCur + ")"));
+    TweenMax.to($(".thermal-numbers:eq(" + thermalCur + ")"), 0.3, {
+        opacity: 1
+    });
+    TweenMax.to($g, 0.3, {
+        opacity: 0
+    });
+
 };
-function contentIn (thermalCur){
-    var g= thermalCur-1;
-    TweenMax.set($(".section-9-article .headline, .section-9-article .content"),{opacity:0});
-     TweenMax.fromTo($(".section-9-article .headline:eq("+thermalCur+")"),0.4,{x:"-=40px",opacity:0},{x:"+=40px",opacity:0.2});
-    TweenMax.fromTo($(".section-9-article .content:eq("+thermalCur+")"),0.4,{x:"+=40px",opacity:0},{x:"-=40px",opacity:1});
+
+function contentIn(thermalCur) {
+    var g = thermalCur - 1;
+    TweenMax.set($(".section-9-article .headline, .section-9-article .content"), {
+        opacity: 0
+    });
+    TweenMax.fromTo($(".section-9-article .headline:eq(" + thermalCur + ")"), 0.4, {
+        x: "-=40px"
+        , opacity: 0
+    }, {
+        x: "+=40px"
+        , opacity: 0.2
+    });
+    TweenMax.fromTo($(".section-9-article .content:eq(" + thermalCur + ")"), 0.4, {
+        x: "+=40px"
+        , opacity: 0
+    }, {
+        x: "-=40px"
+        , opacity: 1
+    });
 };
 
 //END-SEC-9
 
 //SEC-10
 $(".impact-contents").hover(function () {
-    TweenMax.fromTo($(".line", this),0.3,{x:"+=300px",opacity:0},{x:"-=300px",opacity:1,transformOrigin:"0 0",ease:Power1.easeOut});
-  
+    TweenMax.fromTo($(".line", this), 0.3, {
+        x: "+=300px"
+        , opacity: 0
+    }, {
+        x: "-=300px"
+        , opacity: 1
+        , transformOrigin: "0 0"
+        , ease: Power1.easeOut
+    });
+
 }, function () {
-    
+
 });
 //END-SEC-10
 //SEC-11
 $(".msg-wrap h3").hover(function () {
-    TweenMax.fromTo(".msg-wrap .line",0.3,{scaleX:0,x:"+=100%",opacity:0},{scaleX:0.15,x:"-=100%",opacity:1,transformOrigin:"0 0",ease:Power1.easeOut});
-    TweenMax.to(".msg-wrap .line",0.4,{scaleX:1,delay:0.32});
+    TweenMax.fromTo(".msg-wrap .line", 0.3, {
+        scaleX: 0
+        , x: "+=100%"
+        , opacity: 0
+    }, {
+        scaleX: 0.15
+        , x: "-=100%"
+        , opacity: 1
+        , transformOrigin: "0 0"
+        , ease: Power1.easeOut
+    });
+    TweenMax.to(".msg-wrap .line", 0.4, {
+        scaleX: 1
+        , delay: 0.32
+    });
 }, function () {
-    
+
 });
 //END-SEC-11

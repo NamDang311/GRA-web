@@ -93,7 +93,7 @@ h1 {
     font-family: $fonth;
     font-weight: 400;
     letter-spacing: 0.04em;
-    text-transform: capitalize
+    text-transform: capitalize;
 }
 
 p {
@@ -103,7 +103,7 @@ p {
     letter-spacing: 0.08em;
     font-size: 1.1em;
     max-width: 600px;
-    margin: 20px auto 0 auto;
+    margin: 0px auto 0 auto;
 }
 
 h3 {
@@ -386,6 +386,46 @@ nav a {
         background: $dark;
     }
 }
+.section-2-wrapper {}
+article {
+    
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display: flex;
+    .infoImage{
+        width:40vw;
+        height:100vh;
+        background: url(../img/coaloilgas/oil.jpg);
+        background-size: cover;
+    }
+    .section-2-article{
+        margin-left: 2vw;
+       
+        width:48vw;
+        height: 100vh;
+        text-align: left;
+        #backbtn{
+            width:30px;
+            margin-top:2vh;
+            margin-bottom: 20vh;
+            cursor: pointer;
+        }
+        .line {
+            margin:40px 0;
+        }
+        p{
+            margin:0;
+            font-size: 1em;
+            min-width: 100px;
+        }
+    }
+}
+
+
+
 
 .section-2-items-wrapper {
     margin-top: 50px;
@@ -410,7 +450,8 @@ nav a {
         font-size: 5em;
         font-family: $fontp;
         font-weight: 600;
-        letter-spacing: 0.2em;
+       
+         transition: all 0.4s;
     }
     .underline {
         width: 100px;
@@ -445,6 +486,9 @@ nav a {
 
 .markup:hover .markup-items {
     outline: 4px solid $dark;
+    h2{
+        letter-spacing: 0.2em;
+    }
 }
 
 .markup:hover .motion {
@@ -564,6 +608,9 @@ nav a {
     .open p {
         color: white;
         opacity: 0;
+    }
+    .line {
+        background: white;
     }
 }
 
@@ -1342,22 +1389,47 @@ nav a {
    */
 
 #section-8 {
-    background-color: white;
+ 
     text-align: center;
     .open h1 {
         padding: 0;
-        z-index: 999;
         font-family: $fonth;
     }
+    .open {
+        margin-bottom: 5vh;
+    }
+}
+
+#cn {
+    left: 72%;
+    top: 40%;
+}
+
+#usa {
+    left: 22%;
+    top: 42%;
+}
+
+#ind {
+    left: 67%;
+    top: 47%;
+}
+
+#ru {
+    left: 73%;
+    top: 32%;
+}
+
+#ja {
+    left: 81%;
+    top: 43%;
 }
 
 #worldmap {
     width: 100%;
-    height: auto;
-    position: absolute;
-    min-width: 100px;
+    position: relative;
     left: 0;
-    z-index: 99;
+    z-index: 9;
     overflow: visible;
     .circleDotted {
         position: absolute;
@@ -1367,9 +1439,50 @@ nav a {
     }
 }
 
+#section-8 .data-wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    .continent-total {
+        text-align: center;
+        width: 40%;
+        height: 40%;
+        border-radius: 50%;
+        border: 2px solid $black;
+        position: absolute;
+        right: -70%;
+        top: 50%;
+        transform: translate(0, -50%);
+        .data-flex {
+            padding-top: 20%;
+        }
+        .totalTitle {
+            @media #{$mq-small} {
+                font-size: 14px;
+            }
+        }
+        .totalNumber {
+            font-family: $fonth;
+            line-height: 0.80em;
+            font-size: 2em;
+            vertical-align: top;
+            margin: 0;
+            padding: 0;
+            &:after {
+                content: "gt";
+                font-size: 0.4em;
+            }
+            @media #{$mq-large} {
+                font-size: $base-font-size*4;
+            }
+        }
+    }
+}
+
 .circle-ripple {
     overflow: visible;
-    background-color: $yellow;
+    background-color: darken($yellow, 20);
     width: 13px;
     height: 13px;
     border-radius: 50%;
@@ -1377,60 +1490,16 @@ nav a {
     position: absolute;
 }
 
-#cn {
-    left: 72%;
-    top: 38%;
-}
-
-#usa {
-    left: 19%;
-    top: 41%;
-}
-
-#ind {
-    left: 69%;
-    top: 49%;
-}
-
-#ru {
-    left: 77%;
-    top: 17%;
-}
-
-#ja {
-    left: 85%;
-    top: 42%;
-}
-
-.nameBubble {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    z-index: 999;
-    color: white;
-    #mainBubble {
-        min-width: 50px;
-        min-height: 10px;
-        border-radius: 2px;
-        background-color: $red;
-        padding: 2px 7px 3px 7px;
-        text-align: center;
-        font-size: 0.8em;
-        font-weight: 600;
-        white-space: nowrap;
-    }
-}
-
 .continent {
     opacity: 1;
     position: absolute;
     font-size: 1em;
+    right:0;
 }
 
 .continent-content {
     position: relative;
-    height: 50vh;
+    height: 30vh;
     img {
         margin-bottom: 3px;
         margin-right: 5px;
@@ -1447,41 +1516,16 @@ nav a {
     transition: background-color 5s;
 }
 
-.continent-total {
-    text-align: left;
-    position: relative;
-    height: 50vh;
-    color: #020e37;
-    padding-left: 40px;
-    h3 {
-        font-family: $fontp;
-    }
-    div {
-        margin-bottom: 80px;
-    }
-}
-
-.continent-total #totalNumber {
-    font-family: $fonth;
-    line-height: 0.80em;
-    font-size: 4em;
-    vertical-align: top;
-    margin: 0;
-    padding: 0;
-}
-
-.continent-total #totalNumber:after {
-    content: "gt";
-    font-size: 0.2em;
-}
-
 .activated {
     background-color: $red;
 }
-
-.timespanMark {
+.timespan{
+    margin-top: 10vh;
+    .timespanMark {
     padding: 0 15px 0 15px;
     font-weight: bold;
+}
+
 }
 
 
@@ -1515,7 +1559,7 @@ nav a {
         height: 170px;
         border-radius: 50%;
         border: 4px solid $black;
-        background: $yellow;   
+        background: $yellow;
         overflow: hidden;
         .thermal-content {
             text-align: center;
@@ -1540,27 +1584,28 @@ nav a {
         cursor: pointer;
     }
 }
-.section-9-article{
+
+.section-9-article {
     width: 800px;
-  margin:20px auto 0 auto;
-    article{
-    position: absolute;
-    display: flex;
-        
+    margin: 20px auto 0 auto;
+    article {
+        position: absolute;
+        display: flex;
     }
     .headline {
-    font-size:10em;
+        font-size: 10em;
         font-style: italic;
         opacity: .2;
         line-height: 0.8em;
         margin-right: 60px;
         opacity: 0;
-}
+    }
     .content {
         width: 400px;
-          opacity: 0;
+        opacity: 0;
     }
 }
+
 
 /**
    * END OF SEC 9
