@@ -431,19 +431,19 @@ var scenegas = new ScrollMagic.Scene({
 //END-SEC-2
 
 // SEC-3
-Snap.load("img/humansector/fuel.svg", function (data) {
+Snap.load("/img/humansector/fuel.svg", function (data) {
     Snap("#section-3-image-1").append(data);
     TweenLite.set($(".fuel-circle"), {
         drawSVG: 0
     });
 });
-Snap.load("img/humansector/crops.svg", function (data) {
+Snap.load("/img/humansector/crops.svg", function (data) {
     Snap("#section-3-image-0").append(data);
     TweenLite.set($(".crops-circle"), {
         drawSVG: 0
     });
 });
-Snap.load("img/humansector/manu.svg", function (data) {
+Snap.load("/img/humansector/manu.svg", function (data) {
     Snap("#section-3-image-2").append(data);
     TweenLite.set($(".manu-circle"), {
         drawSVG: 0
