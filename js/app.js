@@ -63,7 +63,7 @@ tlintro.fromTo("#sec-1-title", 1, {
         y: "0"
         , opacity: 1
     }, 0.2, "+=0.3")
-    .from("#sec-1-subtitle", 0.7, {
+    .from("#sec-1-subtitle", 0.5, {
         y: "+=120px"
         , opacity: 0
     }).from(".linebreak", 0.5, {
@@ -71,13 +71,36 @@ tlintro.fromTo("#sec-1-title", 1, {
             scaleX: 0
             , transformOrigin: "50% 50%"
         }
-    }).from("#section-1 p", 1, {
+    }).from("#section-1 p", 0.5, {
         opacity: 0
-    });;
+    }).from("#section-1 h3", 0.2, {
+        opacity: 0
+    });
 var sceneintro = new ScrollMagic.Scene({
     triggerElement: "#section-1"
 }).setTween(tlintro).addTo(controller).on("enter", function (event) {
     introAnimation();
+});
+
+$("#section-1 h3").hover(function () {
+
+    TweenMax.fromTo("#section-1 .line", 0.3, {
+        scaleX: 0
+        , x: "+=100%"
+        , opacity: 0
+    }, {
+        scaleX: 0.15
+        , x: "-=100%"
+        , opacity: 1
+        , transformOrigin: "0 0"
+        , ease: Power1.easeOut
+    });
+    TweenMax.to("#section-1 .line", 0.4, {
+        scaleX: 1
+        , delay: 0.32
+    });
+}, function () {
+
 });
 
 function introAnimation() {
@@ -91,12 +114,18 @@ function introAnimation() {
         }
     });
 };
+
+
 //END-SEC-1
 
 
 //SEC-2
 //---Coal animation
-var tlcoal = new TimelineMax({});
+var tlcoal = new TimelineMax({
+    delay: 0.3
+});
+
+
 Snap.load("img/coaloilgas/coal.svg", rockLoad);
 
 function rockLoad(data) {
@@ -130,12 +159,11 @@ function rockLoad(data) {
             , y: "0px"
             , opacity: 1
         }, "-=0.25");
-
 }
 
 ////---Oil animation
 var tloil = new TimelineMax({
-    delay: 0.2
+    delay: 0.3
 });
 var oilShapes;
 Snap.load("img/coaloilgas/oil.svg", oilLoad);
@@ -194,7 +222,7 @@ function oilLoad(data) {
 
 ////---Gas animation
 var tlgas = new TimelineMax({
-    delay: 0.2
+    delay: 0.3
 });
 var gasShapes;
 Snap.load("img/coaloilgas/gas.svg", gasLoad);
@@ -227,13 +255,153 @@ function gasLoad(data) {
             , opacity: 0
         }, 0.1)
 };
-var tlarticle= new TimelineMax({paused:true});
-var $articleItems=$("#backbtn, .section-2-article h1, .section-2-article p, .section-2-article .line" );
-TweenMax.set(".infoImage",{x:"-=100%",autoAlpha:0});
-TweenMax.set($articleItems,{autoAlpha:0});
-tlarticle.staggerTo(".markup-items",0.5,{autoAlpha:0,y:"+=300px"},0.2).to("header",0.5,{y:"-=200px",autoAlpha:0},0).to(".infoImage",0.5,{x:"+=100%",autoAlpha:1}).staggerFromTo($articleItems,0.5,{autoAlpha:0,x:"+=50px"},{autoAlpha:1,x:0},0.3);
-$(".markup").click(
+
+//-----Hover animation
+//++coal
+
+var tlcoalhover = new TimelineMax({
+    paused: true
+    , repeat: -1
+    , yoyo: true
+});
+tlcoalhover.add("coal").to("#coal-cart", 1, {
+    x: "+=20px"
+    , ease: Power1.easeOut
+}).to("#coal-cart", 2, {
+    x: "-=60px"
+    , ease: Power1.easeInOut
+}).to("#coal-cart", 1.5, {
+    x: "+=40px"
+    , ease: Power0.easeOut
+});
+//++oil
+var tloilhover = new TimelineMax({
+    paused: true
+    , repeat: -1
+});
+tloilhover.to("#oil-cart", 1, {
+    x: "+=10px"
+    , ease: Power1.easeOut
+}).to("#oil-cart", 2, {
+    x: "-=60px"
+    , ease: Power1.easeInOut
+}).to("#oil-cart", 2, {
+    x: "+=70px"
+    , ease: Power0.easeInOut
+}).to("#oil-cart", 1, {
+    x: "-=10px"
+    , ease: Power0.easeOut
+}).to("#oil-cart", 0.1, {
+    y: "-=4px"
+    , ease: Power0.easeNone
+}, 1).to("#oil-cart", 0.1, {
+    y: "+=4px"
+    , ease: Power0.easeNone
+}, 1.1).to("#oil-cart", 0.1, {
+    y: "-=4px"
+    , ease: Power0.easeNone
+}, 2).to("#oil-cart", 0.1, {
+    y: "+=4px"
+    , ease: Power0.easeNone
+}, 2.1);
+//++gas
+var tlgashover = new TimelineMax({
+    paused: true
+    , repeat: -1
+});
+tlgashover.to("#gas-cart", 1, {
+    x: "+=120px"
+    , ease: Power1.easeInOut
+}).to("#gas-cart", 5, {
+    x: "-=240px"
+    , ease: Power1.easeInOut
+}).to("#gas-cart", 2, {
+    x: "+=140px"
+    , ease:Back.easeOut
+}).to("#gas-cart", 1, {
+    x: "-=20px"
+    , ease: Power0.easeOut
+});
+var markupAr = $(".markup-items").toArray();
+$(".markup-items").hover(
     function () {
+        switch ($.inArray(this, markupAr)) {
+        case 0:
+            tlcoalhover.play();
+            break;
+        case 1:
+            tloilhover.play();
+            break;
+        case 2:
+             tlgashover.play();
+            break;
+        }
+    }
+    , function () {
+         switch ($.inArray(this, markupAr)) {
+        case 0:
+            tlcoalhover.restart().pause();
+            break;
+        case 1:
+            tloilhover.restart().pause();
+            break;
+        case 2:
+            tlgashover.restart().pause();
+            break;
+        }
+        
+    }
+
+);
+
+//-----Click animation
+var tlarticle = new TimelineMax({
+    paused: true
+});
+var $articleItems = $("#backbtn, .section-2-article h1, .section-2-article p, .section-2-article .line");
+TweenMax.set(".infoImage", {
+    x: "-=100%"
+    , autoAlpha: 0
+});
+TweenMax.set($articleItems, {
+    autoAlpha: 0
+});
+tlarticle.staggerTo(".markup-items", 0.5, {
+    autoAlpha: 0
+    , y: "+=300px"
+}, 0.2).to("header", 0.5, {
+    y: "-=200px"
+    , autoAlpha: 0
+}, 0).to(".infoImage", 0.5, {
+    x: "+=100%"
+    , autoAlpha: 1
+}).staggerFromTo($articleItems, 0.5, {
+    autoAlpha: 0
+    , x: "+=50px"
+}, {
+    autoAlpha: 1
+    , x: 0
+}, 0.3);
+
+$(".markup-items").click(
+    function () {
+        switch ($.inArray(this, markupAr)) {
+        case 0:
+            $(".infoImage").css("background","url(../img/coaloilgas/coal.jpg)");
+            $(".section-2-article h1").html("Big coal, big impact") ;
+              $(".section-2-article p").html("Coal is the most carbon intensive fossil fuel. For every tonne of coal burned, approximately 2.5 tonnes of CO2e are produced.6 Of all the different types of fossil fuels, coal produces the most carbon dioxide. Because of this and it's high rate of use, coal is the largest fossil fuel source of carbon dioxide emissions.<br><br>Coal represents one-third of fossil fuels' share of world total primary energy supply but is responsible for 43% of carbon dioxide emissions from fossil fuel use.Coal also has significant, and harmful, consequences for the environment. Coal mining degrades surrounding landscapes, burning coal releases toxins into the atmosphere, and coal-generated electricity places heavy demands on water resources. It all adds up to a huge, and costly, impact."); 
+            break;
+        case 1:
+          $(".infoImage").css("background","url(../img/coaloilgas/oil.jpg)");
+            $(".section-2-article h1").html("The Price of Oil") ;
+              $(".section-2-article p").html("Like other fossil fuels, oil's production, transport and use have significant environmental impacts. Oil production creates air pollution, greenhouse gas emissions that contribute to climate change, and wilderness destruction. Impacts on the landscape are so significant that Alberta's oil and gas industry now cuts more trees and destroys more habitat than the province's forest companies. The proliferation of offshore oil production, essentially a search for more remote sources of oil, has produced numerous large-scale oil spills, including a major spill from Nova Scotia's Terra Nova offshore platform in 2004 and the BP oil spill that devastated the Gulf of Mexico in 2010.<br><br>Transporting oil also has produced its share of environmental peril, from the Exxon Valdez disaster to leaks from oil and gas pipelines everywhere they exist. Even when pipelines operate as intended, they cut swaths through the landscape that fragment important habitat.And then there's climate change . Oil production and use have made significant contributions to global greenhouse gas emissions, increases in carbon dioxide concentrations in the atmosphere and the consequent changes to our climate."); 
+            break;
+        case 2:
+         $(".infoImage").css("background","url(../img/coaloilgas/gas.jpg)");
+            $(".section-2-article h1").html("Natural Gas:<br>The Newest Danger for Global Warming") ;
+              $(".section-2-article p").html("Fossil fuels come from drilling or mining deep underground to access stored energy sources from bygone millennia.  We bring them to the surface and burn them for heat or electricity or to run our cars and buses.  Burning fossil fuels creates carbon pollution.  It doesn’t matter if it is coal, oil, propane, kerosene, gasoline or natural gas—it all contains carbon, which gets released as a greenhouse gas.<br><br> Methane or natural gas, however, is 72 times more potent at capturing heat in the atmosphere than carbon dioxide over the first 20 years after release.  Methane gradually converts to carbon dioxide, so it’s worst in the short term; the global warming potential over 100 years is about 25 times that of carbon dioxide."); 
+            break;
+        }
         tlarticle.play().timeScale(1);
     }
 );
@@ -665,8 +833,8 @@ Snap.load("img/circle-dotted.svg", function (data) {
     }, {
         rotation: "30"
     }, "-=0.3").
-    staggerFrom(".continent-total",0.3, {
-        scale:0
+    staggerFrom(".continent-total", 0.3, {
+        scale: 0
     }, 0.3, "-=0.9");
 
 });
@@ -688,7 +856,7 @@ $('.circle-ripple').bind('click', function (event) {
         if (!$(".name-" + curbtn + "").hasClass("clicked")) {
             addNumber0(curbtn);
             addNumber1(curbtn);
-           
+
             $(".continent-" + curbtn + "").removeClass("hidden");
             $(".name-" + curbtn + "").css({
                 top: topPos1 + "%"
@@ -783,7 +951,7 @@ function addNumber0(curbtn) {
     });
 };
 $(".circle-ripple").tooltipster({
-    
+
 });
 //SEC-9
 

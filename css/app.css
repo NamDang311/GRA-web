@@ -2,6 +2,16 @@
    * START
    */
 /* line 52, app.scss */
+.icon-menu {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 30px;
+  z-index: 99;
+  top: 30px;
+}
+
+/* line 61, app.scss */
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -9,32 +19,32 @@ body {
   line-height: 1.7;
 }
 @media (min-width: 64em) {
-  /* line 52, app.scss */
+  /* line 61, app.scss */
   body {
     font-size: 0.96em;
     line-height: 2.04;
   }
 }
 @media (min-width: 85.375em) {
-  /* line 52, app.scss */
+  /* line 61, app.scss */
   body {
     font-size: 1.04em;
   }
 }
 @media (min-width: 120em) {
-  /* line 52, app.scss */
+  /* line 61, app.scss */
   body {
     font-size: 1.12em;
   }
 }
 @media (min-width: 160em) {
-  /* line 52, app.scss */
+  /* line 61, app.scss */
   body {
     font-size: 1.28em;
   }
 }
 
-/* line 72, app.scss */
+/* line 81, app.scss */
 .line {
   display: inline-block;
   vertical-align: bottom;
@@ -45,18 +55,18 @@ body {
   background-color: #353535;
 }
 
-/* line 82, app.scss */
+/* line 91, app.scss */
 .highlight {
   font-weight: bold;
   color: #FF6B6B;
 }
 
-/* line 87, app.scss */
+/* line 96, app.scss */
 .bold {
   font-weight: bold;
 }
 
-/* line 91, app.scss */
+/* line 100, app.scss */
 h1 {
   line-height: 1.25;
   font-family: "Miller Display", "Roboto Slab", sans-serif;
@@ -65,7 +75,7 @@ h1 {
   text-transform: capitalize;
 }
 
-/* line 99, app.scss */
+/* line 108, app.scss */
 p {
   font-family: "Source Sans Pro", "Roboto Condensed", sans-serif;
   font-weight: 400;
@@ -76,7 +86,7 @@ p {
   margin: 0px auto 0 auto;
 }
 
-/* line 109, app.scss */
+/* line 118, app.scss */
 h3 {
   line-height: 1.25;
   font-family: "Stellar", serif;
@@ -85,12 +95,12 @@ h3 {
   letter-spacing: 0.05em;
 }
 
-/* line 117, app.scss */
+/* line 126, app.scss */
 section {
   padding-top: 50px;
 }
 
-/* line 121, app.scss */
+/* line 130, app.scss */
 .open {
   text-align: center;
 }
@@ -98,13 +108,13 @@ section {
 /**
    * SEC-0
    */
-/* line 130, app.scss */
+/* line 139, app.scss */
 #section-0 {
   z-index: -2;
   padding-top: 0px;
   text-align: center;
 }
-/* line 134, app.scss */
+/* line 143, app.scss */
 #section-0 #section-0-title-wrap {
   position: absolute;
   top: 50%;
@@ -117,7 +127,7 @@ section {
   padding: 0;
   margin: 0;
 }
-/* line 145, app.scss */
+/* line 154, app.scss */
 #section-0 #section-0-title-wrap h1 {
   font-family: "Stellar", serif;
   font-size: 12vw;
@@ -126,7 +136,7 @@ section {
   padding-left: 3vw;
 }
 
-/* line 155, app.scss */
+/* line 164, app.scss */
 .video-container {
   width: 70vw;
   height: 70vw;
@@ -136,13 +146,13 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/* line 163, app.scss */
+/* line 172, app.scss */
 .video-container video {
   width: 100%;
   opacity: 1;
 }
 
-/* line 169, app.scss */
+/* line 178, app.scss */
 #motion-video {
   position: absolute;
   top: 50%;
@@ -150,7 +160,7 @@ section {
   transform: translate(-50%, -60%);
 }
 
-/* line 176, app.scss */
+/* line 185, app.scss */
 nav {
   height: 50px;
   z-index: 2;
@@ -158,18 +168,18 @@ nav {
   padding-top: 5px;
 }
 
-/* line 183, app.scss */
+/* line 192, app.scss */
 nav a {
   color: #383838;
   text-transform: uppercase;
 }
 
-/* line 188, app.scss */
+/* line 197, app.scss */
 .main {
   z-index: -999;
 }
 
-/* line 192, app.scss */
+/* line 201, app.scss */
 .opening {
   margin: 0 auto;
   width: 50vw;
@@ -177,7 +187,7 @@ nav a {
   position: absolute;
 }
 
-/* line 199, app.scss */
+/* line 208, app.scss */
 .opening .motionCircle {
   width: 1em;
   height: 1em;
@@ -187,19 +197,19 @@ nav a {
   top: 50%;
 }
 
-/* line 208, app.scss */
+/* line 217, app.scss */
 #motionCircle-1 {
   left: -10%;
   transform: translate(-50%, -50%);
 }
 
-/* line 213, app.scss */
+/* line 222, app.scss */
 #motionCircle-2 {
   right: -10%;
   transform: translate(50%, -50%);
 }
 
-/* line 218, app.scss */
+/* line 227, app.scss */
 .outerCircle, #motionCircle-6 {
   width: 50vw;
   height: 50vw;
@@ -211,14 +221,14 @@ nav a {
   transform: translate(-50%, -50%);
 }
 
-/* line 229, app.scss */
+/* line 238, app.scss */
 #motionCircle-6 {
   background: url(../img/worldmap.png);
   background-size: contain;
   z-index: -1;
 }
 
-/* line 236, app.scss */
+/* line 245, app.scss */
 #circle-line {
   width: 65vw;
   height: 65vw;
@@ -228,7 +238,7 @@ nav a {
   transform: translate(-50%, -50%);
 }
 
-/* line 245, app.scss */
+/* line 254, app.scss */
 .section-scroll {
   margin: 0 0 0 -15px;
   position: absolute;
@@ -239,7 +249,7 @@ nav a {
   cursor: pointer;
   z-index: 3;
 }
-/* line 254, app.scss */
+/* line 263, app.scss */
 .section-scroll .mouse {
   display: block;
   position: absolute;
@@ -252,7 +262,7 @@ nav a {
   -webkit-border-radius: 15px;
   border-radius: 10px;
 }
-/* line 266, app.scss */
+/* line 275, app.scss */
 .section-scroll .wheel {
   display: block;
   margin: 0 0 0 -2px;
@@ -270,7 +280,7 @@ nav a {
   animation: scroll-wheel 1.8s linear 0s infinite normal none;
 }
 
-/* line 284, app.scss */
+/* line 293, app.scss */
 #oilrig {
   width: 40px;
   position: absolute;
@@ -282,12 +292,12 @@ nav a {
 /**
    * SEC-1
    */
-/* line 299, app.scss */
+/* line 308, app.scss */
 #section-1 {
   text-align: center;
   background: #CFA98E;
 }
-/* line 302, app.scss */
+/* line 311, app.scss */
 #section-1 .smoke-bg {
   position: absolute;
   top: 0;
@@ -298,24 +308,24 @@ nav a {
   background-size: cover;
   opacity: .3;
 }
-/* line 312, app.scss */
+/* line 321, app.scss */
 #section-1 .row {
   margin-top: 80px;
 }
-/* line 315, app.scss */
+/* line 324, app.scss */
 #section-1 h1 {
   color: #725744;
   letter-spacing: 5px;
   font-size: 2em;
 }
-/* line 320, app.scss */
+/* line 329, app.scss */
 #section-1 h2 {
   color: white;
   letter-spacing: 10px;
   font-size: 8vw;
   margin-top: -10px;
 }
-/* line 326, app.scss */
+/* line 335, app.scss */
 #section-1 #unit {
   color: white;
   letter-spacing: 2px;
@@ -323,7 +333,7 @@ nav a {
   margin-top: -3vw;
   margin-bottom: 5px;
 }
-/* line 333, app.scss */
+/* line 342, app.scss */
 #section-1 p {
   font-size: 1.2em;
   color: #725744;
@@ -331,29 +341,27 @@ nav a {
   margin: 25px auto 100px auto;
   line-height: 2em;
 }
-/* line 340, app.scss */
+/* line 349, app.scss */
 #section-1 h3 {
   color: #353535;
-  display: inline;
   position: relative;
   cursor: pointer;
+  width: 100px;
+  height: 30px;
+  margin: 0 auto;
 }
-/* line 345, app.scss */
+/* line 356, app.scss */
 #section-1 h3 a {
   color: #353535;
+  display: block;
 }
-/* line 349, app.scss */
-#section-1 h3:after {
-  content: "";
-  background-color: #353535;
+/* line 361, app.scss */
+#section-1 .line {
+  width: 90px;
   height: 2px;
-  width: 100%;
-  position: absolute;
-  bottom: -30%;
-  left: -1.2%;
 }
 
-/* line 360, app.scss */
+/* line 368, app.scss */
 .linebreak {
   margin: 40px auto;
   height: 2px;
@@ -367,23 +375,23 @@ nav a {
 /**
    * SEC-2
    */
-/* line 377, app.scss */
+/* line 385, app.scss */
 #section-2 {
   text-align: center;
   background-color: #ffffff;
 }
-/* line 380, app.scss */
+/* line 388, app.scss */
 #section-2 h1 {
   color: #171723;
   line-height: 1.1em;
   font-family: "Miller Display", "Roboto Slab", sans-serif;
 }
-/* line 385, app.scss */
+/* line 393, app.scss */
 #section-2 .line {
   background: #353535;
 }
 
-/* line 390, app.scss */
+/* line 398, app.scss */
 #section-2 article {
   position: absolute;
   top: 0;
@@ -392,43 +400,43 @@ nav a {
   height: 100%;
   display: flex;
 }
-/* line 398, app.scss */
+/* line 405, app.scss */
 #section-2 article .infoImage {
   width: 40vw;
   height: 100vh;
   background: url(../img/coaloilgas/oil.jpg);
   background-size: cover;
 }
-/* line 404, app.scss */
+/* line 411, app.scss */
 #section-2 article .section-2-article {
   margin-left: 2vw;
   width: 45vw;
   height: 100vh;
   text-align: left;
 }
-/* line 409, app.scss */
+/* line 416, app.scss */
 #section-2 article .section-2-article #backbtn {
   width: 30px;
-  margin-top: 64px;
+  margin-top: 23px;
   margin-bottom: 10vh;
   cursor: pointer;
 }
-/* line 415, app.scss */
+/* line 422, app.scss */
 #section-2 article .section-2-article .line {
   margin: 40px 0;
 }
-/* line 418, app.scss */
+/* line 425, app.scss */
 #section-2 article .section-2-article p {
   margin: 0;
   font-size: 1em;
 }
 
-/* line 429, app.scss */
+/* line 436, app.scss */
 .section-2-items-wrapper {
   margin-top: 50px;
 }
 
-/* line 433, app.scss */
+/* line 440, app.scss */
 .markup {
   color: #353535;
   text-align: center;
@@ -436,7 +444,7 @@ nav a {
   cursor: pointer;
 }
 
-/* line 440, app.scss */
+/* line 447, app.scss */
 .markup-items {
   overflow-x: hidden;
   position: relative;
@@ -446,21 +454,21 @@ nav a {
   transition: outline-color 0.4s;
   padding-top: 30px;
 }
-/* line 448, app.scss */
+/* line 455, app.scss */
 .markup-items h2 {
   font-size: 5em;
   font-family: "Source Sans Pro", "Roboto Condensed", sans-serif;
   font-weight: 600;
   transition: all 0.4s;
 }
-/* line 455, app.scss */
+/* line 462, app.scss */
 .markup-items .underline {
   width: 100px;
   height: 4px;
   background-color: #353535;
   margin: 0 auto;
 }
-/* line 461, app.scss */
+/* line 468, app.scss */
 .markup-items #coal-cart, .markup-items #oil-cart, .markup-items #gas-cart {
   position: absolute;
   bottom: 5%;
@@ -468,15 +476,15 @@ nav a {
   left: 50%;
   transform: translate(-50%, 0);
 }
-/* line 468, app.scss */
+/* line 475, app.scss */
 .markup-items #oil-cart {
   width: 90%;
 }
-/* line 472, app.scss */
+/* line 479, app.scss */
 .markup-items #gas-cart {
   width: 70%;
 }
-/* line 476, app.scss */
+/* line 483, app.scss */
 .markup-items .motion {
   height: 4px;
   width: 0;
@@ -486,51 +494,51 @@ nav a {
   right: 0;
 }
 
-/* line 486, app.scss */
+/* line 493, app.scss */
 .markup:hover .markup-items {
   outline: 4px solid #353535;
 }
-/* line 488, app.scss */
+/* line 495, app.scss */
 .markup:hover .markup-items h2 {
   letter-spacing: 0.2em;
 }
 
-/* line 493, app.scss */
+/* line 500, app.scss */
 .markup:hover .motion {
   animation: motion 0.8s linear infinite;
 }
 
-/* line 497, app.scss */
+/* line 504, app.scss */
 .markup:hover .motion {
   animation: motion 0.8s linear infinite;
 }
 
-/* line 501, app.scss */
+/* line 508, app.scss */
 .coal-video,
 .coal-content {
   display: none;
   margin-top: 20px;
 }
 
-/* line 507, app.scss */
+/* line 514, app.scss */
 .coal-content div:nth-child(1) {
   text-align: right;
   padding-right: 20px;
 }
 
-/* line 512, app.scss */
+/* line 519, app.scss */
 .coal-content p {
   color: #353535;
 }
 
-/* line 516, app.scss */
+/* line 523, app.scss */
 #coalRocks {
   margin-bottom: -10px;
   padding: 0;
   min-height: 80px;
 }
 
-/* line 522, app.scss */
+/* line 529, app.scss */
 #coal {
   margin: 0;
 }
@@ -541,27 +549,27 @@ nav a {
 /**
    * SEC-3
    */
-/* line 536, app.scss */
+/* line 543, app.scss */
 #section-3 {
   text-align: center;
   background-color: #1A535C;
 }
-/* line 539, app.scss */
+/* line 546, app.scss */
 #section-3 .open h1 {
   font-family: "Miller Display", "Roboto Slab", sans-serif;
   line-height: 1.1em;
   color: #ffffff;
 }
-/* line 544, app.scss */
+/* line 551, app.scss */
 #section-3 .line {
   background: white;
 }
-/* line 547, app.scss */
+/* line 554, app.scss */
 #section-3 p {
   color: #ffffff;
 }
 
-/* line 554, app.scss */
+/* line 559, app.scss */
 #section-3 .section-3-items {
   margin-top: 40vh;
   text-align: center;
@@ -572,7 +580,7 @@ nav a {
   opacity: 0.5;
   transition: opacity 0.2s ease-in;
 }
-/* line 563, app.scss */
+/* line 568, app.scss */
 #section-3 .section-3-items h1 {
   font-family: "Stellar", serif;
   opacity: .3;
@@ -580,22 +588,22 @@ nav a {
   font-size: 7vw;
   white-space: nowrap;
 }
-/* line 570, app.scss */
+/* line 575, app.scss */
 #section-3 .section-3-items p {
   margin-top: 0px;
   font-size: 1em;
   font-weight: 200;
 }
-/* line 575, app.scss */
+/* line 580, app.scss */
 #section-3 .section-3-items .section-3-image {
   width: 100%;
 }
-/* line 578, app.scss */
+/* line 583, app.scss */
 #section-3 .section-3-items .section-3-items-data {
   opacity: 0;
 }
 
-/* line 583, app.scss */
+/* line 588, app.scss */
 #section-3 .section-3-items:hover {
   opacity: 1;
 }
@@ -606,30 +614,30 @@ nav a {
 /**
    * SEC-4
    */
-/* line 597, app.scss */
+/* line 602, app.scss */
 #section-4 {
   overflow: hidden;
   text-align: center;
   background: #FBF18F;
 }
-/* line 601, app.scss */
+/* line 606, app.scss */
 #section-4 .open h1 {
   padding: 0;
   color: white;
   font-family: "Miller Display", "Roboto Slab", sans-serif;
   opacity: 0;
 }
-/* line 607, app.scss */
+/* line 612, app.scss */
 #section-4 .open p {
   color: white;
   opacity: 0;
 }
-/* line 611, app.scss */
+/* line 616, app.scss */
 #section-4 .line {
   background: white;
 }
 
-/* line 616, app.scss */
+/* line 621, app.scss */
 .cntr {
   position: absolute;
   top: 50%;
@@ -638,35 +646,26 @@ nav a {
   z-index: 1;
 }
 
-/* line 624, app.scss */
-.icon-menu {
-  width: 44px;
-  height: 44px;
-  position: absolute;
-  right: 36px;
-  z-index: 99;
-  top: 36px;
-}
-
-/* line 633, app.scss */
+/* line 629, app.scss */
 #city2 {
-  bottom: 0;
+  bottom: -2%;
   position: absolute;
   left: 0;
   z-index: 9;
   width: 100vw;
 }
 
-/* line 641, app.scss */
+/* line 637, app.scss */
 #windowsHolder {
-  bottom: -0.5%;
+  bottom: -2%;
   position: absolute;
   left: 0;
   z-index: 999;
   width: 100%;
+  left: -0.1%;
 }
 
-/* line 649, app.scss */
+/* line 646, app.scss */
 .clouds {
   width: 200px;
   position: absolute;
@@ -674,42 +673,42 @@ nav a {
   opacity: .1;
 }
 
-/* line 656, app.scss */
+/* line 653, app.scss */
 #cloud-1 {
   top: 20%;
   left: 50%;
   animation: fly linear 45s infinite;
 }
 
-/* line 663, app.scss */
+/* line 660, app.scss */
 #cloud-2 {
   top: 50%;
   left: 20%;
   animation: fly linear 25s infinite;
 }
 
-/* line 670, app.scss */
+/* line 667, app.scss */
 #cloud-3 {
   top: 10%;
   left: 30%;
   animation: fly linear 35s infinite;
 }
 
-/* line 677, app.scss */
+/* line 674, app.scss */
 #cloud-4 {
   top: 30%;
   left: 10%;
   animation: fly linear 65s infinite;
 }
 
-/* line 684, app.scss */
+/* line 681, app.scss */
 #cloud-5 {
   top: 40%;
   left: 00%;
   animation: fly linear 40s infinite;
 }
 
-/* line 691, app.scss */
+/* line 688, app.scss */
 .sun {
   height: 200px;
   width: 200px;
@@ -721,7 +720,7 @@ nav a {
   background-color: #FF6B6B;
 }
 
-/* line 702, app.scss */
+/* line 699, app.scss */
 .sunRay {
   height: 250px;
   width: 250px;
@@ -736,7 +735,7 @@ nav a {
   box-shadow: 0 0 0 20px rgba(255, 107, 107, 0.5), 0 0 0 40px rgba(255, 107, 107, 0.3);
 }
 
-/* line 716, app.scss */
+/* line 713, app.scss */
 .bulb-wrapper {
   width: 35vh;
   height: 50vh;
@@ -746,7 +745,7 @@ nav a {
   z-index: 99;
 }
 
-/* line 725, app.scss */
+/* line 722, app.scss */
 #bulb {
   padding-bottom: 100%;
   position: absolute;
@@ -758,7 +757,7 @@ nav a {
   transform: translate(-50%, 0);
 }
 
-/* line 736, app.scss */
+/* line 733, app.scss */
 .lightray {
   position: absolute;
   background-color: rgba(251, 241, 143, 0.6);
@@ -772,7 +771,7 @@ nav a {
   display: none;
 }
 
-/* line 749, app.scss */
+/* line 746, app.scss */
 .handler, .handler .handler-wrapper {
   height: auto;
   position: absolute;
@@ -782,13 +781,13 @@ nav a {
   height: 300px;
   z-index: 1;
 }
-/* line 757, app.scss */
+/* line 754, app.scss */
 .handler .handler-wrapper {
   right: 0%;
   overflow-y: hidden;
   z-index: 1;
 }
-/* line 763, app.scss */
+/* line 760, app.scss */
 .handler .handler-zone {
   width: 100%;
   position: absolute;
@@ -796,7 +795,7 @@ nav a {
   left: 0;
   z-index: 1;
 }
-/* line 770, app.scss */
+/* line 767, app.scss */
 .handler .handler-ripple {
   background-color: #FF6B6B;
   width: 19.4px;
@@ -811,7 +810,7 @@ nav a {
   -webkit-animation: ripple 2s linear infinite;
   animation: ripple 2s linear infinite;
 }
-/* line 784, app.scss */
+/* line 781, app.scss */
 .handler .handler-hint {
   position: absolute;
   bottom: -40px;
@@ -821,7 +820,7 @@ nav a {
   transform: translate(-50%, 0);
   text-align: center;
 }
-/* line 793, app.scss */
+/* line 790, app.scss */
 .handler h1, .handler .handler-wrapper h1 {
   color: #353535;
   text-transform: uppercase;
@@ -829,7 +828,7 @@ nav a {
   letter-spacing: 0.1em;
   white-space: nowrap;
 }
-/* line 800, app.scss */
+/* line 797, app.scss */
 .handler #arrow {
   width: 30px;
   position: absolute;
@@ -844,46 +843,46 @@ nav a {
 /**
    * SEC-5 
    */
-/* line 819, app.scss */
+/* line 816, app.scss */
 #section-5 {
   background-color: #ffffff;
 }
-/* line 821, app.scss */
+/* line 818, app.scss */
 #section-5 .open h1 {
   font-family: "Miller Display", "Roboto Slab", sans-serif;
   line-height: 1.1em;
   color: #353535;
 }
-/* line 826, app.scss */
+/* line 823, app.scss */
 #section-5 .open p {
   font-family: "Source Sans Pro", "Roboto Condensed", sans-serif;
   font-size: 1em;
   color: #353535;
   letter-spacing: 0.05em;
 }
-/* line 832, app.scss */
+/* line 829, app.scss */
 #section-5 .section-5-table {
   width: 100%;
 }
-/* line 834, app.scss */
+/* line 831, app.scss */
 #section-5 .section-5-table ul {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
 }
-/* line 838, app.scss */
+/* line 835, app.scss */
 #section-5 .section-5-table ul li {
   list-style: none;
   font-family: "Miller Display", "Roboto Slab", sans-serif;
   font-style: italic;
 }
-/* line 845, app.scss */
+/* line 842, app.scss */
 #section-5 .section-5-data {
   position: relative;
   height: 16px;
   font-family: "Stellar", serif;
 }
-/* line 849, app.scss */
+/* line 846, app.scss */
 #section-5 .section-5-data .line-data {
   width: 100%;
   height: 2px;
@@ -891,7 +890,7 @@ nav a {
   position: absolute;
   bottom: 50%;
 }
-/* line 856, app.scss */
+/* line 853, app.scss */
 #section-5 .section-5-data .road-data {
   position: absolute;
   top: 0;
@@ -900,14 +899,14 @@ nav a {
   width: 73%;
   background: #FF6B6B;
 }
-/* line 863, app.scss */
+/* line 860, app.scss */
 #section-5 .section-5-data .road-data:after {
   content: "Road Transport";
   position: absolute;
   right: 0;
   top: 100%;
 }
-/* line 870, app.scss */
+/* line 867, app.scss */
 #section-5 .section-5-data .aviation-data {
   position: absolute;
   top: 0;
@@ -916,14 +915,14 @@ nav a {
   width: 11%;
   background: #1A535C;
 }
-/* line 877, app.scss */
+/* line 874, app.scss */
 #section-5 .section-5-data .aviation-data:after {
   content: "Aviation";
   position: absolute;
   right: 0;
   top: 100%;
 }
-/* line 884, app.scss */
+/* line 881, app.scss */
 #section-5 .section-5-data .marine-data {
   position: absolute;
   top: 0;
@@ -932,7 +931,7 @@ nav a {
   width: 14%;
   background: #FBF18F;
 }
-/* line 891, app.scss */
+/* line 888, app.scss */
 #section-5 .section-5-data .marine-data:after {
   content: "Marine Shipping";
   position: absolute;
@@ -941,7 +940,7 @@ nav a {
   white-space: nowrap;
 }
 
-/* line 902, app.scss */
+/* line 899, app.scss */
 .graphic {
   z-index: 5;
   position: absolute;
@@ -950,7 +949,7 @@ nav a {
   bottom: 0;
 }
 
-/* line 910, app.scss */
+/* line 907, app.scss */
 #bus {
   width: 12vw;
   height: auto;
@@ -961,7 +960,7 @@ nav a {
   animation: traffic linear 9s infinite;
 }
 
-/* line 920, app.scss */
+/* line 917, app.scss */
 #truck {
   width: 9vw;
   height: auto;
@@ -972,7 +971,7 @@ nav a {
   animation: traffic linear 12s infinite;
 }
 
-/* line 930, app.scss */
+/* line 927, app.scss */
 #truck2 {
   width: 9vw;
   height: auto;
@@ -983,7 +982,7 @@ nav a {
   animation: traffic linear 18s infinite;
 }
 
-/* line 940, app.scss */
+/* line 937, app.scss */
 #car {
   width: 6vw;
   height: auto;
@@ -994,7 +993,7 @@ nav a {
   animation: traffic linear 10s infinite;
 }
 
-/* line 950, app.scss */
+/* line 947, app.scss */
 #bigcar {
   width: 7vw;
   height: auto;
@@ -1005,7 +1004,18 @@ nav a {
   animation: traffic linear 8s infinite;
 }
 
-/* line 960, app.scss */
+/* line 957, app.scss */
+#ship {
+  width: 19vw;
+  height: auto;
+  position: absolute;
+  bottom: 5%;
+  left: 00%;
+  -webkit-animation: ship linear 30s infinite;
+  animation: ship linear 30s infinite;
+}
+
+/* line 967, app.scss */
 .plane {
   width: 12vw;
   height: auto;
@@ -1015,12 +1025,12 @@ nav a {
   z-index: 1;
 }
 
-/* line 969, app.scss */
+/* line 976, app.scss */
 .plane:nth-of-type(1) {
   animation: fly linear 15s infinite;
 }
 
-/* line 973, app.scss */
+/* line 980, app.scss */
 .plane:nth-of-type(2) {
   top: 100px;
   width: 10vw;
@@ -1031,7 +1041,7 @@ nav a {
   animation-delay: 5s;
 }
 
-/* line 983, app.scss */
+/* line 990, app.scss */
 .plane:nth-of-type(3) {
   top: 50px;
   width: 8vw;
@@ -1041,14 +1051,14 @@ nav a {
   animation-direction: reverse;
 }
 
-/* line 992, app.scss */
+/* line 999, app.scss */
 .plane:nth-of-type(4) {
   top: 190px;
   width: 15vw;
   animation: fly linear 10s infinite;
 }
 
-/* line 998, app.scss */
+/* line 1005, app.scss */
 #helicopter {
   width: 8vw;
   height: auto;
@@ -1059,13 +1069,13 @@ nav a {
   z-index: 1;
 }
 
-/* line 1008, app.scss */
+/* line 1015, app.scss */
 #land {
   width: 100%;
   position: absolute;
   bottom: 2%;
 }
-/* line 1012, app.scss */
+/* line 1019, app.scss */
 #land .road-line-2 {
   position: absolute;
   bottom: 0;
@@ -1075,12 +1085,14 @@ nav a {
   transform: translate(0, 40%);
 }
 
-/* line 1022, app.scss */
+/* line 1029, app.scss */
 #sea {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 80px;
+  min-height: 20px;
+  max-height: 90px;
+  height: 9vh;
   width: 100vw;
   background-image: url(../img/sea.svg);
   background-position: 0px 0px;
@@ -1089,15 +1101,15 @@ nav a {
   -webkit-animation: seawave 24s linear infinite;
 }
 
-/* line 1035, app.scss */
+/* line 1044, app.scss */
 #dock {
   width: 20vw;
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: -1%;
 }
 
-/* line 1042, app.scss */
+/* line 1051, app.scss */
 #linecity {
   width: 100vw;
   position: absolute;
@@ -1106,7 +1118,7 @@ nav a {
   z-index: 0;
 }
 
-/* line 1050, app.scss */
+/* line 1059, app.scss */
 #factory {
   width: 60vw;
   position: absolute;
@@ -1115,13 +1127,13 @@ nav a {
   z-index: 0;
   vertical-align: bottom;
 }
-/* line 1057, app.scss */
+/* line 1066, app.scss */
 #factory .factory-img {
   height: 100%;
   vertical-align: bottom;
 }
 
-/* line 1063, app.scss */
+/* line 1072, app.scss */
 .smoke-1 {
   z-index: 3;
   height: 20px;
@@ -1131,7 +1143,7 @@ nav a {
   left: 3.5%;
 }
 
-/* line 1072, app.scss */
+/* line 1081, app.scss */
 #smoke-2 {
   z-index: -1;
   height: 340px;
@@ -1142,7 +1154,7 @@ nav a {
   opacity: .4;
 }
 
-/* line 1082, app.scss */
+/* line 1091, app.scss */
 .airballoon {
   z-index: 2;
   width: 8vw;
@@ -1156,13 +1168,13 @@ nav a {
   text-align: center;
   margin-bottom: 50px;
 }
-/* line 1094, app.scss */
+/* line 1103, app.scss */
 .airballoon img {
   width: 100%;
   margin-bottom: 10px;
 }
 
-/* line 1100, app.scss */
+/* line 1109, app.scss */
 .aviation-ripple {
   background-color: #FF6B6B;
   width: 1.2em;
@@ -1176,21 +1188,21 @@ nav a {
   animation: ripple 2s linear infinite;
 }
 
-/* line 1113, app.scss */
+/* line 1122, app.scss */
 .marine-ripple {
   background-color: #FF6B6B;
   width: 1.1em;
   height: 1.1em;
   border-radius: 50%;
   position: absolute;
-  right: 8.5%;
+  right: 9.4%;
   bottom: 57%;
   cursor: pointer;
   -webkit-animation: ripple 2s linear infinite;
   animation: ripple 2s linear infinite;
 }
 
-/* line 1126, app.scss */
+/* line 1135, app.scss */
 .road-ripple {
   background-color: #FF6B6B;
   width: 1.1em;
@@ -1207,24 +1219,24 @@ nav a {
 /**
    * SEC-6 
    */
-/* line 1144, app.scss */
+/* line 1153, app.scss */
 #section-6 {
   text-align: center;
   background-color: #1A535C;
   color: white;
 }
-/* line 1148, app.scss */
+/* line 1157, app.scss */
 #section-6 .open h1 {
   font-family: "Miller Display", "Roboto Slab", sans-serif;
   line-height: 1.1em;
 }
-/* line 1153, app.scss */
+/* line 1162, app.scss */
 #section-6 .open p {
   font-family: "Source Sans Pro", "Roboto Condensed", sans-serif;
   font-size: 1em;
   letter-spacing: 0.05em;
 }
-/* line 1159, app.scss */
+/* line 1168, app.scss */
 #section-6 .line {
   background: white;
 }
@@ -1235,51 +1247,51 @@ nav a {
 /**
    * SEC-8
    */
-/* line 1173, app.scss */
+/* line 1182, app.scss */
 #section-8 {
   text-align: center;
 }
-/* line 1176, app.scss */
+/* line 1185, app.scss */
 #section-8 .open h1 {
   padding: 0;
   font-family: "Miller Display", "Roboto Slab", sans-serif;
 }
-/* line 1180, app.scss */
+/* line 1189, app.scss */
 #section-8 .open {
   margin-bottom: 5vh;
 }
 
-/* line 1185, app.scss */
+/* line 1194, app.scss */
 #cn {
   left: 72%;
   top: 40%;
 }
 
-/* line 1190, app.scss */
+/* line 1199, app.scss */
 #usa {
   left: 22%;
   top: 42%;
 }
 
-/* line 1195, app.scss */
+/* line 1204, app.scss */
 #ind {
   left: 67%;
   top: 47%;
 }
 
-/* line 1200, app.scss */
+/* line 1209, app.scss */
 #ru {
   left: 73%;
   top: 32%;
 }
 
-/* line 1205, app.scss */
+/* line 1214, app.scss */
 #ja {
   left: 81%;
   top: 43%;
 }
 
-/* line 1210, app.scss */
+/* line 1219, app.scss */
 #worldmap {
   width: 100%;
   position: relative;
@@ -1287,7 +1299,7 @@ nav a {
   z-index: 9;
   overflow: visible;
 }
-/* line 1216, app.scss */
+/* line 1225, app.scss */
 #worldmap .circleDotted {
   position: absolute;
   top: 0;
@@ -1295,14 +1307,14 @@ nav a {
   width: 100%;
 }
 
-/* line 1224, app.scss */
+/* line 1233, app.scss */
 #section-8 .data-wrapper {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
 }
-/* line 1229, app.scss */
+/* line 1238, app.scss */
 #section-8 .data-wrapper .continent-total {
   text-align: center;
   width: 40%;
@@ -1314,17 +1326,17 @@ nav a {
   top: 50%;
   transform: translate(0, -50%);
 }
-/* line 1239, app.scss */
+/* line 1248, app.scss */
 #section-8 .data-wrapper .continent-total .data-flex {
   padding-top: 20%;
 }
 @media (min-width: 48em) {
-  /* line 1242, app.scss */
+  /* line 1251, app.scss */
   #section-8 .data-wrapper .continent-total .totalTitle {
     font-size: 14px;
   }
 }
-/* line 1247, app.scss */
+/* line 1256, app.scss */
 #section-8 .data-wrapper .continent-total .totalNumber {
   font-family: "Miller Display", "Roboto Slab", sans-serif;
   line-height: 0.80em;
@@ -1333,19 +1345,19 @@ nav a {
   margin: 0;
   padding: 0;
 }
-/* line 1254, app.scss */
+/* line 1263, app.scss */
 #section-8 .data-wrapper .continent-total .totalNumber:after {
   content: "gt";
   font-size: 0.4em;
 }
 @media (min-width: 85.375em) {
-  /* line 1247, app.scss */
+  /* line 1256, app.scss */
   #section-8 .data-wrapper .continent-total .totalNumber {
     font-size: 3.2em;
   }
 }
 
-/* line 1265, app.scss */
+/* line 1274, app.scss */
 .circle-ripple {
   overflow: visible;
   background-color: #f7e52d;
@@ -1356,7 +1368,7 @@ nav a {
   position: absolute;
 }
 
-/* line 1275, app.scss */
+/* line 1284, app.scss */
 .continent {
   opacity: 1;
   position: absolute;
@@ -1364,39 +1376,39 @@ nav a {
   right: 0;
 }
 
-/* line 1282, app.scss */
+/* line 1291, app.scss */
 .continent-content {
   position: relative;
   height: 30vh;
 }
-/* line 1285, app.scss */
+/* line 1294, app.scss */
 .continent-content img {
   margin-bottom: 3px;
   margin-right: 5px;
 }
 
-/* line 1291, app.scss */
+/* line 1300, app.scss */
 .hidden {
   background-color: aqua;
   display: none;
 }
 
-/* line 1296, app.scss */
+/* line 1305, app.scss */
 .continent:not(.hidden) {
   -webkit-transition: background-color 5s;
   transition: background-color 5s;
 }
 
-/* line 1301, app.scss */
+/* line 1310, app.scss */
 .activated {
   background-color: #FF6B6B;
 }
 
-/* line 1304, app.scss */
+/* line 1313, app.scss */
 .timespan {
   margin-top: 10vh;
 }
-/* line 1306, app.scss */
+/* line 1315, app.scss */
 .timespan .timespanMark {
   padding: 0 15px 0 15px;
   font-weight: bold;
@@ -1405,24 +1417,24 @@ nav a {
 /**
    * Section-9
    */
-/* line 1318, app.scss */
+/* line 1327, app.scss */
 #section-9 {
   background-color: #FBF18F;
 }
-/* line 1320, app.scss */
+/* line 1329, app.scss */
 #section-9 .open h1 {
   font-family: "Miller Display", "Roboto Slab", sans-serif;
   line-height: 1.1em;
   color: #353535;
 }
-/* line 1325, app.scss */
+/* line 1334, app.scss */
 #section-9 .open p {
   font-family: "Source Sans Pro", "Roboto Condensed", sans-serif;
   color: #353535;
   letter-spacing: 0.05em;
 }
 
-/* line 1332, app.scss */
+/* line 1341, app.scss */
 .thermal {
   width: 350px;
   height: 170px;
@@ -1431,7 +1443,7 @@ nav a {
   align-items: center;
   justify-content: space-between;
 }
-/* line 1339, app.scss */
+/* line 1348, app.scss */
 .thermal .thermal-head {
   width: 170px;
   height: 170px;
@@ -1440,7 +1452,7 @@ nav a {
   background: #FBF18F;
   overflow: hidden;
 }
-/* line 1346, app.scss */
+/* line 1355, app.scss */
 .thermal .thermal-head .thermal-content {
   text-align: center;
   font-family: "Miller Display", "Roboto Slab", sans-serif;
@@ -1449,14 +1461,14 @@ nav a {
   font-style: italic;
   transform: translate(0, 7%);
 }
-/* line 1353, app.scss */
+/* line 1362, app.scss */
 .thermal .thermal-head .thermal-content div {
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* line 1361, app.scss */
+/* line 1370, app.scss */
 .thermal .thermal-buttons {
   width: 40px;
   height: 40px;
@@ -1465,17 +1477,17 @@ nav a {
   cursor: pointer;
 }
 
-/* line 1370, app.scss */
+/* line 1379, app.scss */
 .section-9-article {
   width: 800px;
   margin: 20px auto 0 auto;
 }
-/* line 1373, app.scss */
+/* line 1382, app.scss */
 .section-9-article article {
   position: absolute;
   display: flex;
 }
-/* line 1377, app.scss */
+/* line 1386, app.scss */
 .section-9-article .headline {
   font-size: 10em;
   font-style: italic;
@@ -1484,7 +1496,7 @@ nav a {
   margin-right: 60px;
   opacity: 0;
 }
-/* line 1385, app.scss */
+/* line 1394, app.scss */
 .section-9-article .content {
   width: 400px;
   opacity: 0;
@@ -1496,21 +1508,21 @@ nav a {
 /**
    * SEC-10
    */
-/* line 1401, app.scss */
+/* line 1410, app.scss */
 #section-10 {
   background: #1A535C;
 }
-/* line 1403, app.scss */
+/* line 1412, app.scss */
 #section-10 .open h1 {
   color: white;
   text-transform: none;
 }
-/* line 1407, app.scss */
+/* line 1416, app.scss */
 #section-10 .open .line {
   background: white;
 }
 
-/* line 1412, app.scss */
+/* line 1421, app.scss */
 .impact-items-wrapper {
   width: 99vw;
   height: 400px;
@@ -1522,7 +1534,7 @@ nav a {
   justify-content: space-between;
   padding: 0 100px;
 }
-/* line 1422, app.scss */
+/* line 1431, app.scss */
 .impact-items-wrapper .impact-items {
   text-align: left;
   width: 300px;
@@ -1534,35 +1546,35 @@ nav a {
   margin-top: -100px;
   outline: 2px solid rgba(255, 255, 255, 0);
 }
-/* line 1432, app.scss */
+/* line 1441, app.scss */
 .impact-items-wrapper .impact-items .impact-contents {
   width: 90%;
   margin: 0 auto;
 }
-/* line 1435, app.scss */
+/* line 1444, app.scss */
 .impact-items-wrapper .impact-items .impact-contents img {
   width: 150px;
   margin-bottom: 40px;
 }
-/* line 1439, app.scss */
+/* line 1448, app.scss */
 .impact-items-wrapper .impact-items .impact-contents .line {
   display: block;
   background: white;
 }
-/* line 1443, app.scss */
+/* line 1452, app.scss */
 .impact-items-wrapper .impact-items .impact-contents h1 {
   color: white;
   font-family: "Miller Display", "Roboto Slab", sans-serif;
   font-size: 1.4em;
   letter-spacing: 0.2em;
 }
-/* line 1449, app.scss */
+/* line 1458, app.scss */
 .impact-items-wrapper .impact-items .impact-contents p {
   font-size: 0.8em;
   font-weight: 200;
   color: white;
 }
-/* line 1455, app.scss */
+/* line 1464, app.scss */
 .impact-items-wrapper .impact-items:hover {
   outline: 2px solid #FF6B6B;
 }
@@ -1573,11 +1585,11 @@ nav a {
 /**
    *  SEC 11
    */
-/* line 1471, app.scss */
+/* line 1480, app.scss */
 #section-11 {
   background: #FF6B6B;
 }
-/* line 1473, app.scss */
+/* line 1482, app.scss */
 #section-11 .msg-wrap {
   position: absolute;
   width: 100%;
@@ -1586,16 +1598,16 @@ nav a {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-/* line 1480, app.scss */
+/* line 1489, app.scss */
 #section-11 .msg-wrap h1 {
   font-size: 3vw;
 }
-/* line 1483, app.scss */
+/* line 1492, app.scss */
 #section-11 .msg-wrap h3 a {
   font-size: 10vw;
   color: white;
 }
-/* line 1487, app.scss */
+/* line 1496, app.scss */
 #section-11 .msg-wrap .line {
   width: 70vw;
   height: 4px;
@@ -1608,18 +1620,18 @@ nav a {
 /**
    * HEATWAVE
    */
-/* line 1506, app.scss */
+/* line 1515, app.scss */
 #section-heatwave .open h1 {
   font-family: "Miller Display", "Roboto Slab", sans-serif;
   text-transform: uppercase;
   color: #353535;
   font-size: 10em;
 }
-/* line 1512, app.scss */
+/* line 1521, app.scss */
 #section-heatwave blockquote {
   margin-bottom: 32px;
 }
-/* line 1515, app.scss */
+/* line 1524, app.scss */
 #section-heatwave .open p {
   font-family: "Source Sans Pro", "Roboto Condensed", sans-serif;
   font-size: 1.2em;
@@ -1628,7 +1640,7 @@ nav a {
   font-weight: 200;
   line-height: 2em;
 }
-/* line 1523, app.scss */
+/* line 1532, app.scss */
 #section-heatwave img {
   position: absolute;
   width: 500px;
@@ -1636,12 +1648,12 @@ nav a {
   opacity: .03;
 }
 
-/* line 1531, app.scss */
+/* line 1540, app.scss */
 #section-heatwave-2 {
   background: black;
 }
 
-/* line 1535, app.scss */
+/* line 1544, app.scss */
 .section-video {
   position: absolute;
   top: 50%;
@@ -1706,6 +1718,14 @@ nav a {
   }
   to {
     transform: translateX(150vw);
+  }
+}
+@keyframes ship {
+  from {
+    transform: translateX(-20vw);
+  }
+  to {
+    transform: translateX(120vw);
   }
 }
 @keyframes Floating {
