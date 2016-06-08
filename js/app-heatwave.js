@@ -4,4 +4,4 @@ $(".main").onepage_scroll({
     pagination: true
     , loop: false
 });
-
+plyr.setup();

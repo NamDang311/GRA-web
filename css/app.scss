@@ -78,6 +78,37 @@ body {
     }
 }
 
+.loadingScreen {
+    width: 100vw;
+    height:100vh;
+    position: absolute;
+    z-index: 999999;
+    background: $red;
+    .indicator{
+        position: absolute;
+        top:50%;
+        left:50%;
+        height:50px;
+        transform: translate(-50%,0);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content:center; 
+        #earthLoading{
+            width:50px;
+            height:50px;
+            margin-right: 20px;
+        }
+        h3{
+            font-size: 1.5em;
+            font-family: $fonts;
+            height:40px;
+            margin-top: 15px;
+        }
+    }
+}
+
+
 .line {
     display: inline-block;
     vertical-align: bottom;
@@ -351,18 +382,17 @@ nav a {
         position: relative;
         cursor: pointer;
         width: 100px;
-        height:30px;
-        margin:0 auto;
+        height: 30px;
+        margin: 0 auto;
         a {
             color: $dark;
             display: block;
         }
     }
-    .line{
+    .line {
         width: 90px;
-        height:2px;
+        height: 2px;
     }
- 
 }
 
 .linebreak {
@@ -394,44 +424,42 @@ nav a {
         background: $dark;
     }
 }
+
 .section-2-wrapper {}
+
 #section-2 article {
     position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
-    .infoImage{
-        width:40vw;
-        height:100vh;
+    .infoImage {
+        width: 40vw;
+        height: 100vh;
         background: url(../img/coaloilgas/oil.jpg);
         background-size: cover;
     }
-    .section-2-article{
+    .section-2-article {
         margin-left: 2vw;
-        width:45vw;
+        width: 45vw;
         height: 100vh;
         text-align: left;
-        #backbtn{
-            width:30px;
-            margin-top:23px;
+        #backbtn {
+            width: 30px;
+            margin-top: 23px;
             margin-bottom: 10vh;
             cursor: pointer;
         }
         .line {
-            margin:40px 0;
+            margin: 40px 0;
         }
-        p{
-            margin:0;
+        p {
+            margin: 0;
             font-size: 1em;
-           
         }
     }
 }
-
-
-
 
 .section-2-items-wrapper {
     margin-top: 50px;
@@ -456,8 +484,7 @@ nav a {
         font-size: 5em;
         font-family: $fontp;
         font-weight: 600;
-       
-         transition: all 0.4s;
+        transition: all 0.4s;
     }
     .underline {
         width: 100px;
@@ -492,7 +519,7 @@ nav a {
 
 .markup:hover .markup-items {
     outline: 4px solid $dark;
-    h2{
+    h2 {
         letter-spacing: 0.2em;
     }
 }
@@ -640,7 +667,7 @@ nav a {
     left: 0;
     z-index: 999;
     width: 100%;
-    left:-0.1%;
+    left: -0.1%;
 }
 
 .clouds {
@@ -1031,8 +1058,8 @@ nav a {
     bottom: 0;
     left: 0;
     min-height: 20px;
-    max-height:90px;
-    height:9vh;
+    max-height: 90px;
+    height: 9vh;
     width: 100vw;
     background-image: url(../img/sea.svg);
     background-position: 0px 0px;
@@ -1153,19 +1180,17 @@ nav a {
 #section-6 {
     text-align: center;
     background-color: $darkBlue;
-     color: white;
+    color: white;
     .open h1 {
         font-family: $fonth;
         line-height: 1.1em;
-        
     }
     .open p {
         font-family: $fontp;
         font-size: 1em;
-       
         letter-spacing: 0.05em;
     }
-    .line{
+    .line {
         background: white;
     }
 }
@@ -1175,12 +1200,12 @@ nav a {
    * END OF SEC-6 
    */
 
+
 /**
    * SEC-8
    */
 
 #section-8 {
- 
     text-align: center;
     .open h1 {
         padding: 0;
@@ -1285,7 +1310,7 @@ nav a {
     opacity: 1;
     position: absolute;
     font-size: 1em;
-    right:0;
+    right: 0;
 }
 
 .continent-content {
@@ -1310,13 +1335,13 @@ nav a {
 .activated {
     background-color: $red;
 }
-.timespan{
+
+.timespan {
     margin-top: 10vh;
     .timespanMark {
-    padding: 0 15px 0 15px;
-    font-weight: bold;
-}
-
+        padding: 0 15px 0 15px;
+        font-weight: bold;
+    }
 }
 
 
@@ -1739,38 +1764,77 @@ nav a {
 }
 
 @import 'family';
-
 #section-sub article {
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    display: flex;
-    .sub-infoImage{
-        width:40vw;
-        height:100vh;
+  .sub-infoImage {
+        width: 40vw;
+        height: 100vh;
         background: url(../img/sub/1.jpg);
         background-size: cover;
     }
-    .section-sub-article{
+    }
+#section-sub-2 article {
+  .sub-infoImage {
+        width: 40vw;
+        height: 100vh;
+        background: url(../img/sub/2.jpg);
+        background-size: cover;
+    }
+    }
+#section-sub article, #section-sub-2 article {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+  
+    .section-sub-article {
         margin-left: 2vw;
-        width:45vw;
+        width: 45vw;
         height: 100vh;
         text-align: left;
-        #backbtn{
-            width:30px;
-            margin-top:23px;
-            margin-bottom: 10vh;
-            cursor: pointer;
-        }
+        padding-top:40px;
         .line {
-            margin:40px 0;
+            margin: 0px 0 40px 0;
+            background:$red;
         }
-        p{
-            margin:0;
+        h1{
+            font-size:6em;
+        }
+        blockquote {
+            max-width: 600px;
+            font-size: 0.8em;
+        }
+        p {
+            margin: 20px 0 0 0;
             font-size: 1em;
-           
         }
+    }
+    @media #{$mq-small} {
+        font-size: $base-font-size*1.1;
+     
+    }
+    @media #{$mq-medium} {
+        font-size: $base-font-size*1.1;
+     
+    }
+    @media #{$mq-large} {
+        font-size: $base-font-size*1.1;
+    }
+    @media #{$mq-xlarge} {
+        font-size: $base-font-size*1.3;
+    }
+    @media #{$mq-xxlarge} {
+        font-size: $base-font-size*1.6;
+    }
+}
+#section-sub-video{
+    background:white;
+    .video-wrap{
+        position:absolute;
+        top:50%;
+        left:50%;
+        width:90%;
+        transform: translate(-50%,-50%);
     }
 }

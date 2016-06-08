@@ -1,11 +1,19 @@
 $(window).load(function () {
-
+ TweenMax.to(".loadingScreen",0.3,{autoAlpha:0});
 });
 //One-Page 
 $(document).foundation();
 $(".main").onepage_scroll({
     pagination: true
     , loop: false
+});
+
+//loading screen
+Snap.load("img/earth.svg", function(data){
+    Snap("#earthLoading").append(data);
+        TweenMax.fromTo("#earthLoading",2,{},{repeat:-1,rotation:360,ease:Power0.easeNone});
+    TweenMax.fromTo(".indicator h3",0.8,{opacity:0},{repeat:-1,opacity:1,ease:Power0.easeInOut,yoyo:true});
+
 });
 
 //Scroll Magic
