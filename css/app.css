@@ -1834,3 +1834,42 @@ nav a {
     background-position: 100% 0;
   }
 }
+/* line 1743, app.scss */
+#section-sub article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+/* line 1750, app.scss */
+#section-sub article .sub-infoImage {
+  width: 40vw;
+  height: 100vh;
+  background: url(../img/sub/1.jpg);
+  background-size: cover;
+}
+/* line 1756, app.scss */
+#section-sub article .section-sub-article {
+  margin-left: 2vw;
+  width: 45vw;
+  height: 100vh;
+  text-align: left;
+}
+/* line 1761, app.scss */
+#section-sub article .section-sub-article #backbtn {
+  width: 30px;
+  margin-top: 23px;
+  margin-bottom: 10vh;
+  cursor: pointer;
+}
+/* line 1767, app.scss */
+#section-sub article .section-sub-article .line {
+  margin: 40px 0;
+}
+/* line 1770, app.scss */
+#section-sub article .section-sub-article p {
+  margin: 0;
+  font-size: 1em;
+}
