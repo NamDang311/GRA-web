@@ -1,5 +1,5 @@
 $(window).load(function () {
- TweenMax.to(".loadingScreen",1,{autoAlpha:0});
+ TweenMax.to(".loadingScreen",1.5,{autoAlpha:0});
 });
 //One-Page 
 $(document).foundation();
