@@ -15,8 +15,6 @@ $dark:#353535;
 $red:#FF6B6B;
 $white:#ffffff;
 $black:#171723;
-$asteroids-belt-orb: 600px;
-$asteroids-belt-pl: 210px;
 $base-font-size: 0.8em;
 $base-line-height: 1.7;
 $header-line-height: 1.25;
@@ -53,8 +51,8 @@ body {
     font-size: $base-font-size;
     line-height: $base-line-height;
     @media #{$mq-medium} {
-        font-size: $base-font-size*1.2;
-        line-height: $base-line-height*1.2;
+        font-size: $base-font-size*1;
+        
     }
     @media #{$mq-large} {
         font-size: $base-font-size*1.3;
@@ -120,6 +118,13 @@ body {
 .highlight {
     font-weight: bold;
     color: $red;
+    opacity: 1;
+}
+.highlight2 {
+    font-family: $fonth;
+    font-style: italic;
+     opacity: 1;
+    font-size: 110%;
 }
 
 .bold {
@@ -136,12 +141,13 @@ h1 {
 
 p {
     font-family: $fontp;
-    font-weight: 400;
+    font-weight: 200;
     line-height: $base-line-height;
-    letter-spacing: 0.08em;
-    font-size: 1.1em;
+    letter-spacing: 0.15em;
+    font-size: 0.9em;
     max-width: 600px;
     margin: 0px auto 0 auto;
+  
 }
 
 h3 {
@@ -347,9 +353,7 @@ nav a {
         background-size: cover;
         opacity: .3;
     }
-    .row {
-        margin-top: 80px;
-    }
+
     h1 {
         color: #725744;
         letter-spacing: 5px;
@@ -369,6 +373,7 @@ nav a {
         margin-bottom: 5px;
     }
     p {
+        font-weight: 600;
         font-size: 1.2em;
         color: #725744;
         max-width: 960px;
@@ -464,6 +469,9 @@ nav a {
 
 .section-2-items-wrapper {
     margin-top: 50px;
+    @media #{$mq-small} {
+       margin-top: 20px;
+    }
 }
 
 .markup {
@@ -643,6 +651,7 @@ nav a {
     }
     .line {
         background: white;
+        opacity: 0;
     }
 }
 
@@ -772,6 +781,7 @@ nav a {
 }
 
 .handler {
+    cursor:pointer !important;
     height: auto;
     position: absolute;
     top: 0;
@@ -814,6 +824,10 @@ nav a {
         left: 50%;
         transform: translate(-50%, 0);
         text-align: center;
+        h1{
+            font-family: $fonts;
+            font-weight: 600;
+        }
     }
     h1 {
         color: $dark;
@@ -1152,19 +1166,27 @@ nav a {
     color: white;
     .open h1 {
         font-family: $fonth;
-        line-height: 1.1em;
+
     }
     .open p {
-        font-family: $fontp;
-        font-size: 1em;
-        letter-spacing: 0.05em;
+
     }
     .line {
         background: white;
     }
 }
 
-
+.section-6-data {
+    width:80vw;
+    max-width:800px;
+    margin:5vw auto 0 auto;
+     @media #{$mq-small} {
+       width:62vw;
+    }
+    .dataCir{
+        cursor:pointer;
+    }
+}
 /**
    * END OF SEC-6 
    */
@@ -1749,7 +1771,15 @@ nav a {
         background-size: cover;
     }
     }
-#section-sub article, #section-sub-2 article {
+#section-sub-3 article {
+  .sub-infoImage {
+        width: 40vw;
+        height: 100vh;
+        background: url(../img/sub/3.jpg);
+        background-size: cover;
+    }
+    }
+#section-sub article, #section-sub-2 article, #section-sub-3 article {
     position: absolute;
     top: 0;
     left: 0;
@@ -1803,7 +1833,7 @@ nav a {
         position:absolute;
         top:50%;
         left:50%;
-        width:90%;
+        width:90vw;
         transform: translate(-50%,-50%);
     }
 }

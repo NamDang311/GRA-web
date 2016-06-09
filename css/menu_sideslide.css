@@ -73,11 +73,11 @@
 .menu-wrap {
     position: absolute;
     z-index: 1001;
-    width: 17vw;
+    width: 280px;
     height: 100%;
     background: #fff;
     padding: 2em 2.1em 0;
-    right: -18vw;
+    right: -280px;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     -webkit-transition: -webkit-transform 0.4s;
@@ -204,34 +204,13 @@ serif;
     white-space: nowrap;
    
 }
-@media (min-width: 48em) {
-  /* line 61, app.scss */
-  .icon-list a span {
-    font-size: 0.3em;
-    line-height: 2.04;
-  }
-}
-@media (min-width: 64em) {
-  /* line 61, app.scss */
-  .icon-list a span {
-    font-size: 0.3em;
-    line-height: 2.04;
-  }
-}
-@media (min-width: 85.375em) {
-  /* line 61, app.scss */
-  .icon-list a span {
-    font-size: 0.45em;
-    line-height: 2.04;
-  }
-}
 
 
 /* Shown menu */
 
 .show-menu .menu-wrap {
-    -webkit-transform: translate3d(-18vw, 0, 0);
-    transform: translate3d(-18vw, 0, 0);
+    -webkit-transform: translate3d(-280px, 0, 0);
+    transform: translate3d(-280px, 0, 0);
     -webkit-transition: -webkit-transform 0.8s;
     transition: -webkit-transform 0.8s;
     transition: transform 0.8s;
