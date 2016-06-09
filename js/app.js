@@ -665,35 +665,6 @@ d3.xml("img/windows.svg", "image/svg+xml", function (error, xml) {
 //END-SEC-4
 
 //SEC-5
-smoketl = new TimelineMax({
-    repeat: -1
-});
-var smokeLines;
-var smoke2 = Snap("#smoke-2")
-Snap.load("img/smoke.svg", smokeLoad);
-
-function smokeLoad(data) {
-    smoke2.append(data);
-    smokeLines = $("#smoke-line-2, #smoke-line-1,#smoke-line-3");
-    smoketl.set(smokeLines, {
-            drawSVG: "0%"
-        })
-        .to($("#smoke-line-1"), 1, {
-            drawSVG: "100%"
-            , ease: Power0.easeNone
-        })
-        .to($("#smoke-line-2"), 1, {
-            drawSVG: "100%"
-            , ease: Power0.easeNone
-        })
-        .to($("#smoke-line-3"), 1, {
-            drawSVG: "100%"
-            , ease: Power0.easeNone
-        })
-        .to(smokeLines, 2, {
-            opacity: 0
-        });
-}
 Snap.load("img/city.svg", cityLoad);
 
 function cityLoad(data) {

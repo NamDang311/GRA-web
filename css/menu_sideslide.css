@@ -145,9 +145,7 @@
     vertical-align: bottom;
     -webkit-transform: translate3d(0, 500px, 0);
     transform: translate3d(0, 500px, 0);
-    font-family: 'Miller Display',
-'Roboto Slab',
-sans-serif;
+    font-family: 'Miller Display','Roboto Slab',sans-serif;
     font-size: 3rem;
     font-style: italic;
     line-height: 39px;
@@ -201,7 +199,7 @@ sans-serif;
     font-weight: 500;
     display:block;
     font-size: 0.43em;
-    font-family: 'Stellar',
+    font-family: 'stellarmedium',
 serif;
     white-space: nowrap;
    

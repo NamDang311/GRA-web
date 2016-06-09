@@ -4,7 +4,7 @@ sans-serif;
 $fontp:'Source Sans Pro',
 'Roboto Condensed',
 sans-serif;
-$fonts:'Stellar',
+$fonts:'stellarmedium',
 serif;
 $gray:#f3f3f3;
 $yellow:#FBF18F;
@@ -1082,38 +1082,6 @@ nav a {
     bottom: 19%;
     left: 0;
     z-index: 0;
-}
-
-#factory {
-    width: 60vw;
-    position: absolute;
-    bottom: 20%;
-    right: 0;
-    z-index: 0;
-    vertical-align: bottom;
-    .factory-img {
-        height: 100%;
-        vertical-align: bottom;
-    }
-}
-
-.smoke-1 {
-    z-index: 3;
-    height: 20px;
-    width: 120px;
-    position: absolute;
-    bottom: 80%;
-    left: 3.5%;
-}
-
-#smoke-2 {
-    z-index: -1;
-    height: 340px;
-    width: 45%;
-    position: absolute;
-    top: -65%;
-    right: 4%;
-    opacity: .4;
 }
 
 .airballoon {
