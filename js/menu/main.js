@@ -29,13 +29,16 @@
 		// close the menu element if the target it´s not the menu element or one of its descendants..
 		
 	}
-
+ TweenMax.set($(".overlay"),{autoAlpha:0});
 	function toggleMenu() {
 		if( isOpen ) {
 			classie.remove( bodyEl, 'show-menu' );
+            TweenMax.to($(".overlay"),1,{autoAlpha:0});
 		}
 		else {
 			classie.add( bodyEl, 'show-menu' );
+            TweenMax.to($(".overlay"),1,{autoAlpha:.8});
+            
 		}
 		isOpen = !isOpen;
 	}
