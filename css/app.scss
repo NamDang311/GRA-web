@@ -383,13 +383,16 @@ nav a {
         height: 30px;
         margin: 0 auto;
         a {
+            margin: 0;
             color: $dark;
             display: block;
+            line-height: 30px;
         }
     }
     .line {
-        width: 90px;
+        width: 94px;
         height: 2px;
+        
     }
 }
 
