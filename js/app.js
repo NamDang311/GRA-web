@@ -28,8 +28,9 @@ Snap.load("img/earth.svg", function (data) {
     });
 
 });
+//counter
+//Scroll Mvar defaults = {
 
-//Scroll Magic
 var controller = new ScrollMagic.Controller();
 
 //SEC-0
