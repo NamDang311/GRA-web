@@ -2016,3 +2016,9 @@ nav a {
   text-transform: uppercase;
   text-align: center;
 }
+
+/* line 1879, app.scss */
+#section-sub-water #water-faucet {
+  width: 40vw;
+  height: 800px;
+}
