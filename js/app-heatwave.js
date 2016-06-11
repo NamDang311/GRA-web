@@ -46,12 +46,8 @@ var tlwaterdrop3 = new TimelineMax({
     repeat: -1
 , });
 var checkHandler = true;
+TweenMax.set(".fact *",{autoAlpha:0});
 
-function checktoggler() {
-    if (checkHandler == false) {
-        this.pause();
-    }
-};
 Snap.load("img/savetheearth/faucet.svg", function (data) {
     Snap("#water-faucet").append(data);
     tlwaterdrop.fromTo(".waterdrop_0", 4, {
@@ -63,7 +59,9 @@ Snap.load("img/savetheearth/faucet.svg", function (data) {
         y: "+=800px"
         , ease: Power1.easeIn
         , onComplete: function () {
-            checktoggler()
+            if (checkHandler == false) {
+        tlwaterdrop.pause();
+    }
         }
     });
     tlwaterdrop2.fromTo(".waterdrop_1", 3, {
@@ -81,7 +79,9 @@ Snap.load("img/savetheearth/faucet.svg", function (data) {
         y: "+=800px"
         , ease: Power1.easeIn
         , onComplete: function () {
-            checktoggler()
+             if (checkHandler == false) {
+        tlwaterdrop2.pause();
+    }
         }
     }, "+=0.5");
     tlwaterdrop3.fromTo(".waterdrop_2", 3, {
@@ -99,7 +99,9 @@ Snap.load("img/savetheearth/faucet.svg", function (data) {
         y: "+=800px"
         , ease: Power1.easeIn
         , onComplete: function () {
-            checktoggler()
+            if (checkHandler == false) {
+        tlwaterdrop3.pause();
+    }
         }
     }, "+=1");
 
@@ -110,7 +112,7 @@ Snap.load("img/savetheearth/faucet.svg", function (data) {
         type: "rotation"
         , trigger: ".a9a13da9-9345-46d1-a320-c9b71331183a"
         , throwProps: false
-        , dragResistance: 0.55
+        , dragResistance: 0.45
         , bounds: {
             minRotation: 0
             , maxRotation: -34.31
@@ -119,7 +121,9 @@ Snap.load("img/savetheearth/faucet.svg", function (data) {
         , onDragEnd: function () {
 
             if (Draggable.get(".waterHandler").target._gsTransform.rotation == -34.31) {
-                checkHandler = false, console.log(checkHandler)
+                checkHandler = false;
+                
+ TweenMax.staggerTo(".fact *",0.4,{autoAlpha:1},0.2);
             };
         }
     });
@@ -153,17 +157,17 @@ Snap.load("img/savetheearth/elec-bulb-tail.svg", function (data) {
 
     //set hint text
     TweenMax.fromTo(".hintText", 1, {
-        autoAlpha: 1
-    }, {
-        autoAlpha: 0
-        , repeat: -1
-        , yoyo: true
-    })
-    //set bulb glass
-     TweenMax.set("#bulb_glass_0,#bulb_glass_1", {
+            autoAlpha: 1
+        }, {
+            autoAlpha: 0
+            , repeat: -1
+            , yoyo: true
+        })
+        //set bulb glass
+    TweenMax.set("#bulb_glass_0,#bulb_glass_1", {
         autoAlpha: 0
     });
-    
+
     //others
     hoverBulb();
     setupScene();
@@ -203,11 +207,10 @@ function setupScene() {
     Draggable.create(".bulb", {
         type: "x,y"
         , throwProps: false
-    
-        , dragResistance: 0.1
+        
         , onDragStart: function (e) {
             tlhint.play();
-            
+
         }
         , onDrag: function () {
             if (this.hitTest(".hitZone", "90%")) {
@@ -219,15 +222,26 @@ function setupScene() {
                     opacity: .07
                 });
                 TweenMax.set(".dottedCir", {
-        autoAlpha: 1
-    })
+                    autoAlpha: 1
+                })
             }
         }
         , onDragEnd: function (e) {
             if (this.hitTest(".hitZone", "90%")) {
-                attachBulb(e);
-            } else {
+                if ($(event.target).parents("#bulb-1").length == 1) {
+                    var bnum=1;
+                   attachBulb(e,bnum);
+                }else {
 
+                var bnum=0;
+                   attachBulb(e,bnum);
+                }
+               
+            } else {
+                 TweenMax.set(".dottedCir", {
+        autoAlpha: 0
+        
+    });
                 TweenMax.to(this.target, 0.3, {
                     x: 0
                     , y: 0
@@ -237,10 +251,60 @@ function setupScene() {
     });
 };
 
-function attachBulb(e) {
-    var t = $(".innerCir,#outerCir", $(event.target).parent());
+function attachBulb(e,bnum) {
+    var t = $(event.target).parent();
     TweenMax.set(t, {
         autoAlpha: 0
     });
-   
+    TweenMax.set(".hitZone, .dottedCir, .hintText", {
+        autoAlpha: 0
+    });
+    if(bnum==0){
+        TweenMax.set($("#bulb_glass_0"), {
+        autoAlpha: 1
+        , y: "+=200px"
+    });
+        TweenMax.set($("#bulb_glass_1"), {
+        autoAlpha: 0
+        
+    });
+    }else{
+        TweenMax.set($("#bulb_glass_1"), {
+        autoAlpha: 1
+        , y: "+=200px"
+    });
+        TweenMax.set($("#bulb_glass_0"), {
+        autoAlpha: 0
+        
+    });
+    };
+    
+    var tlattach = new TimelineMax({});
+    tlattach.to($("#bulb_glass_"+bnum), 1, {
+        y: "-=200px"
+        , ease: Back.easeIn
+        , delay: 0.2
+    }).
+    to($("#bulb_glass_"+bnum+" *"), 0.2, {
+        css: {
+            fill: "#FBF18F"
+        }
+    }).
+    fromTo($(".bulb-light"), 0.2, {
+        scale: 0
+        , transformOrigin: "50% 50%"
+        , x: "-50%"
+    }, {
+        scale: 1
+        , opacity: 1
+    }, "-=0.2");
+    
+    
+    //show article
+     TweenMax.set("#section-sub-led article *", {
+        autoAlpha: 0
+    });
+    TweenMax.fromTo($("#bulb-content-"+bnum+" h1,span"),1,{autoAlpha:0,y:"-=20"},{autoAlpha:1,y:"+=20",delay:1.7});
+    TweenMax.fromTo($("#bulb-content-"+bnum+" .line"),1,{autoAlpha:0,scale:0,transformOrigin:"50% 50%"},{autoAlpha:1,scale:1,delay:1.7});
+    TweenMax.fromTo($("#bulb-content-"+bnum+" p,b"),1,{autoAlpha:0,y:"+=20"},{autoAlpha:1,y:"-=20",delay:1.7});
 };

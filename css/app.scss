@@ -1927,6 +1927,21 @@ nav a {
 #section-sub-led{
     background:$darkBlue;
     position: relative;
+    overflow:hidden;
+    .bulb-light{
+        width:40vw;
+        height:40vw;
+        max-height: 400px;
+        max-width: 400px;
+        border-radius:50%;
+        background:#F2CA66;
+        position: absolute;
+        transform:translate(-50%,0);
+        top:0%;
+        left:50%;
+        opacity: 0;
+        
+    }
     #elec-tail{
         width:20%;
         position: absolute;
@@ -1940,19 +1955,45 @@ nav a {
         position: absolute;
         bottom:0%;
         left:0%;
-         max-width: 450px;
+         max-width: 400px;
         cursor: pointer;
        
        
     }
     #bulb-2{
         width:100%;
-         max-width: 450px;
+         max-width: 400px;
         position: absolute;
         bottom:0%;
         right:0%;
          cursor: pointer;
         
        
+    }
+    article {
+        width:50vw;
+        position: absolute;
+        top:50%;
+        left:50%;
+        text-align: center;
+        transform:translate(-50%,0);
+        color:white;
+       
+        h1{
+        font-size: 2.5em;
+        text-transform: none;
+             opacity: 0;
+        }
+        .line{
+            background: white;
+             opacity: 0;
+            margin:30px auto;
+        }
+        p{
+            margin:0 auto;
+             opacity: 0;
+            max-width: 700px;
+        }
+        
     }
 }

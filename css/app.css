@@ -2078,8 +2078,23 @@ nav a {
 #section-sub-led {
   background: #1A535C;
   position: relative;
+  overflow: hidden;
 }
-/* line 1930, app.scss */
+/* line 1931, app.scss */
+#section-sub-led .bulb-light {
+  width: 40vw;
+  height: 40vw;
+  max-height: 400px;
+  max-width: 400px;
+  border-radius: 50%;
+  background: #F2CA66;
+  position: absolute;
+  transform: translate(-50%, 0);
+  top: 0%;
+  left: 50%;
+  opacity: 0;
+}
+/* line 1945, app.scss */
 #section-sub-led #elec-tail {
   width: 20%;
   position: absolute;
@@ -2088,21 +2103,49 @@ nav a {
   left: 50%;
   transform: translate(-50%, 0);
 }
-/* line 1938, app.scss */
+/* line 1953, app.scss */
 #section-sub-led #bulb-1 {
   width: 100%;
   position: absolute;
   bottom: 0%;
   left: 0%;
-  max-width: 450px;
+  max-width: 400px;
   cursor: pointer;
 }
-/* line 1948, app.scss */
+/* line 1963, app.scss */
 #section-sub-led #bulb-2 {
   width: 100%;
-  max-width: 450px;
+  max-width: 400px;
   position: absolute;
   bottom: 0%;
   right: 0%;
   cursor: pointer;
+}
+/* line 1973, app.scss */
+#section-sub-led article {
+  width: 50vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, 0);
+  color: white;
+}
+/* line 1982, app.scss */
+#section-sub-led article h1 {
+  font-size: 2.5em;
+  text-transform: none;
+  opacity: 0;
+}
+/* line 1987, app.scss */
+#section-sub-led article .line {
+  background: white;
+  opacity: 0;
+  margin: 30px auto;
+}
+/* line 1992, app.scss */
+#section-sub-led article p {
+  margin: 0 auto;
+  opacity: 0;
+  max-width: 700px;
 }
