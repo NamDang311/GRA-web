@@ -1856,6 +1856,20 @@ nav a {
     transform: translate(-50%, 150%);
   }
 }
+@keyframes arrowleft {
+  0% {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+  50% {
+    opacity: 0;
+    transform: translate(-100%, 0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-100%, 0%);
+  }
+}
 @keyframes seawave {
   from {
     background-position: 0 0;
@@ -1872,7 +1886,7 @@ nav a {
     background-position: 100% 0;
   }
 }
-/* line 1759, app.scss */
+/* line 1772, app.scss */
 #section-sub article .sub-infoImage {
   width: 40vw;
   height: 100vh;
@@ -1880,7 +1894,7 @@ nav a {
   background-size: cover;
 }
 
-/* line 1767, app.scss */
+/* line 1780, app.scss */
 #section-sub-2 article .sub-infoImage {
   width: 40vw;
   height: 100vh;
@@ -1888,7 +1902,7 @@ nav a {
   background-size: cover;
 }
 
-/* line 1775, app.scss */
+/* line 1788, app.scss */
 #section-sub-3 article .sub-infoImage {
   width: 40vw;
   height: 100vh;
@@ -1896,7 +1910,7 @@ nav a {
   background-size: cover;
 }
 
-/* line 1782, app.scss */
+/* line 1795, app.scss */
 #section-sub article, #section-sub-2 article, #section-sub-3 article {
   position: absolute;
   top: 0;
@@ -1905,7 +1919,7 @@ nav a {
   height: 100%;
   display: flex;
 }
-/* line 1790, app.scss */
+/* line 1803, app.scss */
 #section-sub article .section-sub-article, #section-sub-2 article .section-sub-article, #section-sub-3 article .section-sub-article {
   margin-left: 2vw;
   width: 45vw;
@@ -1913,61 +1927,61 @@ nav a {
   text-align: left;
   padding-top: 40px;
 }
-/* line 1796, app.scss */
+/* line 1809, app.scss */
 #section-sub article .section-sub-article .line, #section-sub-2 article .section-sub-article .line, #section-sub-3 article .section-sub-article .line {
   margin: 0px 0 40px 0;
   background: #FF6B6B;
 }
-/* line 1800, app.scss */
+/* line 1813, app.scss */
 #section-sub article .section-sub-article h1, #section-sub-2 article .section-sub-article h1, #section-sub-3 article .section-sub-article h1 {
   font-size: 6em;
 }
-/* line 1803, app.scss */
+/* line 1816, app.scss */
 #section-sub article .section-sub-article blockquote, #section-sub-2 article .section-sub-article blockquote, #section-sub-3 article .section-sub-article blockquote {
   max-width: 600px;
   font-size: 0.8em;
 }
-/* line 1807, app.scss */
+/* line 1820, app.scss */
 #section-sub article .section-sub-article p, #section-sub-2 article .section-sub-article p, #section-sub-3 article .section-sub-article p {
   margin: 20px 0 0 0;
   font-size: 1em;
 }
 @media (min-width: 48em) {
-  /* line 1782, app.scss */
+  /* line 1795, app.scss */
   #section-sub article, #section-sub-2 article, #section-sub-3 article {
     font-size: 0.88em;
   }
 }
 @media (min-width: 64em) {
-  /* line 1782, app.scss */
+  /* line 1795, app.scss */
   #section-sub article, #section-sub-2 article, #section-sub-3 article {
     font-size: 0.88em;
   }
 }
 @media (min-width: 85.375em) {
-  /* line 1782, app.scss */
+  /* line 1795, app.scss */
   #section-sub article, #section-sub-2 article, #section-sub-3 article {
     font-size: 0.88em;
   }
 }
 @media (min-width: 120em) {
-  /* line 1782, app.scss */
+  /* line 1795, app.scss */
   #section-sub article, #section-sub-2 article, #section-sub-3 article {
     font-size: 1.04em;
   }
 }
 @media (min-width: 160em) {
-  /* line 1782, app.scss */
+  /* line 1795, app.scss */
   #section-sub article, #section-sub-2 article, #section-sub-3 article {
     font-size: 1.28em;
   }
 }
 
-/* line 1830, app.scss */
+/* line 1843, app.scss */
 #section-sub-video {
   background: #1A535C;
 }
-/* line 1832, app.scss */
+/* line 1845, app.scss */
 #section-sub-video .video-wrap {
   position: absolute;
   top: 50%;
@@ -1977,19 +1991,19 @@ nav a {
   transform: translate(-50%, -50%);
 }
 
-/* line 1842, app.scss */
+/* line 1855, app.scss */
 #section-sub-4 {
   background: #96ECA9;
 }
-/* line 1844, app.scss */
+/* line 1857, app.scss */
 #section-sub-4 .wrapper {
   position: absolute;
   left: 50%;
   top: 50%;
-  height: 550px;
+  height: 580px;
   transform: translate(-50%, -50%);
 }
-/* line 1851, app.scss */
+/* line 1864, app.scss */
 #section-sub-4 .wrapper h1 {
   font-family: "stellarmedium", serif;
   line-height: 0;
@@ -1999,9 +2013,9 @@ nav a {
   text-align: center;
   white-space: nowrap;
 }
-/* line 1860, app.scss */
+/* line 1873, app.scss */
 #section-sub-4 .wrapper h3 {
-  margin-top: 100px;
+  margin-top: 80px;
   color: #165C4D;
   text-transform: uppercase;
   font-size: 4em;
@@ -2009,16 +2023,86 @@ nav a {
   white-space: nowrap;
   font-weight: 600;
 }
-/* line 1869, app.scss */
+/* line 1882, app.scss */
 #section-sub-4 .wrapper p {
+  margin-top: 20px;
   color: #353535;
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
 }
 
-/* line 1879, app.scss */
+/* line 1893, app.scss */
+#section-sub-water .a9a13da9-9345-46d1-a320-c9b71331183a {
+  cursor: pointer;
+}
+/* line 1896, app.scss */
 #section-sub-water #water-faucet {
-  width: 40vw;
+  width: 90%;
   height: 800px;
+}
+/* line 1900, app.scss */
+#section-sub-water .water-hint {
+  text-align: right;
+  font-family: "stellarmedium", serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 30%;
+}
+/* line 1906, app.scss */
+#section-sub-water .water-hint img {
+  height: 15px;
+  animation: arrowleft 2s infinite;
+}
+/* line 1911, app.scss */
+#section-sub-water .fact {
+  padding-top: 150px;
+  padding-left: 40px;
+}
+/* line 1915, app.scss */
+#section-sub-water .line {
+  margin: 30px auto 30px auto;
+}
+/* line 1918, app.scss */
+#section-sub-water .row h1 {
+  font-size: 2.5em;
+  text-transform: none;
+}
+/* line 1922, app.scss */
+#section-sub-water .row p {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+/* line 1927, app.scss */
+#section-sub-led {
+  background: #1A535C;
+  position: relative;
+}
+/* line 1930, app.scss */
+#section-sub-led #elec-tail {
+  width: 20%;
+  position: absolute;
+  max-width: 250px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+/* line 1938, app.scss */
+#section-sub-led #bulb-1 {
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  max-width: 450px;
+  cursor: pointer;
+}
+/* line 1948, app.scss */
+#section-sub-led #bulb-2 {
+  width: 100%;
+  max-width: 450px;
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  cursor: pointer;
 }

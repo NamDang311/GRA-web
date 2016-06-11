@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="c668ff8f-8654-43b9-bd22-4ca38707ed5b"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500"
+	 style="enable-background:new 0 0 500 500;" xml:space="preserve">
+<style type="text/css">
+
+	.st1{fill:none;stroke:#FFE66D;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;}
+	.innerCir{fill:#FFFFFF;}
+	.st3{fill:#2F404F;}
+</style>
+
+
+<g class="bulbBody">
+    <circle id="outerCir" class="st1" cx="250" cy="250" r="118"/>
+    <circle class="innerCir" cx="250" cy="250" r="150"/>
+	<path class="st3" d="M289,296.8h-78c-2.9,0-5.2,2.3-5.2,5.2c0,2.9,2.3,5.2,5.2,5.2h78c2.9,0,5.2-2.3,5.2-5.2
+		C294.2,299.1,291.9,296.8,289,296.8L289,296.8z"/>
+	<path class="st3" d="M289,314.3h-78c-2.9,0-5.2,2.3-5.2,5.2c0,2.9,2.3,5.2,5.2,5.2h78c2.9,0,5.2-2.3,5.2-5.2
+		C294.2,316.6,291.9,314.3,289,314.3C289,314.3,289,314.3,289,314.3z"/>
+	<path class="st3" d="M276.8,331.9h-53.6c-2.9,0.1-5.1,2.6-5,5.4c0.1,2.7,2.3,4.8,5,5h53.6c2.9,0.1,5.3-2.1,5.4-5
+		c0.1-2.9-2.1-5.3-5-5.4l0,0H276.8L276.8,331.9z"/>
+	<path class="st3" d="M264.5,349.4h-29.2c-2.9,0-5.2,2.3-5.2,5.2c0,2.9,2.3,5.2,5.2,5.2h29.2c2.9,0,5.2-2.3,5.2-5.2
+		C269.7,351.7,267.4,349.4,264.5,349.4z"/>
+	
+		<path class="st3" d="M250,153.7c-9.1,0-16.4,7.3-16.4,16.4c0,0,0,0,0,0l0,0v126.6h10.2V170.1c0-3.5,2.8-6.3,6.3-6.3
+			s6.3,2.8,6.3,6.3l0,0v126.6h10.1V170.1C266.4,161.1,259.1,153.7,250,153.7z"/>
+		<path class="st3" d="M221.7,296.8V156.4l0,0c0-6.1,5-11.1,11.1-11.1h34.4c6.1,0,11.1,5,11.1,11.1v140.4h10.1V156.4
+			c0-11.7-9.5-21.3-21.3-21.3h-34.4c-11.7,0-21.2,9.5-21.3,21.3v140.4H221.7L221.7,296.8z"/>
+	
+</g>
+</svg>

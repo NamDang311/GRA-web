@@ -40,13 +40,16 @@ var tlwaterdrop = new TimelineMax({
     repeat: -1
 });
 var tlwaterdrop2 = new TimelineMax({
-    repeat: -1,
-});
-var checkHandler=true;
-function checktoggler(){
-    if(checkHandler==false){
-        tlwaterdrop.pause();
-        tlwaterdrop2.pause();
+    repeat: -1
+, });
+var tlwaterdrop3 = new TimelineMax({
+    repeat: -1
+, });
+var checkHandler = true;
+
+function checktoggler() {
+    if (checkHandler == false) {
+        this.pause();
     }
 };
 Snap.load("img/savetheearth/faucet.svg", function (data) {
@@ -58,14 +61,17 @@ Snap.load("img/savetheearth/faucet.svg", function (data) {
         , ease: Power1.easeIn
     }, 0).to(".waterdrop_0", 0.5, {
         y: "+=800px"
-        , ease: Power1.easeIn,onComplete:function(){checktoggler()}
+        , ease: Power1.easeIn
+        , onComplete: function () {
+            checktoggler()
+        }
     });
     tlwaterdrop2.fromTo(".waterdrop_1", 3, {
         y: "-=30px"
     }, {
         y: "+=30px"
         , ease: Power1.easeIn
-    }, 1).to(".waterdrop_1", 0.5, {
+    }, 2).to(".waterdrop_1", 0.5, {
         y: "+=800px"
         , ease: Power1.easeIn
     }).
@@ -73,8 +79,30 @@ Snap.load("img/savetheearth/faucet.svg", function (data) {
         y: "-=30px"
     }, {
         y: "+=800px"
-        , ease: Power1.easeIn,onComplete:function(){checktoggler()}
+        , ease: Power1.easeIn
+        , onComplete: function () {
+            checktoggler()
+        }
     }, "+=0.5");
+    tlwaterdrop3.fromTo(".waterdrop_2", 3, {
+        y: "-=0px"
+    }, {
+        y: "+=30px"
+        , ease: Power1.easeIn
+    }, 4).to(".waterdrop_2", 0.3, {
+        y: "+=800px"
+        , ease: Power1.easeIn
+    }).
+    fromTo(".waterdrop_2", 1, {
+        y: "-=30px"
+    }, {
+        y: "+=800px"
+        , ease: Power1.easeIn
+        , onComplete: function () {
+            checktoggler()
+        }
+    }, "+=1");
+
     TweenLite.set(".waterHandler", {
         transformOrigin: "6.483px 99px"
     })
@@ -86,13 +114,133 @@ Snap.load("img/savetheearth/faucet.svg", function (data) {
         , bounds: {
             minRotation: 0
             , maxRotation: -34.31
-        },
-        throwResistance:10000
+        }
+        , throwResistance: 10000
         , onDragEnd: function () {
-            
-            if(Draggable.get(".waterHandler").target._gsTransform.rotation == -34.31){checkHandler=false,console.log(checkHandler)};
+
+            if (Draggable.get(".waterHandler").target._gsTransform.rotation == -34.31) {
+                checkHandler = false, console.log(checkHandler)
+            };
         }
     });
-
-
 });
+
+//electric
+var tlhint = new TimelineMax({
+    repeat: -1
+    , paused: true
+})
+
+Snap.load("img/savetheearth/elec-bulb-tail.svg", function (data) {
+    Snap("#elec-tail").append(data);
+    Snap.load("img/savetheearth/bulb-1.svg", function (data) {
+        Snap("#bulb-1").append(data)
+    });
+    Snap.load("img/savetheearth/bulb-2.svg", function (data) {
+        Snap("#bulb-2").append(data)
+    });
+
+    //set dotted Cir hint
+    TweenMax.set(".dottedCir", {
+        autoAlpha: 0
+        , transformOrigin: "50% 50%"
+    });
+    tlhint.to(".dottedCir", 10, {
+        rotation: 360
+        , transformOrigin: "50% 50%"
+        , ease: Power0.easeNone
+    }, 0);
+
+    //set hint text
+    TweenMax.fromTo(".hintText", 1, {
+        autoAlpha: 1
+    }, {
+        autoAlpha: 0
+        , repeat: -1
+        , yoyo: true
+    })
+    //set bulb glass
+     TweenMax.set("#bulb_glass_0,#bulb_glass_1", {
+        autoAlpha: 0
+    });
+    
+    //others
+    hoverBulb();
+    setupScene();
+});
+
+function hoverBulb() {
+    $(".bulb").hover(function () {
+
+        var r = $("#outerCir", this);
+        var e = $("g", this);
+
+        TweenMax.to(r, 0.3, {
+            scale: 1.5
+            , transformOrigin: "50% 50%"
+        });
+        TweenMax.to(e, 0.3, {
+            scale: 0.9
+            , transformOrigin: "50% 50%"
+        });
+    }, function () {
+        var r = $("#outerCir", this);
+        var e = $("g", this);
+        TweenMax.to(r, 0.3, {
+            scale: 1
+            , transformOrigin: "50% 50%"
+        });
+        TweenMax.to(e, 0.3, {
+            scale: 1
+            , transformOrigin: "50% 50%"
+        });
+    })
+
+
+};
+
+function setupScene() {
+    Draggable.create(".bulb", {
+        type: "x,y"
+        , throwProps: false
+    
+        , dragResistance: 0.1
+        , onDragStart: function (e) {
+            tlhint.play();
+            
+        }
+        , onDrag: function () {
+            if (this.hitTest(".hitZone", "90%")) {
+                TweenMax.to(".hitZone", 1, {
+                    opacity: .4
+                });
+            } else {
+                TweenMax.to(".hitZone", 1, {
+                    opacity: .07
+                });
+                TweenMax.set(".dottedCir", {
+        autoAlpha: 1
+    })
+            }
+        }
+        , onDragEnd: function (e) {
+            if (this.hitTest(".hitZone", "90%")) {
+                attachBulb(e);
+            } else {
+
+                TweenMax.to(this.target, 0.3, {
+                    x: 0
+                    , y: 0
+                });
+            }
+        }
+    });
+};
+
+function attachBulb(e) {
+    var t = $(".innerCir,#outerCir", $(event.target).parent());
+    TweenMax.set(t, {
+        autoAlpha: 0
+    });
+   
+};

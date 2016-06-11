@@ -1735,7 +1735,20 @@ nav a {
         transform: translate(-50%, 150%);
     }
 }
-
+@keyframes arrowleft {
+    0% {
+        opacity: 1;
+        transform: translate(0%, 0%);
+    }
+    50% {
+        opacity: 0;
+        transform: translate(-100%, 0%);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-100%, 0%);
+    }
+}
 @keyframes seawave {
     from {
         background-position: 0 0;
@@ -1845,7 +1858,7 @@ nav a {
         position: absolute;
         left:50%;
         top:50%;
-         height:550px;
+         height:580px;
             
         transform: translate(-50%,-50%);
          h1{
@@ -1858,7 +1871,7 @@ nav a {
         white-space: nowrap;
     }
     h3{
-        margin-top: 100px;
+        margin-top: 80px;
         color:#165C4D;
         text-transform: uppercase;
         font-size: 4em;
@@ -1867,17 +1880,79 @@ nav a {
         font-weight: 600;
     }
     p{
+        margin-top: 20px;
         color:$dark;
         font-weight: 400;
         text-transform: uppercase;
         text-align: center;
     }
     }
-   
 }
+
 #section-sub-water {
+    .a9a13da9-9345-46d1-a320-c9b71331183a{
+        cursor: pointer;
+    }
     #water-faucet{
-        width:40vw;
+        width:90%;
         height:800px;
+    }
+    .water-hint {
+        text-align: right;
+        font-family: $fonts;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-right: 30%;
+        img{
+            height:15px;
+            animation: arrowleft 2s infinite;
+        }
+    }
+    .fact {
+        padding-top: 150px;
+        padding-left: 40px;
+    }
+    .line    {
+        margin: 30px auto 30px auto;
+    }
+    .row h1{
+        font-size: 2.5em;
+        text-transform: none;
+    }
+    .row p {
+        margin:0;
+        font-size: 1.2em;
+    }
+}
+#section-sub-led{
+    background:$darkBlue;
+    position: relative;
+    #elec-tail{
+        width:20%;
+        position: absolute;
+        max-width: 250px;
+        top:0;
+        left:50%;
+        transform:translate(-50%,0);
+    }
+    #bulb-1{
+        width:100%;
+        position: absolute;
+        bottom:0%;
+        left:0%;
+         max-width: 450px;
+        cursor: pointer;
+       
+       
+    }
+    #bulb-2{
+        width:100%;
+         max-width: 450px;
+        position: absolute;
+        bottom:0%;
+        right:0%;
+         cursor: pointer;
+        
+       
     }
 }
