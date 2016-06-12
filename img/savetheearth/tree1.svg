@@ -1,0 +1,20 @@
+<svg id="770c421e-354a-4bfb-8eaa-632f220455a2" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63.11 49.51">
+  <defs>
+    <style>
+      .\36 63bf71d-66c6-4ad5-b90c-0c20ab7f1132 {
+        fill: none;
+        stroke: #2f404f;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <title>tree1</title>
+  <g>
+    <line class="663bf71d-66c6-4ad5-b90c-0c20ab7f1132" x1="30.6" y1="22.45" x2="30.6" y2="49.51"/>
+    <rect class="663bf71d-66c6-4ad5-b90c-0c20ab7f1132" x="19.3" y="1.5" width="42.31" height="20.95" rx="7.6" ry="7.6"/>
+    <rect class="663bf71d-66c6-4ad5-b90c-0c20ab7f1132" x="1.5" y="22.18" width="16.08" height="11.01" rx="5.51" ry="5.51"/>
+    <path class="663bf71d-66c6-4ad5-b90c-0c20ab7f1132" d="M-68.69,42.21c-21.06,0-21.06,0-21.06-7.42" transform="translate(99.3 -0.5)"/>
+    <path class="663bf71d-66c6-4ad5-b90c-0c20ab7f1132" d="M-68.69,36.92c18.19,0,18.19,0,18.19-14" transform="translate(99.3 -0.5)"/>
+  </g>
+</svg>

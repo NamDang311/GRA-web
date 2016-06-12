@@ -1,0 +1,22 @@
+<svg id="194e408e-6b95-4643-aa6d-46c1b185ba00" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.34 49.51">
+  <defs>
+    <style>
+      .\38 1e4339f-7c63-4a04-81a9-84be540a63a6 {
+        fill: none;
+        stroke: #2f404f;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <title>tree4</title>
+  <g>
+    <path class="81e4339f-7c63-4a04-81a9-84be540a63a6" d="M137.26,33.69A16.4,16.4,0,1,1,147,22.95" transform="translate(-113.33 -0.5)"/>
+    <path class="81e4339f-7c63-4a04-81a9-84be540a63a6" d="M137.26,33.69" transform="translate(-113.33 -0.5)"/>
+    <path class="81e4339f-7c63-4a04-81a9-84be540a63a6" d="M147,22.95" transform="translate(-113.33 -0.5)"/>
+    <line class="81e4339f-7c63-4a04-81a9-84be540a63a6" x1="17.92" y1="17.92" x2="17.92" y2="49.51"/>
+    <circle class="81e4339f-7c63-4a04-81a9-84be540a63a6" cx="31.64" cy="30.39" r="8.21"/>
+    <path class="81e4339f-7c63-4a04-81a9-84be540a63a6" d="M131.24,43C145,43,145,43,145,39.05" transform="translate(-113.33 -0.5)"/>
+    <path class="81e4339f-7c63-4a04-81a9-84be540a63a6" d="M131.24,39.05c-13.72,0-13.72,0-13.72-4.27" transform="translate(-113.33 -0.5)"/>
+  </g>
+</svg>

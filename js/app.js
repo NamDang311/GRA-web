@@ -1059,10 +1059,10 @@ function contentIn(thermalCur) {
 //SEC-10
 $(".impact-contents").hover(function () {
     TweenMax.fromTo($(".line", this), 0.3, {
-        x: "+=300px"
+        x: "300px"
         , opacity: 0
     }, {
-        x: "-=300px"
+        x: "0"
         , opacity: 1
         , transformOrigin: "0 0"
         , ease: Power1.easeOut
