@@ -747,13 +747,16 @@ function checkTimeline(dataNum) {
         dataAnimation(dataNum);
     };
 };
-
+var o;
 function dataAnimation(dataNum) {
-    TweenMax.set(".road-data, .aviation-data, .marine-data", {
+    
+  
+    if(o == dataNum){}else{
+        TweenMax.set(".road-data, .aviation-data, .marine-data", {
         width: 0
         , autoAlpha: 0
     });
-    switch (dataNum) {
+         switch (dataNum) {
     case 0:
         TweenMax.fromTo($(".road-data"), 1, {
             width: 0
@@ -761,6 +764,7 @@ function dataAnimation(dataNum) {
             width: "73%"
             , autoAlpha: 1
         });
+                 o=0;
         break;
     case 1:
         TweenMax.fromTo($(".marine-data"), 1, {
@@ -769,6 +773,7 @@ function dataAnimation(dataNum) {
             width: "14%"
             , autoAlpha: 1
         });
+                 o=1;
         break;
     case 2:
         TweenMax.fromTo($(".aviation-data"), 1, {
@@ -777,8 +782,12 @@ function dataAnimation(dataNum) {
             width: "11%"
             , autoAlpha: 1
         });
+                 o=2;
         break;
+                 
     }
+    }
+   
 }
 
 //END-SEC-5
