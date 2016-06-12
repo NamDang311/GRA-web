@@ -1,93 +1,78 @@
 /**
    * START
    */
-/* line 39, app.scss */
+/* line 39, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .icon-menu {
   width: 30px;
   height: 30px;
   position: absolute;
   right: 30px;
   z-index: 99;
-  top: 30px;
-}
+  top: 30px; }
 
-/* line 48, app.scss */
+/* line 48, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 0.8em;
-  line-height: 1.7;
-}
-@media (min-width: 64em) {
-  /* line 48, app.scss */
-  body {
-    font-size: 0.8em;
-  }
-}
-@media (min-width: 85.375em) {
-  /* line 48, app.scss */
-  body {
-    font-size: 1.04em;
-  }
-}
-@media (min-width: 120em) {
-  /* line 48, app.scss */
-  body {
-    font-size: 1.12em;
-  }
-}
-@media (min-width: 160em) {
-  /* line 48, app.scss */
-  body {
-    font-size: 1.28em;
-  }
-}
+  line-height: 1.7; }
+  @media (min-width: 64em) {
+    /* line 48, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    body {
+      font-size: 0.8em; } }
+  @media (min-width: 85.375em) {
+    /* line 48, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    body {
+      font-size: 1.04em; } }
+  @media (min-width: 120em) {
+    /* line 48, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    body {
+      font-size: 1.12em; } }
+  @media (min-width: 160em) {
+    /* line 48, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    body {
+      font-size: 1.28em; } }
 
-/* line 67, app.scss */
+/* line 67, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .loadingScreen {
   width: 100vw;
   height: 100vh;
   position: absolute;
   z-index: 999999;
-  background: #FF6B6B;
-}
-/* line 73, app.scss */
-.loadingScreen .indicator {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 50px;
-  transform: translate(-50%, 0);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-}
-/* line 83, app.scss */
-.loadingScreen .indicator #earthLoading {
-  width: 50px;
-  height: 50px;
-  margin-right: 20px;
-}
-/* line 88, app.scss */
-.loadingScreen .indicator h3 {
-  font-size: 1.5em;
-  font-family: "stellarmedium", serif;
-  height: 40px;
-  margin-top: 15px;
-}
+  background: #FF6B6B; }
+  /* line 73, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .loadingScreen .indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50px;
+    transform: translate(-50%, 0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center; }
+    /* line 83, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    .loadingScreen .indicator #earthLoading {
+      width: 50px;
+      height: 50px;
+      margin-right: 20px; }
+    /* line 88, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    .loadingScreen .indicator h3 {
+      font-size: 1.5em;
+      font-family: "stellarmedium", serif;
+      height: 40px;
+      margin-top: 15px; }
 
-/* line 97, app.scss */
+/* line 97, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .overlay {
   width: 100vw;
   height: 100vh;
   position: absolute;
   top: 0;
   z-index: 99;
-  background: black;
-}
+  background: black; }
 
-/* line 106, app.scss */
+/* line 106, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .line {
   display: inline-block;
   vertical-align: bottom;
@@ -95,100 +80,88 @@ body {
   width: 60px;
   height: 0.2em;
   margin-bottom: 1em;
-  background-color: #353535;
-}
+  background-color: #353535; }
 
-/* line 116, app.scss */
+/* line 116, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .highlight {
   font-weight: bold;
   color: #FF6B6B;
-  opacity: 1;
-}
+  opacity: 1; }
 
-/* line 122, app.scss */
+/* line 122, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .highlight2 {
-  font-family: "Miller Display", "Roboto Slab", sans-serif;
+  font-family: "MillerDisplay", "Roboto Slab", sans-serif;
   font-style: italic;
   opacity: 1;
-  font-size: 110%;
-}
+  font-size: 110%; }
 
-/* line 129, app.scss */
+/* line 129, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .bold {
-  font-weight: bold;
-}
+  font-weight: bold; }
 
-/* line 133, app.scss */
+/* line 133, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 h1 {
   line-height: 1.25;
-  font-family: "Miller Display", "Roboto Slab", sans-serif;
+  font-family: "MillerDisplay", "Roboto Slab", sans-serif;
   font-weight: 400;
   letter-spacing: 0.04em;
-  text-transform: capitalize;
-}
+  text-transform: capitalize; }
 
-/* line 141, app.scss */
+/* line 141, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 p {
   font-family: "Source Sans Pro", "Roboto Condensed", sans-serif;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 1.7;
   letter-spacing: 0.15em;
   font-size: 0.9em;
   max-width: 600px;
-  margin: 0px auto 0 auto;
-}
+  margin: 0px auto 0 auto; }
 
-/* line 151, app.scss */
+/* line 151, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 h3 {
   line-height: 1.25;
   font-family: "stellarmedium", serif;
   font-weight: 400;
   font-size: 1.2em;
-  letter-spacing: 0.05em;
-}
+  letter-spacing: 0.05em; }
 
-/* line 159, app.scss */
+/* line 159, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 section {
-  padding-top: 50px;
-}
+  padding-top: 50px; }
 
-/* line 163, app.scss */
+/* line 163, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .open {
-  text-align: center;
-}
+  text-align: center; }
 
 /**
    * SEC-0
    */
-/* line 172, app.scss */
+/* line 172, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-0 {
   z-index: -2;
   padding-top: 0px;
-  text-align: center;
-}
-/* line 176, app.scss */
-#section-0 #section-0-title-wrap {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -60%);
-  text-transform: uppercase;
-  font-weight: 500;
-  color: white;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-}
-/* line 187, app.scss */
-#section-0 #section-0-title-wrap h1 {
-  font-family: "stellarmedium", serif;
-  font-size: 12vw;
-  line-height: 1em;
-  letter-spacing: 5vw;
-  padding-left: 3vw;
-}
+  text-align: center; }
+  /* line 176, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-0 #section-0-title-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    text-transform: uppercase;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    padding: 0;
+    margin: 0; }
+    /* line 187, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-0 #section-0-title-wrap h1 {
+      font-family: "stellarmedium", serif;
+      font-size: 8vw;
+      line-height: 1em;
+      letter-spacing: 2.5vw;
+      padding-left: 3vw; }
 
-/* line 197, app.scss */
+/* line 197, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .video-container {
   width: 70vw;
   height: 70vw;
@@ -196,72 +169,63 @@ section {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-}
-/* line 205, app.scss */
-.video-container video {
-  width: 100%;
-  opacity: 1;
-}
+  transform: translate(-50%, -50%); }
+  /* line 205, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .video-container video {
+    width: 100%;
+    opacity: 1; }
 
-/* line 211, app.scss */
+/* line 211, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #motion-video {
+  width: 1600px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -60%);
-}
+  transform: translate(-50%, -58%); }
 
-/* line 218, app.scss */
+/* line 220, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 nav {
   height: 50px;
   z-index: 2;
   padding-right: 20px;
-  padding-top: 5px;
-}
+  padding-top: 5px; }
 
-/* line 225, app.scss */
+/* line 227, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 nav a {
   color: #383838;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
-/* line 230, app.scss */
+/* line 232, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .main {
-  z-index: -999;
-}
+  z-index: -999; }
 
-/* line 234, app.scss */
+/* line 236, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .opening {
   margin: 0 auto;
   width: 50vw;
   height: 50vw;
-  position: absolute;
-}
+  position: absolute; }
 
-/* line 241, app.scss */
+/* line 243, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .opening .motionCircle {
   width: 1em;
   height: 1em;
   background-color: white;
   border-radius: 50%;
   position: absolute;
-  top: 50%;
-}
+  top: 50%; }
 
-/* line 250, app.scss */
+/* line 252, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #motionCircle-1 {
   left: -10%;
-  transform: translate(-50%, -50%);
-}
+  transform: translate(-50%, -50%); }
 
-/* line 255, app.scss */
+/* line 257, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #motionCircle-2 {
   right: -10%;
-  transform: translate(50%, -50%);
-}
+  transform: translate(50%, -50%); }
 
-/* line 260, app.scss */
+/* line 262, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .outerCircle, #motionCircle-6 {
   width: 50vw;
   height: 50vw;
@@ -270,27 +234,24 @@ nav a {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-}
+  transform: translate(-50%, -50%); }
 
-/* line 271, app.scss */
+/* line 273, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #motionCircle-6 {
   background: url(../img/worldmap.png);
   background-size: contain;
-  z-index: -1;
-}
+  z-index: -1; }
 
-/* line 278, app.scss */
+/* line 280, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #circle-line {
   width: 65vw;
   height: 65vw;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-}
+  transform: translate(-50%, -50%); }
 
-/* line 287, app.scss */
+/* line 289, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .section-scroll {
   margin: 0 0 0 -15px;
   position: absolute;
@@ -299,44 +260,40 @@ nav a {
   width: 24px;
   height: 34px;
   cursor: pointer;
-  z-index: 3;
-}
-/* line 296, app.scss */
-.section-scroll .mouse {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 2px solid #fff;
-  -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-  border-radius: 10px;
-}
-/* line 308, app.scss */
-.section-scroll .wheel {
-  display: block;
-  margin: 0 0 0 -2px;
-  position: absolute;
-  top: 5px;
-  left: 50%;
-  width: 4px;
-  height: 4px;
-  background: #fff;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  -moz-animation: scroll-wheel 1.8s linear 0s infinite normal none;
-  -webkit-animation: scroll-wheel 1.8s linear 0s infinite normal none;
-  animation: scroll-wheel 1.8s linear 0s infinite normal none;
-}
+  z-index: 3; }
+  /* line 298, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .section-scroll .mouse {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 10px; }
+  /* line 310, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .section-scroll .wheel {
+    display: block;
+    margin: 0 0 0 -2px;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -moz-animation: scroll-wheel 1.8s linear 0s infinite normal none;
+    -webkit-animation: scroll-wheel 1.8s linear 0s infinite normal none;
+    animation: scroll-wheel 1.8s linear 0s infinite normal none; }
 
-/* line 326, app.scss */
+/* line 328, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #oilrig {
   width: 40px;
-  position: absolute;
-}
+  position: absolute; }
 
 /**
    * End of SEC-0
@@ -344,80 +301,70 @@ nav a {
 /**
    * SEC-1
    */
-/* line 341, app.scss */
+/* line 343, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-1 {
   text-align: center;
-  background: #CFA98E;
-}
-/* line 344, app.scss */
-#section-1 .smoke-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url(../img/smoke_PNG965.png);
-  background-size: cover;
-  opacity: .3;
-}
-/* line 354, app.scss */
-#section-1 h1 {
-  color: #725744;
-  letter-spacing: 5px;
-  font-size: 2em;
-}
-/* line 359, app.scss */
-#section-1 h2 {
-  color: white;
-  letter-spacing: 10px;
-  font-size: 8vw;
-  margin-top: -10px;
-}
-/* line 365, app.scss */
-#section-1 #unit {
-  color: white;
-  letter-spacing: 2px;
-  font-size: 2.7vw;
-  margin-top: -3vw;
-  margin-bottom: 5px;
-}
-/* line 372, app.scss */
-#section-1 p {
-  font-weight: 600;
-  font-size: 1.2em;
-  color: #725744;
-  max-width: 960px;
-  margin: 25px auto 100px auto;
-  line-height: 2em;
-}
-/* line 380, app.scss */
-#section-1 h3 {
-  color: #353535;
-  position: relative;
-  cursor: pointer;
-  height: 30px;
-  margin: 0 auto;
-}
-/* line 386, app.scss */
-#section-1 h3 a {
-  margin: 0;
-  color: #353535;
-  display: block;
-  line-height: 30px;
-}
-/* line 393, app.scss */
-#section-1 .line {
-  width: 94px;
-  height: 2px;
-}
+  background: #CFA98E; }
+  /* line 346, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-1 .smoke-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/smoke_PNG965.png);
+    background-size: cover;
+    opacity: .3; }
+  /* line 356, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-1 h1 {
+    color: #725744;
+    letter-spacing: 5px;
+    font-size: 2em; }
+  /* line 361, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-1 h2 {
+    color: white;
+    letter-spacing: 10px;
+    font-size: 8vw;
+    margin-top: -10px; }
+  /* line 367, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-1 #unit {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 2.7vw;
+    margin-top: -3vw;
+    margin-bottom: 5px; }
+  /* line 374, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-1 p {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #725744;
+    max-width: 960px;
+    margin: 25px auto 100px auto;
+    line-height: 2em; }
+  /* line 382, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-1 h3 {
+    color: #353535;
+    position: relative;
+    cursor: pointer;
+    height: 30px;
+    margin: 0 auto; }
+    /* line 388, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-1 h3 a {
+      margin: 0;
+      color: #353535;
+      display: block;
+      line-height: 30px; }
+  /* line 395, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-1 .line {
+    width: 94px;
+    height: 2px; }
 
-/* line 399, app.scss */
+/* line 401, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .linebreak {
   margin: 40px auto;
   height: 2px;
   width: 100px;
-  background: #725744;
-}
+  background: #725744; }
 
 /**
    * End of SEC-1
@@ -425,82 +372,69 @@ nav a {
 /**
    * SEC-2
    */
-/* line 416, app.scss */
+/* line 418, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-2 {
   text-align: center;
-  background-color: #ffffff;
-}
-/* line 419, app.scss */
-#section-2 h1 {
-  color: #171723;
-  line-height: 1.1em;
-  font-family: "Miller Display", "Roboto Slab", sans-serif;
-}
-/* line 424, app.scss */
-#section-2 .line {
-  background: #353535;
-}
+  background-color: #ffffff; }
+  /* line 421, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-2 h1 {
+    color: #171723;
+    line-height: 1.1em;
+    font-family: "MillerDisplay", "Roboto Slab", sans-serif; }
+  /* line 426, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-2 .line {
+    background: #353535; }
 
-/* line 431, app.scss */
+/* line 433, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-2 article {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-}
-/* line 438, app.scss */
-#section-2 article .infoImage {
-  width: 40vw;
-  height: 100vh;
-  background: url(../img/coaloilgas/oil.jpg);
-  background-size: cover;
-}
-/* line 444, app.scss */
-#section-2 article .section-2-article {
-  margin-left: 2vw;
-  width: 45vw;
-  height: 100vh;
-  text-align: left;
-}
-/* line 449, app.scss */
-#section-2 article .section-2-article #backbtn {
-  width: 30px;
-  margin-top: 23px;
-  margin-bottom: 10vh;
-  cursor: pointer;
-}
-/* line 455, app.scss */
-#section-2 article .section-2-article .line {
-  margin: 40px 0;
-}
-/* line 458, app.scss */
-#section-2 article .section-2-article p {
-  margin: 0;
-  font-size: 1em;
-}
+  display: flex; }
+  /* line 440, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-2 article .infoImage {
+    width: 40vw;
+    height: 100vh;
+    background: url(../img/coaloilgas/oil.jpg);
+    background-size: cover; }
+  /* line 446, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-2 article .section-2-article {
+    margin-left: 2vw;
+    width: 45vw;
+    height: 100vh;
+    text-align: left; }
+    /* line 451, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-2 article .section-2-article #backbtn {
+      width: 30px;
+      margin-top: 23px;
+      margin-bottom: 10vh;
+      cursor: pointer; }
+    /* line 457, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-2 article .section-2-article .line {
+      margin: 40px 0; }
+    /* line 460, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-2 article .section-2-article p {
+      margin: 0;
+      font-size: 1em; }
 
-/* line 465, app.scss */
+/* line 467, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .section-2-items-wrapper {
-  margin-top: 50px;
-}
-@media (min-width: 48em) {
-  /* line 465, app.scss */
-  .section-2-items-wrapper {
-    margin-top: 20px;
-  }
-}
+  margin-top: 50px; }
+  @media (min-width: 48em) {
+    /* line 467, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    .section-2-items-wrapper {
+      margin-top: 20px; } }
 
-/* line 472, app.scss */
+/* line 474, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .markup {
   color: #353535;
   text-align: center;
   text-transform: uppercase;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
-/* line 479, app.scss */
+/* line 481, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .markup-items {
   overflow-x: hidden;
   position: relative;
@@ -508,96 +442,80 @@ nav a {
   width: 90%;
   outline: 2px solid transparent;
   transition: outline-color 0.4s;
-  padding-top: 30px;
-}
-/* line 487, app.scss */
-.markup-items h2 {
-  font-size: 5em;
-  font-family: "Source Sans Pro", "Roboto Condensed", sans-serif;
-  font-weight: 600;
-  transition: all 0.4s;
-}
-/* line 493, app.scss */
-.markup-items .underline {
-  width: 100px;
-  height: 4px;
-  background-color: #353535;
-  margin: 0 auto;
-}
-/* line 499, app.scss */
-.markup-items #coal-cart, .markup-items #oil-cart, .markup-items #gas-cart {
-  position: absolute;
-  bottom: 5%;
-  width: 50%;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-/* line 506, app.scss */
-.markup-items #oil-cart {
-  width: 90%;
-}
-/* line 510, app.scss */
-.markup-items #gas-cart {
-  width: 70%;
-}
-/* line 514, app.scss */
-.markup-items .motion {
-  height: 4px;
-  width: 0;
-  background-color: #353535;
-  position: absolute;
-  bottom: 6.5%;
-  right: 0;
-}
+  padding-top: 30px; }
+  /* line 489, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .markup-items h2 {
+    font-size: 5em;
+    font-family: "Source Sans Pro", "Roboto Condensed", sans-serif;
+    font-weight: 600;
+    transition: all 0.4s; }
+  /* line 495, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .markup-items .underline {
+    width: 100px;
+    height: 4px;
+    background-color: #353535;
+    margin: 0 auto; }
+  /* line 501, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .markup-items #coal-cart, .markup-items #oil-cart, .markup-items #gas-cart {
+    position: absolute;
+    bottom: 5%;
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%, 0); }
+  /* line 508, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .markup-items #oil-cart {
+    width: 90%; }
+  /* line 512, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .markup-items #gas-cart {
+    width: 70%; }
+  /* line 516, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .markup-items .motion {
+    height: 4px;
+    width: 0;
+    background-color: #353535;
+    position: absolute;
+    bottom: 6.5%;
+    right: 0; }
 
-/* line 524, app.scss */
+/* line 526, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .markup:hover .markup-items {
-  outline: 4px solid #353535;
-}
-/* line 526, app.scss */
-.markup:hover .markup-items h2 {
-  letter-spacing: 0.2em;
-}
+  outline: 4px solid #353535; }
+  /* line 528, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .markup:hover .markup-items h2 {
+    letter-spacing: 0.2em; }
 
-/* line 531, app.scss */
+/* line 533, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .markup:hover .motion {
-  animation: motion 0.8s linear infinite;
-}
+  animation: motion 0.8s linear infinite; }
 
-/* line 535, app.scss */
+/* line 537, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .markup:hover .motion {
-  animation: motion 0.8s linear infinite;
-}
+  animation: motion 0.8s linear infinite; }
 
-/* line 539, app.scss */
+/* line 542, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .coal-video,
 .coal-content {
   display: none;
-  margin-top: 20px;
-}
+  margin-top: 20px; }
 
-/* line 545, app.scss */
+/* line 547, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .coal-content div:nth-child(1) {
   text-align: right;
-  padding-right: 20px;
-}
+  padding-right: 20px; }
 
-/* line 550, app.scss */
+/* line 552, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .coal-content p {
-  color: #353535;
-}
+  color: #353535; }
 
-/* line 554, app.scss */
+/* line 556, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #coalRocks {
   margin-bottom: -10px;
   padding: 0;
-  min-height: 80px;
-}
+  min-height: 80px; }
 
-/* line 560, app.scss */
+/* line 562, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #coal {
-  margin: 0;
-}
+  margin: 0; }
 
 /**
    * End of SEC-2
@@ -605,64 +523,54 @@ nav a {
 /**
    * SEC-3
    */
-/* line 574, app.scss */
+/* line 576, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-3 {
   text-align: center;
-  background-color: #1A535C;
-}
-/* line 577, app.scss */
-#section-3 .open h1 {
-  font-family: "Miller Display", "Roboto Slab", sans-serif;
-  line-height: 1.1em;
-  color: #ffffff;
-}
-/* line 582, app.scss */
-#section-3 .line {
-  background: white;
-}
-/* line 585, app.scss */
-#section-3 p {
-  color: #ffffff;
-}
+  background-color: #1A535C; }
+  /* line 579, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-3 .open h1 {
+    font-family: "MillerDisplay", "Roboto Slab", sans-serif;
+    line-height: 1.1em;
+    color: #ffffff; }
+  /* line 584, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-3 .line {
+    background: white; }
+  /* line 587, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-3 p {
+    color: #ffffff; }
 
-/* line 590, app.scss */
+/* line 592, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-3 .section-3-items {
-  margin-top: 40vh;
+  margin-top: 30vh;
   text-align: center;
   width: 15%;
   max-width: 350px;
   min-width: 150px;
   cursor: pointer;
   opacity: 0.5;
-  transition: opacity 0.2s ease-in;
-}
-/* line 599, app.scss */
-#section-3 .section-3-items h1 {
-  font-family: "stellarmedium", serif;
-  opacity: .3;
-  width: 100%;
-  font-size: 7vw;
-  white-space: nowrap;
-}
-/* line 606, app.scss */
-#section-3 .section-3-items p {
-  margin-top: 0px;
-  font-size: 1em;
-  font-weight: 200;
-}
-/* line 611, app.scss */
-#section-3 .section-3-items .section-3-image {
-  width: 100%;
-}
-/* line 614, app.scss */
-#section-3 .section-3-items .section-3-items-data {
-  opacity: 0;
-}
+  transition: opacity 0.2s ease-in; }
+  /* line 601, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-3 .section-3-items h1 {
+    font-family: "stellarmedium", serif;
+    opacity: .3;
+    width: 100%;
+    font-size: 7vw;
+    white-space: nowrap; }
+  /* line 608, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-3 .section-3-items p {
+    margin-top: 0px;
+    font-size: 1em;
+    font-weight: 200; }
+  /* line 613, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-3 .section-3-items .section-3-image {
+    width: 100%; }
+  /* line 616, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-3 .section-3-items .section-3-items-data {
+    opacity: 0; }
 
-/* line 619, app.scss */
+/* line 621, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-3 .section-3-items:hover {
-  opacity: 1;
-}
+  opacity: 1; }
 
 /**
    * End of SEC-3
@@ -670,102 +578,89 @@ nav a {
 /**
    * SEC-4
    */
-/* line 633, app.scss */
+/* line 635, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-4 {
   overflow: hidden;
   text-align: center;
-  background: #FBF18F;
-}
-/* line 637, app.scss */
-#section-4 .open h1 {
-  padding: 0;
-  color: white;
-  font-family: "Miller Display", "Roboto Slab", sans-serif;
-  opacity: 0;
-}
-/* line 643, app.scss */
-#section-4 .open p {
-  color: white;
-  opacity: 0;
-}
-/* line 647, app.scss */
-#section-4 .line {
-  background: white;
-  opacity: 0;
-}
+  background: #FBF18F; }
+  /* line 639, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-4 .open h1 {
+    padding: 0;
+    color: white;
+    font-family: "MillerDisplay", "Roboto Slab", sans-serif;
+    opacity: 0; }
+  /* line 645, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-4 .open p {
+    color: white;
+    opacity: 0; }
+  /* line 649, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-4 .line {
+    background: white;
+    opacity: 0; }
 
-/* line 653, app.scss */
+/* line 655, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .cntr {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
-}
+  z-index: 1; }
 
-/* line 661, app.scss */
+/* line 663, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #city2 {
   bottom: -2%;
   position: absolute;
   left: 0;
   z-index: 9;
-  width: 100vw;
-}
+  width: 100vw; }
 
-/* line 669, app.scss */
+/* line 671, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #windowsHolder {
   bottom: -2%;
   position: absolute;
   left: 0;
   z-index: 999;
   width: 100%;
-  left: -0.1%;
-}
+  left: -0.1%; }
 
-/* line 678, app.scss */
+/* line 680, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .clouds {
   width: 200px;
   position: absolute;
   z-index: 0;
-  opacity: .1;
-}
+  opacity: .1; }
 
-/* line 685, app.scss */
+/* line 687, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #cloud-1 {
   top: 20%;
   left: 50%;
-  animation: fly linear 45s infinite;
-}
+  animation: fly linear 45s infinite; }
 
-/* line 692, app.scss */
+/* line 694, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #cloud-2 {
   top: 50%;
   left: 20%;
-  animation: fly linear 25s infinite;
-}
+  animation: fly linear 25s infinite; }
 
-/* line 699, app.scss */
+/* line 701, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #cloud-3 {
   top: 10%;
   left: 30%;
-  animation: fly linear 35s infinite;
-}
+  animation: fly linear 35s infinite; }
 
-/* line 706, app.scss */
+/* line 708, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #cloud-4 {
   top: 30%;
   left: 10%;
-  animation: fly linear 65s infinite;
-}
+  animation: fly linear 65s infinite; }
 
-/* line 713, app.scss */
+/* line 715, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #cloud-5 {
   top: 40%;
   left: 00%;
-  animation: fly linear 40s infinite;
-}
+  animation: fly linear 40s infinite; }
 
-/* line 720, app.scss */
+/* line 722, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .sun {
   height: 200px;
   width: 200px;
@@ -774,10 +669,9 @@ nav a {
   border-radius: 50%;
   position: absolute;
   z-index: 999;
-  background-color: #FF6B6B;
-}
+  background-color: #FF6B6B; }
 
-/* line 731, app.scss */
+/* line 733, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .sunRay {
   height: 250px;
   width: 250px;
@@ -789,20 +683,18 @@ nav a {
   background-color: #FF6B6B;
   transform: translate(-50%, -50%);
   opacity: 0.5;
-  box-shadow: 0 0 0 20px rgba(255, 107, 107, 0.5), 0 0 0 40px rgba(255, 107, 107, 0.3);
-}
+  box-shadow: 0 0 0 20px rgba(255, 107, 107, 0.5), 0 0 0 40px rgba(255, 107, 107, 0.3); }
 
-/* line 745, app.scss */
+/* line 747, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .bulb-wrapper {
   width: 35vh;
   height: 50vh;
   right: 5%;
   position: absolute;
   top: 0;
-  z-index: 99;
-}
+  z-index: 99; }
 
-/* line 754, app.scss */
+/* line 756, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #bulb {
   padding-bottom: 100%;
   position: absolute;
@@ -811,10 +703,9 @@ nav a {
   top: 0;
   z-index: 99;
   left: 50%;
-  transform: translate(-50%, 0);
-}
+  transform: translate(-50%, 0); }
 
-/* line 765, app.scss */
+/* line 767, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .lightray {
   position: absolute;
   background-color: rgba(251, 241, 143, 0.6);
@@ -825,10 +716,9 @@ nav a {
   transform: translate(0, -50%);
   right: 1%;
   z-index: 0;
-  display: none;
-}
+  display: none; }
 
-/* line 778, app.scss */
+/* line 780, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .handler, .handler .handler-wrapper {
   cursor: pointer !important;
   height: auto;
@@ -837,68 +727,60 @@ nav a {
   right: 40%;
   width: 19px;
   height: 300px;
-  z-index: 1;
-}
-/* line 787, app.scss */
-.handler .handler-wrapper {
-  right: 0%;
-  overflow-y: hidden;
-  z-index: 1;
-}
-/* line 793, app.scss */
-.handler .handler-zone {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-}
-/* line 800, app.scss */
-.handler .handler-ripple {
-  background-color: #FF6B6B;
-  width: 19.4px;
-  height: 19.4px;
-  border-radius: 50%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  cursor: pointer;
-  position: absolute;
-  z-index: 2;
-  bottom: 0%;
-  -webkit-animation: ripple 2s linear infinite;
-  animation: ripple 2s linear infinite;
-}
-/* line 814, app.scss */
-.handler .handler-hint {
-  position: absolute;
-  bottom: -40px;
-  width: 200px;
-  z-index: 4;
-  left: 50%;
-  transform: translate(-50%, 0);
-  text-align: center;
-}
-/* line 822, app.scss */
-.handler .handler-hint h1 {
-  font-family: "stellarmedium", serif;
-  font-weight: 600;
-}
-/* line 827, app.scss */
-.handler h1, .handler .handler-wrapper h1 {
-  color: #353535;
-  text-transform: uppercase;
-  font-size: 0.9em;
-  letter-spacing: 0.1em;
-  white-space: nowrap;
-}
-/* line 834, app.scss */
-.handler #arrow {
-  width: 30px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
-  animation: arrowdown 2s ease-out infinite;
-}
+  z-index: 1; }
+  /* line 789, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .handler .handler-wrapper {
+    right: 0%;
+    overflow-y: hidden;
+    z-index: 1; }
+  /* line 795, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .handler .handler-zone {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1; }
+  /* line 802, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .handler .handler-ripple {
+    background-color: #FF6B6B;
+    width: 19.4px;
+    height: 19.4px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    bottom: 0%;
+    -webkit-animation: ripple 2s linear infinite;
+    animation: ripple 2s linear infinite; }
+  /* line 816, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .handler .handler-hint {
+    position: absolute;
+    bottom: -40px;
+    width: 200px;
+    z-index: 4;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center; }
+    /* line 824, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    .handler .handler-hint h1 {
+      font-family: "stellarmedium", serif;
+      font-weight: 600; }
+  /* line 829, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .handler h1, .handler .handler-wrapper h1 {
+    color: #353535;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.1em;
+    white-space: nowrap; }
+  /* line 836, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .handler #arrow {
+    width: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    animation: arrowdown 2s ease-out infinite; }
 
 /**
    * END OF SEC-4
@@ -906,113 +788,98 @@ nav a {
 /**
    * SEC-5 
    */
-/* line 853, app.scss */
+/* line 855, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-5 {
-  background-color: #ffffff;
-}
-/* line 855, app.scss */
-#section-5 .open h1 {
-  font-family: "Miller Display", "Roboto Slab", sans-serif;
-  line-height: 1.1em;
-  color: #353535;
-}
-/* line 860, app.scss */
-#section-5 .open p {
-  font-family: "Source Sans Pro", "Roboto Condensed", sans-serif;
-  font-size: 1em;
-  color: #353535;
-  letter-spacing: 0.05em;
-}
-/* line 866, app.scss */
-#section-5 .section-5-table {
-  width: 100%;
-}
-/* line 868, app.scss */
-#section-5 .section-5-table ul {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-}
-/* line 872, app.scss */
-#section-5 .section-5-table ul li {
-  list-style: none;
-  font-family: "Miller Display", "Roboto Slab", sans-serif;
-  font-style: italic;
-}
-/* line 879, app.scss */
-#section-5 .section-5-data {
-  position: relative;
-  height: 16px;
-  font-family: "stellarmedium", serif;
-}
-/* line 883, app.scss */
-#section-5 .section-5-data .line-data {
-  width: 100%;
-  height: 2px;
-  background: #353535;
-  position: absolute;
-  bottom: 50%;
-}
-/* line 890, app.scss */
-#section-5 .section-5-data .road-data {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 15px;
-  width: 73%;
-  background: #FF6B6B;
-}
-/* line 897, app.scss */
-#section-5 .section-5-data .road-data:after {
-  content: "Road Transport";
-  position: absolute;
-  right: 0;
-  top: 100%;
-}
-/* line 904, app.scss */
-#section-5 .section-5-data .aviation-data {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 15px;
-  width: 11%;
-  background: #1A535C;
-}
-/* line 911, app.scss */
-#section-5 .section-5-data .aviation-data:after {
-  content: "Aviation";
-  position: absolute;
-  right: 0;
-  top: 100%;
-}
-/* line 918, app.scss */
-#section-5 .section-5-data .marine-data {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 15px;
-  width: 14%;
-  background: #FBF18F;
-}
-/* line 925, app.scss */
-#section-5 .section-5-data .marine-data:after {
-  content: "Marine Shipping";
-  position: absolute;
-  right: 0;
-  top: 100%;
-  white-space: nowrap;
-}
+  background-color: #ffffff; }
+  /* line 857, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-5 .open h1 {
+    font-family: "MillerDisplay", "Roboto Slab", sans-serif;
+    line-height: 1.1em;
+    color: #353535; }
+  /* line 862, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-5 .open p {
+    font-family: "Source Sans Pro", "Roboto Condensed", sans-serif;
+    font-size: 1em;
+    color: #353535;
+    letter-spacing: 0.05em; }
+  /* line 868, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-5 .section-5-table {
+    width: 100%; }
+    /* line 870, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-5 .section-5-table ul {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between; }
+      /* line 874, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+      #section-5 .section-5-table ul li {
+        list-style: none;
+        font-family: "MillerDisplay", "Roboto Slab", sans-serif;
+        font-style: italic; }
+  /* line 881, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-5 .section-5-data {
+    position: relative;
+    height: 16px;
+    font-family: "stellarmedium", serif; }
+    /* line 885, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-5 .section-5-data .line-data {
+      width: 100%;
+      height: 2px;
+      background: #353535;
+      position: absolute;
+      bottom: 50%; }
+    /* line 892, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-5 .section-5-data .road-data {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 15px;
+      width: 73%;
+      background: #FF6B6B; }
+      /* line 899, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+      #section-5 .section-5-data .road-data:after {
+        content: "Road Transport";
+        position: absolute;
+        right: 0;
+        top: 100%; }
+    /* line 906, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-5 .section-5-data .aviation-data {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 15px;
+      width: 11%;
+      background: #1A535C; }
+      /* line 913, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+      #section-5 .section-5-data .aviation-data:after {
+        content: "Aviation";
+        position: absolute;
+        right: 0;
+        top: 100%; }
+    /* line 920, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-5 .section-5-data .marine-data {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 15px;
+      width: 14%;
+      background: #FBF18F; }
+      /* line 927, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+      #section-5 .section-5-data .marine-data:after {
+        content: "Marine Shipping";
+        position: absolute;
+        right: 0;
+        top: 100%;
+        white-space: nowrap; }
 
-/* line 936, app.scss */
+/* line 938, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .graphic {
   z-index: 5;
   position: absolute;
   width: 100vw;
   height: 100vh;
-  bottom: 0;
-}
+  bottom: 0; }
 
-/* line 944, app.scss */
+/* line 946, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #bus {
   width: 12vw;
   height: auto;
@@ -1020,10 +887,9 @@ nav a {
   bottom: 20%;
   left: 0;
   -webkit-animation: traffic linear 9s infinite;
-  animation: traffic linear 9s infinite;
-}
+  animation: traffic linear 9s infinite; }
 
-/* line 954, app.scss */
+/* line 956, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #truck {
   width: 9vw;
   height: auto;
@@ -1031,10 +897,9 @@ nav a {
   bottom: 20%;
   left: 20%;
   -webkit-animation: traffic linear 12s infinite;
-  animation: traffic linear 12s infinite;
-}
+  animation: traffic linear 12s infinite; }
 
-/* line 964, app.scss */
+/* line 966, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #truck2 {
   width: 9vw;
   height: auto;
@@ -1042,10 +907,9 @@ nav a {
   bottom: 20%;
   left: 00%;
   -webkit-animation: traffic linear 18s infinite;
-  animation: traffic linear 18s infinite;
-}
+  animation: traffic linear 18s infinite; }
 
-/* line 974, app.scss */
+/* line 976, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #car {
   width: 6vw;
   height: auto;
@@ -1053,10 +917,9 @@ nav a {
   bottom: 20%;
   left: 40%;
   -webkit-animation: traffic linear 10s infinite;
-  animation: traffic linear 10s infinite;
-}
+  animation: traffic linear 10s infinite; }
 
-/* line 984, app.scss */
+/* line 986, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #bigcar {
   width: 7vw;
   height: auto;
@@ -1064,10 +927,9 @@ nav a {
   bottom: 20%;
   left: 60%;
   -webkit-animation: traffic linear 8s infinite;
-  animation: traffic linear 8s infinite;
-}
+  animation: traffic linear 8s infinite; }
 
-/* line 994, app.scss */
+/* line 996, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #ship {
   width: 19vw;
   height: auto;
@@ -1075,25 +937,22 @@ nav a {
   bottom: 5%;
   left: 00%;
   -webkit-animation: ship linear 30s infinite;
-  animation: ship linear 30s infinite;
-}
+  animation: ship linear 30s infinite; }
 
-/* line 1004, app.scss */
+/* line 1006, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .plane {
   width: 12vw;
   height: auto;
   position: absolute;
   top: 150px;
   left: -15vw;
-  z-index: 1;
-}
+  z-index: 1; }
 
-/* line 1013, app.scss */
+/* line 1015, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .plane:nth-of-type(1) {
-  animation: fly linear 15s infinite;
-}
+  animation: fly linear 15s infinite; }
 
-/* line 1017, app.scss */
+/* line 1019, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .plane:nth-of-type(2) {
   top: 100px;
   width: 10vw;
@@ -1101,27 +960,24 @@ nav a {
   transform: scaleX(-1);
   animation: fly linear 10s infinite;
   animation-direction: reverse;
-  animation-delay: 5s;
-}
+  animation-delay: 5s; }
 
-/* line 1027, app.scss */
+/* line 1029, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .plane:nth-of-type(3) {
   top: 50px;
   width: 8vw;
   opacity: .2;
   transform: scaleX(-1);
   animation: fly linear 10s infinite;
-  animation-direction: reverse;
-}
+  animation-direction: reverse; }
 
-/* line 1036, app.scss */
+/* line 1038, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .plane:nth-of-type(4) {
   top: 190px;
   width: 15vw;
-  animation: fly linear 10s infinite;
-}
+  animation: fly linear 10s infinite; }
 
-/* line 1042, app.scss */
+/* line 1044, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #helicopter {
   width: 8vw;
   height: auto;
@@ -1129,26 +985,23 @@ nav a {
   top: 40vh;
   left: -15vw;
   animation: flyHeli ease-in-out 12s infinite;
-  z-index: 1;
-}
+  z-index: 1; }
 
-/* line 1052, app.scss */
+/* line 1054, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #land {
   width: 100%;
   position: absolute;
-  bottom: 2%;
-}
-/* line 1056, app.scss */
-#land .road-line-2 {
-  position: absolute;
-  bottom: 0;
-  height: 1vw;
-  width: 100%;
-  left: 0;
-  transform: translate(0, 40%);
-}
+  bottom: 2%; }
+  /* line 1058, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #land .road-line-2 {
+    position: absolute;
+    bottom: 0;
+    height: 1vw;
+    width: 100%;
+    left: 0;
+    transform: translate(0, 40%); }
 
-/* line 1066, app.scss */
+/* line 1068, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #sea {
   position: absolute;
   bottom: 0;
@@ -1161,27 +1014,24 @@ nav a {
   background-position: 0px 0px;
   background-repeat: repeat-x;
   animation: seawave 24s linear infinite;
-  -webkit-animation: seawave 24s linear infinite;
-}
+  -webkit-animation: seawave 24s linear infinite; }
 
-/* line 1081, app.scss */
+/* line 1083, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #dock {
   width: 20vw;
   position: absolute;
   bottom: 0;
-  left: -1%;
-}
+  left: -1%; }
 
-/* line 1088, app.scss */
+/* line 1090, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #linecity {
   width: 100vw;
   position: absolute;
   bottom: 19%;
   left: 0;
-  z-index: 0;
-}
+  z-index: 0; }
 
-/* line 1096, app.scss */
+/* line 1098, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .airballoon {
   z-index: 2;
   width: 8vw;
@@ -1193,15 +1043,13 @@ nav a {
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
   text-align: center;
-  margin-bottom: 50px;
-}
-/* line 1108, app.scss */
-.airballoon img {
-  width: 100%;
-  margin-bottom: 10px;
-}
+  margin-bottom: 50px; }
+  /* line 1110, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .airballoon img {
+    width: 100%;
+    margin-bottom: 10px; }
 
-/* line 1114, app.scss */
+/* line 1116, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .aviation-ripple {
   background-color: #FF6B6B;
   width: 1.2em;
@@ -1212,10 +1060,9 @@ nav a {
   cursor: pointer;
   bottom: -10%;
   -webkit-animation: ripple 2s linear infinite;
-  animation: ripple 2s linear infinite;
-}
+  animation: ripple 2s linear infinite; }
 
-/* line 1127, app.scss */
+/* line 1129, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .marine-ripple {
   background-color: #FF6B6B;
   width: 1.1em;
@@ -1226,10 +1073,9 @@ nav a {
   bottom: 57%;
   cursor: pointer;
   -webkit-animation: ripple 2s linear infinite;
-  animation: ripple 2s linear infinite;
-}
+  animation: ripple 2s linear infinite; }
 
-/* line 1140, app.scss */
+/* line 1142, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .road-ripple {
   background-color: #FF6B6B;
   width: 1.1em;
@@ -1240,304 +1086,123 @@ nav a {
   right: 39.5%;
   bottom: 14%;
   -webkit-animation: ripple 2s linear infinite;
-  animation: ripple 2s linear infinite;
-}
+  animation: ripple 2s linear infinite; }
 
 /**
    * SEC-6 
    */
-/* line 1158, app.scss */
+/* line 1160, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-6 {
   text-align: center;
   background-color: #1A535C;
-  color: white;
-}
-/* line 1162, app.scss */
-#section-6 .open h1 {
-  font-family: "Miller Display", "Roboto Slab", sans-serif;
-}
-/* line 1166, app.scss */
-#section-6 .line {
-  background: white;
-}
+  color: white; }
+  /* line 1164, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-6 .open h1 {
+    font-family: "MillerDisplay", "Roboto Slab", sans-serif; }
+  /* line 1168, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-6 .line {
+    background: white; }
 
-/* line 1171, app.scss */
+/* line 1173, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .section-6-data {
   width: 80vw;
   max-width: 800px;
-  margin: 5vw auto 0 auto;
-}
-@media (min-width: 48em) {
-  /* line 1171, app.scss */
-  .section-6-data {
-    width: 62vw;
-  }
-}
-/* line 1178, app.scss */
-.section-6-data .dataCir {
-  cursor: pointer;
-}
+  margin: 10vw auto 0 auto; }
+  @media (min-width: 48em) {
+    /* line 1173, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    .section-6-data {
+      width: 62vw; } }
+  /* line 1180, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .section-6-data .dataCir {
+    cursor: pointer; }
 
 /**
    * END OF SEC-6 
    */
 /**
-   * SEC-8
-   */
-/* line 1193, app.scss */
-#section-8 {
-  text-align: center;
-}
-/* line 1195, app.scss */
-#section-8 .open h1 {
-  padding: 0;
-  font-family: "Miller Display", "Roboto Slab", sans-serif;
-}
-/* line 1199, app.scss */
-#section-8 .open {
-  margin-bottom: 5vh;
-}
-
-/* line 1204, app.scss */
-#cn {
-  left: 72%;
-  top: 40%;
-}
-
-/* line 1209, app.scss */
-#usa {
-  left: 22%;
-  top: 42%;
-}
-
-/* line 1214, app.scss */
-#ind {
-  left: 67%;
-  top: 47%;
-}
-
-/* line 1219, app.scss */
-#ru {
-  left: 73%;
-  top: 32%;
-}
-
-/* line 1224, app.scss */
-#ja {
-  left: 81%;
-  top: 43%;
-}
-
-/* line 1229, app.scss */
-#worldmap {
-  width: 100%;
-  position: relative;
-  left: 0;
-  z-index: 9;
-  overflow: visible;
-}
-/* line 1235, app.scss */
-#worldmap .circleDotted {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-/* line 1243, app.scss */
-#section-8 .data-wrapper {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-/* line 1248, app.scss */
-#section-8 .data-wrapper .continent-total {
-  text-align: center;
-  width: 40%;
-  height: 40%;
-  border-radius: 50%;
-  border: 2px solid #171723;
-  position: absolute;
-  right: -70%;
-  top: 50%;
-  transform: translate(0, -50%);
-}
-/* line 1258, app.scss */
-#section-8 .data-wrapper .continent-total .data-flex {
-  padding-top: 20%;
-}
-@media (min-width: 48em) {
-  /* line 1261, app.scss */
-  #section-8 .data-wrapper .continent-total .totalTitle {
-    font-size: 14px;
-  }
-}
-/* line 1266, app.scss */
-#section-8 .data-wrapper .continent-total .totalNumber {
-  font-family: "Miller Display", "Roboto Slab", sans-serif;
-  line-height: 0.80em;
-  font-size: 2em;
-  vertical-align: top;
-  margin: 0;
-  padding: 0;
-}
-/* line 1273, app.scss */
-#section-8 .data-wrapper .continent-total .totalNumber:after {
-  content: "gt";
-  font-size: 0.4em;
-}
-@media (min-width: 85.375em) {
-  /* line 1266, app.scss */
-  #section-8 .data-wrapper .continent-total .totalNumber {
-    font-size: 3.2em;
-  }
-}
-
-/* line 1284, app.scss */
-.circle-ripple {
-  overflow: visible;
-  background-color: #f7e52d;
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  cursor: pointer;
-  position: absolute;
-}
-
-/* line 1294, app.scss */
-.continent {
-  opacity: 1;
-  position: absolute;
-  font-size: 1em;
-  right: 0;
-}
-
-/* line 1301, app.scss */
-.continent-content {
-  position: relative;
-  height: 30vh;
-}
-/* line 1304, app.scss */
-.continent-content img {
-  margin-bottom: 3px;
-  margin-right: 5px;
-}
-
-/* line 1310, app.scss */
-.hidden {
-  background-color: aqua;
-  display: none;
-}
-
-/* line 1315, app.scss */
-.continent:not(.hidden) {
-  -webkit-transition: background-color 5s;
-  transition: background-color 5s;
-}
-
-/* line 1320, app.scss */
-.activated {
-  background-color: #FF6B6B;
-}
-
-/* line 1324, app.scss */
-.timespan {
-  margin-top: 10vh;
-}
-/* line 1326, app.scss */
-.timespan .timespanMark {
-  padding: 0 15px 0 15px;
-  font-weight: bold;
-}
-
-/**
    * Section-9
    */
-/* line 1337, app.scss */
+/* line 1196, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-9 {
-  background-color: #FBF18F;
-}
-/* line 1339, app.scss */
-#section-9 .open h1 {
-  font-family: "Miller Display", "Roboto Slab", sans-serif;
-  line-height: 1.1em;
-  color: #353535;
-}
-/* line 1344, app.scss */
-#section-9 .open p {
-  font-family: "Source Sans Pro", "Roboto Condensed", sans-serif;
-  color: #353535;
-  letter-spacing: 0.05em;
-}
+  background-color: #FBF18F; }
+  /* line 1198, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-9 .open h1 {
+    font-family: "MillerDisplay", "Roboto Slab", sans-serif;
+    line-height: 1.1em;
+    color: #353535; }
+  /* line 1203, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-9 .open p {
+    font-family: "Source Sans Pro", "Roboto Condensed", sans-serif;
+    color: #353535;
+    letter-spacing: 0.05em; }
+  /* line 1208, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-9 h3 {
+    text-transform: uppercase;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px; }
 
-/* line 1351, app.scss */
+/* line 1216, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .thermal {
   width: 350px;
   height: 170px;
-  margin: 10px auto 0 auto;
+  margin: 10px auto 50px auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-/* line 1358, app.scss */
-.thermal .thermal-head {
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
-  border: 4px solid #171723;
-  background: #FBF18F;
-  overflow: hidden;
-}
-/* line 1365, app.scss */
-.thermal .thermal-head .thermal-content {
-  text-align: center;
-  font-family: "Miller Display", "Roboto Slab", sans-serif;
-  font-size: 38px;
-  line-height: 32px;
-  font-style: italic;
-  transform: translate(0, 7%);
-}
-/* line 1372, app.scss */
-.thermal .thermal-head .thermal-content div {
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/* line 1380, app.scss */
-.thermal .thermal-buttons {
-  width: 40px;
-  height: 40px;
-  font-size: 60px;
-  line-height: 30px;
-  cursor: pointer;
-}
+  justify-content: space-between; }
+  /* line 1223, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .thermal .thermal-head {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 4px solid #171723;
+    background: #FBF18F;
+    overflow: hidden; }
+    /* line 1230, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    .thermal .thermal-head .thermal-content {
+      text-align: center;
+      font-family: "MillerDisplay", "Roboto Slab", sans-serif;
+      font-size: 38px;
+      line-height: 32px;
+      font-style: italic;
+      transform: translate(0, 7%); }
+      /* line 1237, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+      .thermal .thermal-head .thermal-content div {
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+  /* line 1245, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .thermal .thermal-buttons {
+    width: 40px;
+    height: 40px;
+    font-size: 60px;
+    line-height: 30px;
+    cursor: pointer; }
 
-/* line 1389, app.scss */
+/* line 1254, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .section-9-article {
   width: 800px;
-  margin: 20px auto 0 auto;
-}
-/* line 1392, app.scss */
-.section-9-article article {
-  position: absolute;
-  display: flex;
-}
-/* line 1396, app.scss */
-.section-9-article .headline {
-  font-size: 10em;
-  font-style: italic;
-  opacity: .2;
-  line-height: 0.8em;
-  margin-right: 60px;
-  opacity: 0;
-}
-/* line 1404, app.scss */
-.section-9-article .content {
-  width: 400px;
-  opacity: 0;
-}
+  margin: 20px auto 0 auto; }
+  /* line 1257, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .section-9-article article {
+    position: absolute;
+    display: flex; }
+  /* line 1261, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .section-9-article .headline {
+    font-size: 10em;
+    font-style: italic;
+    opacity: .2;
+    line-height: 0.8em;
+    margin-right: 60px;
+    opacity: 0; }
+  /* line 1269, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .section-9-article .content {
+    width: 600px;
+    opacity: 0; }
+    /* line 1273, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    .section-9-article .content ul li {
+      margin-bottom: 20px; }
 
 /**
    * END OF SEC 9
@@ -1545,23 +1210,17 @@ nav a {
 /**
    * SEC-10
    */
-/* line 1420, app.scss */
+/* line 1289, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-10 {
-  background: #1A535C;
-}
-/* line 1422, app.scss */
-#section-10 .open h1 {
-  color: white;
-  text-transform: none;
-}
-/* line 1426, app.scss */
-#section-10 .open .line {
-  background: white;
-}
+  background: white; }
+  /* line 1291, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-10 .open h1 {
+    font-size: 5em;
+    text-transform: none; }
 
-/* line 1431, app.scss */
+/* line 1300, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .impact-items-wrapper {
-  width: 99vw;
+  width: 85vw;
   height: 400px;
   position: absolute;
   top: 60%;
@@ -1569,52 +1228,45 @@ nav a {
   transform: translate(-50%, -30%);
   display: flex;
   justify-content: space-between;
-  padding: 0 100px;
-}
-/* line 1441, app.scss */
-.impact-items-wrapper .impact-items {
-  text-align: left;
-  width: 300px;
-  height: 470px;
-  text-transform: capitalize;
-  padding-top: 10px;
-  transition: all 0.3s ease-in;
-  cursor: pointer;
-  margin-top: -100px;
-  outline: 2px solid rgba(255, 255, 255, 0);
-}
-/* line 1451, app.scss */
-.impact-items-wrapper .impact-items .impact-contents {
-  width: 90%;
-  margin: 0 auto;
-}
-/* line 1454, app.scss */
-.impact-items-wrapper .impact-items .impact-contents img {
-  width: 150px;
-  margin-bottom: 40px;
-}
-/* line 1458, app.scss */
-.impact-items-wrapper .impact-items .impact-contents .line {
-  display: block;
-  background: white;
-}
-/* line 1462, app.scss */
-.impact-items-wrapper .impact-items .impact-contents h1 {
-  color: white;
-  font-family: "Miller Display", "Roboto Slab", sans-serif;
-  font-size: 1.4em;
-  letter-spacing: 0.2em;
-}
-/* line 1468, app.scss */
-.impact-items-wrapper .impact-items .impact-contents p {
-  font-size: 0.8em;
-  font-weight: 200;
-  color: white;
-}
-/* line 1474, app.scss */
-.impact-items-wrapper .impact-items:hover {
-  outline: 2px solid #FF6B6B;
-}
+  padding: 0 100px; }
+  /* line 1310, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  .impact-items-wrapper .impact-items {
+    text-align: left;
+    width: 400px;
+    height: 490px;
+    text-transform: capitalize;
+    padding-top: 10px;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    margin-top: -100px;
+    outline: 2px solid rgba(255, 255, 255, 0); }
+    /* line 1321, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    .impact-items-wrapper .impact-items a {
+      color: #353535; }
+    /* line 1324, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    .impact-items-wrapper .impact-items .impact-contents {
+      width: 90%;
+      margin: 0 auto; }
+      /* line 1327, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+      .impact-items-wrapper .impact-items .impact-contents img {
+        width: 150px;
+        margin-bottom: 40px; }
+      /* line 1331, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+      .impact-items-wrapper .impact-items .impact-contents .line {
+        display: block; }
+      /* line 1335, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+      .impact-items-wrapper .impact-items .impact-contents h1 {
+        text-transform: none;
+        font-family: "MillerDisplay", "Roboto Slab", sans-serif;
+        font-size: 2em;
+        letter-spacing: 0.2em; }
+      /* line 1342, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+      .impact-items-wrapper .impact-items .impact-contents p {
+        font-size: 0.8em;
+        font-weight: 200; }
+    /* line 1348, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    .impact-items-wrapper .impact-items:hover {
+      outline: 4px solid #FF6B6B; }
 
 /**
    * END OF SEC 10
@@ -1622,34 +1274,29 @@ nav a {
 /**
    *  SEC 11
    */
-/* line 1490, app.scss */
+/* line 1364, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-11 {
-  background: #FF6B6B;
-}
-/* line 1492, app.scss */
-#section-11 .msg-wrap {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-/* line 1499, app.scss */
-#section-11 .msg-wrap h1 {
-  font-size: 3vw;
-}
-/* line 1502, app.scss */
-#section-11 .msg-wrap h3 a {
-  font-size: 10vw;
-  color: white;
-}
-/* line 1506, app.scss */
-#section-11 .msg-wrap .line {
-  width: 70vw;
-  height: 4px;
-  background: #ffffff;
-}
+  background: #FF6B6B; }
+  /* line 1366, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-11 .msg-wrap {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+    /* line 1373, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-11 .msg-wrap h1 {
+      font-size: 3vw; }
+    /* line 1376, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-11 .msg-wrap h3 a {
+      font-size: 10vw;
+      color: white; }
+    /* line 1380, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-11 .msg-wrap .line {
+      width: 70vw;
+      height: 4px;
+      background: #ffffff; }
 
 /**
    * END OF SEC 10
@@ -1657,46 +1304,43 @@ nav a {
 /**
    * HEATWAVE
    */
-/* line 1525, app.scss */
+/* line 1399, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-heatwave .open h1 {
-  font-family: "Miller Display", "Roboto Slab", sans-serif;
+  font-family: "MillerDisplay", "Roboto Slab", sans-serif;
   text-transform: uppercase;
   color: #353535;
-  font-size: 10em;
-}
-/* line 1531, app.scss */
+  font-size: 10em; }
+
+/* line 1405, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-heatwave blockquote {
-  margin-bottom: 32px;
-}
-/* line 1534, app.scss */
+  margin-bottom: 32px; }
+
+/* line 1408, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-heatwave .open p {
   font-family: "Source Sans Pro", "Roboto Condensed", sans-serif;
   font-size: 1.2em;
   color: #353535;
   letter-spacing: 0.05em;
   font-weight: 200;
-  line-height: 2em;
-}
-/* line 1542, app.scss */
+  line-height: 2em; }
+
+/* line 1416, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-heatwave img {
   position: absolute;
   width: 500px;
   z-index: -1;
-  opacity: .03;
-}
+  opacity: .03; }
 
-/* line 1550, app.scss */
+/* line 1424, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-heatwave-2 {
-  background: black;
-}
+  background: black; }
 
-/* line 1554, app.scss */
+/* line 1428, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 .section-video {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-}
+  transform: translate(-50%, -50%); }
 
 /**
    * END OF HEATWAVE
@@ -1706,210 +1350,166 @@ nav a {
     -moz-transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
+    opacity: 1; }
   35% {
     -moz-transform: translate3d(0, 7px, 0);
     -webkit-transform: translate3d(0, 7px, 0);
     transform: translate3d(0, 7px, 0);
-    opacity: 1;
-  }
+    opacity: 1; }
   50% {
     -moz-transform: translate3d(0, 10px, 0);
     -webkit-transform: translate3d(0, 10px, 0);
     transform: translate3d(0, 10px, 0);
-    opacity: 0;
-  }
+    opacity: 0; }
   50.001% {
     -moz-transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    opacity: 0;
-  }
+    opacity: 0; }
   80% {
     -moz-transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    opacity: 0;
-  }
-}
+    opacity: 0; } }
+
 @-webkit-keyframes ripple {
   0% {
-    box-shadow: 0px 0px 0px 0px rgba(72, 74, 81, 0.3);
-  }
+    box-shadow: 0px 0px 0px 0px rgba(72, 74, 81, 0.3); }
   80% {
-    box-shadow: 0px 0px 0px 10px rgba(72, 74, 81, 0);
-  }
-}
+    box-shadow: 0px 0px 0px 10px rgba(72, 74, 81, 0); } }
+
 @keyframes ripple {
   0% {
-    box-shadow: 0px 0px 0px 0px rgba(72, 74, 81, 0.3);
-  }
+    box-shadow: 0px 0px 0px 0px rgba(72, 74, 81, 0.3); }
   80% {
-    box-shadow: 0px 0px 0px 10px rgba(72, 74, 81, 0);
-  }
-}
+    box-shadow: 0px 0px 0px 10px rgba(72, 74, 81, 0); } }
+
 @keyframes traffic {
   from {
-    transform: translateX(-100vw);
-  }
+    transform: translateX(-100vw); }
   to {
-    transform: translateX(150vw);
-  }
-}
+    transform: translateX(150vw); } }
+
 @keyframes ship {
   from {
-    transform: translateX(-20vw);
-  }
+    transform: translateX(-20vw); }
   to {
-    transform: translateX(120vw);
-  }
-}
+    transform: translateX(120vw); } }
+
 @keyframes Floating {
   from {
-    -webkit-transform: translate(0, 0px);
-  }
+    -webkit-transform: translate(0, 0px); }
   65% {
-    -webkit-transform: translate(0, 15px);
-  }
+    -webkit-transform: translate(0, 15px); }
   to {
-    -webkit-transform: translate(0, 0px);
-  }
-}
+    -webkit-transform: translate(0, 0px); } }
+
 @keyframes fly {
   0% {
-    left: -15vw;
-  }
+    left: -15vw; }
   100% {
-    left: 115vw;
-  }
-}
+    left: 115vw; } }
+
 @keyframes flyHeli {
   0% {
     left: -15vw;
-    transform: translateY(0px) rotate();
-  }
+    transform: translateY(0px) rotate(); }
   30% {
     left: 60vw;
-    transform: translateY(-20px) rotate(5deg);
-  }
+    transform: translateY(-20px) rotate(5deg); }
   40% {
-    left: 60vw;
-  }
+    left: 60vw; }
   60% {
     left: 115vw;
-    transform: translateY(0px) rotate(0);
-  }
+    transform: translateY(0px) rotate(0); }
   100% {
-    left: 115vw;
-  }
-}
+    left: 115vw; } }
+
 @keyframes orb {
   from {
-    transform: rotate(0deg);
-  }
+    transform: rotate(0deg); }
   to {
-    transform: rotate(-360deg);
-  }
-}
+    transform: rotate(-360deg); } }
+
 @keyframes satellite {
   from {
-    transform: rotate(0deg);
-  }
+    transform: rotate(0deg); }
   to {
-    transform: rotate(360deg);
-  }
-}
+    transform: rotate(360deg); } }
+
 @keyframes pulsate {
   0% {
     transform: scale(0.1);
-    opacity: 0.0;
-  }
+    opacity: 0.0; }
   100% {
     transform: scale(1.2);
-    opacity: 1;
-  }
-}
+    opacity: 1; } }
+
 @keyframes motion {
   0% {
     right: 0;
     width: 0;
-    transform-origin: 100% 0;
-  }
+    transform-origin: 100% 0; }
   100% {
     right: 100%;
-    width: 200px;
-  }
-}
+    width: 200px; } }
+
 @keyframes arrowdown {
   0% {
     opacity: 1;
-    transform: translate(-50%, 0%);
-  }
+    transform: translate(-50%, 0%); }
   50% {
     opacity: 0;
-    transform: translate(-50%, 150%);
-  }
+    transform: translate(-50%, 150%); }
   100% {
     opacity: 0;
-    transform: translate(-50%, 150%);
-  }
-}
+    transform: translate(-50%, 150%); } }
+
 @keyframes arrowleft {
   0% {
     opacity: 1;
-    transform: translate(0%, 0%);
-  }
+    transform: translate(0%, 0%); }
   50% {
     opacity: 0;
-    transform: translate(-100%, 0%);
-  }
+    transform: translate(-100%, 0%); }
   100% {
     opacity: 0;
-    transform: translate(-100%, 0%);
-  }
-}
+    transform: translate(-100%, 0%); } }
+
 @keyframes seawave {
   from {
-    background-position: 0 0;
-  }
+    background-position: 0 0; }
   to {
-    background-position: 100% 0;
-  }
-}
+    background-position: 100% 0; } }
+
 @-webkit-keyframes seawave {
   from {
-    background-position: 0 0;
-  }
+    background-position: 0 0; }
   to {
-    background-position: 100% 0;
-  }
-}
-/* line 1768, app.scss */
+    background-position: 100% 0; } }
+
+/* line 1642, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-sub article .sub-infoImage {
   width: 40vw;
   height: 100vh;
   background: url(../img/sub/1.jpg);
-  background-size: cover;
-}
+  background-size: cover; }
 
-/* line 1777, app.scss */
+/* line 1651, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-sub-2 article .sub-infoImage {
   width: 40vw;
   height: 100vh;
   background: url(../img/sub/2.jpg);
-  background-size: cover;
-}
+  background-size: cover; }
 
-/* line 1786, app.scss */
+/* line 1660, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-sub-3 article .sub-infoImage {
   width: 40vw;
   height: 100vh;
   background: url(../img/sub/3.jpg);
-  background-size: cover;
-}
+  background-size: cover; }
 
-/* line 1794, app.scss */
+/* line 1670, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-sub article,
 #section-sub-2 article,
 #section-sub-3 article {
@@ -1918,489 +1518,416 @@ nav a {
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-}
-/* line 1803, app.scss */
-#section-sub article .section-sub-article,
-#section-sub-2 article .section-sub-article,
-#section-sub-3 article .section-sub-article {
-  margin-left: 2vw;
-  width: 45vw;
-  height: 100vh;
-  text-align: left;
-  padding-top: 40px;
-}
-/* line 1809, app.scss */
-#section-sub article .section-sub-article .line,
-#section-sub-2 article .section-sub-article .line,
-#section-sub-3 article .section-sub-article .line {
-  margin: 0px 0 40px 0;
-  background: #FF6B6B;
-}
-/* line 1813, app.scss */
-#section-sub article .section-sub-article h1,
-#section-sub-2 article .section-sub-article h1,
-#section-sub-3 article .section-sub-article h1 {
-  font-size: 6em;
-}
-/* line 1816, app.scss */
-#section-sub article .section-sub-article blockquote,
-#section-sub-2 article .section-sub-article blockquote,
-#section-sub-3 article .section-sub-article blockquote {
-  max-width: 600px;
-  font-size: 0.8em;
-}
-/* line 1820, app.scss */
-#section-sub article .section-sub-article p,
-#section-sub-2 article .section-sub-article p,
-#section-sub-3 article .section-sub-article p {
-  margin: 20px 0 0 0;
-  font-size: 1em;
-}
-@media (min-width: 48em) {
-  /* line 1794, app.scss */
-  #section-sub article,
-  #section-sub-2 article,
-  #section-sub-3 article {
-    font-size: 0.88em;
-  }
-}
-@media (min-width: 64em) {
-  /* line 1794, app.scss */
-  #section-sub article,
-  #section-sub-2 article,
-  #section-sub-3 article {
-    font-size: 0.88em;
-  }
-}
-@media (min-width: 85.375em) {
-  /* line 1794, app.scss */
-  #section-sub article,
-  #section-sub-2 article,
-  #section-sub-3 article {
-    font-size: 0.88em;
-  }
-}
-@media (min-width: 120em) {
-  /* line 1794, app.scss */
-  #section-sub article,
-  #section-sub-2 article,
-  #section-sub-3 article {
-    font-size: 1.04em;
-  }
-}
-@media (min-width: 160em) {
-  /* line 1794, app.scss */
-  #section-sub article,
-  #section-sub-2 article,
-  #section-sub-3 article {
-    font-size: 1.28em;
-  }
-}
+  display: flex; }
+  /* line 1677, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub article .section-sub-article,
+  #section-sub-2 article .section-sub-article,
+  #section-sub-3 article .section-sub-article {
+    margin-left: 2vw;
+    width: 45vw;
+    height: 100vh;
+    text-align: left;
+    padding-top: 40px; }
+    /* line 1683, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-sub article .section-sub-article .line,
+    #section-sub-2 article .section-sub-article .line,
+    #section-sub-3 article .section-sub-article .line {
+      margin: 0px 0 40px 0;
+      background: #FF6B6B; }
+    /* line 1687, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-sub article .section-sub-article h1,
+    #section-sub-2 article .section-sub-article h1,
+    #section-sub-3 article .section-sub-article h1 {
+      font-size: 6em; }
+    /* line 1690, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-sub article .section-sub-article blockquote,
+    #section-sub-2 article .section-sub-article blockquote,
+    #section-sub-3 article .section-sub-article blockquote {
+      max-width: 600px;
+      font-size: 0.8em; }
+    /* line 1694, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-sub article .section-sub-article p,
+    #section-sub-2 article .section-sub-article p,
+    #section-sub-3 article .section-sub-article p {
+      margin: 20px 0 0 0;
+      font-size: 1em; }
+  @media (min-width: 48em) {
+    /* line 1670, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-sub article,
+    #section-sub-2 article,
+    #section-sub-3 article {
+      font-size: 0.88em; } }
+  @media (min-width: 64em) {
+    /* line 1670, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-sub article,
+    #section-sub-2 article,
+    #section-sub-3 article {
+      font-size: 0.88em; } }
+  @media (min-width: 85.375em) {
+    /* line 1670, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-sub article,
+    #section-sub-2 article,
+    #section-sub-3 article {
+      font-size: 0.88em; } }
+  @media (min-width: 120em) {
+    /* line 1670, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-sub article,
+    #section-sub-2 article,
+    #section-sub-3 article {
+      font-size: 0.96em; } }
+  @media (min-width: 160em) {
+    /* line 1670, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-sub article,
+    #section-sub-2 article,
+    #section-sub-3 article {
+      font-size: 1.12em; } }
 
-/* line 1842, app.scss */
+/* line 1716, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-sub-video {
-  background: #1A535C;
-}
-/* line 1844, app.scss */
-#section-sub-video .video-wrap {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 90vw;
-  max-width: 1700px;
-  transform: translate(-50%, -50%);
-}
+  background: #1A535C; }
+  /* line 1718, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-video .video-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90vw;
+    max-width: 1700px;
+    transform: translate(-50%, -50%); }
 
-/* line 1854, app.scss */
+/* line 1728, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-sub-4 {
-  background: #96ECA9;
-}
-/* line 1856, app.scss */
-#section-sub-4 .wrapper {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 580px;
-  transform: translate(-50%, -50%);
-}
-/* line 1862, app.scss */
-#section-sub-4 .wrapper h1 {
-  font-family: "stellarmedium", serif;
-  line-height: 0;
-  color: white;
-  text-transform: uppercase;
-  font-size: 10em;
-  text-align: center;
-  white-space: nowrap;
-}
-@media (min-width: 48em) {
-  /* line 1862, app.scss */
-  #section-sub-4 .wrapper h1 {
-    font-size: 6em;
-  }
-}
-/* line 1874, app.scss */
-#section-sub-4 .wrapper h3 {
-  margin-top: 80px;
-  color: #165C4D;
-  text-transform: uppercase;
-  font-size: 4em;
-  text-align: center;
-  white-space: nowrap;
-  font-weight: 600;
-}
-/* line 1883, app.scss */
-#section-sub-4 .wrapper p {
-  margin-top: 20px;
-  color: #353535;
-  font-weight: 400;
-  font-size: 1.3em;
-  text-transform: uppercase;
-  text-align: center;
-}
-@media (min-width: 48em) {
-  /* line 1883, app.scss */
-  #section-sub-4 .wrapper p {
-    font-size: 1.5em;
-  }
-}
-@media (min-width: 85.375em) {
-  /* line 1883, app.scss */
-  #section-sub-4 .wrapper p {
-    font-size: 1.3em;
-  }
-}
-@media (min-width: 120em) {
-  /* line 1883, app.scss */
-  #section-sub-4 .wrapper p {
-    font-size: 0.9em;
-  }
-}
+  background: #96ECA9; }
+  /* line 1730, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-4 .wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 580px;
+    transform: translate(-50%, -50%); }
+    /* line 1736, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-sub-4 .wrapper h1 {
+      font-family: "stellarmedium", serif;
+      line-height: 0;
+      color: white;
+      text-transform: uppercase;
+      font-size: 10em;
+      text-align: center;
+      white-space: nowrap; }
+      @media (min-width: 48em) {
+        /* line 1736, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+        #section-sub-4 .wrapper h1 {
+          font-size: 6em; } }
+    /* line 1748, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-sub-4 .wrapper h3 {
+      margin-top: 80px;
+      color: #165C4D;
+      text-transform: uppercase;
+      font-size: 4em;
+      text-align: center;
+      white-space: nowrap;
+      font-weight: 600; }
+    /* line 1757, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-sub-4 .wrapper p {
+      margin-top: 20px;
+      color: #353535;
+      font-weight: 400;
+      font-size: 1.3em;
+      text-transform: uppercase;
+      text-align: center; }
+      @media (min-width: 48em) {
+        /* line 1757, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+        #section-sub-4 .wrapper p {
+          font-size: 1.5em; } }
+      @media (min-width: 85.375em) {
+        /* line 1757, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+        #section-sub-4 .wrapper p {
+          font-size: 1.3em; } }
+      @media (min-width: 120em) {
+        /* line 1757, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+        #section-sub-4 .wrapper p {
+          font-size: 0.9em; } }
 
-/* line 1904, app.scss */
+/* line 1778, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+#section-sub-water .row {
+  max-width: none; }
+
+/* line 1781, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-sub-water .a9a13da9-9345-46d1-a320-c9b71331183a {
-  cursor: pointer;
-}
-/* line 1907, app.scss */
+  cursor: pointer; }
+
+/* line 1784, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-sub-water #water-faucet {
   width: 90%;
-  height: 800px;
-}
-/* line 1911, app.scss */
+  height: 800px; }
+
+/* line 1788, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-sub-water .water-hint {
   text-align: right;
   font-family: "stellarmedium", serif;
   font-weight: 600;
   text-transform: uppercase;
-  margin-right: 35%;
-}
-/* line 1917, app.scss */
-#section-sub-water .water-hint img {
-  height: 15px;
-  animation: arrowleft 2s infinite;
-}
-/* line 1922, app.scss */
+  margin-right: 35%; }
+  /* line 1794, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-water .water-hint img {
+    height: 15px;
+    animation: arrowleft 2s infinite; }
+
+/* line 1799, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-sub-water .fact {
-  padding-top: 100px;
-  padding-left: 40px;
-}
-/* line 1926, app.scss */
+  padding-top: 30px;
+  padding-left: 40px; }
+
+/* line 1803, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-sub-water .line {
-  margin: 30px auto 30px auto;
-}
-/* line 1929, app.scss */
+  margin: 30px auto 30px auto; }
+
+/* line 1806, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-sub-water .row h1 {
   font-size: 2.5em;
-  text-transform: none;
-}
-/* line 1933, app.scss */
+  text-transform: none; }
+
+/* line 1810, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-sub-water .row p {
   margin: 0;
-  font-size: 1.2em;
-}
+  font-size: 1.2em; }
 
-/* line 1939, app.scss */
+/* line 1816, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-sub-led {
   background: #1A535C;
   position: relative;
-  overflow: hidden;
-}
-/* line 1943, app.scss */
-#section-sub-led .bulb-light {
-  width: 40vw;
-  height: 40vw;
-  max-height: 400px;
-  max-width: 400px;
-  border-radius: 50%;
-  background: #F2CA66;
-  position: absolute;
-  transform: translate(-50%, 0);
-  top: 0%;
-  left: 50%;
-  opacity: 0;
-}
-/* line 1956, app.scss */
-#section-sub-led #elec-tail {
-  width: 20%;
-  position: absolute;
-  max-width: 250px;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-/* line 1964, app.scss */
-#section-sub-led #bulb-1 {
-  width: 100%;
-  position: absolute;
-  bottom: 0%;
-  left: 0%;
-  max-width: 400px;
-  cursor: pointer;
-}
-/* line 1972, app.scss */
-#section-sub-led #bulb-2 {
-  width: 100%;
-  max-width: 400px;
-  position: absolute;
-  bottom: 0%;
-  right: 0%;
-  cursor: pointer;
-}
-/* line 1980, app.scss */
-#section-sub-led article {
-  width: 50vw;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-  transform: translate(-50%, 0);
-  color: white;
-}
-@media (min-width: 48em) {
-  /* line 1980, app.scss */
+  overflow: hidden; }
+  /* line 1821, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-led .bulb-light {
+    width: 40vw;
+    height: 40vw;
+    max-height: 400px;
+    max-width: 400px;
+    border-radius: 50%;
+    background: #F2CA66;
+    position: absolute;
+    transform: translate(-50%, 0);
+    top: 0%;
+    left: 50%;
+    opacity: 0; }
+  /* line 1834, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-led #elec-tail {
+    width: 20%;
+    position: absolute;
+    max-width: 250px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0); }
+  /* line 1842, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-led #bulb-1 {
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    max-width: 400px;
+    cursor: pointer; }
+  /* line 1850, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-led #bulb-2 {
+    width: 100%;
+    max-width: 400px;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    cursor: pointer; }
+  /* line 1858, /Users/hndan2/Desktop/GRA-web/css/app.scss */
   #section-sub-led article {
-    top: 40%;
-    width: 65vw;
-  }
-}
-/* line 1992, app.scss */
-#section-sub-led article h1 {
-  font-size: 2.5em;
-  text-transform: none;
-}
-/* line 1996, app.scss */
-#section-sub-led article .line {
-  background: white;
-  margin: 30px auto;
-}
-/* line 2000, app.scss */
-#section-sub-led article p {
-  margin: 0 auto;
-  max-width: 700px;
-}
+    width: 50vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, 0);
+    color: white; }
+    @media (min-width: 48em) {
+      /* line 1858, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+      #section-sub-led article {
+        top: 40%;
+        width: 65vw; } }
+    /* line 1870, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-sub-led article h1 {
+      font-size: 2.5em;
+      text-transform: none; }
+    /* line 1874, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-sub-led article .line {
+      background: white;
+      margin: 30px auto; }
+    /* line 1878, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-sub-led article p {
+      margin: 0 auto;
+      max-width: 700px; }
 
-/* line 2007, app.scss */
+/* line 1885, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-sub-petition {
   background: #FFF6C9;
   padding: 0;
-  margin: 0;
-}
-/* line 2011, app.scss */
-#section-sub-petition .row {
-  text-align: center;
-  padding: 0;
-}
-@media (min-width: 48em) {
-  /* line 2015, app.scss */
-  #section-sub-petition h1 {
-    font-size: 2em;
-  }
-}
-/* line 2020, app.scss */
-#section-sub-petition .mat-label {
-  font-family: "Miller Display", "Roboto Slab", sans-serif;
-  display: block;
-  font-size: 16px;
-  transform: translateY(35px);
-  transition: all 0.5s;
-  text-align: left;
-}
-/* line 2028, app.scss */
-#section-sub-petition .mat-input {
-  position: relative;
-  background: transparent;
-  width: 100%;
-  border: none;
-  outline: none;
-  padding: 0;
-  font-size: 16px;
-}
-/* line 2037, app.scss */
-#section-sub-petition .mat-div {
-  padding: 0;
-  position: relative;
-}
-/* line 2041, app.scss */
-#section-sub-petition .mat-div:after,
-#section-sub-petition .mat-div:before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: #353535;
-  bottom: 0;
-  left: 0;
-  transition: all 0.5s;
-}
-/* line 2053, app.scss */
-#section-sub-petition .mat-div::after {
-  background-color: #FF6B6B;
-  transform: scaleX(0);
-}
-/* line 2057, app.scss */
-#section-sub-petition .is-active::after {
-  transform: scaleX(1);
-}
-/* line 2060, app.scss */
-#section-sub-petition .is-active .mat-label {
-  color: #FF6B6B;
-}
-/* line 2063, app.scss */
-#section-sub-petition .is-completed .mat-label {
-  font-size: 12px;
-  transform: translateY(0);
-}
-/* line 2068, app.scss */
-#section-sub-petition #submit-btn button {
-  display: block;
-  margin: 95px auto 0 auto;
-  cursor: pointer;
-}
-/* line 2073, app.scss */
-#section-sub-petition #submit-btn .line {
-  height: 2px;
-}
-/* line 2077, app.scss */
-#section-sub-petition .notifi {
-  margin-top: 20px;
-  height: 40px;
-  color: #FF6B6B;
-}
-/* line 2082, app.scss */
-#section-sub-petition .sign {
-  margin-top: 120px;
-}
-/* line 2087, app.scss */
-#section-sub-petition .tshirt h1 {
-  margin-top: 70px;
-}
-/* line 2090, app.scss */
-#section-sub-petition .tshirt h2 {
-  font-weight: 600;
-  font-size: 1.2em;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-/* line 2096, app.scss */
-#section-sub-petition .tshirt p {
-  font-size: 1.1em;
-  margin: 0;
-  max-width: none;
-}
-/* line 2101, app.scss */
-#section-sub-petition .tshirt .treeItems {
-  display: flex;
-  margin-top: 100px;
-}
-/* line 2104, app.scss */
-#section-sub-petition .tshirt .treeItems img {
-  cursor: pointer;
-  height: 70px;
-  opacity: 0.5;
-  transition: opacity 0.2s linear;
-}
-/* line 2109, app.scss */
-#section-sub-petition .tshirt .treeItems img:hover {
-  opacity: 1;
-}
-/* line 2114, app.scss */
-#section-sub-petition .tshirt .tshirt-zone-holder {
-  background: white;
-  position: relative;
-  height: 100vh;
-}
-/* line 2118, app.scss */
-#section-sub-petition .tshirt .tshirt-zone-holder .finishBtn {
-  position: absolute;
-  left: 50%;
-  bottom: 5%;
-  transform: translate(-50%, 0);
-}
-/* line 2123, app.scss */
-#section-sub-petition .tshirt .tshirt-zone-holder .finishBtn h3 {
-  font-size: 1.3em;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-/* line 2129, app.scss */
-#section-sub-petition .tshirt .tshirt-zone-holder .tshirt-zone {
-  position: absolute;
-  width: 95%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
+  margin: 0; }
+  /* line 1889, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-petition .row {
+    text-align: center;
+    padding: 0; }
+  @media (min-width: 48em) {
+    /* line 1893, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-sub-petition h1 {
+      font-size: 2em; } }
+  /* line 1898, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-petition .mat-label {
+    font-family: "MillerDisplay", "Roboto Slab", sans-serif;
+    display: block;
+    font-size: 16px;
+    transform: translateY(35px);
+    transition: all 0.5s;
+    text-align: left; }
+  /* line 1906, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-petition .mat-input {
+    position: relative;
+    background: transparent;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0;
+    font-size: 16px; }
+  /* line 1915, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-petition .mat-div {
+    padding: 0;
+    position: relative; }
+  /* line 1920, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-petition .mat-div:after,
+  #section-sub-petition .mat-div:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #353535;
+    bottom: 0;
+    left: 0;
+    transition: all 0.5s; }
+  /* line 1931, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-petition .mat-div::after {
+    background-color: #FF6B6B;
+    transform: scaleX(0); }
+  /* line 1935, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-petition .is-active::after {
+    transform: scaleX(1); }
+  /* line 1938, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-petition .is-active .mat-label {
+    color: #FF6B6B; }
+  /* line 1941, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-petition .is-completed .mat-label {
+    font-size: 12px;
+    transform: translateY(0); }
+  /* line 1946, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-petition #submit-btn button {
+    display: block;
+    margin: 95px auto 0 auto;
+    cursor: pointer; }
+  /* line 1951, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-petition #submit-btn .line {
+    height: 2px; }
+  /* line 1955, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-petition .notifi {
+    margin-top: 20px;
+    height: 40px;
+    color: #FF6B6B; }
+  /* line 1960, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-petition .sign {
+    margin-top: 120px; }
+  /* line 1965, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-petition .tshirt h1 {
+    margin-top: 70px; }
+  /* line 1968, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-petition .tshirt h2 {
+    font-weight: 600;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase; }
+  /* line 1974, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-petition .tshirt p {
+    font-size: 1.1em;
+    margin: 0;
+    max-width: none; }
+  /* line 1979, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-petition .tshirt .treeItems {
+    display: flex;
+    margin-top: 100px; }
+    /* line 1982, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-sub-petition .tshirt .treeItems img {
+      cursor: pointer;
+      height: 70px;
+      opacity: 0.5;
+      transition: opacity 0.2s linear; }
+      /* line 1987, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+      #section-sub-petition .tshirt .treeItems img:hover {
+        opacity: 1; }
+  /* line 1992, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-petition .tshirt .tshirt-zone-holder {
+    background: white;
+    position: relative;
+    height: 100vh; }
+    /* line 1996, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-sub-petition .tshirt .tshirt-zone-holder .finishBtn {
+      position: absolute;
+      left: 50%;
+      bottom: 5%;
+      transform: translate(-50%, 0); }
+      /* line 2001, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+      #section-sub-petition .tshirt .tshirt-zone-holder .finishBtn h3 {
+        font-size: 1.3em;
+        text-transform: uppercase;
+        cursor: pointer; }
+    /* line 2007, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-sub-petition .tshirt .tshirt-zone-holder .tshirt-zone {
+      position: absolute;
+      width: 95%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); }
 
-/* line 2140, app.scss */
+/* line 2018, /Users/hndan2/Desktop/GRA-web/css/app.scss */
 #section-sub-last {
   background: url(../img/savetheearth/earth.jpg);
   background-size: cover;
-  padding-top: 20vh;
-}
-/* line 2144, app.scss */
-#section-sub-last h1 {
-  font-size: 2.5em;
-  color: white;
-  text-transform: none;
-  text-align: center;
-}
-@media (min-width: 48em) {
-  /* line 2144, app.scss */
+  padding-top: 20vh; }
+  /* line 2022, /Users/hndan2/Desktop/GRA-web/css/app.scss */
   #section-sub-last h1 {
-    font-size: 2em;
-  }
-}
-/* line 2153, app.scss */
-#section-sub-last .social-likes {
-  width: 500px;
-  font-family: "stellarmedium", serif;
-  color: white;
-  display: flex;
-  margin: 0 auto 50px auto;
-  justify-content: space-between;
-}
-/* line 2165, app.scss */
-#section-sub-last .orglist {
-  width: 95%;
-  text-transform: uppercase;
-  font-family: "stellarmedium", serif;
-  display: flex;
-  margin: 0 auto;
-  justify-content: space-between;
-}
-/* line 2174, app.scss */
-#section-sub-last .orglist div {
-  cursor: pointer;
-}
-/* line 2175, app.scss */
-#section-sub-last .orglist div a {
-  color: white;
-  opacity: 0.5;
-}
-/* line 2178, app.scss */
-#section-sub-last .orglist div:hover a {
-  text-decoration: underline;
-  opacity: 1;
-}
+    font-size: 2.5em;
+    color: white;
+    text-transform: none;
+    text-align: center; }
+    @media (min-width: 48em) {
+      /* line 2022, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+      #section-sub-last h1 {
+        font-size: 2em; } }
+  /* line 2031, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-last .social-likes {
+    width: 500px;
+    font-family: "stellarmedium", serif;
+    color: white;
+    display: flex;
+    margin: 0 auto 50px auto;
+    justify-content: space-between; }
+  /* line 2043, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+  #section-sub-last .orglist {
+    width: 95%;
+    text-transform: uppercase;
+    font-family: "stellarmedium", serif;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between; }
+    /* line 2052, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+    #section-sub-last .orglist div {
+      cursor: pointer; }
+      /* line 2053, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+      #section-sub-last .orglist div a {
+        color: white;
+        opacity: 0.5; }
+      /* line 2056, /Users/hndan2/Desktop/GRA-web/css/app.scss */
+      #section-sub-last .orglist div:hover a {
+        text-decoration: underline;
+        opacity: 1; }
+
+/*# sourceMappingURL=app.css.map */

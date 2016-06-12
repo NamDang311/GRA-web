@@ -1,0 +1,402 @@
+<section id="section-8">
+
+            <div class="row">
+                <div class="small-6 small-centered medium-6 medium-offset-1 medium-centered large-6 large-centered columns open">
+                    <h1>Top 5 countries with highest Co<sub>2</sub> emissions</h1>
+                    <div class="line"></div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="medium-3 medium-offset-1 large-3 columns">
+                    <div class="continent-content">
+                        <h3 class="continent continent-0 name-0 hidden"><img src="img/flag/cn.png"> China</h3>
+                        <div class="continent continent-0 data-0 hidden"> </div>
+                        <h3 class="continent continent-1 name-1 hidden"><img src="img/flag/us.png"> USA</h3>
+                        <div class="continent continent-1 data-1 hidden"></div>
+                        <h3 class="continent continent-2 name-2 hidden"><img src="img/flag/in.png"> India</h3>
+                        <div class="continent continent-2 data-2 hidden"></div>
+                        <h3 class="continent continent-3 name-3 hidden"><img src="img/flag/ru.png"> Russia</h3>
+                        <div class="continent continent-3 data-3 hidden"></div>
+                        <h3 class="continent continent-4 name-4 hidden"><img src="img/flag/jp.png"> Japan</h3>
+                        <div class="continent continent-4 data-4 hidden"></div>
+                    </div>
+                </div>
+                <div class="medium-4 large-3 large-centered columns" style="position:relative">
+                    <div id="worldmap">
+                        <img src="img/map.png">
+                        <div class="circleDotted"></div>
+                       
+                        <div class="circle-ripple tooltip" id="cn" title="China"></div>
+                        <div class="circle-ripple tooltip" id="usa" title="USA"></div>
+                        <div class="circle-ripple tooltip" id="ind" title="India"></div>
+                        <div class="circle-ripple tooltip" id="ru" title="Russia"></div>
+                        <div class="circle-ripple tooltip" id="ja" title="Japan"></div>
+                    </div>
+                    <div class="">
+                        <div class="data-wrapper">
+                            <div class="continent-total">
+                                <div class="data-flex" style="transform: rotate(30deg);width:100%;height:100%;">
+                                    <h3 class="totalTitle">Selected<br> Country</h3>
+                                    <div class="totalNumber">0</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-wrapper">
+                            <div class="continent-total">
+                                <div class="data-flex" style="transform: rotate(0deg);width:100%;height:100%;">
+                                    <h3 class="totalTitle">Total CO<sub>2</sub> </h3>
+                                    <div class="totalNumber">0</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-wrapper">
+                            <div class="continent-total">
+                                <div class="data-flex" style="transform: rotate(-30deg);width:100%;height:100%;">
+                                    <h3 class="totalTitle">Recorded<br>in year </h3>
+                                    <div class="totalNumber">0</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="medium-2 large-2 end columns">
+
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="small-6 small-centered medium-4 medium-offset-1 medium-centered large-4 large-centered columns">
+                    <div class="timespan">
+                        <div class="timespanYear" layout="row center-justify">
+                            <div>2002</div>
+                            <div>2003</div>
+                            <div>2004</div>
+                        </div>
+                        <div class="timespanMark" layout="row center-justify">
+                            <div>|</div>
+                            <div>|</div>
+                            <div>|</div>
+                            <div>|</div>
+                            <div>|</div>
+                            <div>|</div>
+                            <div>|</div>
+                            <div>|</div>
+                            <div>|</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        // SEC-8
+var myAr = $(".circle-ripple").toArray();
+var trigger = true;
+var topPos1 = 0;
+var clickCount = 0;
+var clickedAr = [];
+
+TweenMax.set($("#worldmap"), {
+    perspective: 1000
+});
+var tlworldmap = new TimelineMax({
+    delay: 0.2
+});
+Snap.load("img/circle-dotted.svg", function (data) {
+    Snap(".circleDotted").append(data);
+    tlworldmap.staggerFromTo("#section-8 .dotted", 1, {
+        scale: 1
+        , opacity: 0
+    }, {
+        scale: 1
+        , opacity: 1
+    }, 0.01).
+    from("#section-8 #worldmap img", 0.3, {
+        scale: 0
+    }, "-=0.5").
+    staggerFrom("#section-8 #worldmap .circle-ripple", 0.3, {
+        autoAlpha: 0
+        , y: "-=150px"
+    }, 0.1).
+    fromTo($(".data-wrapper:eq(0)"), 0.5, {
+        rotation: "90"
+    }, {
+        rotation: "-30"
+    }, "-=0.3").
+    fromTo($(".data-wrapper:eq(1)"), 0.5, {
+        rotation: "90"
+    }, {
+        rotation: "0"
+    }, "-=0.3").fromTo($(".data-wrapper:eq(2)"), 0.5, {
+        rotation: "90"
+    }, {
+        rotation: "30"
+    }, "-=0.3").
+    staggerFrom(".continent-total", 0.3, {
+        scale: 0
+    }, 0.3, "-=0.9");
+
+});
+var sceneworldmap = new ScrollMagic.Scene({
+        triggerElement: "#section-8"
+    })
+    .setTween(tlworldmap).addTo(controller);
+
+
+$('.circle-ripple').bind('click', function (event) {
+
+    var curbtn = $.inArray(this, myAr);
+    if (!$(this).hasClass("activated")) {
+        $(this).addClass("activated");
+
+        clickedAr.push(this);
+
+        //set Pos Country+ Bars
+        if (!$(".name-" + curbtn + "").hasClass("clicked")) {
+            addNumber0(curbtn);
+            addNumber1(curbtn);
+
+            $(".continent-" + curbtn + "").removeClass("hidden");
+            $(".name-" + curbtn + "").css({
+                top: topPos1 + "%"
+
+            }).addClass("clicked");
+            $(".data-" + curbtn + "").css({
+                top: (topPos1 + 10) + "%"
+            });
+
+            topPos1 = topPos1 + 20;
+            TweenLite.fromTo($(".data-" + curbtn + ""), 1, {
+                width: 0
+            }, {
+                width: barWidth[curbtn]
+            });
+        }
+
+    };
+
+
+});
+
+var dataAr = [];
+var nameAr = [];
+var barWidth = [];
+
+$.ajax({
+    type: "GET"
+    , url: "worlddata.xml"
+    , dataType: "xml"
+    , success: function (xml) {
+        for (t = 0; t <= 4; t++) {
+            dataAr.push($(xml).find('data:eq(' + t + ')').text());
+            nameAr.push($(xml).find('name:eq(' + t + ')').text());
+
+        }
+        if (trigger) {
+            appendData();
+            trigger = !trigger;
+        }
+    }
+, });
+
+function appendData() {
+    for (a = 0; a <= 4; a++) {
+        $(".data-" + a + "").css({
+            height: "10px"
+            , position: "absolute"
+            , top: "0"
+            , "background-color": "#1A535C"
+            , width: parseFloat(dataAr[a]) * 6
+        , });
+        barWidth.push($(".data-" + a + "").css("width"));
+    }
+};
+
+// count total
+var totalNumber = 0;
+var curNumber = 0;
+
+function addNumber1(curbtn) {
+    totalNumber = totalNumber + parseFloat(dataAr[curbtn]);
+    $(".totalNumber:eq(1)").countTo({
+        from: curNumber
+        , to: totalNumber
+        , speed: 400
+        , refreshInterval: 10
+        , formatter: function (value, options) {
+            return value.toFixed(1).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
+        }
+        , onComplete: function (value) {
+            curNumber = totalNumber;
+        }
+
+    });
+};
+
+function addNumber0(curbtn) {
+    var z = parseFloat(dataAr[curbtn]);
+    $(".totalNumber:eq(0)").countTo({
+        from: curNumber
+        , to: z
+        , speed: 400
+        , refreshInterval: 10
+        , formatter: function (value, options) {
+            return value.toFixed(1).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
+        }
+        , onComplete: function (value) {
+            curNumber = totalNumber;
+        }
+
+    });
+};
+$(".circle-ripple").tooltipster({
+
+});
+
+
+/**
+   * SEC-8
+   */
+
+#section-8 {
+    text-align: center;
+    .open h1 {
+        padding: 0;
+        font-family: $fonth;
+    }
+    .open {
+        margin-bottom: 5vh;
+    }
+}
+
+#cn {
+    left: 72%;
+    top: 40%;
+}
+
+#usa {
+    left: 22%;
+    top: 42%;
+}
+
+#ind {
+    left: 67%;
+    top: 47%;
+}
+
+#ru {
+    left: 73%;
+    top: 32%;
+}
+
+#ja {
+    left: 81%;
+    top: 43%;
+}
+
+#worldmap {
+    width: 100%;
+    position: relative;
+    left: 0;
+    z-index: 9;
+    overflow: visible;
+    .circleDotted {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+#section-8 .data-wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    .continent-total {
+        text-align: center;
+        width: 40%;
+        height: 40%;
+        border-radius: 50%;
+        border: 2px solid $black;
+        position: absolute;
+        right: -70%;
+        top: 50%;
+        transform: translate(0, -50%);
+        .data-flex {
+            padding-top: 20%;
+        }
+        .totalTitle {
+            @media #{$mq-small} {
+                font-size: 14px;
+            }
+        }
+        .totalNumber {
+            font-family: $fonth;
+            line-height: 0.80em;
+            font-size: 2em;
+            vertical-align: top;
+            margin: 0;
+            padding: 0;
+            &:after {
+                content: "gt";
+                font-size: 0.4em;
+            }
+            @media #{$mq-large} {
+                font-size: $base-font-size*4;
+            }
+        }
+    }
+}
+
+.circle-ripple {
+    overflow: visible;
+    background-color: darken($yellow, 20);
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+}
+
+.continent {
+    opacity: 1;
+    position: absolute;
+    font-size: 1em;
+    right: 0;
+}
+
+.continent-content {
+    position: relative;
+    height: 30vh;
+    img {
+        margin-bottom: 3px;
+        margin-right: 5px;
+    }
+}
+
+.hidden {
+    background-color: aqua;
+    display: none;
+}
+
+.continent:not(.hidden) {
+    -webkit-transition: background-color 5s;
+    transition: background-color 5s;
+}
+
+.activated {
+    background-color: $red;
+}
+
+.timespan {
+    margin-top: 10vh;
+    .timespanMark {
+        padding: 0 15px 0 15px;
+        font-weight: bold;
+    }
+}
+

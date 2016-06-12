@@ -432,7 +432,7 @@ $("#submit-btn button").click(function () {
             , y: "+=50px"
         }, 0.2, "-=2")
     };
-    tlpetition.timeScale(6);
+    tlpetition.timeScale(1.2);
 
 
 });

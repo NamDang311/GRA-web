@@ -402,16 +402,19 @@ $(".markup-items").click(
         switch ($.inArray(this, markupAr)) {
         case 0:
             $(".infoImage").css("background", "url(./img/coaloilgas/coal.jpg)");
+            $(".infoImage").css("background-size", "cover");
             $(".section-2-article h1").html("Big coal, big impact");
-            $(".section-2-article p").html("Coal is the most carbon intensive fossil fuel. For every tonne of coal burned, approximately 2.5 tonnes of CO2e are produced.6 Of all the different types of fossil fuels, coal produces the most carbon dioxide. Because of this and it's high rate of use, coal is the largest fossil fuel source of carbon dioxide emissions.<br><br>Coal represents one-third of fossil fuels' share of world total primary energy supply but is responsible for 43% of carbon dioxide emissions from fossil fuel use.Coal also has significant, and harmful, consequences for the environment. Coal mining degrades surrounding landscapes, burning coal releases toxins into the atmosphere, and coal-generated electricity places heavy demands on water resources. It all adds up to a huge, and costly, impact.");
+            $(".section-2-article p").html("Coal is the most carbon intensive fossil fuel. For every tonne of coal burned, approximately 2.5 tonnes of CO<sub>2</sub> are produced. Of all the different types of fossil fuels, coal produces the most carbon dioxide. Because of this and it's high rate of use, coal is the largest fossil fuel source of carbon dioxide emissions. Coal represents one-third of fossil fuels' share of world total primary energy supply but is responsible for 43% of carbon dioxide emissions from fossil fuel use. According to the statistics which shows that Coal represents one-third of fossil fuels' share of world total primary energy supply and occupies 43% of carbon dioxide emissions from fossil fuel use.<br><br>Coal has significant, and harmful effect on the environment. Coal mining degrades surrounding landscapes, burning coal releases toxins into the atmosphere, and coal-generated electricity places heavy demands on water resources.");
             break;
         case 1:
             $(".infoImage").css("background", "url(./img/coaloilgas/oil.jpg)");
+            $(".infoImage").css("background-size", "cover");
             $(".section-2-article h1").html("The Price of Oil");
             $(".section-2-article p").html("Like other fossil fuels, oil's production, transport and use have significant environmental impacts. Oil production creates air pollution, greenhouse gas emissions that contribute to climate change, and wilderness destruction. Impacts on the landscape are so significant that Alberta's oil and gas industry now cuts more trees and destroys more habitat than the province's forest companies. The proliferation of offshore oil production, essentially a search for more remote sources of oil, has produced numerous large-scale oil spills, including a major spill from Nova Scotia's Terra Nova offshore platform in 2004 and the BP oil spill that devastated the Gulf of Mexico in 2010.<br><br>Transporting oil also has produced its share of environmental peril, from the Exxon Valdez disaster to leaks from oil and gas pipelines everywhere they exist. Even when pipelines operate as intended, they cut swaths through the landscape that fragment important habitat.And then there's climate change . Oil production and use have made significant contributions to global greenhouse gas emissions, increases in carbon dioxide concentrations in the atmosphere and the consequent changes to our climate.");
             break;
         case 2:
             $(".infoImage").css("background", "url(./img/coaloilgas/gas.jpg)");
+                $(".infoImage").css("background-size", "cover");
             $(".section-2-article h1").html("Natural Gas:<br>The Newest Danger for Global Warming");
             $(".section-2-article p").html("Fossil fuels come from drilling or mining deep underground to access stored energy sources from bygone millennia.  We bring them to the surface and burn them for heat or electricity or to run our cars and buses.  Burning fossil fuels creates carbon pollution.  It doesn’t matter if it is coal, oil, propane, kerosene, gasoline or natural gas—it all contains carbon, which gets released as a greenhouse gas.<br><br> Methane or natural gas, however, is 72 times more potent at capturing heat in the atmosphere than carbon dioxide over the first 20 years after release.  Methane gradually converts to carbon dioxide, so it’s worst in the short term; the global warming potential over 100 years is about 25 times that of carbon dioxide.");
             break;
@@ -441,12 +444,14 @@ var scenegas = new ScrollMagic.Scene({
 //END-SEC-2
 
 // SEC-3
+var tlhuman = new TimelineMax({delay:0.3});
+
 Snap.load("img/humansector/fuel.svg", function (data) {
     Snap("#section-3-image-1").append(data);
     TweenLite.set($(".fuel-circle"), {
         drawSVG: 0
     });
-});
+
 Snap.load("img/humansector/crops.svg", function (data) {
     Snap("#section-3-image-0").append(data);
     TweenLite.set($(".crops-circle"), {
@@ -459,7 +464,17 @@ Snap.load("img/humansector/manu.svg", function (data) {
         drawSVG: 0
     });
 });
+tlhuman.staggerFromTo(".section-3-items", 0.5, {
+    y: "+=100%"
+}, {
+    y: "-=100%"
+, }, 0.1);
+var scenehuman = new ScrollMagic.Scene({
+        triggerElement: "#section-3"
+    })
+    .setTween(tlhuman).addTo(controller);
 
+});
 $(".section-3-items").click(
     function () {
         if (!$(this).hasClass("clicked")) {
@@ -768,22 +783,26 @@ function dataAnimation(dataNum) {
 
 //END-SEC-5
 //SEC - 6
-var tldataCir = new TimelineMax({delay:0.3});
+var tldataCir = new TimelineMax({
+    delay: 0.3
+});
 
 Snap.load("img/industrial/indusData.svg", function (data) {
     Snap(".section-6-data").append(data);
 
     tldataCir.staggerFromTo(".dataCir", 0.3, {
-        x:"-=100%",scale: 0,transformOrigin:"50% 50%"
+        x: "-=100%"
+        , scale: 0
+        , transformOrigin: "50% 50%"
     }, {
-        x:"+=100%",
-        scale: 1,
-    },0.1).staggerFromTo(".dataField", 0.3, {
-        y:"+=120%",
-    }, {
-        y:"-=120%",
-      
-    },0.1,"0.3");
+        x: "+=100%"
+        , scale: 1
+    , }, 0.1).staggerFromTo(".dataField", 0.3, {
+        y: "+=120%"
+    , }, {
+        y: "-=120%",
+
+    }, 0.1, "0.3");
     var sceneindustrial = new ScrollMagic.Scene({
             triggerElement: "#section-6"
         })
@@ -794,8 +813,8 @@ Snap.load("img/industrial/indusData.svg", function (data) {
         drawSVG: 0
     });
     TweenMax.set($(".dataField"), {
-                opacity:0.5
-            });
+        opacity: 0.5
+    });
     var u;
     $(".dataCir").hover(
         function () {
@@ -807,7 +826,7 @@ Snap.load("img/industrial/indusData.svg", function (data) {
                 drawSVG: "true"
             });
             TweenMax.to($(".dataField:eq(" + u + ")"), 0.2, {
-                opacity:1
+                opacity: 1
             });
         }
         , function () {
@@ -817,8 +836,8 @@ Snap.load("img/industrial/indusData.svg", function (data) {
             TweenMax.to($(".dataLine:eq(" + u + ")"), 0.2, {
                 drawSVG: 0
             });
-             TweenMax.to($(".dataField:eq(" + u + ")"), 0.2, {
-                opacity:0.5
+            TweenMax.to($(".dataField:eq(" + u + ")"), 0.2, {
+                opacity: 0.5
             });
         });
 });
@@ -828,169 +847,7 @@ Snap.load("img/industrial/indusData.svg", function (data) {
 //SEC - 7
 //END-SEC-7
 
-// SEC-8
-var myAr = $(".circle-ripple").toArray();
-var trigger = true;
-var topPos1 = 0;
-var clickCount = 0;
-var clickedAr = [];
 
-TweenMax.set($("#worldmap"), {
-    perspective: 1000
-});
-var tlworldmap = new TimelineMax({
-    delay: 0.2
-});
-Snap.load("img/circle-dotted.svg", function (data) {
-    Snap(".circleDotted").append(data);
-    tlworldmap.staggerFromTo("#section-8 .dotted", 1, {
-        scale: 1
-        , opacity: 0
-    }, {
-        scale: 1
-        , opacity: 1
-    }, 0.01).
-    from("#section-8 #worldmap img", 0.3, {
-        scale: 0
-    }, "-=0.5").
-    staggerFrom("#section-8 #worldmap .circle-ripple", 0.3, {
-        autoAlpha: 0
-        , y: "-=150px"
-    }, 0.1).
-    fromTo($(".data-wrapper:eq(0)"), 0.5, {
-        rotation: "90"
-    }, {
-        rotation: "-30"
-    }, "-=0.3").
-    fromTo($(".data-wrapper:eq(1)"), 0.5, {
-        rotation: "90"
-    }, {
-        rotation: "0"
-    }, "-=0.3").fromTo($(".data-wrapper:eq(2)"), 0.5, {
-        rotation: "90"
-    }, {
-        rotation: "30"
-    }, "-=0.3").
-    staggerFrom(".continent-total", 0.3, {
-        scale: 0
-    }, 0.3, "-=0.9");
-
-});
-var sceneworldmap = new ScrollMagic.Scene({
-        triggerElement: "#section-8"
-    })
-    .setTween(tlworldmap).addTo(controller);
-
-
-$('.circle-ripple').bind('click', function (event) {
-
-    var curbtn = $.inArray(this, myAr);
-    if (!$(this).hasClass("activated")) {
-        $(this).addClass("activated");
-
-        clickedAr.push(this);
-
-        //set Pos Country+ Bars
-        if (!$(".name-" + curbtn + "").hasClass("clicked")) {
-            addNumber0(curbtn);
-            addNumber1(curbtn);
-
-            $(".continent-" + curbtn + "").removeClass("hidden");
-            $(".name-" + curbtn + "").css({
-                top: topPos1 + "%"
-
-            }).addClass("clicked");
-            $(".data-" + curbtn + "").css({
-                top: (topPos1 + 10) + "%"
-            });
-
-            topPos1 = topPos1 + 20;
-            TweenLite.fromTo($(".data-" + curbtn + ""), 1, {
-                width: 0
-            }, {
-                width: barWidth[curbtn]
-            });
-        }
-
-    };
-
-
-});
-
-var dataAr = [];
-var nameAr = [];
-var barWidth = [];
-
-$.ajax({
-    type: "GET"
-    , url: "worlddata.xml"
-    , dataType: "xml"
-    , success: function (xml) {
-        for (t = 0; t <= 4; t++) {
-            dataAr.push($(xml).find('data:eq(' + t + ')').text());
-            nameAr.push($(xml).find('name:eq(' + t + ')').text());
-
-        }
-        if (trigger) {
-            appendData();
-            trigger = !trigger;
-        }
-    }
-, });
-
-function appendData() {
-    for (a = 0; a <= 4; a++) {
-        $(".data-" + a + "").css({
-            height: "10px"
-            , position: "absolute"
-            , top: "0"
-            , "background-color": "#1A535C"
-            , width: parseFloat(dataAr[a]) * 6
-        , });
-        barWidth.push($(".data-" + a + "").css("width"));
-    }
-};
-
-// count total
-var totalNumber = 0;
-var curNumber = 0;
-
-function addNumber1(curbtn) {
-    totalNumber = totalNumber + parseFloat(dataAr[curbtn]);
-    $(".totalNumber:eq(1)").countTo({
-        from: curNumber
-        , to: totalNumber
-        , speed: 400
-        , refreshInterval: 10
-        , formatter: function (value, options) {
-            return value.toFixed(1).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
-        }
-        , onComplete: function (value) {
-            curNumber = totalNumber;
-        }
-
-    });
-};
-
-function addNumber0(curbtn) {
-    var z = parseFloat(dataAr[curbtn]);
-    $(".totalNumber:eq(0)").countTo({
-        from: curNumber
-        , to: z
-        , speed: 400
-        , refreshInterval: 10
-        , formatter: function (value, options) {
-            return value.toFixed(1).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
-        }
-        , onComplete: function (value) {
-            curNumber = totalNumber;
-        }
-
-    });
-};
-$(".circle-ripple").tooltipster({
-
-});
 //SEC-9
 
 var thermalCur = 0;

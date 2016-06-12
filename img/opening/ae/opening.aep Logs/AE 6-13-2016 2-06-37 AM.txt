@@ -1,0 +1,12 @@
+Adobe After Effects v13.7.1 Windows 64 render log for project “opening.aep”
+
+Rendering started on 6/13/2016 at 2:06:37 AM
+
+  6/13/2016 2:06:37 AM: Starting composition “final”.
+
+  Output To: C:\Users\Nam\Desktop\GRA-web\img\opening\final.mov    6/13/2016 2:10:51 AM: Finished composition “final”.
+
+
+  Total Time Elapsed: 4 Min, 14 Sec
+Log closed on 6/13/2016 at 2:10:51 AM
+

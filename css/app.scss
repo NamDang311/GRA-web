@@ -1,4 +1,4 @@
-$fonth:'Miller Display',
+$fonth:'MillerDisplay',
 'Roboto Slab',
 sans-serif;
 $fontp:'Source Sans Pro',
@@ -140,7 +140,7 @@ h1 {
 
 p {
     font-family: $fontp;
-    font-weight: 200;
+    font-weight: 300;
     line-height: $base-line-height;
     letter-spacing: 0.15em;
     font-size: 0.9em;
@@ -186,9 +186,9 @@ section {
         margin: 0;
         h1 {
             font-family: $fonts;
-            font-size: 12vw;
+            font-size: 8vw;
             line-height: 1em;
-            letter-spacing: 5vw;
+            letter-spacing: 2.5vw;
             padding-left: 3vw;
         }
     }
@@ -209,10 +209,12 @@ section {
 }
 
 #motion-video {
+    width:1600px;
+  
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -60%);
+    transform: translate(-50%, -58%);
 }
 
 nav {
@@ -588,7 +590,7 @@ nav a {
 }
 
 #section-3 .section-3-items {
-    margin-top: 40vh;
+    margin-top: 30vh;
     text-align: center;
     width: 15%;
     max-width: 350px;
@@ -1171,7 +1173,7 @@ nav a {
 .section-6-data {
     width: 80vw;
     max-width: 800px;
-    margin: 5vw auto 0 auto;
+    margin: 10vw auto 0 auto;
     @media #{$mq-small} {
         width: 62vw;
     }
@@ -1185,149 +1187,6 @@ nav a {
    * END OF SEC-6 
    */
 
-
-/**
-   * SEC-8
-   */
-
-#section-8 {
-    text-align: center;
-    .open h1 {
-        padding: 0;
-        font-family: $fonth;
-    }
-    .open {
-        margin-bottom: 5vh;
-    }
-}
-
-#cn {
-    left: 72%;
-    top: 40%;
-}
-
-#usa {
-    left: 22%;
-    top: 42%;
-}
-
-#ind {
-    left: 67%;
-    top: 47%;
-}
-
-#ru {
-    left: 73%;
-    top: 32%;
-}
-
-#ja {
-    left: 81%;
-    top: 43%;
-}
-
-#worldmap {
-    width: 100%;
-    position: relative;
-    left: 0;
-    z-index: 9;
-    overflow: visible;
-    .circleDotted {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
-}
-
-#section-8 .data-wrapper {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    .continent-total {
-        text-align: center;
-        width: 40%;
-        height: 40%;
-        border-radius: 50%;
-        border: 2px solid $black;
-        position: absolute;
-        right: -70%;
-        top: 50%;
-        transform: translate(0, -50%);
-        .data-flex {
-            padding-top: 20%;
-        }
-        .totalTitle {
-            @media #{$mq-small} {
-                font-size: 14px;
-            }
-        }
-        .totalNumber {
-            font-family: $fonth;
-            line-height: 0.80em;
-            font-size: 2em;
-            vertical-align: top;
-            margin: 0;
-            padding: 0;
-            &:after {
-                content: "gt";
-                font-size: 0.4em;
-            }
-            @media #{$mq-large} {
-                font-size: $base-font-size*4;
-            }
-        }
-    }
-}
-
-.circle-ripple {
-    overflow: visible;
-    background-color: darken($yellow, 20);
-    width: 13px;
-    height: 13px;
-    border-radius: 50%;
-    cursor: pointer;
-    position: absolute;
-}
-
-.continent {
-    opacity: 1;
-    position: absolute;
-    font-size: 1em;
-    right: 0;
-}
-
-.continent-content {
-    position: relative;
-    height: 30vh;
-    img {
-        margin-bottom: 3px;
-        margin-right: 5px;
-    }
-}
-
-.hidden {
-    background-color: aqua;
-    display: none;
-}
-
-.continent:not(.hidden) {
-    -webkit-transition: background-color 5s;
-    transition: background-color 5s;
-}
-
-.activated {
-    background-color: $red;
-}
-
-.timespan {
-    margin-top: 10vh;
-    .timespanMark {
-        padding: 0 15px 0 15px;
-        font-weight: bold;
-    }
-}
 
 
 /**
@@ -1346,12 +1205,18 @@ nav a {
         color: $dark;
         letter-spacing: 0.05em;
     }
+    h3{
+        text-transform: uppercase;
+        margin:0 auto;
+        text-align: center;
+        margin-top: 50px;
+    }
 }
 
 .thermal {
     width: 350px;
     height: 170px;
-    margin: 10px auto 0 auto;
+    margin: 10px auto 50px auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1402,8 +1267,12 @@ nav a {
         opacity: 0;
     }
     .content {
-        width: 400px;
+        width: 600px;
+       
         opacity: 0;
+        ul li{
+            margin-bottom: 20px;
+        }
     }
 }
 
@@ -1418,18 +1287,18 @@ nav a {
    */
 
 #section-10 {
-    background: $darkBlue;
+    background: white;
     .open h1 {
-        color: white;
+        font-size: 5em;
         text-transform: none;
     }
     .open .line {
-        background: white;
+       
     }
 }
 
 .impact-items-wrapper {
-    width: 99vw;
+    width: 85vw;
     height: 400px;
     position: absolute;
     top: 60%;
@@ -1439,15 +1308,19 @@ nav a {
     justify-content: space-between;
     padding: 0 100px;
     .impact-items {
+       
         text-align: left;
-        width: 300px;
-        height: 470px;
+        width: 400px;
+        height: 490px;
         text-transform: capitalize;
         padding-top: 10px;
         transition: all 0.3s ease-in;
         cursor: pointer;
         margin-top: -100px;
         outline: 2px solid rgba(255, 255, 255, .0);
+        a{
+            color:$dark;
+        }
         .impact-contents {
             width: 90%;
             margin: 0 auto;
@@ -1457,22 +1330,23 @@ nav a {
             }
             .line {
                 display: block;
-                background: white;
+               
             }
             h1 {
-                color: white;
+              text-transform: none;
                 font-family: $fonth;
-                font-size: 1.4em;
+                font-size: 2em;
                 letter-spacing: 0.2em;
+                
             }
             p {
                 font-size: 0.8em;
                 font-weight: 200;
-                color: white;
+               
             }
         }
         &:hover {
-            outline: 2px solid $red;
+            outline: 4px solid $red;
         }
     }
 }
@@ -1832,10 +1706,10 @@ nav a {
         font-size: $base-font-size*1.1;
     }
     @media #{$mq-xlarge} {
-        font-size: $base-font-size*1.3;
+        font-size: $base-font-size*1.2;
     }
     @media #{$mq-xxlarge} {
-        font-size: $base-font-size*1.6;
+        font-size: $base-font-size*1.4;
     }
 }
 
@@ -1901,6 +1775,9 @@ nav a {
 }
 
 #section-sub-water {
+    .row {
+        max-width: none;
+    }
     .a9a13da9-9345-46d1-a320-c9b71331183a {
         cursor: pointer;
     }
@@ -1920,7 +1797,7 @@ nav a {
         }
     }
     .fact {
-        padding-top: 100px;
+        padding-top: 30px;
         padding-left: 40px;
     }
     .line {
@@ -1940,6 +1817,7 @@ nav a {
     background: $darkBlue;
     position: relative;
     overflow: hidden;
+    
     .bulb-light {
         width: 40vw;
         height: 40vw;
